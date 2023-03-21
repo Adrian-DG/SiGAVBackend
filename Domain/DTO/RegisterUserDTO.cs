@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Domain.DTO
 {
-    public class RegisterUser : PersonaModelMetadata
+    public class RegisterUserDTO : PersonaModelMetadata
     {
         public string Username { get; set; }
         public string Password { get; set; }

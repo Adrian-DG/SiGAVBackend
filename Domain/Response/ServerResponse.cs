@@ -17,5 +17,10 @@ namespace Domain.Response
             ? new ServerResponse { Title = "Ok", Message = "Los cambios se guardaron con exito!!", Status = true }
             : new ServerResponse { Title = "Error", Message = "Algo salio mal durante el proceso !!", Status = false};
         }
-    }
+
+		public ServerResponse GetResponse(bool status, string message)
+		{
+			return new ServerResponse { Title = $"{(status ? "Ok" : "Error")}", Message = message, Status = status };
+		}
+	}
 }
