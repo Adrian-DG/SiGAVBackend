@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    public class UsuarioPermiso
+    public class UsuarioPermiso : ModelMetadata
     {
         [ForeignKey("Usuario")]
         public int UsuarioId { get; set; }

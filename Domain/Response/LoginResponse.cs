@@ -8,8 +8,9 @@ namespace Domain.Response
     public class LoginResponse : ServerResponse
     {
         public int UsuarioId { get; set; }
+        public string Usuario { get; set; }
         public string Token { get; set; }
         public bool EsAdministrador { get; set; }
-        public int[] Permisos { get; set; }
+        public List<int> Permisos { get; set; }
     }
 }
