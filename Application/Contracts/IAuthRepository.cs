@@ -11,7 +11,6 @@ namespace Application.Contracts
 	public interface IAuthRepository
 	{
 		Task<bool> ConfirmUserExists(string username);
-		Task RegisterUser(RegisterUserDTO model);
 		Task<LoginResponse> LoginUser(LoginUserDTO model);
 	}
 }

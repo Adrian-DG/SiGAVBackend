@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.Contracts
 {
-	public interface UnitOfWork
+	public interface IUnitOfWork
 	{
 		Task<bool> CommitChangesAsync();
 
