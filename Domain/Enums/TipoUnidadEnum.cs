@@ -1,6 +1,6 @@
 namespace Domain.Enums
 {
-    public enum TipoUnidad
+    public enum TipoUnidadEnum
     {
         Supervisor = 1,
 		Encargado,

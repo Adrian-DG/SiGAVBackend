@@ -6,10 +6,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Entities
 {
-    public class Municipio : NombreModelMetadata
+    public class TipoAsistencia : NombreModelMetadata
     {
-        [ForeignKey("Provincia")]
-        public int ProvinciaId { get; set; }
-        public virtual Provincia Provincia { get; set; }
+        public CategoriaAsistencia CategoriaAsistencia { get; set; }
     }
 }

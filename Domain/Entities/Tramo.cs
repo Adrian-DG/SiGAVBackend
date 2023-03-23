@@ -11,6 +11,6 @@ namespace Domain.Entities
 
         [ForeignKey("RegionAsistencia")]
         public int RegionAsistenciaId { get; set; }
-        public virtual RegionAsistencia RegionAsistencia { get; set; }
+        public virtual RegionesAsistencia RegionAsistencia { get; set; }
     }
 }

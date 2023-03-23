@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    public class RegionAsistencia : NombreModelMetadata
+    public class UnidadMiembro : ModelMetadata
     {
-        public RegionMacro RegionMacro { get; set; }
+        
     }
 }

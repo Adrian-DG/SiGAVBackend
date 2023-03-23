@@ -1,6 +1,6 @@
 namespace Domain.Enums
 {
-    public enum RegionesAsistencia
+    public enum RegionesAsistenciaEnum
     {
         Region_Este = 1,
 		Region_Las_Americas,
