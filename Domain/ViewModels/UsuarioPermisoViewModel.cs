@@ -9,6 +9,6 @@ namespace Domain.ViewModels
 {
 	public class UsuarioPermisoViewModel : UsuarioViewModel
 	{
-		public List<UsuarioPermiso> Permisos { get; set; }
+		public List<PermisoViewModel> Permisos { get; set; }
 	}
 }

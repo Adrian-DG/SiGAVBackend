@@ -41,7 +41,21 @@ namespace API.Controllers
 			}
 			catch (Exception)
 			{
+				throw;
+			}
+		}
 
+		[HttpPost("permisos/create")]
+		public async Task<IActionResult> CreateUsuarioPermiso([FromBody] CreateUsuarioPermisoDTO model)
+		{
+			try
+			{
+				await _usuarios.AsignarPermiso(model);
+				var response = _response.GetResponse(await _uow.CommitChangesAsync());
+				return Ok(response);
+			}
+			catch (Exception)
+			{
 				throw;
 			}
 		}

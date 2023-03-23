@@ -1,4 +1,5 @@
-﻿using Domain.ViewModels;
+﻿using Domain.DTO;
+using Domain.ViewModels;
 using Infrastructure.Context;
 using Infrastructure.Helpers;
 using Microsoft.EntityFrameworkCore;
@@ -54,12 +55,17 @@ namespace Infrastructure.Repositories
 							NombreCompleto = x.NombreCompleto(),
 							NombreUsuario = x.Username,
 							EsAdministrador = x.EsAdministrador,
-							Permisos = x.Permisos.ToList(),
+							Permisos = x.Permisos.Select(x => new PermisoViewModel {  Nombre = x.Permiso.Nombre, Descripcion = x.Permiso.Descripcion}).ToList(),
 							Estatus = x.Estatus
 						})
 						.SingleAsync(x => x.Id.Equals(usuarioId));
 
 			return result;
+		}
+
+		public async Task AsignarPermiso(CreateUsuarioPermisoDTO model)
+		{
+			await _context.UsuarioPermisos.AddAsync(new UsuarioPermiso {  UsuarioId = model.UsuarioId, PermisoId = model.PermisoId });
 		}
 	}
 }
