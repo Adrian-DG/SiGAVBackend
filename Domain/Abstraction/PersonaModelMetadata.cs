@@ -15,5 +15,7 @@ namespace Domain.Abstraction
         [DataType(DataType.Date)]
         public DateTime FechaNacimiento { get; set; }
         public Genero Genero { get; set; }
+
+        public string NombreCompleto() => $"{Nombre} {Apellido}";
     }
 }
