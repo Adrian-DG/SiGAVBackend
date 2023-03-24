@@ -10,14 +10,14 @@ namespace Domain.ViewModels
 {
 	public class AsistenciaViewModel
 	{
+		public int Id { get; set; }
 		// Ciudadano 
 		public string Identificacion { get; set; } // Cedula o Pasaporte
-		public string Nombre { get; set; }
-		public string Apellido { get; set; }
+		public string NombreCiudadano { get; set; }
 
 		[DataType(DataType.PhoneNumber)]
 		public string Telefono { get; set; }
-		public Genero Genero { get; set; }
+		public string Genero { get; set; }
 		public bool EsExtranjero { get; set; }
 
 		// Vehiculo 
@@ -35,6 +35,7 @@ namespace Domain.ViewModels
 		// Unidad
 		public string FichaUnidad { get; set; }
 		public string DenominacionUnidad { get; set; }
+		public string TipoUnidad { get; set; }
 
 		// Agente
 		public string CedulaAgente { get; set; }

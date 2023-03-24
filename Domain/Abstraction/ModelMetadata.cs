@@ -17,5 +17,6 @@ namespace Domain.Abstraction
         [DataType(DataType.DateTime)]
         public DateTime FechaModificacion { get; set; } = DateTime.Now;
         public bool Estatus { get; set; } = true;
+        public Nullable<int> UsuarioId { get; set; } = 1; // Usuario Administrador 
     }
 }

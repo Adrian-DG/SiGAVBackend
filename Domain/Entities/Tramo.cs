@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Domain.Entities
 {
     public class Tramo : NombreModelMetadata
-    {
+    { 
 
         [ForeignKey("RegionAsistencia")]
         public int RegionAsistenciaId { get; set; }

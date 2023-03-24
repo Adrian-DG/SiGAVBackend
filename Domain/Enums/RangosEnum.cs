@@ -1,0 +1,28 @@
+﻿using Domain.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Domain.Enums
+{
+	public enum RangosEnum
+	{
+		MAYOR_GENERAL_VICEALMIRANTE = 1,
+		GENERAL_CONTRALMIRANTE,
+		CORONEL_CAPITAN_DE_NAVIO,
+		TENIENTE_CORONEL_CAPITAN_DE_FRAGATA,
+		MAYOR_CAPITAN_CORBETA,
+		CAPITAN_TENIENTE_NAVIO,
+		PRIMER_TENIENTE_TENIENTE_FRAGATA,
+		SEGUNDO_TENIENTE_TENIENTE_CORBETA,
+		SARGENTO_MAYOR,
+		SARGENTO,
+		CABO,
+		RASO_MARINERO,
+		ASIMILADO,
+		AGENTE_MOPC
+	}
+}
+

@@ -64,7 +64,7 @@ namespace Domain.Entities
 		public ReportadoPor ReportadoPor { get; set; }
 
 		[DataType(DataType.MultilineText)]
-		public string Comentarios { get; set; }
+		public string Comentario { get; set; }
 
 		// Tiempos
 		[DataType(DataType.Time)]
