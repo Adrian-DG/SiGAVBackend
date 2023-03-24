@@ -10,7 +10,7 @@ namespace Application.Contracts
 	public interface IGenericRepository<T> where T : class
 	{
 		Task<ICollection<T>> GetAllAsync();
-		Task<PagedData<T>> GetAllAsync(PaginationFilterDTO filters, Expression<Func<T, bool>> predicate);
+		Task<PagedData<T>> GetAllAsync(PaginationFilter filters, Expression<Func<T, bool>> predicate);
 		Task<T> GetByIdAsync(int id);
 		Task InsertAsync(T entity);
 		void Update(T entity);

@@ -32,7 +32,7 @@ namespace API.Controllers
 		}
 
 		[HttpGet]
-		public async Task<IActionResult> GetAll([FromQuery] PaginationFilterDTO filters)
+		public async Task<IActionResult> GetAll([FromQuery] PaginationFilter filters)
 		{
 			try
 			{

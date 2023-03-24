@@ -28,7 +28,7 @@ namespace Infrastructure.Repositories
 			_repository.Remove(entity);
 		}
 
-		public async Task<PagedData<T>> GetAllAsync(PaginationFilterDTO filters, Expression<Func<T, bool>> predicate)
+		public async Task<PagedData<T>> GetAllAsync(PaginationFilter filters, Expression<Func<T, bool>> predicate)
 		{
 			var results = await _repository
 							.Where<T>(predicate)
