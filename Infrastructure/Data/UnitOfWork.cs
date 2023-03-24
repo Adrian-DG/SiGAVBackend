@@ -24,7 +24,10 @@ namespace Infrastructure.Data
 			_repositories = new Dictionary<string, object>()
 			{
 				{ "Domain.Entities.Usuario", new UsuariosRepository(_context) },
-				{ "Domain.Entities.Tramo", new TramoRepository(_context) }
+				{ "Domain.Entities.Tramo", new TramoRepository(_context) },
+				{ "Domain.Entities.Unidad", new UnidadRepository(_context) },
+				{ "Domain.Entities.Miembro", new MiembroRepository(_context) },
+				{ "Domain.Entities.Asistencia", new AsistenciaRepository(_context) }
 			};
 
 		}

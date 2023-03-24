@@ -68,6 +68,15 @@ namespace API.Controllers
 			return Ok(result);
 		}
 
+		[HttpGet("TipoUnidades")]
+		public async Task<IActionResult> GetTipoUnidades()
+		{
+			var result = await _dbContext.TipoUnidades
+						.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre })
+						.ToListAsync();
+			return Ok(result);
+		}
+
 		[HttpGet("VehiculoMarca")]
 		public async Task<IActionResult> GetVehiculoMarca()
 		{

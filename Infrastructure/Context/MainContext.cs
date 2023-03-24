@@ -1,10 +1,13 @@
 ﻿using Domain.Entities;
 using Domain.Enums;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Infrastructure.Context
@@ -26,6 +29,36 @@ namespace Infrastructure.Context
 			//		new Usuario { Id = 1, Username = "admin", PasswordHash = passwordHash, PasswordSalt = passwordSalt, EsAdministrador = true, Estatus = true }
 			//	);
 			//}
+
+			// Guardamos listado como JSON a la base de datos 
+
+			modelBuilder.Entity<Asistencia>()
+				.Property(a => a.TipoAsistencias).HasConversion(
+					v => JsonConvert.SerializeObject(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }),
+					v => JsonConvert.DeserializeObject<IList<TipoAsistencia>>(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore })
+				);
+
+			// Guardamos el listado de imagenes base64 como un string 
+
+			modelBuilder.Entity<Asistencia>()
+				.Property(a => a.Imagenes).HasConversion(
+					v => JsonConvert.SerializeObject(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }),
+					v => JsonConvert.DeserializeObject<IList<string>>(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore })
+				);
+
+			// Tipo Unidade 
+
+			modelBuilder.Entity<TipoUnidad>().HasData(
+					new TipoUnidad { Id = (int) TipoUnidadEnum.Supervisor, Nombre = "Supervisor" },
+					new TipoUnidad { Id = (int)TipoUnidadEnum.Encargado, Nombre = "Encargado" },
+					new TipoUnidad { Id = (int)TipoUnidadEnum.Unidad, Nombre = "Unidad" },
+					new TipoUnidad { Id = (int)TipoUnidadEnum.Movil, Nombre = "Movil" },
+					new TipoUnidad { Id = (int)TipoUnidadEnum.Ambulancia, Nombre = "Ambulanccia" },
+					new TipoUnidad { Id = (int)TipoUnidadEnum.Grua, Nombre = "Grua" },
+					new TipoUnidad { Id = (int)TipoUnidadEnum.Rescate, Nombre = "Rescate" },
+					new TipoUnidad { Id = (int)TipoUnidadEnum.CODEVIAL, Nombre = "CODEVIAL" },
+					new TipoUnidad { Id = (int)TipoUnidadEnum.Motorizada, Nombre = "Motorizada" }
+				);
 
 			// Regiones Asistencia Vial
 
