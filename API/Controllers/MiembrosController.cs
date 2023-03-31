@@ -1,5 +1,6 @@
 ﻿using Application.DataAccess;
 using Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,7 +16,7 @@ namespace API.Controllers
 		}
 
 		[HttpGet("all")]
-		public async Task<IActionResult> GetAllMiembros(PaginationFilter filters)
+		public async Task<IActionResult> GetAllMiembros([FromQuery] PaginationFilter filters)
 		{
 			try
 			{
@@ -26,6 +27,50 @@ namespace API.Controllers
 			}
 			catch (Exception)
 			{
+				throw;
+			}
+		}
+
+		[HttpPost("create")]
+		public async Task<IActionResult> CreateMiembro([FromBody] CreateMiembroDTO model)
+		{
+			try
+			{
+				await _miembros.CreateMiembro(model);
+				return Ok(_response.GetResponse(await _uow.CommitChangesAsync()));
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+
+		[HttpPut("authorize")]
+		public async Task<IActionResult> UpdateEstatusMiembro([FromBody] int id)
+		{
+			try
+			{
+				await _miembros.UpdateEstatusMiembro(id);
+				return Ok(_response.GetResponse(await _uow.CommitChangesAsync()));
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		[AllowAnonymous]
+		[HttpGet("confirm")]
+		public async Task<IActionResult> ConfirmMiembroExists([FromQuery] string cedula)
+		{
+			try
+			{
+				return Ok(await _miembros.ConfirmMiembroExists(cedula));
+			}
+			catch (Exception)
+			{
+
 				throw;
 			}
 		}

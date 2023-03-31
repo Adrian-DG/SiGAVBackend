@@ -43,13 +43,14 @@ namespace Domain.ViewModels
 		public string RangoAgente { get; set; }
 
 		// Tipificacion Asistencia
-		public List<TipoAsistenciaViewModel> TipoAsistencias { get; set; }
+		public List<TipoAsistencia> TipoAsistencias { get; set; }
 		public string Comentario { get; set; }
 
 		// Metadata Asistencia
 		public string ReportadaPor { get; set; }
 		public DateTime FechaCreacion { get; set; }
-		public int EstatusAsistencia { get; set; }
+		public string EstatusAsistencia { get; set; }
+		public bool Estatus { get; set; }
 
 	}
 }

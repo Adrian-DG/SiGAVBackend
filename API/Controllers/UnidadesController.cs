@@ -1,5 +1,6 @@
 ﻿using Application.DataAccess;
 using Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,6 +28,37 @@ namespace API.Controllers
 			catch (Exception ex)
 			{
 				throw ex;
+			}
+		}
+
+		[HttpGet("autocomplete")]
+		public async Task<IActionResult> GetUnidadesAutoComplete([FromQuery] string param)
+		{
+			try
+			{
+				param = param is null ? "" : param;
+				var result = await _unidades.GetUnidadesAutoComplete(param);
+				return Ok(result);
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+
+		[AllowAnonymous]
+		[HttpGet("confirm")]
+		public async Task<IActionResult> ConfirmUnidadExists([FromQuery] string ficha)
+		{
+			try
+			{
+				return Ok(await _unidades.ConfirmUnidadExists(ficha));
+			}
+			catch (Exception)
+			{
+
+				throw;
 			}
 		}
 

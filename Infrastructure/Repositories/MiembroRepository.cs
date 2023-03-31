@@ -16,6 +16,27 @@ namespace Infrastructure.Repositories
 		{
 		}
 
+		public async Task<bool> ConfirmMiembroExists(string cedula)
+		{
+			return await _repository.AnyAsync(x => x.Cedula == cedula);
+		}
+
+		public async Task CreateMiembro(CreateMiembroDTO model)
+		{
+			var newMiembro = new Miembro
+			{
+				Cedula = model.Cedula,
+				Nombre = model.Nombre,
+				Apellido = model.Apellido,
+				FechaNacimiento = model.FechaNacimiento,
+				RangoId = model.RangoId,
+				Institucion = model.Institucion,
+				Estatus = false
+			};
+
+			await _repository.AddAsync(newMiembro);
+		}
+
 		public async Task<PagedData<MiembroViewModel>> GetAllMiembrosAsync(PaginationFilter filters, Expression<Func<Miembro, bool>> predicate)
 		{
 			var results = await _repository
@@ -30,7 +51,10 @@ namespace Infrastructure.Repositories
 								Cedula = u.Cedula,
 								NombreCompleto = u.NombreCompleto(),
 								Rango = u.Rango.Nombre,
-								Institucion = u.Institucion.ToString()
+								Institucion = u.Institucion.ToString(),
+								Estatus = u.Estatus,
+								FechaCreacion = u.FechaCreacion,
+								UsuarioId = (int) u.UsuarioId
 							})
 							.ToListAsync();
 
@@ -41,6 +65,17 @@ namespace Infrastructure.Repositories
 				Items = results,
 				TotalCount = await GetTotalRecords()
 			};
+		}
+
+		public async Task UpdateEstatusMiembro(int id)
+		{
+			var miembro = await _repository.FindAsync(id);
+
+			miembro.Estatus = !miembro.Estatus;
+
+			_context.Attach<Miembro>(miembro);
+			_context.Entry<Miembro>(miembro).State = EntityState.Modified;
+
 		}
 	}
 }

@@ -49,21 +49,21 @@ namespace API.Controllers
 		}
 
 		[HttpGet("municipios")]
-		public async Task<IActionResult> GetMunicipios([FromQuery] int Provincia)
+		public async Task<IActionResult> GetMunicipios([FromQuery] int id)
 		{
 			var result = await _dbContext.Municipios
-						.Where(x => x.ProvinciaId == Provincia)
+						.Where(x => x.ProvinciaId == id)
 						.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre })
 						.ToListAsync();
 
 			return Ok(result);
 		}
 
-		[HttpGet("TipoAsistencia/{categoria}")]
-		public async Task<IActionResult> GetTipoAsistencias([FromRoute] int categoria)
+		[HttpGet("TipoAsistencia")]
+		public async Task<IActionResult> GetTipoAsistencias([FromQuery] int id)
 		{
 			var result = await _dbContext.TipoAsistencias
-						.Where(x => (int)x.CategoriaAsistencia == categoria)
+						.Where(x => (int)x.CategoriaAsistencia == id)
 						.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre }).ToListAsync();
 			return Ok(result);
 		}
@@ -85,10 +85,10 @@ namespace API.Controllers
 		}
 
 		[HttpGet("VehiculoModelo")]
-		public async Task<IActionResult> GetVehiculoModelo([FromQuery] int Marca)
+		public async Task<IActionResult> GetVehiculoModelo([FromQuery] int id)
 		{
 			var result = await _dbContext.VehiculoModelos
-						.Where(x => x.VehiculoMarcaId == Marca)
+						.Where(x => x.VehiculoMarcaId == id)
 						.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre })
 						.ToListAsync();
 

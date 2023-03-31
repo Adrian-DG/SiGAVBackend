@@ -35,5 +35,15 @@ namespace Infrastructure.Repositories
 				TotalCount = await GetTotalRecords()
 			};
 		}
+
+
+		public async Task<ICollection<TramoViewModel>> GetTramosByNombre()
+		{
+			return await _repository
+				.Where(x => x.Estatus)
+				.Select(x => new TramoViewModel { Id = x.Id, Nombre = x.Nombre, RegionAsistencia = x.Nombre })
+				.ToListAsync<TramoViewModel>();
+		}
+
 	}
 }

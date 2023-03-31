@@ -21,6 +21,25 @@ namespace Infrastructure.Repositories
 			_encrypt = new EncryptHelper();	
 		}
 
+		public async Task<PagedData<UsuarioViewModel>> GetAllUsuariosAsync(PaginationFilter filters, Expression<Func<Usuario, bool>> predicate)
+		{
+			var results = await _repository
+							.Where(predicate)
+							.Skip((filters.Page - 1) * filters.Size)
+							.Take(filters.Size)
+							.OrderBy(x => x.FechaCreacion)
+							.Select(x => new UsuarioViewModel { Id = x.Id, Cedula = x.Cedula, NombreCompleto = x.NombreCompleto(), NombreUsuario = x.Username, EsAdministrador = x.EsAdministrador, Estatus = x.Estatus  })
+							.ToListAsync();
+
+			return new PagedData<UsuarioViewModel>
+			{
+				Page = filters.Page,
+				Size = filters.Size,
+				Items = results,
+				TotalCount = await GetTotalRecords()
+			};
+		}
+
 		public async Task<bool> CreateUsuario(CreateUserDTO model)
 		{
 			if (await _repository.AnyAsync(x => x.Username == model.Username)) return false;
@@ -55,7 +74,7 @@ namespace Infrastructure.Repositories
 							NombreCompleto = x.NombreCompleto(),
 							NombreUsuario = x.Username,
 							EsAdministrador = x.EsAdministrador,
-							Permisos = x.Permisos.Select(x => new PermisoViewModel {  Nombre = x.Permiso.Nombre, Descripcion = x.Permiso.Descripcion}).ToList(),
+							Permisos = x.Permisos.Select(x => new PermisoViewModel { Nombre = x.Permiso.Nombre, Descripcion = x.Permiso.Descripcion }).ToList(),
 							Estatus = x.Estatus
 						})
 						.SingleAsync(x => x.Id.Equals(usuarioId));
@@ -66,6 +85,16 @@ namespace Infrastructure.Repositories
 		public async Task AsignarPermiso(CreateUsuarioPermisoDTO model)
 		{
 			await _context.UsuarioPermisos.AddAsync(new UsuarioPermiso {  UsuarioId = model.UsuarioId, PermisoId = model.PermisoId });
+		}
+
+		public async Task UpdateUsuarioEstatus(int id)
+		{
+			var usuario = await _repository.FindAsync(id);
+			usuario.Estatus = !usuario.Estatus;
+			usuario.FechaModificacion = DateTime.Now;
+
+			_context.Attach<Usuario>(usuario);
+			_context.Entry<Usuario>(usuario).State = EntityState.Modified;
 		}
 	}
 }

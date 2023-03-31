@@ -30,5 +30,21 @@ namespace API.Controllers
 				throw;
 			}
 		}
+
+		[HttpGet("search")]
+		public async Task<IActionResult> GetListTramosByNombre()
+		{
+			try
+			{
+				var tramosFiltered = await _tramos.GetTramosByNombre();
+				return new JsonResult(tramosFiltered);
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+
 	}
 }

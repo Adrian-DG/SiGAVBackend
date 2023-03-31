@@ -16,6 +16,59 @@ namespace Infrastructure.Repositories
 		{
 		}
 
+		private async Task<int> GetUnidadMiembroId(int unidadId)
+		{
+			var results = await _context.UnidadMiembro
+						.Where(x => x.UnidadId == unidadId && x.FechaCreacion.Date == DateTime.Now.Date)
+						.OrderByDescending(x => x.FechaCreacion)
+						.ToListAsync();
+
+			return results.First().Id;
+		}
+
+		public async Task CreateAsistenciaR5(CreateAsistenciaR5 model)
+		{
+
+			List<TipoAsistencia> tipoAsistencias = new();
+
+			foreach (var item in model.TipoAsistencias)
+			{
+				var tipo = await _context.TipoAsistencias.FindAsync(item);
+				tipoAsistencias.Add(tipo);
+			}
+
+			var unidadMiembroId = await GetUnidadMiembroId(model.UnidadId);
+
+			var newAsistencia = new Asistencia
+			{
+				// Ciudadano
+				Identificacion = model.Identificacion,
+				Nombre = model.Nombre,
+				Apellido = model.Apellido,
+				Genero = model.Genero,
+				Telefono = model.Telefono,
+				EsExtranjero = model.EsExtranjero,
+				// Vehiculo
+				VehiculoTipoId = model.VehiculoTipoId,
+				VehiculoColorId = model.VehiculoColorId,
+				VehiculoModeloId = model.VehiculoModeloId,
+				VehiculoMarcaId = model.VehiculoMarcaId,
+				Placa = model.Placa,
+				// asistencia (sin coordenadas)
+				MunicipioId = model.MunicipioId,
+				ProvinciaId = model.ProvinciaId,
+				UnidadMiembroId = unidadMiembroId,
+				ReportadoPor = ReportadoPor.CallCenter,
+				EstatusAsistencia = EstatusAsistencia.PENDIENTE,
+				UsuarioId = model.UsuarioId,
+				TipoAsistencias = tipoAsistencias,
+				Comentario = model.Comentario,
+				Estatus = false
+			};
+
+			await _repository.AddAsync(newAsistencia);
+		}
+
 		public async Task<PagedData<AsistenciaViewModel>> GetAllAsistencias(PaginationFilter filters, Expression<Func<Asistencia, bool>> predicate)
 		{
 			var result = await _repository
@@ -63,11 +116,12 @@ namespace Infrastructure.Repositories
 							CedulaAgente = a.UnidadMiembro.Miembro.Cedula,
 							NombreAgente = String.Concat(a.UnidadMiembro.Miembro.Nombre, " ", a.UnidadMiembro.Miembro.Apellido),
 							RangoAgente = a.UnidadMiembro.Miembro.Rango.Nombre,
-							TipoAsistencias = a.TipoAsistencias.Select(x => new TipoAsistenciaViewModel { TipoAsistencia = x.Nombre, CategoriaAsistencia = x.CategoriaAsistencia.ToString() }).ToList(),
+							TipoAsistencias = a.TipoAsistencias.ToList(),
 							Comentario = a.Comentario,
 							ReportadaPor = a.ReportadoPor.ToString(),
 							FechaCreacion = a.FechaCreacion,
-							EstatusAsistencia = (int)a.EstatusAsistencia
+							EstatusAsistencia = a.EstatusAsistencia.ToString(),
+							Estatus = a.Estatus
 						})
 						.ToListAsync();
 
@@ -79,5 +133,23 @@ namespace Infrastructure.Repositories
 				TotalCount = await GetTotalRecords()
 			};
 		}
+
+		public async Task ActualizarAsistencia(UpdateAsistencia model)
+		{
+			var asistencia = await _repository.FindAsync(model.Id);
+
+			asistencia.EstatusAsistencia = model.EstatusAsistencia;
+			asistencia.FechaModificacion = DateTime.Now;
+
+			if ((int) model.EstatusAsistencia == 3)
+			{
+				asistencia.Estatus = true;
+				asistencia.TiempoCompletada = DateTime.Now;
+			}			
+
+			_context.Attach<Asistencia>(asistencia);
+			_context.Entry<Asistencia>(asistencia).State = EntityState.Modified;
+		}
+
 	}
 }

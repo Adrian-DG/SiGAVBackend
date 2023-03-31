@@ -13,5 +13,9 @@ namespace Domain.ViewModels
 		public string NombreCompleto { get; set; }
 		public string Rango { get; set; }
 		public string Institucion { get; set; }
+		public bool Estatus { get; set; }
+		public DateTime FechaCreacion { get; set; }
+		public int UsuarioId { get; set; }
 	}
 }
+	

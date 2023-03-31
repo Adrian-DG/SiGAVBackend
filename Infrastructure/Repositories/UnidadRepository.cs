@@ -31,7 +31,7 @@ namespace Infrastructure.Repositories
 								Denominacion = u.Denominacion,
 								Ficha = u.Ficha,
 								Placa = u.Placa,
-								Tramo = u.Tramo,
+								Tramo = u.Tramo.Nombre,
 								Cobertura = u.Cobertura,
 								TipoUnidad = u.TipoUnidad.Nombre,
 								PuntosAsignados = u.PuntosAsignados
@@ -45,6 +45,31 @@ namespace Infrastructure.Repositories
 				Items = results,
 				TotalCount = await GetTotalRecords()
 			};
+		}
+
+		public async Task<List<UnidadAutoCompleteViewModel>> GetUnidadesAutoComplete(string param)
+		{
+			var result = await _repository
+						.Include(x => x.Tramo)
+						.Where(x => x.Denominacion.Contains(param))
+						.Select(x => new UnidadAutoCompleteViewModel
+						{
+							UnidadId = x.Id,
+							Denominacion = x.Denominacion,
+							Placa = x.Placa,
+							Ficha = x.Ficha,
+							Tramo = x.Tramo.Nombre,
+							EstaDisponible = false
+						})
+						.Take(5)
+						.ToListAsync();
+
+			return result;
+		}
+
+		public async Task<bool> ConfirmUnidadExists(string ficha)
+		{
+			return await _repository.AnyAsync(x => x.Ficha == ficha);
 		}
 	}
 }

@@ -21,50 +21,50 @@ namespace Infrastructure.Context
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
+			// Guardamos listado como JSON a la base de datos 
+
+			modelBuilder.Entity<Asistencia>()
+				.Property(a => a.TipoAsistencias).HasConversion(
+					v => JsonConvert.SerializeObject(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }),
+					v => JsonConvert.DeserializeObject<IList<TipoAsistencia>>(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore })
+				);
+
+			// Guardamos el listado de imagenes base64 como un string 
+
+			modelBuilder.Entity<Asistencia>()
+				.Property(a => a.Imagenes).HasConversion(
+					v => JsonConvert.SerializeObject(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }),
+					v => JsonConvert.DeserializeObject<IList<string>>(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore })
+				);
+
 			// Esta data puede cambiar, se insertara con la salvedad de que es temporal
-			if (false)	
-			{
-				modelBuilder.Entity<Miembro>().HasData(
-						new Miembro { Id = 1, Cedula = "00111710059", Nombre = "Juan Jose", Apellido = "Reyes Tatis", Genero = Genero.Masculino, RangoId = (int)RangosEnum.MAYOR_CAPITAN_CORBETA, Institucion = Institucion.ERD },
-						new Miembro { Id = 2, Cedula = "00113164909", Nombre = "Jordi Jose", Apellido = "Mercedes Delgado", Genero = Genero.Masculino, RangoId = (int)RangosEnum.PRIMER_TENIENTE_TENIENTE_FRAGATA, Institucion = Institucion.ERD },
-						new Miembro { Id = 3, Cedula = "40240760179", Nombre = "Robert Luis", Apellido = "Carbonell Marte", Genero = Genero.Masculino, RangoId = (int)RangosEnum.RASO_MARINERO, Institucion = Institucion.FARD }						
-					);
+			//if (false)	
+			//{
+			//	modelBuilder.Entity<Miembro>().HasData(
+			//			new Miembro { Id = 1, Cedula = "00111710059", Nombre = "Juan Jose", Apellido = "Reyes Tatis", Genero = Genero.Masculino, RangoId = (int)RangosEnum.MAYOR_CAPITAN_CORBETA, Institucion = Institucion.ERD },
+			//			new Miembro { Id = 2, Cedula = "00113164909", Nombre = "Jordi Jose", Apellido = "Mercedes Delgado", Genero = Genero.Masculino, RangoId = (int)RangosEnum.PRIMER_TENIENTE_TENIENTE_FRAGATA, Institucion = Institucion.ERD },
+			//			new Miembro { Id = 3, Cedula = "40240760179", Nombre = "Robert Luis", Apellido = "Carbonell Marte", Genero = Genero.Masculino, RangoId = (int)RangosEnum.RASO_MARINERO, Institucion = Institucion.FARD }						
+			//		);
 
-				modelBuilder.Entity<SupervisorEncargado>().HasData(
-						new SupervisorEncargado { Id = 1, IOT = "OP-10", CategoriaSupervisor = CategoriaSupervisor.SUPERVISOR_REGIONAL, MiembroId = 1 },
-						new SupervisorEncargado { Id = 2, IOT = "OP-10.1", CategoriaSupervisor = CategoriaSupervisor.ENCARGADO_ZONA, MiembroId = 2 }
-					);
+			//	modelBuilder.Entity<SupervisorEncargado>().HasData(
+			//			new SupervisorEncargado { Id = 1, IOT = "OP-10", CategoriaSupervisor = CategoriaSupervisor.SUPERVISOR_REGIONAL, MiembroId = 1 },
+			//			new SupervisorEncargado { Id = 2, IOT = "OP-10.1", CategoriaSupervisor = CategoriaSupervisor.ENCARGADO_ZONA, MiembroId = 2 }
+			//		);
 
-				modelBuilder.Entity<SupervisorEncargadoTramo>().HasData(
-						new SupervisorEncargadoTramo { Id = 1, SupervisorEncargadoId = 1, TramoId = 9 },
-						new SupervisorEncargadoTramo { Id = 2, SupervisorEncargadoId = 2, TramoId = 9 }
-					);
-			}
+			//	modelBuilder.Entity<SupervisorEncargadoTramo>().HasData(
+			//			new SupervisorEncargadoTramo { Id = 1, SupervisorEncargadoId = 1, TramoId = 9 },
+			//			new SupervisorEncargadoTramo { Id = 2, SupervisorEncargadoId = 2, TramoId = 9 }
+			//		);
+			//}
 
-			if (false)
+			if (true)
 			{
 				// Generamos el cifrado de la clave del usuario administrador
 				new Infrastructure.Helpers.EncryptHelper().CreatePasswordHash("admin01", out byte[] passwordHash, out byte[] passwordSalt);
 
 				modelBuilder.Entity<Usuario>().HasData(
 					new Usuario { Id = 1, Username = "admin", PasswordHash = passwordHash, PasswordSalt = passwordSalt, EsAdministrador = true, UsuarioId = null,Estatus = true }
-				);
-
-				// Guardamos listado como JSON a la base de datos 
-
-				modelBuilder.Entity<Asistencia>()
-					.Property(a => a.TipoAsistencias).HasConversion(
-						v => JsonConvert.SerializeObject(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }),
-						v => JsonConvert.DeserializeObject<IList<TipoAsistencia>>(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore })
-					);
-
-				// Guardamos el listado de imagenes base64 como un string 
-
-				modelBuilder.Entity<Asistencia>()
-					.Property(a => a.Imagenes).HasConversion(
-						v => JsonConvert.SerializeObject(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }),
-						v => JsonConvert.DeserializeObject<IList<string>>(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore })
-					);
+				);				
 
 				// Tipo Unidad
 

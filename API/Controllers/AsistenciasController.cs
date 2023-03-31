@@ -11,7 +11,22 @@ namespace API.Controllers
 		public AsistenciasController(IUnitOfWork unitOfWork, ISpecifaction<Asistencia> specifaction) : base(unitOfWork, specifaction)
 		{
 			_asistencias = (AsistenciaRepository)_repository;
-			_predicate = x => (x.Nombre.Contains(_searchTerm) || x.Apellido.Contains(_searchTerm) || x.Identificacion.Contains(_searchTerm));
+			_predicate = x => (x.Nombre.Contains(_searchTerm) || x.Apellido.Contains(_searchTerm) || x.Identificacion.Contains(_searchTerm)) && x.Estatus == _status;
+		}
+
+		[HttpPost("createR5")]
+		public async Task<IActionResult> CreateAsistenciaR5([FromBody] CreateAsistenciaR5 model)
+		{
+			try
+			{
+				await _asistencias.CreateAsistenciaR5(model);
+				return Ok(_response.GetResponse(await _uow.CommitChangesAsync()));
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
 		}
 
 		[HttpGet("all")]
@@ -26,6 +41,21 @@ namespace API.Controllers
 			}
 			catch (Exception)
 			{
+				throw;
+			}
+		}
+
+		[HttpPut("actualizar")]
+		public async Task<IActionResult> ActualizarAsistencia([FromBody] UpdateAsistencia model)
+		{
+			try
+			{
+				await _asistencias.ActualizarAsistencia(model);
+				return Ok(_response.GetResponse(await _uow.CommitChangesAsync()));
+			}
+			catch (Exception)
+			{
+
 				throw;
 			}
 		}

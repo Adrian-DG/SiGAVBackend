@@ -10,7 +10,6 @@ namespace Domain.Entities
     public class Asistencia : ModelMetadata
     {
         // Ciudadano
-
 		public string Identificacion { get; set; } // Cedula o Pasaporte
         public string Nombre { get; set; }
         public string Apellido { get; set; }
@@ -37,6 +36,7 @@ namespace Domain.Entities
 		[ForeignKey("VehiculoMarca")]
 		public int VehiculoMarcaId { get; set; }
 		public virtual VehiculoMarca VehiculoMarca { get; set; }
+		public string Placa { get; set; }
 
 		// Informacion Ubicacion Asistencia		
 		public string Coordenadas { get; set; }

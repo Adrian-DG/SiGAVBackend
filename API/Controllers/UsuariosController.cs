@@ -14,6 +14,24 @@ namespace API.Controllers
 			_usuarios = (UsuariosRepository) _repository;
 		}
 
+		[HttpGet("all")]
+		public async Task<IActionResult> GetAllUsuarios([FromQuery] PaginationFilter filters)
+		{
+			try
+			{
+				_searchTerm = filters.SearchTerm is null ? "" : filters.SearchTerm;
+				_status = filters.Status;
+				var result = await _usuarios.GetAllUsuariosAsync(filters, _predicate);
+				return Ok(result);
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+
+
 		[HttpPost("create")]
 		public async Task<IActionResult> CreateUsuario(CreateUserDTO model)
 		{
@@ -56,6 +74,21 @@ namespace API.Controllers
 			}
 			catch (Exception)
 			{
+				throw;
+			}
+		}
+
+		[HttpPut("authorize")]
+		public async Task<IActionResult> UpdateUsuarioEstatus([FromBody] int id)
+		{
+			try
+			{
+				await _usuarios.UpdateUsuarioEstatus(id);
+				return Ok(_response.GetResponse(await _uow.CommitChangesAsync()));
+			}
+			catch (Exception)
+			{
+
 				throw;
 			}
 		}
