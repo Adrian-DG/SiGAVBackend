@@ -27,7 +27,8 @@ namespace Infrastructure.Data
 				{ "Domain.Entities.Tramo", new TramoRepository(_context) },
 				{ "Domain.Entities.Unidad", new UnidadRepository(_context) },
 				{ "Domain.Entities.Miembro", new MiembroRepository(_context) },
-				{ "Domain.Entities.Asistencia", new AsistenciaRepository(_context) }
+				{ "Domain.Entities.Asistencia", new AsistenciaRepository(_context) },
+				{ "Domain.Entities.UnidadMiembro", new UnidadMiembroRepository(_context, _configuration) }
 			};
 
 		}

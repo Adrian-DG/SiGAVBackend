@@ -18,7 +18,7 @@ namespace Infrastructure.Repositories
 
 		public async Task<bool> ConfirmMiembroExists(string cedula)
 		{
-			return await _repository.AnyAsync(x => x.Cedula == cedula);
+			return await _repository.AnyAsync(x => x.Cedula == cedula && x.Estatus);
 		}
 
 		public async Task CreateMiembro(CreateMiembroDTO model)

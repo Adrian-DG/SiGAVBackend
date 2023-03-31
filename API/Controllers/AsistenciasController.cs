@@ -1,5 +1,6 @@
 ﻿using Application.DataAccess;
 using Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,6 +22,23 @@ namespace API.Controllers
 			{
 				await _asistencias.CreateAsistenciaR5(model);
 				return Ok(_response.GetResponse(await _uow.CommitChangesAsync()));
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+
+		[AllowAnonymous]
+		[HttpPost("create")]
+		public async Task<IActionResult> CreateAsistenciaAgente([FromBody] CreateAsistenciaAgente model)
+		{
+			try
+			{
+				await _asistencias.CreateAsistenciaAgente(model);
+				var response = _response.GetResponse(await _uow.CommitChangesAsync());
+				return Ok(response.Status);
 			}
 			catch (Exception)
 			{
@@ -56,6 +74,21 @@ namespace API.Controllers
 			catch (Exception)
 			{
 
+				throw;
+			}
+		}
+
+		[AllowAnonymous]
+		[HttpGet("all/{ficha}")]
+		public async Task<IActionResult> GetAsistenciasAsignadaAUnidad([FromRoute] string ficha)
+		{
+			try
+			{
+				var result = await _asistencias.GetAsistenciasAsignadaAUnidad(ficha);
+				return Ok(result);
+			}
+			catch (Exception)
+			{
 				throw;
 			}
 		}

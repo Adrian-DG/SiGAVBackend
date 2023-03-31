@@ -9,7 +9,7 @@ namespace API.Controllers
 {
 	[Route("api/[controller]")]
 	[ApiController]
-	[Authorize]
+	[AllowAnonymous]
 	public class CacheController : ControllerBase
 	{
 		private readonly MainContext _dbContext;

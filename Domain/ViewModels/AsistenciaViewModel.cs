@@ -25,6 +25,7 @@ namespace Domain.ViewModels
 		public string VehiculoColor { get; set; }
 		public string VehiculoModelo { get; set; }
 		public string VehiculoMarca { get; set; }
+		public string Placa { get; set; }
 
 		// Ubicacion 
 		public string Coordenadas { get; set; }

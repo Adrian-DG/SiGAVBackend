@@ -44,5 +44,32 @@ namespace Infrastructure.Helpers
 
 		}
 
+		public string GenerateUnitToken(Unidad unidad)
+		{
+			List<Claim> claims = new List<Claim>()
+			{
+				new Claim(ClaimTypes.NameIdentifier, unidad.Id.ToString()),
+				new Claim(ClaimTypes.NameIdentifier, unidad.Ficha.ToString())
+			};
+
+			var SecretKey = _configuration.GetSection("SecretKey").Value;
+			var SimmetricKey = new SymmetricSecurityKey(ASCIIEncoding.UTF8.GetBytes(SecretKey));
+
+			SigningCredentials credentials = new SigningCredentials(SimmetricKey, SecurityAlgorithms.HmacSha512Signature);
+
+			SecurityTokenDescriptor tokenDecriptor = new SecurityTokenDescriptor
+			{
+				Subject = new ClaimsIdentity(claims),
+				Expires = DateTime.Now.AddHours(24),
+				SigningCredentials = credentials
+			};
+
+			JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
+			SecurityToken token = tokenHandler.CreateToken(tokenDecriptor);
+
+			return tokenHandler.WriteToken(token);
+
+		}
+
 	}
 }

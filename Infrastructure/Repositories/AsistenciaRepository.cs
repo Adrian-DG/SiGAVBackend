@@ -151,5 +151,124 @@ namespace Infrastructure.Repositories
 			_context.Entry<Asistencia>(asistencia).State = EntityState.Modified;
 		}
 
+
+		public async Task CreateAsistenciaAgente(CreateAsistenciaAgente model)
+		{
+
+			List<TipoAsistencia> tipoAsistencias = new();
+
+			foreach (var item in model.TipoAsistencias)
+			{
+				var tipo = await _context.TipoAsistencias.FindAsync(item);
+				tipoAsistencias.Add(tipo);
+			}
+
+			var newAsistencia = new Asistencia
+			{
+				// Ciudadano
+				Identificacion = model.Identificacion,
+				Nombre = model.Nombre,
+				Apellido = model.Apellido,
+				Genero = model.Genero,
+				Telefono = model.Telefono,
+				EsExtranjero = model.EsExtranjero,
+				// Vehiculo
+				VehiculoTipoId = model.VehiculoTipoId,
+				VehiculoColorId = model.VehiculoColorId,
+				VehiculoModeloId = model.VehiculoModeloId,
+				VehiculoMarcaId = model.VehiculoMarcaId,
+				Placa = model.Placa,
+				// asistencia (sin coordenadas)
+				MunicipioId = model.MunicipioId,
+				ProvinciaId = model.ProvinciaId,
+				Coordenadas = model.Coordenadas,
+				UnidadMiembroId = model.UnidadMiembroId,
+				ReportadoPor = model.reportadoPor,
+				EstatusAsistencia = EstatusAsistencia.EN_CURSO,
+				UsuarioId = model.UsuarioId,
+				TipoAsistencias = tipoAsistencias,
+				Comentario = model.Comentario,
+				Imagenes = model.Imagenes,
+				Estatus = false
+			};
+
+			await _repository.AddAsync(newAsistencia);
+		}
+
+		public async Task<List<AsistenciaViewModel>> GetAsistenciasAsignadaAUnidad(string ficha)
+		{
+			var results = await _repository
+							.Include(a => a.VehiculoMarca)
+							.Include(a => a.VehiculoModelo)
+							.Include(a => a.VehiculoTipo)
+							.Include(a => a.VehiculoColor)
+							.Include(a => a.UnidadMiembro.Miembro)
+							.Include(a => a.UnidadMiembro.Unidad)
+							.Include(a => a.UnidadMiembro.Unidad.Tramo)
+							.Include(a => a.UnidadMiembro.Miembro.Rango)
+							.Include(a => a.Provincia)
+							.Include(a => a.Municipio)
+							.Where(x => x.UnidadMiembro.Unidad.Ficha == ficha && x.FechaCreacion.Date == DateTime.Now.Date)
+							.OrderByDescending(a => a.FechaCreacion)
+							.Select(a => new AsistenciaViewModel
+							{
+								Id = a.Id,
+								// ciudadano
+								Identificacion = a.Identificacion,
+								NombreCiudadano = $"{a.Nombre} {a.Apellido}",
+								Genero = a.Genero.ToString(),
+								EsExtranjero = a.EsExtranjero,
+								Telefono = a.Telefono,
+								// vehiculo
+								VehiculoColor = a.VehiculoColor.Nombre,
+								VehiculoTipo = a.VehiculoTipo.Nombre,
+								VehiculoMarca = a.VehiculoMarca.Nombre,
+								VehiculoModelo = a.VehiculoModelo.Nombre,
+								Placa = a.Placa,
+								// agente
+								RangoAgente = a.UnidadMiembro.Miembro.Rango.Nombre,
+								CedulaAgente = a.UnidadMiembro.Miembro.Cedula,
+								NombreAgente = a.UnidadMiembro.Miembro.NombreCompleto(),
+								// unidad
+								FichaUnidad = a.UnidadMiembro.Unidad.Ficha,
+								DenominacionUnidad = a.UnidadMiembro.Unidad.Denominacion,
+								TipoUnidad = a.UnidadMiembro.Unidad.TipoUnidad.ToString(),
+								// ubicacion
+								Provincia = a.Provincia.Nombre,
+								Municipio = a.Municipio.Nombre,
+								Coordenadas = a.Coordenadas,
+								Tramo = a.UnidadMiembro.Unidad.Tramo.Nombre,
+								TipoAsistencias = a.TipoAsistencias.ToList(),
+								FechaCreacion = a.FechaCreacion,
+								EstatusAsistencia = a.EstatusAsistencia.ToString(),
+								ReportadaPor = a.ReportadoPor.ToString(),
+								Comentario = a.Comentario,
+								Estatus = a.Estatus 							
+							})
+							.ToListAsync();
+
+			return results;
+
+		}
+
+		//public async Task<ContadorAsistenciasViewModel> GetTotalAsistenciasUnidad(int unidadMiembroId)
+		//{
+		//	var unidadMiembro = await _context.UnidadMiembro
+		//						.Include(x => x.Unidad)
+		//						.SingleAsync(x => x.Id == unidadMiembroId);
+
+		//	var asistencias = await _repository
+		//					.Include(x => x.UnidadMiembro)
+		//					.Include(x => x.UnidadMiembro.Unidad)
+		//					.Where(x => x.UnidadMiembro.UnidadId == unidadMiembro.UnidadId && x.FechaCreacion.Date == DateTime.Now.Date)
+		//					.ToListAsync();
+
+		//	return new ContadorAsistenciasViewModel
+		//	{
+		//		TotalAccidentes = asistencias.,
+		//		TotalAsistencias = asistencias.Count(x => (int)x.TipoAsistencia.CategoriaAsistencia == 2),
+		//	};
+		//}
+
 	}
 }
