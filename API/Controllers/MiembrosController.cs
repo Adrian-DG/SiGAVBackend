@@ -46,6 +46,22 @@ namespace API.Controllers
 			}
 		}
 
+		[AllowAnonymous]
+		[HttpPost("createApp")]
+		public async Task<IActionResult> CreateMiembroApp([FromBody] CreateMiembroDTO model)
+		{
+			try
+			{
+				await _miembros.CreateMiembro(model);
+				return Ok(_response.GetResponse(await _uow.CommitChangesAsync()).Status);
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+
 		[HttpPut("authorize")]
 		public async Task<IActionResult> UpdateEstatusMiembro([FromBody] int id)
 		{
