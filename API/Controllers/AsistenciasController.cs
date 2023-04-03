@@ -79,6 +79,22 @@ namespace API.Controllers
 		}
 
 		[AllowAnonymous]
+		[HttpGet("contador")]
+		public async Task<IActionResult> GetTotalAsistenciasUnidad([FromQuery] int unidadMiembroId)
+		{
+			try
+			{
+				var result = await _asistencias.GetTotalAsistenciasUnidad(unidadMiembroId);
+				return Ok(result);
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+
+		[AllowAnonymous]
 		[HttpGet("all/{ficha}")]
 		public async Task<IActionResult> GetAsistenciasAsignadaAUnidad([FromRoute] string ficha)
 		{

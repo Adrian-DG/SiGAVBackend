@@ -161,7 +161,7 @@ namespace Infrastructure.Repositories
 			{
 				var tipo = await _context.TipoAsistencias.FindAsync(item);
 				tipoAsistencias.Add(tipo);
-			}
+			}	
 
 			var newAsistencia = new Asistencia
 			{
@@ -251,24 +251,33 @@ namespace Infrastructure.Repositories
 
 		}
 
-		//public async Task<ContadorAsistenciasViewModel> GetTotalAsistenciasUnidad(int unidadMiembroId)
-		//{
-		//	var unidadMiembro = await _context.UnidadMiembro
-		//						.Include(x => x.Unidad)
-		//						.SingleAsync(x => x.Id == unidadMiembroId);
+		public async Task<ContadorAsistenciasViewModel> GetTotalAsistenciasUnidad(int unidadMiembroId)
+		{
+			var unidadMiembro = await _context.UnidadMiembro
+								.Include(x => x.Unidad)
+								.SingleAsync(x => x.Id == unidadMiembroId);
 
-		//	var asistencias = await _repository
-		//					.Include(x => x.UnidadMiembro)
-		//					.Include(x => x.UnidadMiembro.Unidad)
-		//					.Where(x => x.UnidadMiembro.UnidadId == unidadMiembro.UnidadId && x.FechaCreacion.Date == DateTime.Now.Date)
-		//					.ToListAsync();
+			var asistencias = await _repository
+							.Include(x => x.UnidadMiembro)
+							.Include(x => x.UnidadMiembro.Unidad)
+							.Where(x => x.UnidadMiembro.UnidadId == unidadMiembro.UnidadId && x.FechaCreacion.Date == DateTime.Now.Date)
+							.ToListAsync();
 
-		//	return new ContadorAsistenciasViewModel
-		//	{
-		//		TotalAccidentes = asistencias.,
-		//		TotalAsistencias = asistencias.Count(x => (int)x.TipoAsistencia.CategoriaAsistencia == 2),
-		//	};
-		//}
+			int totalAsistencias = 0;
+			int totalAccidentes = 0;
+
+			foreach(var item in asistencias)
+			{
+				totalAccidentes += item.TipoAsistencias.Count(x => (int)x.CategoriaAsistencia == 1);
+				totalAsistencias += item.TipoAsistencias.Count(x => (int)x.CategoriaAsistencia == 2);
+			}
+
+			return new ContadorAsistenciasViewModel
+			{
+				TotalAccidentes = totalAccidentes,
+				TotalAsistencias = totalAsistencias
+			};
+		}
 
 	}
 }
