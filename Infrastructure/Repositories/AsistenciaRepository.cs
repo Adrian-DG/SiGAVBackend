@@ -279,5 +279,20 @@ namespace Infrastructure.Repositories
 			};
 		}
 
+
+		public async Task<List<AsistenciasUnidadTramoViewModel>> GetMetricasAsistenciasUnidadByTramo(int tramoId)
+		{
+			var results = await _repository
+						.Include(x => x.UnidadMiembro)
+						.Include(x => x.UnidadMiembro.Unidad)
+						.Include(x => x.UnidadMiembro.Unidad.Tramo)						
+						.Where(x => x.UnidadMiembro.Unidad.Tramo.Id == tramoId && x.FechaCreacion.Date == DateTime.Now.Date)
+						.GroupBy(x => x.UnidadMiembro.Unidad.Ficha)
+						.Select(x => new AsistenciasUnidadTramoViewModel { Ficha = x.Key, Total = x.Count() })
+						.ToListAsync();
+
+			return results;
+		}
+
 	}
 }

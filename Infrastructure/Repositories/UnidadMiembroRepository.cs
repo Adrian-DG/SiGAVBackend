@@ -54,6 +54,7 @@ namespace Infrastructure.Repositories
 				Tramo = foundUnit.Tramo.Nombre,
 				MiembroInfo = $"Nombre: {member.NombreCompleto()}, {member.Rango.Nombre}",
 				Token = _token.GenerateUnitToken(foundUnit),
+				EsEncargado = (foundUnit.TipoUnidadId.Equals(1) || foundUnit.TipoUnidadId.Equals(2)),
 				Estatus = true
 			};
 		}

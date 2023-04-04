@@ -72,4 +72,5 @@ namespace Infrastructure.Repositories
 			return await _repository.AnyAsync(x => x.Ficha == ficha);
 		}
 	}
+
 }

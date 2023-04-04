@@ -109,5 +109,20 @@ namespace API.Controllers
 			}
 		}
 
+		[AllowAnonymous]
+		[HttpGet("metricas")]
+		public async Task<IActionResult> GetMetricasAsistenciasUnidadByTramo([FromQuery] int tramoId)
+		{
+			try
+			{
+				var result = await _asistencias.GetMetricasAsistenciasUnidadByTramo(tramoId);
+				return Ok(result);
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
 	}
 }
