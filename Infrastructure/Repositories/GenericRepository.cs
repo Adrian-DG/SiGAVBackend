@@ -1,4 +1,5 @@
-﻿using Infrastructure.Context;
+﻿using Domain.Abstraction;
+using Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repositories
 {
-	public class GenericRepository<T> : IGenericRepository<T> where T: class
+	public class GenericRepository<T> : IGenericRepository<T> where T: ModelMetadata
 	{
 		protected readonly MainContext _context;
 		protected readonly DbSet<T> _repository;
@@ -55,9 +56,9 @@ namespace Infrastructure.Repositories
 			return await _repository.FindAsync(id);
 		}
 
-		public async Task<int> GetTotalRecords()
+		public async Task<int> GetTotalRecords(bool status)
 		{
-			return await _repository.CountAsync();
+			return await _repository.CountAsync(x => x.Estatus == status);
 		}
 
 		public async Task InsertAsync(T entity)

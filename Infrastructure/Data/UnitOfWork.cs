@@ -1,5 +1,6 @@
 ﻿using Application.Contracts;
 using Application.DataAccess;
+using Domain.Abstraction;
 using Infrastructure.Context;
 using Infrastructure.Repositories;
 using Microsoft.Extensions.Configuration;
@@ -40,7 +41,7 @@ namespace Infrastructure.Data
 			return await _context.SaveChangesAsync() > 0;
 		}
 
-		public object Repository<T>() where T : class
+		public object Repository<T>() where T : ModelMetadata
 		{
 			string assembly = typeof(T).ToString();
 

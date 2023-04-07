@@ -20,7 +20,7 @@ namespace API.Controllers
 		{
 			try
 			{
-				var result = await _unidadMiembro.CreateUnidadMiembro(model);
+					var result = await _unidadMiembro.CreateUnidadMiembro(model);
 
 				return Ok(result);
 			}

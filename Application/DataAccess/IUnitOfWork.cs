@@ -1,4 +1,5 @@
 ﻿using Application.Contracts;
+using Domain.Abstraction;
 using Domain.Response;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,6 @@ namespace Application.DataAccess
         Task<bool> CommitChangesAsync();
 
         IAuthRepository AuthRepository { get; }
-        object Repository<T>() where T : class;
+        object Repository<T>() where T : ModelMetadata;
     }
 }

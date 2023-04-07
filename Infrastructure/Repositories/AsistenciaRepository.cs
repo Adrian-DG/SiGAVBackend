@@ -19,7 +19,7 @@ namespace Infrastructure.Repositories
 		private async Task<int> GetUnidadMiembroId(int unidadId)
 		{
 			var results = await _context.UnidadMiembro
-						.Where(x => x.UnidadId == unidadId && x.FechaCreacion.Date == DateTime.Now.Date)
+						.Where(x => x.UnidadId == unidadId)
 						.OrderByDescending(x => x.FechaCreacion)
 						.ToListAsync();
 
@@ -66,7 +66,7 @@ namespace Infrastructure.Repositories
 				Estatus = false
 			};
 
-			await _repository.AddAsync(newAsistencia);
+				await _repository.AddAsync(newAsistencia);
 		}
 
 		public async Task<PagedData<AsistenciaViewModel>> GetAllAsistencias(PaginationFilter filters, Expression<Func<Asistencia, bool>> predicate)
@@ -130,7 +130,7 @@ namespace Infrastructure.Repositories
 				Page = filters.Page,
 				Size = filters.Size,
 				Items = result,
-				TotalCount = await GetTotalRecords()
+				TotalCount = await GetTotalRecords(filters.Status)
 			};
 		}
 
