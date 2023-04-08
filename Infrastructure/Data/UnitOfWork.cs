@@ -29,7 +29,8 @@ namespace Infrastructure.Data
 				{ "Domain.Entities.Unidad", new UnidadRepository(_context) },
 				{ "Domain.Entities.Miembro", new MiembroRepository(_context) },
 				{ "Domain.Entities.Asistencia", new AsistenciaRepository(_context) },
-				{ "Domain.Entities.UnidadMiembro", new UnidadMiembroRepository(_context, _configuration) }
+				{ "Domain.Entities.UnidadMiembro", new UnidadMiembroRepository(_context, _configuration) },
+				{ "Domain.Entities.VehiculoModelo", new VehiculoModeloRepository(_context) }
 			};
 
 		}
