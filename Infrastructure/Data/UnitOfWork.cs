@@ -1,5 +1,6 @@
 ﻿using Application.Contracts;
 using Application.DataAccess;
+using Domain.Abstraction;
 using Infrastructure.Context;
 using Infrastructure.Repositories;
 using Microsoft.Extensions.Configuration;
@@ -28,7 +29,8 @@ namespace Infrastructure.Data
 				{ "Domain.Entities.Unidad", new UnidadRepository(_context) },
 				{ "Domain.Entities.Miembro", new MiembroRepository(_context) },
 				{ "Domain.Entities.Asistencia", new AsistenciaRepository(_context) },
-				{ "Domain.Entities.UnidadMiembro", new UnidadMiembroRepository(_context, _configuration) }
+				{ "Domain.Entities.UnidadMiembro", new UnidadMiembroRepository(_context, _configuration) },
+				{ "Domain.Entities.VehiculoModelo", new VehiculoModeloRepository(_context) }
 			};
 
 		}
@@ -40,7 +42,7 @@ namespace Infrastructure.Data
 			return await _context.SaveChangesAsync() > 0;
 		}
 
-		public object Repository<T>() where T : class
+		public object Repository<T>() where T : ModelMetadata
 		{
 			string assembly = typeof(T).ToString();
 

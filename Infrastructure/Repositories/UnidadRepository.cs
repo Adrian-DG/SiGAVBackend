@@ -43,7 +43,7 @@ namespace Infrastructure.Repositories
 				Page = filters.Page,
 				Size = filters.Size,
 				Items = results,
-				TotalCount = await GetTotalRecords()
+				TotalCount = await GetTotalRecords(filters.Status)
 			};
 		}
 
