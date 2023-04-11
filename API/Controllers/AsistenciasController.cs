@@ -21,7 +21,8 @@ namespace API.Controllers
 			try
 			{
 				await _asistencias.CreateAsistenciaR5(model);
-				return Ok(_response.GetResponse(await _uow.CommitChangesAsync()));
+				var response = _response.GetResponse(await _uow.CommitChangesAsync());
+				return Ok(response);
 			}
 			catch (Exception)
 			{
