@@ -125,5 +125,21 @@ namespace API.Controllers
 			}
 		}
 
+		[AllowAnonymous]
+		[HttpGet("reporte")]
+		public IActionResult GetReporteAsistencias([FromQuery] DateFilter filter)
+		{
+			try
+			{
+				var result = _asistencias.GetReporteAsistencias(filter);
+				return Ok(result);
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+
 	}
 }

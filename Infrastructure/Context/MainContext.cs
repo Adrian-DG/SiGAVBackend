@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Domain.Enums;
+using Domain.ResultSetsModels;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System;
@@ -21,6 +22,10 @@ namespace Infrastructure.Context
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
+
+			// SP_Asistencias_Por_Region (SQL Procedure)
+			modelBuilder.Entity<SP_ReporteAsistenciasResult>(e => e.HasNoKey());
+
 			// Guardamos listado como JSON a la base de datos 
 
 			modelBuilder.Entity<Asistencia>()
@@ -606,6 +611,8 @@ namespace Infrastructure.Context
 			}		
 
 		}
+
+		public DbSet<SP_ReporteAsistenciasResult> SP_ReporteAsistenciasResult { get; set; }
 
 		public DbSet<Usuario> Usuarios { get; set; }
 		public DbSet<Permiso> Permisos { get; set; }

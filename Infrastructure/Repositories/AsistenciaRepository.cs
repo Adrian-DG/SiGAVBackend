@@ -1,8 +1,10 @@
-﻿using Domain.ViewModels;
+﻿using Domain.ResultSetsModels;
+using Domain.ViewModels;
 using Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -292,6 +294,11 @@ namespace Infrastructure.Repositories
 						.ToListAsync();
 
 			return results;
+		}
+
+		public List<SP_ReporteAsistenciasResult> GetReporteAsistencias(DateFilter filter)
+		{
+			return _context.SP_ReporteAsistenciasResult.FromSqlInterpolated($"[dbo].[CorteAsistencias] {filter.InitialDate}, {filter.FinalDate}").ToList();
 		}
 
 	}
