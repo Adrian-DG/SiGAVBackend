@@ -89,9 +89,10 @@ namespace Infrastructure.Repositories
 						.Include(a => a.Municipio)
 						.Include(a => a.Provincia)
 						.Where(predicate)
+						.OrderByDescending(a => a.FechaCreacion.Date)
+						.ThenByDescending(a => a.FechaCreacion.TimeOfDay)
 						.Skip((filters.Page - 1) * filters.Size)
 						.Take(filters.Size)
-						.OrderByDescending(a => a.FechaCreacion)
 						.Select(a => new AsistenciaViewModel
 						{
 							Id = a.Id,
