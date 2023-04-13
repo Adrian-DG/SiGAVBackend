@@ -10,7 +10,11 @@ builder.Services.GetApplicationServices(builder.Configuration, builder.Environme
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddCors(opt => opt.AddPolicy(_customPolicy, b =>
 {
-	b.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().WithExposedHeaders("content-disposition");
+	b.AllowAnyOrigin();
+	b.AllowAnyMethod();
+	b.AllowAnyHeader();
+	// Allows to send back exports filename 
+	b.WithExposedHeaders("content-disposition");
 }));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
