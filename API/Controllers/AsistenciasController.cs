@@ -163,7 +163,7 @@ namespace API.Controllers
 					worksheet.Cells["B3"].Value = printDate;
 
 					// nota (advertencia)
-					var disclaimer = worksheet.Cells["A5:I5"];
+					var disclaimer = worksheet.Cells["A5"];
 					disclaimer.Merge = true;
 					disclaimer.Style.Font.Bold = true;
 					disclaimer.LoadFromText("Nota: Este documento, pretende servir como apoyo para realizar el corte de las asistencias realizadas.");
@@ -180,7 +180,6 @@ namespace API.Controllers
 					tableHeader.Style.Fill.BackgroundColor.SetColor(Color.FromArgb(38, 46, 133));
 					tableHeader.Style.Font.Color.SetColor(Color.White);
 					tableHeader.Style.Font.Bold = true;
-					tableHeader.Style.Border.BorderAround(OfficeOpenXml.Style.ExcelBorderStyle.Thin);
 
 					// Data rows 
 					var startRow = worksheet.Cells["A8:D8"];
