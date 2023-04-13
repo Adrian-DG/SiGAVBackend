@@ -296,7 +296,7 @@ namespace Infrastructure.Repositories
 			return results;
 		}
 
-		public List<SP_ReporteAsistenciasResult> GetReporteAsistencias(DateFilter filter)
+		public List<SP_ReporteAsistenciasResult> GetResumenAsistencias(DateFilter filter)
 		{
 			return _context.SP_ReporteAsistenciasResult.FromSqlInterpolated($"[dbo].[CorteAsistencias] {filter.InitialDate}, {filter.FinalDate}").ToList();
 		}

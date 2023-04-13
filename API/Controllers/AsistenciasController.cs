@@ -3,6 +3,9 @@ using Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using OfficeOpenXml;
+using System.Drawing;
+using System.Linq.Expressions;
 
 namespace API.Controllers
 {
@@ -125,18 +128,61 @@ namespace API.Controllers
 			}
 		}
 
-		[AllowAnonymous]
-		[HttpGet("reporte")]
-		public IActionResult GetReporteAsistencias([FromQuery] DateFilter filter)
+		[HttpGet("reporte/resumen_fecha")]
+		public IActionResult GetReporteResumenAsistencias([FromQuery] DateFilter filter)
 		{
 			try
 			{
-				var result = _asistencias.GetReporteAsistencias(filter);
-				return Ok(result);
+				var result = _asistencias.GetResumenAsistencias(filter);
+
+				var stream = new MemoryStream();
+
+				using (var excel = new ExcelPackage())
+				{
+					var worksheet = excel.Workbook.Worksheets.Add("Resumen");
+					var namedStyle = excel.Workbook.Styles.CreateNamedStyle("HyperLink");
+					namedStyle.Style.Font.UnderLine = true;
+					namedStyle.Style.Font.Color.SetColor(Color.Blue);
+
+					const int startRow = 5;
+					var row = startRow;
+
+					worksheet.Cells["A1"].Value = "Resumen Asistencias";
+
+					using (var header = worksheet.Cells["A1:C1"])
+					{
+						header.Merge = true;
+						header.Style.Font.Color.SetColor(Color.White);
+						header.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.CenterContinuous;
+						header.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+						header.Style.Fill.BackgroundColor.SetColor(Color.FromArgb(23, 55, 93));
+					}
+
+					worksheet.Cells["A3"].Value = "Fecha";
+					string printDate = DateTime.Now.ToString("dd/MM/yyyy hh:mm tt"); 
+					worksheet.Cells["B3"].Value = printDate;
+
+					foreach (var item in result)
+					{
+						worksheet.Cells[row, 1].Value = item.Region;
+						worksheet.Cells[row, 2].Value = item.CategoriaAsistencia;
+						worksheet.Cells[row, 3].Value = item.TipoAsistencia;
+						worksheet.Cells[row, 4].Value = item.Total;
+					}
+
+					excel.Workbook.Properties.Title = "User List";
+					excel.Workbook.Properties.Author = "Mohamad Lawand";
+					excel.Workbook.Properties.Subject = "User List";
+					// save the new spreadsheet
+					excel.Save();
+
+				}
+
+				stream.Position = 0;
+				return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", $"Resumen_Asistencias_{DateTime.Now.ToString("dd/MM/yyyy")}.xlsx");
 			}
 			catch (Exception)
 			{
-
 				throw;
 			}
 		}
