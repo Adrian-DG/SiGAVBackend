@@ -297,9 +297,20 @@ namespace Infrastructure.Repositories
 			return results;
 		}
 
-		public List<SP_ReporteAsistenciasResult> GetResumenAsistencias(DateFilter filter)
+		public List<SP_ReporteAsistenciasResult> GetResumenAsistenciasDiario()
 		{
-			return _context.SP_ReporteAsistenciasResult.FromSqlInterpolated($"[dbo].[CorteAsistencias] {filter.InitialDate}, {filter.FinalDate}").ToList();
+			return _context.SP_ReporteAsistenciasResult
+				.FromSqlInterpolated($"[dbo].[CorteAsistenciasDiario]")
+				.ToList();
+		}
+
+		public List<SP_ReporteAsistenciasResult> GetResumenAsistenciasPorFecha(DateFilter filter)
+		{
+			var initial = filter.InitialDate.ToString("yyyy-MM-dd");
+			var final = filter.FinalDate.ToString("yyyy-MM-dd");
+			return _context.SP_ReporteAsistenciasResult
+				.FromSqlInterpolated($"[dbo].[CorteAsistencias] {initial}, {final}")
+				.ToList();
 		}
 
 	}

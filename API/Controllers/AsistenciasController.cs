@@ -129,16 +129,95 @@ namespace API.Controllers
 			}
 		}
 
-		[HttpGet("reporte/resumen_fecha")]
-		public IActionResult GetReporteResumenAsistencias([FromQuery] DateFilter filter)
+		[HttpGet("reporte/resumen_diario")]
+		public IActionResult GetReporteResumenAsistenciasDiario()
 		{
 			try
 			{
-				var result = _asistencias.GetResumenAsistencias(filter);
+				var result = _asistencias.GetResumenAsistenciasDiario();
 
 				var stream = new MemoryStream();
 
-				using (var excel = new ExcelPackage())
+				using (var excel = new ExcelPackage(stream))
+				{
+					var worksheet = excel.Workbook.Worksheets.Add("Resumen");
+					var namedStyle = excel.Workbook.Styles.CreateNamedStyle("HyperLink");
+					namedStyle.Style.Font.UnderLine = true;
+					namedStyle.Style.Font.Color.SetColor(Color.Blue);
+
+					worksheet.Cells["A1"].Value = "Resumen Asistencias Diario";
+
+					using (var header = worksheet.Cells["A1:D1"])
+					{
+						header.Merge = true;
+						header.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Left;
+						header.Style.Font.Size = 20;
+						header.Style.Font.Bold = true;
+					}
+
+					// Fecha de impresion (datos)
+					var fecha = worksheet.Cells["A3"];
+					fecha.Value = "Fecha Impresión";
+					fecha.Style.Font.Bold = true;
+					string printDate = DateTime.Now.ToString("dd/MM/yyyy hh:mm tt");
+					worksheet.Cells["B3"].Value = printDate;
+
+					// nota (advertencia)
+					var disclaimer = worksheet.Cells["A5:I5"];
+					disclaimer.Merge = true;
+					disclaimer.Style.Font.Bold = true;
+					disclaimer.LoadFromText("Nota: Este documento, pretende servir como apoyo para realizar el corte de las asistencias realizadas.");
+
+					// Table header 
+					worksheet.Cells["A7"].Value = "Region";
+					worksheet.Cells["B7"].Value = "Categoria";
+					worksheet.Cells["C7"].Value = "Tipo";
+					worksheet.Cells["D7"].Value = "Total";
+
+					var tableHeader = worksheet.Cells["A7:D7"];
+					tableHeader.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+					tableHeader.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
+					tableHeader.Style.Fill.BackgroundColor.SetColor(Color.FromArgb(38, 46, 133));
+					tableHeader.Style.Font.Color.SetColor(Color.White);
+					tableHeader.Style.Font.Bold = true;
+					tableHeader.Style.Border.BorderAround(OfficeOpenXml.Style.ExcelBorderStyle.Thin);
+
+					// Data rows 
+					var startRow = worksheet.Cells["A8:D8"];
+					startRow.Style.VerticalAlignment = OfficeOpenXml.Style.ExcelVerticalAlignment.Center;
+					startRow.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
+					startRow.Style.Border.BorderAround(OfficeOpenXml.Style.ExcelBorderStyle.Thin);
+					startRow.LoadFromCollection(result);
+
+					excel.Workbook.Properties.Title = "Resumen Diario";
+					excel.Workbook.Properties.Author = "Admin";
+					excel.Workbook.Properties.Subject = "Resumen Asistencias";
+					// save the new spreadsheet
+					excel.Save();
+
+				}
+
+				stream.Position = 0;
+				return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", $"resumen_asistencia_diario_{DateTime.Now.ToString("dd-MM-yyyy")}");
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+
+
+		[HttpGet("reporte/resumen_fecha")]
+		public IActionResult GetReporteResumenAsistenciasPorFecha([FromQuery] DateFilter filter)
+		{
+			try
+			{
+				var result = _asistencias.GetResumenAsistenciasPorFecha(filter);
+
+				var stream = new MemoryStream();
+
+				using (var excel = new ExcelPackage(stream))
 				{
 					var worksheet = excel.Workbook.Worksheets.Add("Resumen");
 					var namedStyle = excel.Workbook.Styles.CreateNamedStyle("HyperLink");
