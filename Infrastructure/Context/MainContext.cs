@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Domain.Enums;
+using Domain.ResultSetModels;
 using Domain.ResultSetsModels;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
@@ -22,6 +23,7 @@ namespace Infrastructure.Context
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
+			modelBuilder.Entity<SP_UnidadAutoCompleteResult>(e => e.HasNoKey());
 
 			// SP_Asistencias_Por_Region (SQL Procedure)
 			modelBuilder.Entity<SP_ReporteAsistenciasResult>(e => e.HasNoKey());
@@ -612,6 +614,7 @@ namespace Infrastructure.Context
 
 		}
 
+		public DbSet<SP_UnidadAutoCompleteResult> SP_UnidadAutoCompleteResult { get; set; }
 		public DbSet<SP_ReporteAsistenciasResult> SP_ReporteAsistenciasResult { get; set; }
 
 		public DbSet<Usuario> Usuarios { get; set; }

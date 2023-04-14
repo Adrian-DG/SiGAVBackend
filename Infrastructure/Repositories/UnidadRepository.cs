@@ -1,4 +1,5 @@
-﻿using Domain.ViewModels;
+﻿using Domain.ResultSetModels;
+using Domain.ViewModels;
 using Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -47,24 +48,9 @@ namespace Infrastructure.Repositories
 			};
 		}
 
-		public async Task<List<UnidadAutoCompleteViewModel>> GetUnidadesAutoComplete(string param)
+		public List<SP_UnidadAutoCompleteResult> GetUnidadesAutoComplete(string param)
 		{
-			var result = await _repository
-						.Include(x => x.Tramo)
-						.Where(x => x.Denominacion.Contains(param))
-						.Select(x => new UnidadAutoCompleteViewModel
-						{
-							UnidadId = x.Id,
-							Denominacion = x.Denominacion,
-							Placa = x.Placa,
-							Ficha = x.Ficha,
-							Tramo = x.Tramo.Nombre,
-							EstaDisponible = false
-						})
-						.Take(5)
-						.ToListAsync();
-
-			return result;
+			return _context.SP_UnidadAutoCompleteResult.FromSqlInterpolated($"[dbo].[UnidadesAutocompleteAsignar] {param}").ToList();
 		}
 
 		public async Task<bool> ConfirmUnidadExists(string ficha)
