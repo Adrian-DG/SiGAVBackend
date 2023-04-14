@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Domain.Enums;
+using Domain.ProcedureResults;
 using Domain.ResultSetModels;
 using Domain.ResultSetsModels;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +24,11 @@ namespace Infrastructure.Context
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
+			/* ------- STORED PROCEDURE --------------- */
+
+			// SP Contador de asistencias para las unidades
+			modelBuilder.Entity<SP_ContadorAsistenciasPorUnidad>(e => e.HasNoKey());
+
 			// SP create login unidad miembro aplicacion 
 			modelBuilder.Entity<SP_CreateUnidadMiembro>(e => e.HasNoKey());
 
@@ -32,6 +38,10 @@ namespace Infrastructure.Context
 			// SP_Asistencias_Por_Region (SQL Procedure)
 			modelBuilder.Entity<SP_ReporteAsistenciasResult>(e => e.HasNoKey());
 
+
+			/* ---------- VALUES PARSER (CONVERSIONS) --------------- */
+
+			
 			// Guardamos listado como JSON a la base de datos 
 
 			modelBuilder.Entity<Asistencia>()
@@ -47,6 +57,9 @@ namespace Infrastructure.Context
 					v => JsonConvert.SerializeObject(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }),
 					v => JsonConvert.DeserializeObject<IList<string>>(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore })
 				);
+
+
+			/* ----------- DATA SEEDING TO TABLES --------------- */
 
 			if (true)
 			{
@@ -598,10 +611,13 @@ namespace Infrastructure.Context
 
 		}
 
+		// Stored Procedure result set's
+		public DbSet<SP_ContadorAsistenciasPorUnidad> SP_ContadorAsistenciasPorUnidad_Result { get; set; }
 		public DbSet<SP_CreateUnidadMiembro> SP_CreateUnidadMiembro_Result { get; set; }
-		public DbSet<SP_UnidadAutoCompleteResult> SP_UnidadAutoCompleteResult { get; set; }
-		public DbSet<SP_ReporteAsistenciasResult> SP_ReporteAsistenciasResult { get; set; }
+		public DbSet<SP_UnidadAutoCompleteResult> SP_UnidadAutoComplete_Result { get; set; }
+		public DbSet<SP_ReporteAsistenciasResult> SP_ReporteAsistencias_Result { get; set; }
 
+		// Tables
 		public DbSet<Usuario> Usuarios { get; set; }
 		public DbSet<Permiso> Permisos { get; set; }
 		public DbSet<UsuarioPermiso> UsuarioPermisos { get; set; }

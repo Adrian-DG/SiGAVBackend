@@ -85,11 +85,11 @@ namespace API.Controllers
 
 		[AllowAnonymous]
 		[HttpGet("contador")]
-		public async Task<IActionResult> GetTotalAsistenciasUnidad([FromQuery] int unidadMiembroId)
+		public IActionResult GetTotalAsistenciasUnidad([FromQuery] int unidadMiembroId)
 		{
 			try
 			{
-				var result = await _asistencias.GetTotalAsistenciasUnidad(unidadMiembroId);
+				var result = _asistencias.GetTotalAsistenciasUnidad(unidadMiembroId);
 				return Ok(result);
 			}
 			catch (Exception)

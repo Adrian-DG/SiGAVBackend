@@ -50,7 +50,7 @@ namespace Infrastructure.Repositories
 
 		public List<SP_UnidadAutoCompleteResult> GetUnidadesAutoComplete(string param)
 		{
-			return _context.SP_UnidadAutoCompleteResult.FromSqlInterpolated($"[dbo].[UnidadesAutocompleteAsignar] {param}").ToList();
+			return _context.SP_UnidadAutoComplete_Result.FromSqlInterpolated($"[dbo].[UnidadesAutocompleteAsignar] {param}").ToList();
 		}
 
 		public async Task<bool> ConfirmUnidadExists(string ficha)
