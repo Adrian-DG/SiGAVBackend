@@ -211,7 +211,7 @@ namespace Infrastructure.Repositories
 							.Include(a => a.UnidadMiembro.Miembro.Rango)
 							.Include(a => a.Provincia)
 							.Include(a => a.Municipio)
-							.Where(x => x.UnidadMiembro.Unidad.Ficha == ficha && x.FechaCreacion.Date == DateTime.Now.Date)
+							.Where(x => x.UnidadMiembro.Unidad.Ficha == ficha && x.FechaCreacion == DateTime.Now.Date)
 							.OrderByDescending(a => a.FechaCreacion)
 							.Select(a => new AsistenciaViewModel
 							{
