@@ -3,12 +3,14 @@ using Domain.ResultSetsModels;
 using Domain.ViewModels;
 using Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
+using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 
 namespace Infrastructure.Repositories
@@ -212,7 +214,7 @@ namespace Infrastructure.Repositories
 							.Include(a => a.UnidadMiembro.Miembro.Rango)
 							.Include(a => a.Provincia)
 							.Include(a => a.Municipio)
-							.Where(x => x.UnidadMiembro.Unidad.Ficha == ficha && x.FechaCreacion == DateTime.Now.Date)
+							.Where(x => x.UnidadMiembro.Unidad.Ficha == ficha && x.FechaCreacion.Date == DateTime.Now.Date)
 							.OrderByDescending(a => a.FechaCreacion)
 							.Select(a => new AsistenciaViewModel
 							{
@@ -247,7 +249,7 @@ namespace Infrastructure.Repositories
 								EstatusAsistencia = a.EstatusAsistencia.ToString(),
 								ReportadaPor = a.ReportadoPor.ToString(),
 								Comentario = a.Comentario,
-								Estatus = a.Estatus 							
+								Estatus = a.Estatus
 							})
 							.ToListAsync();
 
