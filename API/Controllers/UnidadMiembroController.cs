@@ -16,17 +16,15 @@ namespace API.Controllers
 
 		[AllowAnonymous]
 		[HttpPost("create")]
-		public async Task<IActionResult> CreateUnidadMiembro([FromBody] CreateUnidadMiembro model)
+		public IActionResult CreateUnidadMiembro([FromBody] CreateUnidadMiembro model)
 		{
 			try
 			{
-					var result = await _unidadMiembro.CreateUnidadMiembro(model);
-
+				var result = _unidadMiembro.CreateUnidadMiembro(model);
 				return Ok(result);
 			}
 			catch (Exception)
 			{
-
 				throw;
 			}
 		}

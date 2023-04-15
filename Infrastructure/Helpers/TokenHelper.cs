@@ -44,12 +44,12 @@ namespace Infrastructure.Helpers
 
 		}
 
-		public string GenerateUnitToken(Unidad unidad)
+		public string GenerateUnitToken(string ficha)
 		{
 			List<Claim> claims = new List<Claim>()
 			{
-				new Claim(ClaimTypes.NameIdentifier, unidad.Id.ToString()),
-				new Claim(ClaimTypes.NameIdentifier, unidad.Ficha.ToString())
+				new Claim(ClaimTypes.NameIdentifier, ficha),
+				new Claim(ClaimTypes.Name, ficha)
 			};
 
 			var SecretKey = _configuration.GetSection("SecretKey").Value;
@@ -60,7 +60,7 @@ namespace Infrastructure.Helpers
 			SecurityTokenDescriptor tokenDecriptor = new SecurityTokenDescriptor
 			{
 				Subject = new ClaimsIdentity(claims),
-				Expires = DateTime.Now.AddHours(24),
+				Expires = DateTime.Now.AddHours(8),
 				SigningCredentials = credentials
 			};
 

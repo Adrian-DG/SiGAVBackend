@@ -18,43 +18,23 @@ namespace Infrastructure.Repositories
 			_token = new TokenHelper(_configuration);
 		}
 
-		public async Task<LoginUnitResponse> CreateUnidadMiembro(CreateUnidadMiembro model)
+		public LoginUnitResponse CreateUnidadMiembro(CreateUnidadMiembro model)
 		{
-			var foundUnit = await _context.Unidades.SingleAsync(x => x.Ficha == model.Ficha);
+			var result = _context.SP_CreateUnidadMiembro_Result
+						.FromSqlInterpolated($"[dbo].[CreateUnidadMiembro] {model.Cedula}, {model.Ficha}").ToList();
 
-			await _context.Entry<Unidad>(foundUnit).Reference(x => x.Tramo).LoadAsync();
-
-			var member = await _context.Miembro.SingleAsync(x => x.Cedula == model.Cedula);
-
-			await _context.Entry<Miembro>(member).Reference(x => x.Rango).LoadAsync();
-
-			// Create new Object
-
-			var newAssignation = new UnidadMiembro
-			{
-				UnidadId = foundUnit.Id,
-				MiembroId = member.Id
-			};
-
-			await _context.UnidadMiembro.AddAsync(newAssignation);
-
-			await _context.SaveChangesAsync();
-
-			var unidadMiembroId = await _context.UnidadMiembro
-								  .Where(x => x.UnidadId.Equals(foundUnit.Id) && x.MiembroId.Equals(member.Id))
-								  .OrderByDescending(x => x.FechaCreacion)
-								  .FirstAsync();
+			var response = result[0];
 
 			return new LoginUnitResponse
 			{
-				Denominacion = foundUnit.Denominacion,
-				UnidadMiembroId = unidadMiembroId.Id,
-				Ficha = foundUnit.Ficha,
-				Placa = foundUnit.Placa,
-				Tramo = foundUnit.Tramo.Nombre,
-				MiembroInfo = $"Nombre: {member.NombreCompleto()}, {member.Rango.Nombre}",
-				Token = _token.GenerateUnitToken(foundUnit),
-				EsEncargado = (foundUnit.TipoUnidadId.Equals(1) || foundUnit.TipoUnidadId.Equals(2)),
+				Denominacion = response.Denominacion,
+				UnidadMiembroId = response.UnidadMiembroId,
+				Ficha = response.Ficha,
+				Placa = response.Placa,
+				Tramo = response.Tramo,
+				MiembroInfo = response.MiembroInfo,
+				Token = _token.GenerateUnitToken(response.Ficha),
+				EsEncargado = response.EsEncargado,
 				Estatus = true
 			};
 		}

@@ -1,5 +1,7 @@
 ﻿using Domain.Entities;
 using Domain.Enums;
+using Domain.ProcedureResults;
+using Domain.ResultSetModels;
 using Domain.ResultSetsModels;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
@@ -22,10 +24,24 @@ namespace Infrastructure.Context
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
+			/* ------- STORED PROCEDURE --------------- */
+
+			// SP Contador de asistencias para las unidades
+			modelBuilder.Entity<SP_ContadorAsistenciasPorUnidad>(e => e.HasNoKey());
+
+			// SP create login unidad miembro aplicacion 
+			modelBuilder.Entity<SP_CreateUnidadMiembro>(e => e.HasNoKey());
+
+			// SP busqueda autocompletar unidades
+			modelBuilder.Entity<SP_UnidadAutoCompleteResult>(e => e.HasNoKey());
 
 			// SP_Asistencias_Por_Region (SQL Procedure)
 			modelBuilder.Entity<SP_ReporteAsistenciasResult>(e => e.HasNoKey());
 
+
+			/* ---------- VALUES PARSER (CONVERSIONS) --------------- */
+
+			
 			// Guardamos listado como JSON a la base de datos 
 
 			modelBuilder.Entity<Asistencia>()
@@ -42,25 +58,8 @@ namespace Infrastructure.Context
 					v => JsonConvert.DeserializeObject<IList<string>>(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore })
 				);
 
-			// Esta data puede cambiar, se insertara con la salvedad de que es temporal
-			//if (false)	
-			//{
-			//	modelBuilder.Entity<Miembro>().HasData(
-			//			new Miembro { Id = 1, Cedula = "00111710059", Nombre = "Juan Jose", Apellido = "Reyes Tatis", Genero = Genero.Masculino, RangoId = (int)RangosEnum.MAYOR_CAPITAN_CORBETA, Institucion = Institucion.ERD },
-			//			new Miembro { Id = 2, Cedula = "00113164909", Nombre = "Jordi Jose", Apellido = "Mercedes Delgado", Genero = Genero.Masculino, RangoId = (int)RangosEnum.PRIMER_TENIENTE_TENIENTE_FRAGATA, Institucion = Institucion.ERD },
-			//			new Miembro { Id = 3, Cedula = "40240760179", Nombre = "Robert Luis", Apellido = "Carbonell Marte", Genero = Genero.Masculino, RangoId = (int)RangosEnum.RASO_MARINERO, Institucion = Institucion.FARD }						
-			//		);
 
-			//	modelBuilder.Entity<SupervisorEncargado>().HasData(
-			//			new SupervisorEncargado { Id = 1, IOT = "OP-10", CategoriaSupervisor = CategoriaSupervisor.SUPERVISOR_REGIONAL, MiembroId = 1 },
-			//			new SupervisorEncargado { Id = 2, IOT = "OP-10.1", CategoriaSupervisor = CategoriaSupervisor.ENCARGADO_ZONA, MiembroId = 2 }
-			//		);
-
-			//	modelBuilder.Entity<SupervisorEncargadoTramo>().HasData(
-			//			new SupervisorEncargadoTramo { Id = 1, SupervisorEncargadoId = 1, TramoId = 9 },
-			//			new SupervisorEncargadoTramo { Id = 2, SupervisorEncargadoId = 2, TramoId = 9 }
-			//		);
-			//}
+			/* ----------- DATA SEEDING TO TABLES --------------- */
 
 			if (true)
 			{
@@ -474,7 +473,7 @@ namespace Infrastructure.Context
 				modelBuilder.Entity<VehiculoTipo>().HasData(
 						new VehiculoTipo { Id = (int)VehiculoTipoEnum.Otro, Nombre = "Otro" },
 						new VehiculoTipo { Id = (int)VehiculoTipoEnum.Autobus, Nombre = "Autobus" },
-						new VehiculoTipo { Id = (int)VehiculoTipoEnum.Camion, Nombre = "Camion" },
+						new VehiculoTipo { Id = (int)VehiculoTipoEnum.Camion, Nombre = "Camión" },
 						new VehiculoTipo { Id = (int)VehiculoTipoEnum.Camioneta, Nombre = "Camioneta" },
 						new VehiculoTipo { Id = (int)VehiculoTipoEnum.Carro, Nombre = "Carro" },
 						new VehiculoTipo { Id = (int)VehiculoTipoEnum.Jeepeta, Nombre = "Jeepeta" },
@@ -612,8 +611,13 @@ namespace Infrastructure.Context
 
 		}
 
-		public DbSet<SP_ReporteAsistenciasResult> SP_ReporteAsistenciasResult { get; set; }
+		// Stored Procedure result set's
+		public DbSet<SP_ContadorAsistenciasPorUnidad> SP_ContadorAsistenciasPorUnidad_Result { get; set; }
+		public DbSet<SP_CreateUnidadMiembro> SP_CreateUnidadMiembro_Result { get; set; }
+		public DbSet<SP_UnidadAutoCompleteResult> SP_UnidadAutoComplete_Result { get; set; }
+		public DbSet<SP_ReporteAsistenciasResult> SP_ReporteAsistencias_Result { get; set; }
 
+		// Tables
 		public DbSet<Usuario> Usuarios { get; set; }
 		public DbSet<Permiso> Permisos { get; set; }
 		public DbSet<UsuarioPermiso> UsuarioPermisos { get; set; }

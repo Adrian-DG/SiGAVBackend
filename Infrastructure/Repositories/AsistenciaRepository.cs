@@ -1,13 +1,16 @@
-﻿using Domain.ResultSetsModels;
+﻿using Domain.ProcedureResults;
+using Domain.ResultSetsModels;
 using Domain.ViewModels;
 using Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
+using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 
 namespace Infrastructure.Repositories
@@ -142,6 +145,12 @@ namespace Infrastructure.Repositories
 			var asistencia = await _repository.FindAsync(model.Id);
 
 			asistencia.EstatusAsistencia = model.EstatusAsistencia;
+			
+			if((int)model.EstatusAsistencia == 2)
+			{
+				asistencia.TiempoLlegada = DateTime.Now;
+			}
+			
 			asistencia.FechaModificacion = DateTime.Now;
 
 			if ((int) model.EstatusAsistencia == 3)
@@ -246,7 +255,7 @@ namespace Infrastructure.Repositories
 								EstatusAsistencia = a.EstatusAsistencia.ToString(),
 								ReportadaPor = a.ReportadoPor.ToString(),
 								Comentario = a.Comentario,
-								Estatus = a.Estatus 							
+								Estatus = a.Estatus
 							})
 							.ToListAsync();
 
@@ -254,32 +263,11 @@ namespace Infrastructure.Repositories
 
 		}
 
-		public async Task<ContadorAsistenciasViewModel> GetTotalAsistenciasUnidad(int unidadMiembroId)
+		public SP_ContadorAsistenciasPorUnidad GetTotalAsistenciasUnidad(int unidadMiembroId)
 		{
-			var unidadMiembro = await _context.UnidadMiembro
-								.Include(x => x.Unidad)
-								.SingleAsync(x => x.Id == unidadMiembroId);
-
-			var asistencias = await _repository
-							.Include(x => x.UnidadMiembro)
-							.Include(x => x.UnidadMiembro.Unidad)
-							.Where(x => x.UnidadMiembro.UnidadId == unidadMiembro.UnidadId && x.FechaCreacion.Date == DateTime.Now.Date)
-							.ToListAsync();
-
-			int totalAsistencias = 0;
-			int totalAccidentes = 0;
-
-			foreach(var item in asistencias)
-			{
-				totalAccidentes += item.TipoAsistencias.Count(x => (int)x.CategoriaAsistencia == 1);
-				totalAsistencias += item.TipoAsistencias.Count(x => (int)x.CategoriaAsistencia == 2);
-			}
-
-			return new ContadorAsistenciasViewModel
-			{
-				TotalAccidentes = totalAccidentes,
-				TotalAsistencias = totalAsistencias
-			};
+			return _context.SP_ContadorAsistenciasPorUnidad_Result
+				.FromSqlInterpolated($"[dbo].[ContadorAsistenciasPorUnidad] {unidadMiembroId}")
+				.ToList()[0];
 		}
 
 
@@ -299,7 +287,7 @@ namespace Infrastructure.Repositories
 
 		public List<SP_ReporteAsistenciasResult> GetResumenAsistenciasDiario()
 		{
-			return _context.SP_ReporteAsistenciasResult
+			return _context.SP_ReporteAsistencias_Result
 				.FromSqlInterpolated($"[dbo].[CorteAsistenciasDiario]")
 				.ToList();
 		}
@@ -308,7 +296,7 @@ namespace Infrastructure.Repositories
 		{
 			var initial = filter.InitialDate.ToString("yyyy-MM-dd");
 			var final = filter.FinalDate.ToString("yyyy-MM-dd");
-			return _context.SP_ReporteAsistenciasResult
+			return _context.SP_ReporteAsistencias_Result
 				.FromSqlInterpolated($"[dbo].[CorteAsistencias] {initial}, {final}")
 				.ToList();
 		}
