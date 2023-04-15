@@ -84,6 +84,22 @@ namespace API.Controllers
 		}
 
 		[AllowAnonymous]
+		[HttpPut("iniciar")]
+		public async Task<IActionResult> IniciarAsistencia([FromBody] UpdateAsistencia model)
+		{
+			try
+			{
+				await _asistencias.ActualizarAsistencia(model);
+				await _uow.CommitChangesAsync();
+				return Ok();
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		[AllowAnonymous]
 		[HttpGet("contador")]
 		public IActionResult GetTotalAsistenciasUnidad([FromQuery] int unidadMiembroId)
 		{

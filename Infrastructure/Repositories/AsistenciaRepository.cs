@@ -145,6 +145,12 @@ namespace Infrastructure.Repositories
 			var asistencia = await _repository.FindAsync(model.Id);
 
 			asistencia.EstatusAsistencia = model.EstatusAsistencia;
+			
+			if((int)model.EstatusAsistencia == 2)
+			{
+				asistencia.TiempoLlegada = DateTime.Now;
+			}
+			
 			asistencia.FechaModificacion = DateTime.Now;
 
 			if ((int) model.EstatusAsistencia == 3)
