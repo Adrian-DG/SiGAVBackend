@@ -10,7 +10,7 @@ builder.Services.GetApplicationServices(builder.Configuration, builder.Environme
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddCors(opt => opt.AddPolicy(_customPolicy, b =>
 {
-	b.AllowAnyOrigin();
+	b.WithOrigins("https://94.74.67.195:444", "https://94.74.67.195:450", "http://localhost:4200", "http://localhost:8100");
 	b.AllowAnyMethod();
 	b.AllowAnyHeader();
 	// Allows to send back exports filename 
