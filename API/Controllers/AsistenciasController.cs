@@ -322,12 +322,16 @@ namespace API.Controllers
                     excel.Workbook.Properties.Title = "Detalle Asistencias";
                     excel.Workbook.Properties.Author = "Admin";
                     excel.Workbook.Properties.Subject = "Corte Detalle Asistencias";
+					excel.Save();
 
                 }
 
 
+                stream.Position = 0;
+				return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", $"resumen_asistencia_diario_{DateTime.Now.ToString("dd-MM-yyyy")}");
+
             }
-			catch (Exception)
+            catch (Exception)
 			{
 				throw;
 			}
