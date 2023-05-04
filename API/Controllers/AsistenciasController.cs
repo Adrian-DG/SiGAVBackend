@@ -282,5 +282,52 @@ namespace API.Controllers
 			}
 		}
 
-	}
+		[HttpGet("reporte/resumen_detalles")]
+		public ActionResult GetResumenAsistenciasDetalles()
+		{
+			try
+			{
+				var result = _asistencias.GetResumenAsistenciasDetalles();
+                var stream = new MemoryStream();
+
+				using (var excel = new ExcelPackage(stream))
+				{
+                    var worksheet = excel.Workbook.Worksheets.Add("Resumen");
+                    var namedStyle = excel.Workbook.Styles.CreateNamedStyle("HyperLink");
+                    namedStyle.Style.Font.UnderLine = true;
+                    namedStyle.Style.Font.Color.SetColor(Color.Blue);
+
+                    const int startRow = 5;
+                    var row = startRow;
+
+					var header = worksheet.Cells["A1:C1"]; 
+					header.LoadFromText("Detalle de Asistencias");
+                    header.Merge = true;
+                    header.Style.Font.Color.SetColor(Color.White);
+                    header.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.CenterContinuous;
+                    header.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+                    header.Style.Fill.BackgroundColor.SetColor(Color.FromArgb(23, 55, 93));
+
+					worksheet.Cells["A3"].Value = "Fecha Impresion";
+					worksheet.Cells["B3"].Value = DateTime.Now.ToString("dd/MM/yyyy hh:mm tt");
+
+					var items = worksheet.Cells[startRow, 26].LoadFromCollection(result);
+
+					excel.Save();
+
+                    stream.Position = 0;
+                    return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", $"Detalle_Asistencias_{DateTime.Now.ToString("dd/MM/yyyy")}.xlsx");
+
+                }
+
+
+            }
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+
+    }
 }

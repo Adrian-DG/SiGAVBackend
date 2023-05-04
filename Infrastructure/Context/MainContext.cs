@@ -26,6 +26,9 @@ namespace Infrastructure.Context
 		{
 			/* ------- STORED PROCEDURE --------------- */
 
+			// SP detalle de asistencias 
+			modelBuilder.Entity<SP_ReporteAsistenciasDetalles>(e => e.HasNoKey());
+
 			// SP Contador de asistencias para las unidades
 			modelBuilder.Entity<SP_ContadorAsistenciasPorUnidad>(e => e.HasNoKey());
 
@@ -37,6 +40,7 @@ namespace Infrastructure.Context
 
 			// SP_Asistencias_Por_Region (SQL Procedure)
 			modelBuilder.Entity<SP_ReporteAsistenciasResult>(e => e.HasNoKey());
+
 
 
 			/* ---------- VALUES PARSER (CONVERSIONS) --------------- */
@@ -611,8 +615,9 @@ namespace Infrastructure.Context
 
 		}
 
-		// Stored Procedure result set's
-		public DbSet<SP_ContadorAsistenciasPorUnidad> SP_ContadorAsistenciasPorUnidad_Result { get; set; }
+        // Stored Procedure result set's
+        public DbSet<SP_ReporteAsistenciasDetalles> SP_ReporteAsistenciasDetalles_Result { get; set; }
+        public DbSet<SP_ContadorAsistenciasPorUnidad> SP_ContadorAsistenciasPorUnidad_Result { get; set; }
 		public DbSet<SP_CreateUnidadMiembro> SP_CreateUnidadMiembro_Result { get; set; }
 		public DbSet<SP_UnidadAutoCompleteResult> SP_UnidadAutoComplete_Result { get; set; }
 		public DbSet<SP_ReporteAsistenciasResult> SP_ReporteAsistencias_Result { get; set; }

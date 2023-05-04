@@ -301,5 +301,10 @@ namespace Infrastructure.Repositories
 				.ToList();
 		}
 
+		public List<SP_ReporteAsistenciasDetalles> GetResumenAsistenciasDetalles()
+		{
+			return _context.SP_ReporteAsistenciasDetalles_Result.FromSqlInterpolated($"dbo.CorteAsistenciasDetalle").ToList();
+		}
+
 	}
 }
