@@ -295,28 +295,33 @@ namespace API.Controllers
                     var worksheet = excel.Workbook.Worksheets.Add("Resumen");
                     var namedStyle = excel.Workbook.Styles.CreateNamedStyle("HyperLink");
                     namedStyle.Style.Font.UnderLine = true;
-                    namedStyle.Style.Font.Color.SetColor(Color.Blue);
-
-                    const int startRow = 5;
-                    var row = startRow;
+                    namedStyle.Style.Font.Color.SetColor(Color.Blue);   
 
 					var header = worksheet.Cells["A1:C1"]; 
 					header.LoadFromText("Detalle de Asistencias");
                     header.Merge = true;
-                    header.Style.Font.Color.SetColor(Color.White);
-                    header.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.CenterContinuous;
-                    header.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-                    header.Style.Fill.BackgroundColor.SetColor(Color.FromArgb(23, 55, 93));
 
 					worksheet.Cells["A3"].Value = "Fecha Impresion";
+					worksheet.Cells["A3"].Style.Font.Bold = true;
 					worksheet.Cells["B3"].Value = DateTime.Now.ToString("dd/MM/yyyy hh:mm tt");
 
-					var items = worksheet.Cells[startRow, 26].LoadFromCollection(result);
+                    var tableHeader = worksheet.Cells["A7:D7"];
+                    tableHeader.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+                    tableHeader.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
+                    tableHeader.Style.Fill.BackgroundColor.SetColor(Color.FromArgb(38, 46, 133));
+                    tableHeader.Style.Font.Color.SetColor(Color.White);
+                    tableHeader.Style.Font.Bold = true;
 
-					excel.Save();
+                    // Data rows 
+                    var startRow = worksheet.Cells["A8:D8"];
+                    startRow.Style.VerticalAlignment = OfficeOpenXml.Style.ExcelVerticalAlignment.Center;
+                    startRow.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
+                    startRow.Style.Border.BorderAround(OfficeOpenXml.Style.ExcelBorderStyle.Thin);
+                    startRow.LoadFromCollection(result);
 
-                    stream.Position = 0;
-                    return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", $"Detalle_Asistencias_{DateTime.Now.ToString("dd/MM/yyyy")}.xlsx");
+                    excel.Workbook.Properties.Title = "Detalle Asistencias";
+                    excel.Workbook.Properties.Author = "Admin";
+                    excel.Workbook.Properties.Subject = "Corte Detalle Asistencias";
 
                 }
 
