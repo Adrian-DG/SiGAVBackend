@@ -122,6 +122,7 @@ namespace Infrastructure.Repositories
 							CedulaAgente = a.UnidadMiembro.Miembro.Cedula,
 							NombreAgente = String.Concat(a.UnidadMiembro.Miembro.Nombre, " ", a.UnidadMiembro.Miembro.Apellido),
 							RangoAgente = a.UnidadMiembro.Miembro.Rango.Nombre,
+							Institucion = a.UnidadMiembro.Miembro.Institucion.ToString(),
 							TipoAsistencias = a.TipoAsistencias.ToList(),
 							Comentario = a.Comentario,
 							ReportadaPor = a.ReportadoPor.ToString(),

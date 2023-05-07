@@ -42,9 +42,10 @@ namespace Domain.ViewModels
 		public string CedulaAgente { get; set; }
 		public string NombreAgente { get; set; }
 		public string RangoAgente { get; set; }
+        public string Institucion { get; set; }
 
-		// Tipificacion Asistencia
-		public List<TipoAsistencia> TipoAsistencias { get; set; }
+        // Tipificacion Asistencia
+        public List<TipoAsistencia> TipoAsistencias { get; set; }
 		public string Comentario { get; set; }
 
 		// Metadata Asistencia
