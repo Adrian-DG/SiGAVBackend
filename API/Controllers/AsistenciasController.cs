@@ -1,5 +1,7 @@
 ﻿using Application.DataAccess;
 using Domain.Entities;
+using Domain.ProcedureResults;
+using Domain.ResultSetsModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -156,60 +158,41 @@ namespace API.Controllers
 
 				using (var excel = new ExcelPackage(stream))
 				{
-					var worksheet = excel.Workbook.Worksheets.Add("Resumen");
-					var namedStyle = excel.Workbook.Styles.CreateNamedStyle("HyperLink");
-					namedStyle.Style.Font.UnderLine = true;
-					namedStyle.Style.Font.Color.SetColor(Color.Blue);
 
-					worksheet.Cells["A1"].Value = "Resumen Asistencias Diario";
+					ExcelWorksheet worksheet = excel.Workbook.Worksheets.Add("Reporte de Asistencias");
 
-					using (var header = worksheet.Cells["A1:D1"])
+					int startRow = 4;
+					int columnIndex = 1;
+
+					foreach (var prop in typeof(SP_ReporteAsistenciasResult).GetProperties())
 					{
-						header.Merge = true;
-						header.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Left;
-						header.Style.Font.Size = 20;
-						header.Style.Font.Bold = true;
+						worksheet.Cells[startRow, columnIndex].Value = prop.Name;
+						columnIndex++;
 					}
 
-					// Fecha de impresion (datos)
-					var fecha = worksheet.Cells["A3"];
-					fecha.Value = "Fecha Impresión";
-					fecha.Style.Font.Bold = true;
-					string printDate = DateTime.Now.ToString("dd/MM/yyyy hh:mm tt");
-					worksheet.Cells["B3"].Value = printDate;
+					// Apply styling to column headers
+					using (var range = worksheet.Cells[startRow, 1, startRow, columnIndex])
+					{
+						range.Style.Font.Bold = true;
+						range.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+						range.Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.Gray);
+						range.Style.Font.Color.SetColor(System.Drawing.Color.White);
+					}
 
-					// nota (advertencia)
-					var disclaimer = worksheet.Cells["A5"];
-					disclaimer.Merge = true;
-					disclaimer.Style.Font.Bold = true;
-					disclaimer.LoadFromText("Nota: Este documento, pretende servir como apoyo para realizar el corte de las asistencias realizadas.");
+					// Populate data rows
+					int rowIndex = 2;
+					foreach (var item in result)
+					{
+						columnIndex = 1;
+						foreach (var prop in typeof(SP_ReporteAsistenciasResult).GetProperties())
+						{
+							worksheet.Cells[rowIndex, columnIndex].Value = prop.GetValue(item, null);
+							columnIndex++;
+						}
+						rowIndex++;
+					}
 
-					// Table header 
-					worksheet.Cells["A7"].Value = "Region";
-					worksheet.Cells["B7"].Value = "Categoria";
-					worksheet.Cells["C7"].Value = "Tipo";
-					worksheet.Cells["D7"].Value = "Total";
-
-					var tableHeader = worksheet.Cells["A7:D7"];
-					tableHeader.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-					tableHeader.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
-					tableHeader.Style.Fill.BackgroundColor.SetColor(Color.FromArgb(38, 46, 133));
-					tableHeader.Style.Font.Color.SetColor(Color.White);
-					tableHeader.Style.Font.Bold = true;
-
-					// Data rows 
-					var startRow = worksheet.Cells["A8:D8"];
-					startRow.Style.VerticalAlignment = OfficeOpenXml.Style.ExcelVerticalAlignment.Center;
-					startRow.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
-					startRow.Style.Border.BorderAround(OfficeOpenXml.Style.ExcelBorderStyle.Thin);
-					startRow.LoadFromCollection(result);
-
-					excel.Workbook.Properties.Title = "Resumen Diario";
-					excel.Workbook.Properties.Author = "Admin";
-					excel.Workbook.Properties.Subject = "Resumen Asistencias";
-					// save the new spreadsheet
-					excel.Save();
-
+					worksheet.Cells.AutoFitColumns();
 				}
 
 				stream.Position = 0;
@@ -292,43 +275,46 @@ namespace API.Controllers
 
 				using (var excel = new ExcelPackage(stream))
 				{
-                    var worksheet = excel.Workbook.Worksheets.Add("Resumen");
-                    var namedStyle = excel.Workbook.Styles.CreateNamedStyle("HyperLink");
-                    namedStyle.Style.Font.UnderLine = true;
-                    namedStyle.Style.Font.Color.SetColor(Color.Blue);   
+					// Create a new worksheet
+					ExcelWorksheet worksheet = excel.Workbook.Worksheets.Add("Reporte de Asistencias");
 
-					var header = worksheet.Cells["A1:C1"]; 
-					header.LoadFromText("Detalle de Asistencias");
-                    header.Merge = true;
+					int startRow = 4;
+					int columnIndex = 1;
 
-					worksheet.Cells["A3"].Value = "Fecha Impresion";
-					worksheet.Cells["A3"].Style.Font.Bold = true;
-					worksheet.Cells["B3"].Value = DateTime.Now.ToString("dd/MM/yyyy hh:mm tt");
+					foreach(var prop in typeof(SP_ReporteAsistenciasDetalles).GetProperties())
+					{
+						worksheet.Cells[startRow, columnIndex].Value = prop.Name;
+						columnIndex++;
+					}
 
-                    var tableHeader = worksheet.Cells["A7:D7"];
-                    tableHeader.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-                    tableHeader.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
-                    tableHeader.Style.Fill.BackgroundColor.SetColor(Color.FromArgb(38, 46, 133));
-                    tableHeader.Style.Font.Color.SetColor(Color.White);
-                    tableHeader.Style.Font.Bold = true;
+					// Apply styling to column headers
+					using (var range = worksheet.Cells[startRow, 1, startRow, columnIndex])
+					{
+						range.Style.Font.Bold = true;
+						range.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+						range.Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.Gray);
+						range.Style.Font.Color.SetColor(System.Drawing.Color.White);
+					}
 
-                    // Data rows 
-                    var startRow = worksheet.Cells["A8:D8"];
-                    startRow.Style.VerticalAlignment = OfficeOpenXml.Style.ExcelVerticalAlignment.Center;
-                    startRow.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
-                    startRow.Style.Border.BorderAround(OfficeOpenXml.Style.ExcelBorderStyle.Thin);
-                    startRow.LoadFromCollection(result);
+					// Populate data rows
+					int rowIndex = 2;
+					foreach (var item in result)
+					{
+						columnIndex = 1;
+						foreach (var prop in typeof(SP_ReporteAsistenciasDetalles).GetProperties())
+						{
+							worksheet.Cells[rowIndex, columnIndex].Value = prop.GetValue(item, null);
+							columnIndex++;
+						}
+						rowIndex++;
+					}
 
-                    excel.Workbook.Properties.Title = "Detalle Asistencias";
-                    excel.Workbook.Properties.Author = "Admin";
-                    excel.Workbook.Properties.Subject = "Corte Detalle Asistencias";
-					excel.Save();
+					worksheet.Cells.AutoFitColumns();
 
-                }
+				}
 
-
-                stream.Position = 0;
-				return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", $"resumen_asistencia_diario_{DateTime.Now.ToString("dd-MM-yyyy")}");
+				stream.Position = 0;
+				return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", $"resumen_asistencia_{DateTime.Now.ToString("dd-MM-yyyy")}");
 
             }
             catch (Exception)
