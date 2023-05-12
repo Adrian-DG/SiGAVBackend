@@ -1,7 +1,10 @@
 ﻿using Domain.ProcedureResults;
 using Domain.ResultSetsModels;
 using Domain.ViewModels;
+using Google.Apis.Sheets.v4;
+using Google.Apis.Sheets.v4.Data;
 using Infrastructure.Context;
+using Infrastructure.Helpers;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System;
@@ -12,13 +15,79 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Text.Json.Nodes;
 using System.Threading.Tasks;
+using static Google.Apis.Sheets.v4.SpreadsheetsResource.ValuesResource;
 
 namespace Infrastructure.Repositories
 {
 	public class AsistenciaRepository : GenericRepository<Asistencia>
 	{
+		private readonly SpreadsheetsResource.ValuesResource _googleSheetValues;
+
+		private const string SPREADSHEET_ID = "1q8x_9-tZaAyXKDxiC1FceoKwtVsGubky9QvRyeX25RU";
+		private const string SHEET_NAME = "prueba";
+
 		public AsistenciaRepository(MainContext mainContext) : base(mainContext)
 		{
+			_googleSheetValues = new GoogleSheetHelper().Service.Spreadsheets.Values;
+		}
+
+		// Map Excel section
+
+		public static IList<IList<object>> MapToRangeData(AsistenciaExcelSheetModel item)
+		{
+			var objectList = new List<object>()
+			{
+				item.Tipo,
+				item.Categoria,
+				item.Unidad,
+				item.Region,
+				item.Provincia,
+				item.Municipio,
+				item.Tramo,
+				item.Fecha
+			};
+			var rangeData = new List<IList<object>> { objectList };
+			return rangeData;
+		}
+
+		public async Task AddNewRowToExcel(Asistencia model)
+		{
+			var unidadMiembro = await _context.UnidadMiembro.FindAsync(model.UnidadMiembroId);
+
+			await _context.Entry(unidadMiembro).Reference(u => u.Unidad).LoadAsync();
+			await _context.Entry(unidadMiembro.Unidad).Reference(u => u.Tramo).LoadAsync();
+			await _context.Entry(unidadMiembro.Unidad.Tramo).Reference(u => u.RegionAsistencia).LoadAsync();
+
+			var municipio = await _context.Municipios.FindAsync(model.MunicipioId);
+
+			await _context.Entry(municipio).Reference(m => m.Provincia).LoadAsync();
+
+			string tipoAsistencia = "";
+
+			foreach (var item in model.TipoAsistencias)
+			{
+				tipoAsistencia += $"{item.Nombre}, ";
+			}
+
+			var excelModel = new AsistenciaExcelSheetModel()
+			{
+				Tipo = tipoAsistencia,
+				Categoria = model.TipoAsistencias[0].CategoriaAsistencia.ToString(),
+				Unidad = unidadMiembro.Unidad.Denominacion,
+				Region = unidadMiembro.Unidad.Tramo.RegionAsistencia.Nombre,
+				Provincia = municipio.Provincia.Nombre,
+				Municipio = municipio.Nombre,
+				Tramo = unidadMiembro.Unidad.Tramo.Nombre,
+				Fecha = DateTime.Now.ToString("d")
+			};
+			var valueRange = new ValueRange
+			{
+				Values = MapToRangeData(excelModel)
+			};
+
+			var appendRequest = _googleSheetValues.Append(valueRange, SPREADSHEET_ID, $"{SHEET_NAME}!A:I");
+			appendRequest.ValueInputOption = AppendRequest.ValueInputOptionEnum.USERENTERED;
+			appendRequest.Execute();
 		}
 
 		private async Task<int> GetUnidadMiembroId(int unidadId)
@@ -158,6 +227,9 @@ namespace Infrastructure.Repositories
 			{
 				asistencia.Estatus = true;
 				asistencia.TiempoCompletada = DateTime.Now;
+
+				// insert to excel
+				AddNewRowToExcel(asistencia);
 			}			
 
 			_context.Attach<Asistencia>(asistencia);
