@@ -212,8 +212,8 @@ namespace API.Migrations
                         {
                             Id = 1,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4264),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4264),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5304),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5304),
                             Nombre = "Distrito Nacional",
                             ProvinciaId = 5,
                             UsuarioId = 1
@@ -222,8 +222,8 @@ namespace API.Migrations
                         {
                             Id = 2,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4265),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4266),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5305),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5306),
                             Nombre = "Azua de Compostela",
                             ProvinciaId = 1,
                             UsuarioId = 1
@@ -232,8 +232,8 @@ namespace API.Migrations
                         {
                             Id = 3,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4266),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4267),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5307),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5307),
                             Nombre = "Estebanía",
                             ProvinciaId = 1,
                             UsuarioId = 1
@@ -242,8 +242,8 @@ namespace API.Migrations
                         {
                             Id = 4,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4267),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4268),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5308),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5309),
                             Nombre = "Guayabal",
                             ProvinciaId = 1,
                             UsuarioId = 1
@@ -252,8 +252,8 @@ namespace API.Migrations
                         {
                             Id = 5,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4268),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4269),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5310),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5310),
                             Nombre = "Las Charcas",
                             ProvinciaId = 1,
                             UsuarioId = 1
@@ -262,8 +262,8 @@ namespace API.Migrations
                         {
                             Id = 6,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4269),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4270),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5311),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5312),
                             Nombre = "Las Yayas de Viajama",
                             ProvinciaId = 1,
                             UsuarioId = 1
@@ -272,8 +272,8 @@ namespace API.Migrations
                         {
                             Id = 7,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4271),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4271),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5312),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5313),
                             Nombre = "Padre Las Casas",
                             ProvinciaId = 1,
                             UsuarioId = 1
@@ -282,8 +282,8 @@ namespace API.Migrations
                         {
                             Id = 8,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4272),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4272),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5314),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5314),
                             Nombre = "Peralta",
                             ProvinciaId = 1,
                             UsuarioId = 1
@@ -292,8 +292,8 @@ namespace API.Migrations
                         {
                             Id = 9,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4273),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4273),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5315),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5316),
                             Nombre = "Pueblo Viejo",
                             ProvinciaId = 1,
                             UsuarioId = 1
@@ -302,8 +302,8 @@ namespace API.Migrations
                         {
                             Id = 10,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4274),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4274),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5317),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5317),
                             Nombre = "Sabana Yegua",
                             ProvinciaId = 1,
                             UsuarioId = 1
@@ -312,8 +312,8 @@ namespace API.Migrations
                         {
                             Id = 11,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4275),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4275),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5318),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5319),
                             Nombre = "Tábara Arriba",
                             ProvinciaId = 1,
                             UsuarioId = 1
@@ -322,8 +322,8 @@ namespace API.Migrations
                         {
                             Id = 12,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4276),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4276),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5319),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5320),
                             Nombre = "Neiba",
                             ProvinciaId = 2,
                             UsuarioId = 1
@@ -332,8 +332,8 @@ namespace API.Migrations
                         {
                             Id = 13,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4277),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4277),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5321),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5321),
                             Nombre = "Galván",
                             ProvinciaId = 2,
                             UsuarioId = 1
@@ -342,8 +342,8 @@ namespace API.Migrations
                         {
                             Id = 14,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4278),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4278),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5322),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5323),
                             Nombre = "Los Ríos",
                             ProvinciaId = 2,
                             UsuarioId = 1
@@ -352,8 +352,8 @@ namespace API.Migrations
                         {
                             Id = 15,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4279),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4279),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5323),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5324),
                             Nombre = "Villa Jaragua",
                             ProvinciaId = 2,
                             UsuarioId = 1
@@ -362,8 +362,8 @@ namespace API.Migrations
                         {
                             Id = 16,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4280),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4280),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5325),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5325),
                             Nombre = "Tamayo",
                             ProvinciaId = 2,
                             UsuarioId = 1
@@ -372,8 +372,8 @@ namespace API.Migrations
                         {
                             Id = 17,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4281),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4281),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5326),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5327),
                             Nombre = "Barahona",
                             ProvinciaId = 3,
                             UsuarioId = 1
@@ -382,8 +382,8 @@ namespace API.Migrations
                         {
                             Id = 18,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4282),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4282),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5328),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5328),
                             Nombre = "Cabral",
                             ProvinciaId = 3,
                             UsuarioId = 1
@@ -392,8 +392,8 @@ namespace API.Migrations
                         {
                             Id = 19,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4283),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4283),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5329),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5330),
                             Nombre = "El Peñón",
                             ProvinciaId = 3,
                             UsuarioId = 1
@@ -402,8 +402,8 @@ namespace API.Migrations
                         {
                             Id = 20,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4284),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4284),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5330),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5331),
                             Nombre = "Enriquillo",
                             ProvinciaId = 3,
                             UsuarioId = 1
@@ -412,8 +412,8 @@ namespace API.Migrations
                         {
                             Id = 21,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4285),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4285),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5332),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5332),
                             Nombre = "Fundación",
                             ProvinciaId = 3,
                             UsuarioId = 1
@@ -422,8 +422,8 @@ namespace API.Migrations
                         {
                             Id = 22,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4286),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4286),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5333),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5334),
                             Nombre = "Jaquimeyes",
                             ProvinciaId = 3,
                             UsuarioId = 1
@@ -432,8 +432,8 @@ namespace API.Migrations
                         {
                             Id = 23,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4287),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4287),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5335),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5335),
                             Nombre = "La Ciénaga",
                             ProvinciaId = 3,
                             UsuarioId = 1
@@ -442,8 +442,8 @@ namespace API.Migrations
                         {
                             Id = 24,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4288),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4289),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5336),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5337),
                             Nombre = "Las Salinas",
                             ProvinciaId = 3,
                             UsuarioId = 1
@@ -452,8 +452,8 @@ namespace API.Migrations
                         {
                             Id = 25,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4289),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4290),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5337),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5338),
                             Nombre = "Paraíso",
                             ProvinciaId = 3,
                             UsuarioId = 1
@@ -462,8 +462,8 @@ namespace API.Migrations
                         {
                             Id = 26,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4290),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4291),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5339),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5339),
                             Nombre = "Polo",
                             ProvinciaId = 3,
                             UsuarioId = 1
@@ -472,8 +472,8 @@ namespace API.Migrations
                         {
                             Id = 27,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4291),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4292),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5340),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5341),
                             Nombre = "Vicente Noble",
                             ProvinciaId = 3,
                             UsuarioId = 1
@@ -482,8 +482,8 @@ namespace API.Migrations
                         {
                             Id = 28,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4292),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4293),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5341),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5342),
                             Nombre = "Dajabón",
                             ProvinciaId = 4,
                             UsuarioId = 1
@@ -492,8 +492,8 @@ namespace API.Migrations
                         {
                             Id = 29,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4293),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4294),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5343),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5343),
                             Nombre = "El Pino",
                             ProvinciaId = 4,
                             UsuarioId = 1
@@ -502,8 +502,8 @@ namespace API.Migrations
                         {
                             Id = 30,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4294),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4295),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5344),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5345),
                             Nombre = "Loma de Cabrera",
                             ProvinciaId = 4,
                             UsuarioId = 1
@@ -512,8 +512,8 @@ namespace API.Migrations
                         {
                             Id = 31,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4295),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4296),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5347),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5347),
                             Nombre = "Partido",
                             ProvinciaId = 4,
                             UsuarioId = 1
@@ -522,8 +522,8 @@ namespace API.Migrations
                         {
                             Id = 32,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4296),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4297),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5348),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5349),
                             Nombre = "Restauración",
                             ProvinciaId = 4,
                             UsuarioId = 1
@@ -532,8 +532,8 @@ namespace API.Migrations
                         {
                             Id = 33,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4297),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4298),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5349),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5350),
                             Nombre = "San Francisco de Macorís",
                             ProvinciaId = 6,
                             UsuarioId = 1
@@ -542,8 +542,8 @@ namespace API.Migrations
                         {
                             Id = 34,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4299),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4300),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5351),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5351),
                             Nombre = "Arenoso",
                             ProvinciaId = 6,
                             UsuarioId = 1
@@ -552,8 +552,8 @@ namespace API.Migrations
                         {
                             Id = 35,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4300),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4301),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5352),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5353),
                             Nombre = "Castillo",
                             ProvinciaId = 6,
                             UsuarioId = 1
@@ -562,8 +562,8 @@ namespace API.Migrations
                         {
                             Id = 36,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4302),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4302),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5353),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5354),
                             Nombre = "Eugenio María de Hostos",
                             ProvinciaId = 6,
                             UsuarioId = 1
@@ -572,8 +572,8 @@ namespace API.Migrations
                         {
                             Id = 37,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4303),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4303),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5355),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5355),
                             Nombre = "Las Guáranas",
                             ProvinciaId = 6,
                             UsuarioId = 1
@@ -582,8 +582,8 @@ namespace API.Migrations
                         {
                             Id = 38,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4304),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4304),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5356),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5357),
                             Nombre = "Pimentel",
                             ProvinciaId = 6,
                             UsuarioId = 1
@@ -592,8 +592,8 @@ namespace API.Migrations
                         {
                             Id = 39,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4305),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4305),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5358),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5358),
                             Nombre = "Villa Riva",
                             ProvinciaId = 6,
                             UsuarioId = 1
@@ -602,8 +602,8 @@ namespace API.Migrations
                         {
                             Id = 40,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4306),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4306),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5359),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5360),
                             Nombre = "Comendador",
                             ProvinciaId = 8,
                             UsuarioId = 1
@@ -612,8 +612,8 @@ namespace API.Migrations
                         {
                             Id = 41,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4307),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4307),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5360),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5361),
                             Nombre = "Bánica",
                             ProvinciaId = 8,
                             UsuarioId = 1
@@ -622,8 +622,8 @@ namespace API.Migrations
                         {
                             Id = 42,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4308),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4308),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5362),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5362),
                             Nombre = "El Llano",
                             ProvinciaId = 8,
                             UsuarioId = 1
@@ -632,8 +632,8 @@ namespace API.Migrations
                         {
                             Id = 43,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4309),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4496),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5363),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5364),
                             Nombre = "Hondo Valle",
                             ProvinciaId = 8,
                             UsuarioId = 1
@@ -642,8 +642,8 @@ namespace API.Migrations
                         {
                             Id = 44,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4497),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4498),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5364),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5365),
                             Nombre = "Juan Santiago",
                             ProvinciaId = 8,
                             UsuarioId = 1
@@ -652,8 +652,8 @@ namespace API.Migrations
                         {
                             Id = 45,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4498),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4500),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5366),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5366),
                             Nombre = "Pedro Santana",
                             ProvinciaId = 8,
                             UsuarioId = 1
@@ -662,8 +662,8 @@ namespace API.Migrations
                         {
                             Id = 46,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4501),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4502),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5367),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5368),
                             Nombre = "Moca",
                             ProvinciaId = 9,
                             UsuarioId = 1
@@ -672,8 +672,8 @@ namespace API.Migrations
                         {
                             Id = 47,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4502),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4503),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5369),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5369),
                             Nombre = "Cayetano Germosén",
                             ProvinciaId = 9,
                             UsuarioId = 1
@@ -682,8 +682,8 @@ namespace API.Migrations
                         {
                             Id = 48,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4505),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4505),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5370),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5370),
                             Nombre = "Gaspar Hernández",
                             ProvinciaId = 9,
                             UsuarioId = 1
@@ -692,8 +692,8 @@ namespace API.Migrations
                         {
                             Id = 49,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4506),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4506),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5371),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5372),
                             Nombre = "Jamao al Norte",
                             ProvinciaId = 9,
                             UsuarioId = 1
@@ -702,8 +702,8 @@ namespace API.Migrations
                         {
                             Id = 50,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4507),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4507),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5373),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5373),
                             Nombre = "Hato Mayor del Rey",
                             ProvinciaId = 10,
                             UsuarioId = 1
@@ -712,8 +712,8 @@ namespace API.Migrations
                         {
                             Id = 51,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4508),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4508),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5374),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5375),
                             Nombre = "El Valle",
                             ProvinciaId = 10,
                             UsuarioId = 1
@@ -722,8 +722,8 @@ namespace API.Migrations
                         {
                             Id = 52,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4510),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4510),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5376),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5376),
                             Nombre = "Sabana de la Mar",
                             ProvinciaId = 10,
                             UsuarioId = 1
@@ -732,8 +732,8 @@ namespace API.Migrations
                         {
                             Id = 53,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4511),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4511),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5377),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5377),
                             Nombre = "Salcedo",
                             ProvinciaId = 11,
                             UsuarioId = 1
@@ -742,8 +742,8 @@ namespace API.Migrations
                         {
                             Id = 54,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4512),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4512),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5378),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5379),
                             Nombre = "Tenares",
                             ProvinciaId = 11,
                             UsuarioId = 1
@@ -752,8 +752,8 @@ namespace API.Migrations
                         {
                             Id = 55,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4513),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4513),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5380),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5380),
                             Nombre = "Villa Tapia",
                             ProvinciaId = 11,
                             UsuarioId = 1
@@ -762,8 +762,8 @@ namespace API.Migrations
                         {
                             Id = 56,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4514),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4514),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5381),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5381),
                             Nombre = "Jimaní",
                             ProvinciaId = 12,
                             UsuarioId = 1
@@ -772,8 +772,8 @@ namespace API.Migrations
                         {
                             Id = 57,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4515),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4516),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5387),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5389),
                             Nombre = "Cristóbal",
                             ProvinciaId = 12,
                             UsuarioId = 1
@@ -782,8 +782,8 @@ namespace API.Migrations
                         {
                             Id = 58,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4516),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4517),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5390),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5390),
                             Nombre = "Duvergé",
                             ProvinciaId = 12,
                             UsuarioId = 1
@@ -792,8 +792,8 @@ namespace API.Migrations
                         {
                             Id = 59,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4517),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4518),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5391),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5392),
                             Nombre = "La Descubierta",
                             ProvinciaId = 12,
                             UsuarioId = 1
@@ -802,8 +802,8 @@ namespace API.Migrations
                         {
                             Id = 60,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4518),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4519),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5392),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5393),
                             Nombre = "Mella",
                             ProvinciaId = 12,
                             UsuarioId = 1
@@ -812,8 +812,8 @@ namespace API.Migrations
                         {
                             Id = 61,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4519),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4520),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5395),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5396),
                             Nombre = "Postrer Río",
                             ProvinciaId = 12,
                             UsuarioId = 1
@@ -822,8 +822,8 @@ namespace API.Migrations
                         {
                             Id = 62,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4548),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4555),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5396),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5397),
                             Nombre = "Higüey",
                             ProvinciaId = 13,
                             UsuarioId = 1
@@ -832,8 +832,8 @@ namespace API.Migrations
                         {
                             Id = 63,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4556),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4556),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5398),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5398),
                             Nombre = "San Rafael del Yuma",
                             ProvinciaId = 13,
                             UsuarioId = 1
@@ -842,8 +842,8 @@ namespace API.Migrations
                         {
                             Id = 64,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4558),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4558),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5399),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5400),
                             Nombre = "La Romana",
                             ProvinciaId = 14,
                             UsuarioId = 1
@@ -852,8 +852,8 @@ namespace API.Migrations
                         {
                             Id = 65,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4559),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4559),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5401),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5401),
                             Nombre = "Guaymate",
                             ProvinciaId = 14,
                             UsuarioId = 1
@@ -862,8 +862,8 @@ namespace API.Migrations
                         {
                             Id = 66,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4560),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4560),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5402),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5403),
                             Nombre = "Villa Hermosa",
                             ProvinciaId = 14,
                             UsuarioId = 1
@@ -872,8 +872,8 @@ namespace API.Migrations
                         {
                             Id = 67,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4561),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4562),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5403),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5404),
                             Nombre = "La Concepción de La Vega",
                             ProvinciaId = 15,
                             UsuarioId = 1
@@ -882,8 +882,8 @@ namespace API.Migrations
                         {
                             Id = 68,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4562),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4563),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5405),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5405),
                             Nombre = "Constanza",
                             ProvinciaId = 15,
                             UsuarioId = 1
@@ -892,8 +892,8 @@ namespace API.Migrations
                         {
                             Id = 69,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4563),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4564),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5406),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5407),
                             Nombre = "Jarabacoa",
                             ProvinciaId = 15,
                             UsuarioId = 1
@@ -902,8 +902,8 @@ namespace API.Migrations
                         {
                             Id = 70,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4564),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4565),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5408),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5408),
                             Nombre = "Jima Abajo",
                             ProvinciaId = 15,
                             UsuarioId = 1
@@ -912,8 +912,8 @@ namespace API.Migrations
                         {
                             Id = 71,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4565),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4566),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5409),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5410),
                             Nombre = "Nagua",
                             ProvinciaId = 16,
                             UsuarioId = 1
@@ -922,8 +922,8 @@ namespace API.Migrations
                         {
                             Id = 72,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4566),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4567),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5410),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5411),
                             Nombre = "Cabrera",
                             ProvinciaId = 16,
                             UsuarioId = 1
@@ -932,8 +932,8 @@ namespace API.Migrations
                         {
                             Id = 73,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4567),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4568),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5412),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5412),
                             Nombre = "El Factor",
                             ProvinciaId = 16,
                             UsuarioId = 1
@@ -942,8 +942,8 @@ namespace API.Migrations
                         {
                             Id = 74,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4568),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4569),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5413),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5414),
                             Nombre = "Río San Juan",
                             ProvinciaId = 16,
                             UsuarioId = 1
@@ -952,8 +952,8 @@ namespace API.Migrations
                         {
                             Id = 75,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4569),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4570),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5414),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5415),
                             Nombre = "Bonao",
                             ProvinciaId = 17,
                             UsuarioId = 1
@@ -962,8 +962,8 @@ namespace API.Migrations
                         {
                             Id = 76,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4570),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4571),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5416),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5416),
                             Nombre = "Maimón",
                             ProvinciaId = 17,
                             UsuarioId = 1
@@ -972,8 +972,8 @@ namespace API.Migrations
                         {
                             Id = 77,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4572),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4572),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5417),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5418),
                             Nombre = "Piedra Blanca",
                             ProvinciaId = 17,
                             UsuarioId = 1
@@ -982,8 +982,8 @@ namespace API.Migrations
                         {
                             Id = 78,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4573),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4573),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5419),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5419),
                             Nombre = "Montecristi",
                             ProvinciaId = 19,
                             UsuarioId = 1
@@ -992,8 +992,8 @@ namespace API.Migrations
                         {
                             Id = 79,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4574),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4574),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5420),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5421),
                             Nombre = "Castañuela",
                             ProvinciaId = 19,
                             UsuarioId = 1
@@ -1002,8 +1002,8 @@ namespace API.Migrations
                         {
                             Id = 80,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4575),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4575),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5421),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5422),
                             Nombre = "Guayubín",
                             ProvinciaId = 19,
                             UsuarioId = 1
@@ -1012,8 +1012,8 @@ namespace API.Migrations
                         {
                             Id = 81,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4576),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4576),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5423),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5423),
                             Nombre = "Las Matas de Santa Cruz",
                             ProvinciaId = 19,
                             UsuarioId = 1
@@ -1022,8 +1022,8 @@ namespace API.Migrations
                         {
                             Id = 82,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4577),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4577),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5424),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5425),
                             Nombre = "Pepillo Salcedo",
                             ProvinciaId = 19,
                             UsuarioId = 1
@@ -1032,8 +1032,8 @@ namespace API.Migrations
                         {
                             Id = 83,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4578),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4578),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5425),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5426),
                             Nombre = "Villa Vásquez",
                             ProvinciaId = 19,
                             UsuarioId = 1
@@ -1042,8 +1042,8 @@ namespace API.Migrations
                         {
                             Id = 84,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4579),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4579),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5427),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5427),
                             Nombre = "Monte Plata",
                             ProvinciaId = 18,
                             UsuarioId = 1
@@ -1052,8 +1052,8 @@ namespace API.Migrations
                         {
                             Id = 85,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4580),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4580),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5428),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5429),
                             Nombre = "Bayaguana",
                             ProvinciaId = 18,
                             UsuarioId = 1
@@ -1062,8 +1062,8 @@ namespace API.Migrations
                         {
                             Id = 86,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4581),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4581),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5430),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5430),
                             Nombre = "Peralvillo",
                             ProvinciaId = 18,
                             UsuarioId = 1
@@ -1072,8 +1072,8 @@ namespace API.Migrations
                         {
                             Id = 87,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4582),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4582),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5431),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5431),
                             Nombre = "Sabana Grande de Boyá",
                             ProvinciaId = 18,
                             UsuarioId = 1
@@ -1082,8 +1082,8 @@ namespace API.Migrations
                         {
                             Id = 88,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4583),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4583),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5432),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5433),
                             Nombre = "Yamasá",
                             ProvinciaId = 18,
                             UsuarioId = 1
@@ -1092,8 +1092,8 @@ namespace API.Migrations
                         {
                             Id = 89,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4584),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4585),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5434),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5434),
                             Nombre = "Pedernales",
                             ProvinciaId = 20,
                             UsuarioId = 1
@@ -1102,8 +1102,8 @@ namespace API.Migrations
                         {
                             Id = 90,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4585),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4586),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5436),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5436),
                             Nombre = "Oviedo",
                             ProvinciaId = 20,
                             UsuarioId = 1
@@ -1112,8 +1112,8 @@ namespace API.Migrations
                         {
                             Id = 91,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4586),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4587),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5437),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5438),
                             Nombre = "Baní",
                             ProvinciaId = 21,
                             UsuarioId = 1
@@ -1122,8 +1122,8 @@ namespace API.Migrations
                         {
                             Id = 92,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4587),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4588),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5439),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5439),
                             Nombre = "Nizao",
                             ProvinciaId = 21,
                             UsuarioId = 1
@@ -1132,8 +1132,8 @@ namespace API.Migrations
                         {
                             Id = 93,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4588),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4589),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5440),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5441),
                             Nombre = "Puerto Plata",
                             ProvinciaId = 22,
                             UsuarioId = 1
@@ -1142,8 +1142,8 @@ namespace API.Migrations
                         {
                             Id = 94,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4593),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4593),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5441),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5442),
                             Nombre = "Altamira",
                             ProvinciaId = 22,
                             UsuarioId = 1
@@ -1152,8 +1152,8 @@ namespace API.Migrations
                         {
                             Id = 95,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4594),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4594),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5443),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5443),
                             Nombre = "Guananico",
                             ProvinciaId = 22,
                             UsuarioId = 1
@@ -1162,8 +1162,8 @@ namespace API.Migrations
                         {
                             Id = 96,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4595),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4595),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5444),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5445),
                             Nombre = "Imbert",
                             ProvinciaId = 22,
                             UsuarioId = 1
@@ -1172,8 +1172,8 @@ namespace API.Migrations
                         {
                             Id = 97,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4596),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4596),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5445),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5446),
                             Nombre = "Los Hidalgos",
                             ProvinciaId = 22,
                             UsuarioId = 1
@@ -1182,8 +1182,8 @@ namespace API.Migrations
                         {
                             Id = 98,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4597),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4597),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5447),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5447),
                             Nombre = "Luperón",
                             ProvinciaId = 22,
                             UsuarioId = 1
@@ -1192,8 +1192,8 @@ namespace API.Migrations
                         {
                             Id = 99,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4598),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4598),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5448),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5449),
                             Nombre = "Sosúa",
                             ProvinciaId = 22,
                             UsuarioId = 1
@@ -1202,8 +1202,8 @@ namespace API.Migrations
                         {
                             Id = 100,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4599),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4599),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5449),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5450),
                             Nombre = "Villa Isabela",
                             ProvinciaId = 22,
                             UsuarioId = 1
@@ -1212,8 +1212,8 @@ namespace API.Migrations
                         {
                             Id = 101,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4600),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4600),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5451),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5451),
                             Nombre = "Villa Montellano",
                             ProvinciaId = 22,
                             UsuarioId = 1
@@ -1222,8 +1222,8 @@ namespace API.Migrations
                         {
                             Id = 102,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4601),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4601),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5452),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5453),
                             Nombre = "Samaná",
                             ProvinciaId = 23,
                             UsuarioId = 1
@@ -1232,8 +1232,8 @@ namespace API.Migrations
                         {
                             Id = 103,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4602),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4602),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5454),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5454),
                             Nombre = "Las Terrenas",
                             ProvinciaId = 23,
                             UsuarioId = 1
@@ -1242,8 +1242,8 @@ namespace API.Migrations
                         {
                             Id = 104,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4603),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4604),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5455),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5455),
                             Nombre = "Sánchez",
                             ProvinciaId = 23,
                             UsuarioId = 1
@@ -1252,8 +1252,8 @@ namespace API.Migrations
                         {
                             Id = 105,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4604),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4605),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5456),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5457),
                             Nombre = "San Cristóbal",
                             ProvinciaId = 24,
                             UsuarioId = 1
@@ -1262,8 +1262,8 @@ namespace API.Migrations
                         {
                             Id = 106,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4605),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4606),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5458),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5458),
                             Nombre = "Bajos de Haina",
                             ProvinciaId = 24,
                             UsuarioId = 1
@@ -1272,8 +1272,8 @@ namespace API.Migrations
                         {
                             Id = 107,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4606),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4607),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5459),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5459),
                             Nombre = "Cambita Garabito",
                             ProvinciaId = 24,
                             UsuarioId = 1
@@ -1282,8 +1282,8 @@ namespace API.Migrations
                         {
                             Id = 108,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4607),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4608),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5460),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5461),
                             Nombre = "Los Cacaos",
                             ProvinciaId = 24,
                             UsuarioId = 1
@@ -1292,8 +1292,8 @@ namespace API.Migrations
                         {
                             Id = 109,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4609),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4609),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5462),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5462),
                             Nombre = "Sabana Grande de Palenque",
                             ProvinciaId = 24,
                             UsuarioId = 1
@@ -1302,8 +1302,8 @@ namespace API.Migrations
                         {
                             Id = 110,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4610),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4610),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5463),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5464),
                             Nombre = "San Gregorio de Nigua",
                             ProvinciaId = 24,
                             UsuarioId = 1
@@ -1312,8 +1312,8 @@ namespace API.Migrations
                         {
                             Id = 111,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4611),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4611),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5464),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5465),
                             Nombre = "Villa Altagracia",
                             ProvinciaId = 24,
                             UsuarioId = 1
@@ -1322,8 +1322,8 @@ namespace API.Migrations
                         {
                             Id = 112,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4612),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4612),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5466),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5466),
                             Nombre = "Yaguate",
                             ProvinciaId = 24,
                             UsuarioId = 1
@@ -1332,8 +1332,8 @@ namespace API.Migrations
                         {
                             Id = 113,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4613),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4613),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5467),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5468),
                             Nombre = "San José de Ocoa",
                             ProvinciaId = 25,
                             UsuarioId = 1
@@ -1342,8 +1342,8 @@ namespace API.Migrations
                         {
                             Id = 114,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4614),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4614),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5468),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5469),
                             Nombre = "Rancho Arriba",
                             ProvinciaId = 25,
                             UsuarioId = 1
@@ -1352,8 +1352,8 @@ namespace API.Migrations
                         {
                             Id = 115,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4615),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4615),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5470),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5470),
                             Nombre = "Sabana Larga",
                             ProvinciaId = 25,
                             UsuarioId = 1
@@ -1362,8 +1362,8 @@ namespace API.Migrations
                         {
                             Id = 116,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4616),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4616),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5471),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5472),
                             Nombre = "BOHECHIO",
                             ProvinciaId = 26,
                             UsuarioId = 1
@@ -1372,8 +1372,8 @@ namespace API.Migrations
                         {
                             Id = 117,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4617),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4617),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5473),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5473),
                             Nombre = "EL CERCADO",
                             ProvinciaId = 26,
                             UsuarioId = 1
@@ -1382,8 +1382,8 @@ namespace API.Migrations
                         {
                             Id = 118,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4618),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4618),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5474),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5474),
                             Nombre = "JUAN DE HERRERA",
                             ProvinciaId = 26,
                             UsuarioId = 1
@@ -1392,8 +1392,8 @@ namespace API.Migrations
                         {
                             Id = 119,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4619),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4620),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5475),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5476),
                             Nombre = "LAS MATAS DE FARFAN",
                             ProvinciaId = 26,
                             UsuarioId = 1
@@ -1402,8 +1402,8 @@ namespace API.Migrations
                         {
                             Id = 120,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4620),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4621),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5478),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5478),
                             Nombre = "SAN JUAN DE LA MAGUANA",
                             ProvinciaId = 26,
                             UsuarioId = 1
@@ -1412,8 +1412,8 @@ namespace API.Migrations
                         {
                             Id = 121,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4622),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4622),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5479),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5480),
                             Nombre = "VALLEJUELO",
                             ProvinciaId = 26,
                             UsuarioId = 1
@@ -1422,8 +1422,8 @@ namespace API.Migrations
                         {
                             Id = 122,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4623),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4623),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5480),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5481),
                             Nombre = "San Pedro de Macorís",
                             ProvinciaId = 27,
                             UsuarioId = 1
@@ -1432,8 +1432,8 @@ namespace API.Migrations
                         {
                             Id = 123,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4624),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4624),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5482),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5482),
                             Nombre = "Consuelo",
                             ProvinciaId = 27,
                             UsuarioId = 1
@@ -1442,8 +1442,8 @@ namespace API.Migrations
                         {
                             Id = 124,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4626),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4626),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5483),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5484),
                             Nombre = "Guayacanes",
                             ProvinciaId = 27,
                             UsuarioId = 1
@@ -1452,8 +1452,8 @@ namespace API.Migrations
                         {
                             Id = 125,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4627),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4627),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5484),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5485),
                             Nombre = "Quisqueya",
                             ProvinciaId = 27,
                             UsuarioId = 1
@@ -1462,8 +1462,8 @@ namespace API.Migrations
                         {
                             Id = 126,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4628),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4628),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5486),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5486),
                             Nombre = "Ramón Santana",
                             ProvinciaId = 27,
                             UsuarioId = 1
@@ -1472,8 +1472,8 @@ namespace API.Migrations
                         {
                             Id = 127,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4629),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4629),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5487),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5488),
                             Nombre = "San José de Los Llano",
                             ProvinciaId = 27,
                             UsuarioId = 1
@@ -1482,8 +1482,8 @@ namespace API.Migrations
                         {
                             Id = 128,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4630),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4630),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5488),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5489),
                             Nombre = "Cotui",
                             ProvinciaId = 28,
                             UsuarioId = 1
@@ -1492,8 +1492,8 @@ namespace API.Migrations
                         {
                             Id = 129,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4631),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4631),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5490),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5490),
                             Nombre = "Cevicos",
                             ProvinciaId = 28,
                             UsuarioId = 1
@@ -1502,8 +1502,8 @@ namespace API.Migrations
                         {
                             Id = 130,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4632),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4632),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5491),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5492),
                             Nombre = "Fantino",
                             ProvinciaId = 28,
                             UsuarioId = 1
@@ -1512,8 +1512,8 @@ namespace API.Migrations
                         {
                             Id = 131,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4633),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4633),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5493),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5493),
                             Nombre = "La Mata",
                             ProvinciaId = 28,
                             UsuarioId = 1
@@ -1522,8 +1522,8 @@ namespace API.Migrations
                         {
                             Id = 132,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4634),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4634),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5494),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5494),
                             Nombre = "Santiago",
                             ProvinciaId = 29,
                             UsuarioId = 1
@@ -1532,8 +1532,8 @@ namespace API.Migrations
                         {
                             Id = 133,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4635),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4635),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5495),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5496),
                             Nombre = "Bisonó",
                             ProvinciaId = 29,
                             UsuarioId = 1
@@ -1542,8 +1542,8 @@ namespace API.Migrations
                         {
                             Id = 134,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4636),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4636),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5497),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5497),
                             Nombre = "Jánico",
                             ProvinciaId = 29,
                             UsuarioId = 1
@@ -1552,8 +1552,8 @@ namespace API.Migrations
                         {
                             Id = 135,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4637),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4637),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5498),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5499),
                             Nombre = "Licey al Medio",
                             ProvinciaId = 29,
                             UsuarioId = 1
@@ -1562,8 +1562,8 @@ namespace API.Migrations
                         {
                             Id = 136,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4638),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4638),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5499),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5500),
                             Nombre = "Puñal",
                             ProvinciaId = 29,
                             UsuarioId = 1
@@ -1572,8 +1572,8 @@ namespace API.Migrations
                         {
                             Id = 137,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4639),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4639),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5501),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5501),
                             Nombre = "Sabana Iglesia",
                             ProvinciaId = 29,
                             UsuarioId = 1
@@ -1582,8 +1582,8 @@ namespace API.Migrations
                         {
                             Id = 138,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4640),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4640),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5502),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5503),
                             Nombre = "San José de las Matas",
                             ProvinciaId = 29,
                             UsuarioId = 1
@@ -1592,8 +1592,8 @@ namespace API.Migrations
                         {
                             Id = 139,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4641),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4642),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5503),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5504),
                             Nombre = "Tamboril",
                             ProvinciaId = 29,
                             UsuarioId = 1
@@ -1602,8 +1602,8 @@ namespace API.Migrations
                         {
                             Id = 140,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4642),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4643),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5505),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5505),
                             Nombre = "Villa González",
                             ProvinciaId = 29,
                             UsuarioId = 1
@@ -1612,8 +1612,8 @@ namespace API.Migrations
                         {
                             Id = 141,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4643),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4644),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5506),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5507),
                             Nombre = "San Ignacio de Sabaneta",
                             ProvinciaId = 30,
                             UsuarioId = 1
@@ -1622,8 +1622,8 @@ namespace API.Migrations
                         {
                             Id = 142,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4644),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4645),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5508),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5508),
                             Nombre = "Los Almácigos",
                             ProvinciaId = 30,
                             UsuarioId = 1
@@ -1632,8 +1632,8 @@ namespace API.Migrations
                         {
                             Id = 143,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4645),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4646),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5509),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5510),
                             Nombre = "Monción",
                             ProvinciaId = 30,
                             UsuarioId = 1
@@ -1642,8 +1642,8 @@ namespace API.Migrations
                         {
                             Id = 144,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4646),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4647),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5510),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5511),
                             Nombre = "Santo Domingo Este",
                             ProvinciaId = 31,
                             UsuarioId = 1
@@ -1652,8 +1652,8 @@ namespace API.Migrations
                         {
                             Id = 145,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4647),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4648),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5512),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5512),
                             Nombre = "Boca Chica",
                             ProvinciaId = 31,
                             UsuarioId = 1
@@ -1662,8 +1662,8 @@ namespace API.Migrations
                         {
                             Id = 146,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4648),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4649),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5513),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5514),
                             Nombre = "Los Alcarrizos",
                             ProvinciaId = 31,
                             UsuarioId = 1
@@ -1672,8 +1672,8 @@ namespace API.Migrations
                         {
                             Id = 147,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4650),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4650),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5515),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5515),
                             Nombre = "Pedro Brand",
                             ProvinciaId = 31,
                             UsuarioId = 1
@@ -1682,8 +1682,8 @@ namespace API.Migrations
                         {
                             Id = 148,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4651),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4651),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5516),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5517),
                             Nombre = "San Antonio de Guerra",
                             ProvinciaId = 31,
                             UsuarioId = 1
@@ -1692,8 +1692,8 @@ namespace API.Migrations
                         {
                             Id = 149,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4652),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4652),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5517),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5518),
                             Nombre = "Santo Domingo Norte",
                             ProvinciaId = 31,
                             UsuarioId = 1
@@ -1702,8 +1702,8 @@ namespace API.Migrations
                         {
                             Id = 150,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4657),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4657),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5520),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5520),
                             Nombre = "Santo Domingo Oeste",
                             ProvinciaId = 31,
                             UsuarioId = 1
@@ -1712,8 +1712,8 @@ namespace API.Migrations
                         {
                             Id = 151,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4658),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4659),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5521),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5522),
                             Nombre = "Mao",
                             ProvinciaId = 32,
                             UsuarioId = 1
@@ -1722,8 +1722,8 @@ namespace API.Migrations
                         {
                             Id = 152,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4660),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4660),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5522),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5523),
                             Nombre = "Esperanza",
                             ProvinciaId = 32,
                             UsuarioId = 1
@@ -1732,8 +1732,8 @@ namespace API.Migrations
                         {
                             Id = 153,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4661),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4662),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5524),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5524),
                             Nombre = "Laguna Salada",
                             ProvinciaId = 32,
                             UsuarioId = 1
@@ -1806,8 +1806,8 @@ namespace API.Migrations
                         {
                             Id = 1,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4168),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4168),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5231),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5233),
                             Nombre = "AZUA",
                             RegionMacro = 3,
                             UsuarioId = 1
@@ -1816,8 +1816,8 @@ namespace API.Migrations
                         {
                             Id = 2,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4169),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4170),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5234),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5235),
                             Nombre = "BAHORUCO",
                             RegionMacro = 3,
                             UsuarioId = 1
@@ -1826,8 +1826,8 @@ namespace API.Migrations
                         {
                             Id = 3,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4170),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4171),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5236),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5236),
                             Nombre = "BARAHONA",
                             RegionMacro = 3,
                             UsuarioId = 1
@@ -1836,8 +1836,8 @@ namespace API.Migrations
                         {
                             Id = 4,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4171),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4172),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5237),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5238),
                             Nombre = "DAJABON",
                             RegionMacro = 3,
                             UsuarioId = 1
@@ -1846,8 +1846,8 @@ namespace API.Migrations
                         {
                             Id = 5,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4172),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4173),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5239),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5239),
                             Nombre = "DISTRITO NACIONAL",
                             RegionMacro = 2,
                             UsuarioId = 1
@@ -1856,8 +1856,8 @@ namespace API.Migrations
                         {
                             Id = 6,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4213),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4213),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5240),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5240),
                             Nombre = "DUARTE",
                             RegionMacro = 1,
                             UsuarioId = 1
@@ -1866,8 +1866,8 @@ namespace API.Migrations
                         {
                             Id = 7,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4215),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4216),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5241),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5242),
                             Nombre = "EL SEYBO",
                             RegionMacro = 2,
                             UsuarioId = 1
@@ -1876,8 +1876,8 @@ namespace API.Migrations
                         {
                             Id = 8,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4216),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4217),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5243),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5243),
                             Nombre = "ELIAS PIÑA",
                             RegionMacro = 3,
                             UsuarioId = 1
@@ -1886,8 +1886,8 @@ namespace API.Migrations
                         {
                             Id = 9,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4217),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4218),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5244),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5245),
                             Nombre = "ESPAILLAT",
                             RegionMacro = 1,
                             UsuarioId = 1
@@ -1896,8 +1896,8 @@ namespace API.Migrations
                         {
                             Id = 10,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4218),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4219),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5245),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5246),
                             Nombre = "HATO MAYOR",
                             RegionMacro = 2,
                             UsuarioId = 1
@@ -1906,8 +1906,8 @@ namespace API.Migrations
                         {
                             Id = 11,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4219),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4220),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5247),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5247),
                             Nombre = "HERMANAS MIRABAL o Salcedo",
                             RegionMacro = 1,
                             UsuarioId = 1
@@ -1916,8 +1916,8 @@ namespace API.Migrations
                         {
                             Id = 12,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4220),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4221),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5248),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5249),
                             Nombre = "INDEPENDENCIA",
                             RegionMacro = 3,
                             UsuarioId = 1
@@ -1926,8 +1926,8 @@ namespace API.Migrations
                         {
                             Id = 13,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4221),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4222),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5250),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5250),
                             Nombre = "LA ALTAGRACIA",
                             RegionMacro = 2,
                             UsuarioId = 1
@@ -1936,8 +1936,8 @@ namespace API.Migrations
                         {
                             Id = 14,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4222),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4223),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5251),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5251),
                             Nombre = "LA ROMANA",
                             RegionMacro = 2,
                             UsuarioId = 1
@@ -1946,8 +1946,8 @@ namespace API.Migrations
                         {
                             Id = 15,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4223),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4224),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5252),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5253),
                             Nombre = "LA VEGA",
                             RegionMacro = 1,
                             UsuarioId = 1
@@ -1956,8 +1956,8 @@ namespace API.Migrations
                         {
                             Id = 16,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4224),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4225),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5254),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5254),
                             Nombre = "MARIA TRINIDAD SANCHEZ",
                             RegionMacro = 1,
                             UsuarioId = 1
@@ -1966,8 +1966,8 @@ namespace API.Migrations
                         {
                             Id = 17,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4225),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4226),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5255),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5256),
                             Nombre = "MONSEÑOR NOUEL",
                             RegionMacro = 1,
                             UsuarioId = 1
@@ -1976,8 +1976,8 @@ namespace API.Migrations
                         {
                             Id = 18,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4226),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4227),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5257),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5257),
                             Nombre = "MONTE PLATA",
                             RegionMacro = 2,
                             UsuarioId = 1
@@ -1986,8 +1986,8 @@ namespace API.Migrations
                         {
                             Id = 19,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4227),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4228),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5258),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5258),
                             Nombre = "MONTECRISTI",
                             RegionMacro = 1,
                             UsuarioId = 1
@@ -1996,8 +1996,8 @@ namespace API.Migrations
                         {
                             Id = 20,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4228),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4229),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5259),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5260),
                             Nombre = "PEDERNALES",
                             RegionMacro = 3,
                             UsuarioId = 1
@@ -2006,8 +2006,8 @@ namespace API.Migrations
                         {
                             Id = 21,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4229),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4230),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5261),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5261),
                             Nombre = "PERAVIA",
                             RegionMacro = 3,
                             UsuarioId = 1
@@ -2016,8 +2016,8 @@ namespace API.Migrations
                         {
                             Id = 22,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4230),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4231),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5262),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5263),
                             Nombre = "PUERTO PLATA",
                             RegionMacro = 1,
                             UsuarioId = 1
@@ -2026,8 +2026,8 @@ namespace API.Migrations
                         {
                             Id = 23,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4231),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4232),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5263),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5264),
                             Nombre = "SAMANA",
                             RegionMacro = 1,
                             UsuarioId = 1
@@ -2036,8 +2036,8 @@ namespace API.Migrations
                         {
                             Id = 24,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4233),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4233),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5265),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5265),
                             Nombre = "SAN CRISTOBAL",
                             RegionMacro = 2,
                             UsuarioId = 1
@@ -2046,8 +2046,8 @@ namespace API.Migrations
                         {
                             Id = 25,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4234),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4234),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5266),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5267),
                             Nombre = "SAN JOSE DE OCOA",
                             RegionMacro = 3,
                             UsuarioId = 1
@@ -2056,8 +2056,8 @@ namespace API.Migrations
                         {
                             Id = 26,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4235),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4235),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5268),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5268),
                             Nombre = "SAN JUAN",
                             RegionMacro = 3,
                             UsuarioId = 1
@@ -2066,8 +2066,8 @@ namespace API.Migrations
                         {
                             Id = 27,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4236),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4237),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5269),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5269),
                             Nombre = "SAN PEDRO DE MACORIS",
                             RegionMacro = 2,
                             UsuarioId = 1
@@ -2076,8 +2076,8 @@ namespace API.Migrations
                         {
                             Id = 28,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4237),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4238),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5270),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5271),
                             Nombre = "SANCHEZ RAMIREZ",
                             RegionMacro = 1,
                             UsuarioId = 1
@@ -2086,8 +2086,8 @@ namespace API.Migrations
                         {
                             Id = 29,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4238),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4239),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5272),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5272),
                             Nombre = "SANTIAGO",
                             RegionMacro = 1,
                             UsuarioId = 1
@@ -2096,8 +2096,8 @@ namespace API.Migrations
                         {
                             Id = 30,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4239),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4240),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5273),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5274),
                             Nombre = "SANTIAGO RODRIGUEZ",
                             RegionMacro = 1,
                             UsuarioId = 1
@@ -2106,8 +2106,8 @@ namespace API.Migrations
                         {
                             Id = 31,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4240),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4241),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5274),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5275),
                             Nombre = "SANTO DOMINGO",
                             RegionMacro = 2,
                             UsuarioId = 1
@@ -2116,8 +2116,8 @@ namespace API.Migrations
                         {
                             Id = 32,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4241),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4241),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5276),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5276),
                             Nombre = "VALVERDE",
                             RegionMacro = 1,
                             UsuarioId = 1
@@ -2156,8 +2156,8 @@ namespace API.Migrations
                         {
                             Id = 1,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4728),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4729),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5577),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5578),
                             Nombre = "MAYOR GENERAL/VICEALMIRANTE",
                             UsuarioId = 1
                         },
@@ -2165,8 +2165,8 @@ namespace API.Migrations
                         {
                             Id = 2,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4730),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4730),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5579),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5580),
                             Nombre = "GENERAL/CONTRALMIRANTE",
                             UsuarioId = 1
                         },
@@ -2174,8 +2174,8 @@ namespace API.Migrations
                         {
                             Id = 3,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4731),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4732),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5580),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5581),
                             Nombre = "CORONEL/CAPITAN DE NAVIO",
                             UsuarioId = 1
                         },
@@ -2183,8 +2183,8 @@ namespace API.Migrations
                         {
                             Id = 4,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4732),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4733),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5582),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5582),
                             Nombre = "TENIENTE CORONEL/CAPITAN DE FRAGATA",
                             UsuarioId = 1
                         },
@@ -2192,8 +2192,8 @@ namespace API.Migrations
                         {
                             Id = 5,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4733),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4734),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5583),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5584),
                             Nombre = "MAYOR/CAPITAN CORBETA",
                             UsuarioId = 1
                         },
@@ -2201,8 +2201,8 @@ namespace API.Migrations
                         {
                             Id = 6,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4734),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4735),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5584),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5585),
                             Nombre = "CAPITAN/TENIENTE NAVIO",
                             UsuarioId = 1
                         },
@@ -2210,8 +2210,8 @@ namespace API.Migrations
                         {
                             Id = 7,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4735),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4736),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5586),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5586),
                             Nombre = "1ER TENIENTE/TENIENTE FRAGATA",
                             UsuarioId = 1
                         },
@@ -2219,8 +2219,8 @@ namespace API.Migrations
                         {
                             Id = 8,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4736),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4737),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5587),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5588),
                             Nombre = "2DO TENIENTE/TENIENTE CORBETA",
                             UsuarioId = 1
                         },
@@ -2228,8 +2228,8 @@ namespace API.Migrations
                         {
                             Id = 9,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4737),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4738),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5588),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5589),
                             Nombre = "SARGENTO MAYOR",
                             UsuarioId = 1
                         },
@@ -2237,8 +2237,8 @@ namespace API.Migrations
                         {
                             Id = 10,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4738),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4739),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5590),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5590),
                             Nombre = "SARGENTO",
                             UsuarioId = 1
                         },
@@ -2246,8 +2246,8 @@ namespace API.Migrations
                         {
                             Id = 11,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4739),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4740),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5591),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5592),
                             Nombre = "CABO",
                             UsuarioId = 1
                         },
@@ -2255,8 +2255,8 @@ namespace API.Migrations
                         {
                             Id = 12,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4740),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4741),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5593),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5593),
                             Nombre = "RASO/MARINERO",
                             UsuarioId = 1
                         },
@@ -2264,8 +2264,8 @@ namespace API.Migrations
                         {
                             Id = 13,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4741),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4742),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5594),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5594),
                             Nombre = "ASIMILADO",
                             UsuarioId = 1
                         },
@@ -2273,8 +2273,8 @@ namespace API.Migrations
                         {
                             Id = 14,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4742),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4743),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5595),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5596),
                             Nombre = "AGENTE MOPC",
                             UsuarioId = 1
                         });
@@ -2315,8 +2315,8 @@ namespace API.Migrations
                         {
                             Id = 1,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4142),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4143),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5187),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5187),
                             Nombre = "Region Este",
                             RegionMacro = 0,
                             UsuarioId = 1
@@ -2325,8 +2325,8 @@ namespace API.Migrations
                         {
                             Id = 2,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4144),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4144),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5189),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5190),
                             Nombre = "Region Las Americas",
                             RegionMacro = 0,
                             UsuarioId = 1
@@ -2335,8 +2335,8 @@ namespace API.Migrations
                         {
                             Id = 3,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4145),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4145),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5191),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5191),
                             Nombre = "Region del Nordeste",
                             RegionMacro = 0,
                             UsuarioId = 1
@@ -2345,8 +2345,8 @@ namespace API.Migrations
                         {
                             Id = 4,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4146),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4146),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5192),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5193),
                             Nombre = "Region Cibao Sur",
                             RegionMacro = 0,
                             UsuarioId = 1
@@ -2355,8 +2355,8 @@ namespace API.Migrations
                         {
                             Id = 5,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4146),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4147),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5194),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5194),
                             Nombre = "Region Noroeste",
                             RegionMacro = 0,
                             UsuarioId = 1
@@ -2365,8 +2365,8 @@ namespace API.Migrations
                         {
                             Id = 6,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4147),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4148),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5195),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5195),
                             Nombre = "Region Cibao Norte",
                             RegionMacro = 0,
                             UsuarioId = 1
@@ -2375,8 +2375,8 @@ namespace API.Migrations
                         {
                             Id = 7,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4148),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4149),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5196),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5197),
                             Nombre = "Region Sureste",
                             RegionMacro = 0,
                             UsuarioId = 1
@@ -2385,8 +2385,8 @@ namespace API.Migrations
                         {
                             Id = 8,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4149),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4150),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5198),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5198),
                             Nombre = "Region Suroeste",
                             RegionMacro = 0,
                             UsuarioId = 1
@@ -2395,8 +2395,8 @@ namespace API.Migrations
                         {
                             Id = 9,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4150),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4151),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5199),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5199),
                             Nombre = "Region Circunvalacion de Santo Domingo",
                             RegionMacro = 0,
                             UsuarioId = 1
@@ -2510,8 +2510,8 @@ namespace API.Migrations
                             Id = 1,
                             CategoriaAsistencia = 1,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4758),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4759),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5615),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5616),
                             Nombre = "Choque",
                             UsuarioId = 1
                         },
@@ -2520,8 +2520,8 @@ namespace API.Migrations
                             Id = 2,
                             CategoriaAsistencia = 1,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4760),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4760),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5617),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5618),
                             Nombre = "Choque Multiple",
                             UsuarioId = 1
                         },
@@ -2530,8 +2530,8 @@ namespace API.Migrations
                             Id = 3,
                             CategoriaAsistencia = 1,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4761),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4761),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5618),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5619),
                             Nombre = "Choque con animal",
                             UsuarioId = 1
                         },
@@ -2540,8 +2540,8 @@ namespace API.Migrations
                             Id = 4,
                             CategoriaAsistencia = 1,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4762),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4762),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5620),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5620),
                             Nombre = "Deslizamiento",
                             UsuarioId = 1
                         },
@@ -2550,8 +2550,8 @@ namespace API.Migrations
                             Id = 5,
                             CategoriaAsistencia = 1,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4763),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4763),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5621),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5622),
                             Nombre = "Volcadura",
                             UsuarioId = 1
                         },
@@ -2560,8 +2560,8 @@ namespace API.Migrations
                             Id = 6,
                             CategoriaAsistencia = 1,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4764),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4764),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5623),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5623),
                             Nombre = "Atropellamiento",
                             UsuarioId = 1
                         },
@@ -2570,8 +2570,8 @@ namespace API.Migrations
                             Id = 7,
                             CategoriaAsistencia = 2,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4765),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4765),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5624),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5625),
                             Nombre = "Seguridad",
                             UsuarioId = 1
                         },
@@ -2580,8 +2580,8 @@ namespace API.Migrations
                             Id = 8,
                             CategoriaAsistencia = 2,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4766),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4766),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5625),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5626),
                             Nombre = "Neumático",
                             UsuarioId = 1
                         },
@@ -2590,8 +2590,8 @@ namespace API.Migrations
                             Id = 9,
                             CategoriaAsistencia = 2,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4767),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4767),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5627),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5627),
                             Nombre = "Combustible",
                             UsuarioId = 1
                         },
@@ -2600,8 +2600,8 @@ namespace API.Migrations
                             Id = 10,
                             CategoriaAsistencia = 2,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4768),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4769),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5628),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5629),
                             Nombre = "Mecanica",
                             UsuarioId = 1
                         },
@@ -2610,8 +2610,8 @@ namespace API.Migrations
                             Id = 11,
                             CategoriaAsistencia = 2,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4769),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4770),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5630),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5630),
                             Nombre = "Electrica",
                             UsuarioId = 1
                         },
@@ -2620,8 +2620,8 @@ namespace API.Migrations
                             Id = 12,
                             CategoriaAsistencia = 2,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4770),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4771),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5631),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5632),
                             Nombre = "Calentamiento",
                             UsuarioId = 1
                         },
@@ -2630,8 +2630,8 @@ namespace API.Migrations
                             Id = 13,
                             CategoriaAsistencia = 2,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4771),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4772),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5633),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5634),
                             Nombre = "Grúas",
                             UsuarioId = 1
                         },
@@ -2640,8 +2640,8 @@ namespace API.Migrations
                             Id = 14,
                             CategoriaAsistencia = 2,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4772),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4773),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5635),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5635),
                             Nombre = "Ambulancia",
                             UsuarioId = 1
                         },
@@ -2650,8 +2650,8 @@ namespace API.Migrations
                             Id = 15,
                             CategoriaAsistencia = 2,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4773),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4774),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5636),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5637),
                             Nombre = "Talleres",
                             UsuarioId = 1
                         },
@@ -2660,8 +2660,8 @@ namespace API.Migrations
                             Id = 16,
                             CategoriaAsistencia = 2,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4774),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4775),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5638),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5638),
                             Nombre = "Camión. Rescate",
                             UsuarioId = 1
                         });
@@ -2699,8 +2699,8 @@ namespace API.Migrations
                         {
                             Id = 1,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4113),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4113),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5145),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5145),
                             Nombre = "Supervisor",
                             UsuarioId = 1
                         },
@@ -2708,8 +2708,8 @@ namespace API.Migrations
                         {
                             Id = 2,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4115),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4115),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5147),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5148),
                             Nombre = "Encargado",
                             UsuarioId = 1
                         },
@@ -2717,8 +2717,8 @@ namespace API.Migrations
                         {
                             Id = 4,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4116),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4117),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5149),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5149),
                             Nombre = "Unidad",
                             UsuarioId = 1
                         },
@@ -2726,8 +2726,8 @@ namespace API.Migrations
                         {
                             Id = 3,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4117),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4118),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5150),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5151),
                             Nombre = "Movil",
                             UsuarioId = 1
                         },
@@ -2735,8 +2735,8 @@ namespace API.Migrations
                         {
                             Id = 6,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4118),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4118),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5151),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5152),
                             Nombre = "Ambulanccia",
                             UsuarioId = 1
                         },
@@ -2744,8 +2744,8 @@ namespace API.Migrations
                         {
                             Id = 7,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4119),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4119),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5153),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5153),
                             Nombre = "Grua",
                             UsuarioId = 1
                         },
@@ -2753,8 +2753,8 @@ namespace API.Migrations
                         {
                             Id = 8,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4120),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4120),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5154),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5155),
                             Nombre = "Rescate",
                             UsuarioId = 1
                         },
@@ -2762,8 +2762,8 @@ namespace API.Migrations
                         {
                             Id = 9,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4121),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4121),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5155),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5156),
                             Nombre = "CODEVIAL",
                             UsuarioId = 1
                         },
@@ -2771,8 +2771,8 @@ namespace API.Migrations
                         {
                             Id = 10,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4122),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4122),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5157),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5157),
                             Nombre = "Motorizada",
                             UsuarioId = 1
                         });
@@ -2815,8 +2815,8 @@ namespace API.Migrations
                         {
                             Id = 1,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4792),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4793),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5657),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5658),
                             Nombre = "Tramo Carretero Miches",
                             RegionAsistenciaId = 1,
                             UsuarioId = 1
@@ -2825,8 +2825,8 @@ namespace API.Migrations
                         {
                             Id = 2,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4794),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4794),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5659),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5659),
                             Nombre = "Tramo Carretero Punta Cana",
                             RegionAsistenciaId = 1,
                             UsuarioId = 1
@@ -2835,8 +2835,8 @@ namespace API.Migrations
                         {
                             Id = 3,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4795),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4796),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5660),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5661),
                             Nombre = "Tramo El Coral y Circ. Romana",
                             RegionAsistenciaId = 1,
                             UsuarioId = 1
@@ -2845,8 +2845,8 @@ namespace API.Migrations
                         {
                             Id = 4,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4796),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4797),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5662),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5662),
                             Nombre = "9-1-1 Romana",
                             RegionAsistenciaId = 1,
                             UsuarioId = 1
@@ -2855,8 +2855,8 @@ namespace API.Migrations
                         {
                             Id = 5,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4797),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4798),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5663),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5664),
                             Nombre = "Tramo del Seibo",
                             RegionAsistenciaId = 1,
                             UsuarioId = 1
@@ -2865,8 +2865,8 @@ namespace API.Migrations
                         {
                             Id = 6,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4798),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4799),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5665),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5665),
                             Nombre = "Las Américas tramo I",
                             RegionAsistenciaId = 2,
                             UsuarioId = 1
@@ -2875,8 +2875,8 @@ namespace API.Migrations
                         {
                             Id = 7,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4799),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4800),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5666),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5666),
                             Nombre = "Las Américas tramo II",
                             RegionAsistenciaId = 2,
                             UsuarioId = 1
@@ -2885,8 +2885,8 @@ namespace API.Migrations
                         {
                             Id = 8,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4800),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4801),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5667),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5668),
                             Nombre = "Tramo  Hato Mayor",
                             RegionAsistenciaId = 2,
                             UsuarioId = 1
@@ -2895,8 +2895,8 @@ namespace API.Migrations
                         {
                             Id = 9,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4801),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4802),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5669),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5669),
                             Nombre = "Tramo Samaná",
                             RegionAsistenciaId = 3,
                             UsuarioId = 1
@@ -2905,8 +2905,8 @@ namespace API.Migrations
                         {
                             Id = 10,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4802),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4803),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5670),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5671),
                             Nombre = "Cibao Sur tramo I",
                             RegionAsistenciaId = 4,
                             UsuarioId = 1
@@ -2915,8 +2915,8 @@ namespace API.Migrations
                         {
                             Id = 11,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4804),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4804),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5672),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5673),
                             Nombre = "Tramo San Francisco de Macorís",
                             RegionAsistenciaId = 4,
                             UsuarioId = 1
@@ -2925,8 +2925,8 @@ namespace API.Migrations
                         {
                             Id = 12,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4805),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4805),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5674),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5674),
                             Nombre = "Cibao Sur Tramo II",
                             RegionAsistenciaId = 4,
                             UsuarioId = 1
@@ -2935,8 +2935,8 @@ namespace API.Migrations
                         {
                             Id = 13,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4806),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4806),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5675),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5676),
                             Nombre = "Tramo Cotuí",
                             RegionAsistenciaId = 4,
                             UsuarioId = 1
@@ -2945,8 +2945,8 @@ namespace API.Migrations
                         {
                             Id = 14,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4807),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4807),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5680),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5681),
                             Nombre = "Tramo Salcedo",
                             RegionAsistenciaId = 4,
                             UsuarioId = 1
@@ -2955,8 +2955,8 @@ namespace API.Migrations
                         {
                             Id = 15,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4808),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4808),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5682),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5682),
                             Nombre = "Tramo Circunvalación Norte",
                             RegionAsistenciaId = 5,
                             UsuarioId = 1
@@ -2965,8 +2965,8 @@ namespace API.Migrations
                         {
                             Id = 16,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4809),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4809),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5683),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5684),
                             Nombre = "Noroeste tramo I",
                             RegionAsistenciaId = 5,
                             UsuarioId = 1
@@ -2975,8 +2975,8 @@ namespace API.Migrations
                         {
                             Id = 17,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4810),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4810),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5684),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5685),
                             Nombre = "Noroeste tramo II",
                             RegionAsistenciaId = 5,
                             UsuarioId = 1
@@ -2985,8 +2985,8 @@ namespace API.Migrations
                         {
                             Id = 18,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4811),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4811),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5686),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5686),
                             Nombre = "Tramo Mao, Valverde",
                             RegionAsistenciaId = 5,
                             UsuarioId = 1
@@ -2995,8 +2995,8 @@ namespace API.Migrations
                         {
                             Id = 19,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4812),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4812),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5687),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5688),
                             Nombre = "Tramo Cibao Norte",
                             RegionAsistenciaId = 6,
                             UsuarioId = 1
@@ -3005,8 +3005,8 @@ namespace API.Migrations
                         {
                             Id = 20,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4813),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4813),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5689),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5689),
                             Nombre = "Atlántico tramo I",
                             RegionAsistenciaId = 6,
                             UsuarioId = 1
@@ -3015,8 +3015,8 @@ namespace API.Migrations
                         {
                             Id = 21,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4814),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4814),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5690),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5690),
                             Nombre = "Tramo Luperón",
                             RegionAsistenciaId = 6,
                             UsuarioId = 1
@@ -3025,8 +3025,8 @@ namespace API.Migrations
                         {
                             Id = 22,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4815),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4815),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5698),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5699),
                             Nombre = "Atlántico tramo II",
                             RegionAsistenciaId = 6,
                             UsuarioId = 1
@@ -3035,8 +3035,8 @@ namespace API.Migrations
                         {
                             Id = 23,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4816),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4816),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5699),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5700),
                             Nombre = "Tramo Rio San Juan",
                             RegionAsistenciaId = 6,
                             UsuarioId = 1
@@ -3045,8 +3045,8 @@ namespace API.Migrations
                         {
                             Id = 24,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4817),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4817),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5701),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5701),
                             Nombre = "Sureste tramo I",
                             RegionAsistenciaId = 7,
                             UsuarioId = 1
@@ -3055,8 +3055,8 @@ namespace API.Migrations
                         {
                             Id = 25,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4818),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4818),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5702),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5703),
                             Nombre = "Sureste tramo II",
                             RegionAsistenciaId = 7,
                             UsuarioId = 1
@@ -3065,8 +3065,8 @@ namespace API.Migrations
                         {
                             Id = 26,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4819),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4819),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5705),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5705),
                             Nombre = "Tramo  San Juan de la Maguana",
                             RegionAsistenciaId = 7,
                             UsuarioId = 1
@@ -3075,8 +3075,8 @@ namespace API.Migrations
                         {
                             Id = 27,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4847),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4847),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5706),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5706),
                             Nombre = "Tramo San José de Ocoa",
                             RegionAsistenciaId = 7,
                             UsuarioId = 1
@@ -3085,8 +3085,8 @@ namespace API.Migrations
                         {
                             Id = 28,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4848),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4849),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5707),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5708),
                             Nombre = "Suroeste tramo I",
                             RegionAsistenciaId = 8,
                             UsuarioId = 1
@@ -3095,8 +3095,8 @@ namespace API.Migrations
                         {
                             Id = 29,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4850),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4850),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5709),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5709),
                             Nombre = "Suroeste tramo II",
                             RegionAsistenciaId = 8,
                             UsuarioId = 1
@@ -3105,8 +3105,8 @@ namespace API.Migrations
                         {
                             Id = 30,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4851),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4852),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5710),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5711),
                             Nombre = "Circunvalación Santo Domingo tramo I",
                             RegionAsistenciaId = 9,
                             UsuarioId = 1
@@ -3115,8 +3115,8 @@ namespace API.Migrations
                         {
                             Id = 31,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4852),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4853),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5711),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5712),
                             Nombre = "Circunvalación Santo Domingo tramo II",
                             RegionAsistenciaId = 9,
                             UsuarioId = 1
@@ -3125,8 +3125,8 @@ namespace API.Migrations
                         {
                             Id = 32,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4853),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4854),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5713),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5713),
                             Nombre = "Corredores del Distrito Nacional",
                             RegionAsistenciaId = 9,
                             UsuarioId = 1
@@ -3275,12 +3275,12 @@ namespace API.Migrations
                             Id = 1,
                             EsAdministrador = true,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(3988),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(4000),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5005),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5015),
                             FechaNacimiento = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Genero = 0,
-                            PasswordHash = new byte[] { 53, 144, 201, 170, 39, 39, 201, 174, 170, 162, 222, 61, 47, 7, 84, 51, 62, 82, 229, 22, 212, 99, 15, 146, 101, 209, 146, 104, 25, 100, 157, 48, 199, 249, 192, 21, 235, 19, 247, 183, 18, 57, 145, 217, 82, 183, 12, 64, 138, 118, 141, 215, 133, 154, 91, 11, 48, 126, 92, 241, 131, 101, 91, 206 },
-                            PasswordSalt = new byte[] { 148, 210, 167, 166, 241, 176, 40, 85, 222, 202, 146, 247, 113, 59, 102, 15, 224, 128, 130, 42, 195, 74, 132, 68, 6, 233, 2, 109, 21, 49, 226, 25, 175, 214, 185, 153, 149, 81, 59, 97, 9, 216, 245, 69, 29, 210, 224, 105, 85, 101, 1, 173, 114, 191, 243, 77, 195, 78, 55, 103, 195, 247, 191, 86, 59, 113, 20, 140, 53, 172, 225, 97, 197, 9, 12, 231, 98, 250, 10, 46, 26, 78, 112, 209, 91, 176, 159, 59, 124, 76, 62, 171, 162, 172, 5, 32, 118, 162, 192, 39, 125, 176, 9, 210, 82, 158, 137, 240, 146, 189, 148, 185, 74, 206, 71, 43, 61, 200, 190, 162, 208, 22, 175, 177, 123, 31, 182, 111 },
+                            PasswordHash = new byte[] { 151, 251, 239, 51, 208, 234, 4, 47, 47, 230, 169, 105, 46, 228, 26, 61, 158, 209, 155, 244, 246, 69, 197, 129, 83, 117, 127, 0, 191, 41, 198, 83, 244, 107, 49, 118, 10, 99, 175, 174, 104, 149, 221, 159, 130, 187, 127, 102, 217, 224, 165, 242, 105, 178, 191, 3, 190, 207, 193, 115, 140, 92, 19, 153 },
+                            PasswordSalt = new byte[] { 14, 108, 229, 35, 18, 131, 36, 173, 125, 236, 75, 45, 102, 235, 5, 76, 11, 233, 228, 178, 108, 43, 39, 60, 76, 193, 156, 211, 61, 143, 35, 13, 150, 86, 218, 63, 32, 136, 97, 3, 188, 196, 12, 210, 239, 158, 3, 164, 204, 14, 185, 102, 80, 136, 130, 90, 223, 61, 44, 192, 111, 253, 69, 9, 45, 49, 251, 51, 80, 31, 56, 7, 156, 110, 140, 219, 223, 23, 154, 112, 110, 120, 96, 144, 152, 175, 236, 204, 185, 237, 54, 63, 128, 212, 227, 21, 158, 97, 202, 149, 160, 139, 253, 23, 50, 82, 96, 21, 210, 78, 102, 87, 145, 208, 106, 184, 55, 252, 190, 158, 63, 63, 135, 98, 20, 124, 94, 224 },
                             Username = "admin"
                         });
                 });
@@ -3349,8 +3349,8 @@ namespace API.Migrations
                         {
                             Id = 1,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5014),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5015),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5736),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5736),
                             Nombre = "Otro",
                             UsuarioId = 1
                         },
@@ -3358,8 +3358,8 @@ namespace API.Migrations
                         {
                             Id = 2,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5015),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5016),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5737),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5738),
                             Nombre = "Amarillo",
                             UsuarioId = 1
                         },
@@ -3367,8 +3367,8 @@ namespace API.Migrations
                         {
                             Id = 3,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5016),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5017),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5738),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5739),
                             Nombre = "Azul",
                             UsuarioId = 1
                         },
@@ -3376,8 +3376,8 @@ namespace API.Migrations
                         {
                             Id = 4,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5017),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5018),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5740),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5740),
                             Nombre = "Blanco",
                             UsuarioId = 1
                         },
@@ -3385,8 +3385,8 @@ namespace API.Migrations
                         {
                             Id = 5,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5018),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5019),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5741),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5741),
                             Nombre = "Crema",
                             UsuarioId = 1
                         },
@@ -3394,8 +3394,8 @@ namespace API.Migrations
                         {
                             Id = 6,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5019),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5020),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5742),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5743),
                             Nombre = "Gris",
                             UsuarioId = 1
                         },
@@ -3403,8 +3403,8 @@ namespace API.Migrations
                         {
                             Id = 7,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5020),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5021),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5744),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5744),
                             Nombre = "Gris oscuro",
                             UsuarioId = 1
                         },
@@ -3412,8 +3412,8 @@ namespace API.Migrations
                         {
                             Id = 8,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5021),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5022),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5745),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5745),
                             Nombre = "Marron",
                             UsuarioId = 1
                         },
@@ -3421,8 +3421,8 @@ namespace API.Migrations
                         {
                             Id = 9,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5022),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5023),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5746),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5747),
                             Nombre = "Naranja",
                             UsuarioId = 1
                         },
@@ -3430,8 +3430,8 @@ namespace API.Migrations
                         {
                             Id = 10,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5023),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5024),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5748),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5748),
                             Nombre = "Negro",
                             UsuarioId = 1
                         },
@@ -3439,8 +3439,8 @@ namespace API.Migrations
                         {
                             Id = 11,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5024),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5025),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5749),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5750),
                             Nombre = "Rojo",
                             UsuarioId = 1
                         },
@@ -3448,8 +3448,8 @@ namespace API.Migrations
                         {
                             Id = 12,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5025),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5026),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5751),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5751),
                             Nombre = "Rojo Vino",
                             UsuarioId = 1
                         },
@@ -3457,8 +3457,8 @@ namespace API.Migrations
                         {
                             Id = 13,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5026),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5026),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5752),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5752),
                             Nombre = "Verde",
                             UsuarioId = 1
                         },
@@ -3466,8 +3466,8 @@ namespace API.Migrations
                         {
                             Id = 14,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5027),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5027),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5753),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5754),
                             Nombre = "Morado",
                             UsuarioId = 1
                         });
@@ -3505,8 +3505,8 @@ namespace API.Migrations
                         {
                             Id = 1,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5068),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5069),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5806),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5806),
                             Nombre = "Otra",
                             UsuarioId = 1
                         },
@@ -3514,8 +3514,8 @@ namespace API.Migrations
                         {
                             Id = 2,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5070),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5070),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5807),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5808),
                             Nombre = "Acura",
                             UsuarioId = 1
                         },
@@ -3523,8 +3523,8 @@ namespace API.Migrations
                         {
                             Id = 3,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5071),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5071),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5809),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5809),
                             Nombre = "Audi",
                             UsuarioId = 1
                         },
@@ -3532,8 +3532,8 @@ namespace API.Migrations
                         {
                             Id = 4,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5072),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5072),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5810),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5810),
                             Nombre = "BMW",
                             UsuarioId = 1
                         },
@@ -3541,8 +3541,8 @@ namespace API.Migrations
                         {
                             Id = 5,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5073),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5074),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5811),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5812),
                             Nombre = "Chevrolet",
                             UsuarioId = 1
                         },
@@ -3550,8 +3550,8 @@ namespace API.Migrations
                         {
                             Id = 6,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5074),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5074),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5813),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5814),
                             Nombre = "Daihatsu",
                             UsuarioId = 1
                         },
@@ -3559,8 +3559,8 @@ namespace API.Migrations
                         {
                             Id = 7,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5075),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5075),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5815),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5815),
                             Nombre = "Ford",
                             UsuarioId = 1
                         },
@@ -3568,8 +3568,8 @@ namespace API.Migrations
                         {
                             Id = 8,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5076),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5076),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5816),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5817),
                             Nombre = "Hyundai",
                             UsuarioId = 1
                         },
@@ -3577,8 +3577,8 @@ namespace API.Migrations
                         {
                             Id = 9,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5077),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5077),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5818),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5818),
                             Nombre = "Honda",
                             UsuarioId = 1
                         },
@@ -3586,8 +3586,8 @@ namespace API.Migrations
                         {
                             Id = 10,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5078),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5078),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5820),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5820),
                             Nombre = "Infiniti",
                             UsuarioId = 1
                         },
@@ -3595,8 +3595,8 @@ namespace API.Migrations
                         {
                             Id = 11,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5079),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5079),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5823),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5823),
                             Nombre = "Isuzu",
                             UsuarioId = 1
                         },
@@ -3604,8 +3604,8 @@ namespace API.Migrations
                         {
                             Id = 12,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5080),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5080),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5824),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5824),
                             Nombre = "Jeep",
                             UsuarioId = 1
                         },
@@ -3613,8 +3613,8 @@ namespace API.Migrations
                         {
                             Id = 13,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5081),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5081),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5825),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5826),
                             Nombre = "Kia",
                             UsuarioId = 1
                         },
@@ -3622,8 +3622,8 @@ namespace API.Migrations
                         {
                             Id = 14,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5082),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5082),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5827),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5827),
                             Nombre = "Lexus",
                             UsuarioId = 1
                         },
@@ -3631,8 +3631,8 @@ namespace API.Migrations
                         {
                             Id = 15,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5083),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5083),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5828),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5828),
                             Nombre = "Mazda",
                             UsuarioId = 1
                         },
@@ -3640,8 +3640,8 @@ namespace API.Migrations
                         {
                             Id = 16,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5084),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5084),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5829),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5830),
                             Nombre = "Mercedes Benz",
                             UsuarioId = 1
                         },
@@ -3649,8 +3649,8 @@ namespace API.Migrations
                         {
                             Id = 17,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5085),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5085),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5830),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5831),
                             Nombre = "Nissan",
                             UsuarioId = 1
                         },
@@ -3658,8 +3658,8 @@ namespace API.Migrations
                         {
                             Id = 18,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5086),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5086),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5832),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5832),
                             Nombre = "Otro",
                             UsuarioId = 1
                         },
@@ -3667,8 +3667,8 @@ namespace API.Migrations
                         {
                             Id = 19,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5087),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5087),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5833),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5834),
                             Nombre = "Scion",
                             UsuarioId = 1
                         },
@@ -3676,8 +3676,8 @@ namespace API.Migrations
                         {
                             Id = 20,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5088),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5088),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5834),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5835),
                             Nombre = "Skoda",
                             UsuarioId = 1
                         },
@@ -3685,8 +3685,8 @@ namespace API.Migrations
                         {
                             Id = 21,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5089),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5089),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5837),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5837),
                             Nombre = "Toyota",
                             UsuarioId = 1
                         },
@@ -3694,8 +3694,8 @@ namespace API.Migrations
                         {
                             Id = 22,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5089),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5090),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5838),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5838),
                             Nombre = "Volkswagen",
                             UsuarioId = 1
                         },
@@ -3703,8 +3703,8 @@ namespace API.Migrations
                         {
                             Id = 23,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5091),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5091),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5839),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5840),
                             Nombre = "Volvo",
                             UsuarioId = 1
                         },
@@ -3712,8 +3712,8 @@ namespace API.Migrations
                         {
                             Id = 24,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5092),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5092),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5841),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5841),
                             Nombre = "Subaru",
                             UsuarioId = 1
                         });
@@ -3761,8 +3761,8 @@ namespace API.Migrations
                         {
                             Id = 1,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5110),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5111),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5861),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5862),
                             Nombre = "Camry",
                             UsuarioId = 1,
                             VehiculoMarcaId = 21,
@@ -3772,8 +3772,8 @@ namespace API.Migrations
                         {
                             Id = 2,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5112),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5112),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5863),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5864),
                             Nombre = "Corrolla",
                             UsuarioId = 1,
                             VehiculoMarcaId = 21,
@@ -3783,8 +3783,8 @@ namespace API.Migrations
                         {
                             Id = 3,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5113),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5113),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5865),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5865),
                             Nombre = "Highlander",
                             UsuarioId = 1,
                             VehiculoMarcaId = 21,
@@ -3794,8 +3794,8 @@ namespace API.Migrations
                         {
                             Id = 4,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5114),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5114),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5866),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5867),
                             Nombre = "LandCruiser",
                             UsuarioId = 1,
                             VehiculoMarcaId = 21,
@@ -3805,8 +3805,8 @@ namespace API.Migrations
                         {
                             Id = 5,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5115),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5115),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5868),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5868),
                             Nombre = "Hilux",
                             UsuarioId = 1,
                             VehiculoMarcaId = 21,
@@ -3816,8 +3816,8 @@ namespace API.Migrations
                         {
                             Id = 6,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5116),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5116),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5869),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5870),
                             Nombre = "Tacoma",
                             UsuarioId = 1,
                             VehiculoMarcaId = 21,
@@ -3827,8 +3827,8 @@ namespace API.Migrations
                         {
                             Id = 7,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5117),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5117),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5871),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5871),
                             Nombre = "Tundra",
                             UsuarioId = 1,
                             VehiculoMarcaId = 21,
@@ -3838,8 +3838,8 @@ namespace API.Migrations
                         {
                             Id = 8,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5118),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5118),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5872),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5873),
                             Nombre = "Sequoia",
                             UsuarioId = 1,
                             VehiculoMarcaId = 21,
@@ -3849,8 +3849,8 @@ namespace API.Migrations
                         {
                             Id = 9,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5119),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5119),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5875),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5875),
                             Nombre = "Civic",
                             UsuarioId = 1,
                             VehiculoMarcaId = 9,
@@ -3860,8 +3860,8 @@ namespace API.Migrations
                         {
                             Id = 10,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5121),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5121),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5876),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5876),
                             Nombre = "CR-V",
                             UsuarioId = 1,
                             VehiculoMarcaId = 9,
@@ -3871,8 +3871,8 @@ namespace API.Migrations
                         {
                             Id = 11,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5122),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5122),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5877),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5878),
                             Nombre = "Fit",
                             UsuarioId = 1,
                             VehiculoMarcaId = 9,
@@ -3882,8 +3882,8 @@ namespace API.Migrations
                         {
                             Id = 12,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5123),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5123),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5879),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5879),
                             Nombre = "HR-V",
                             UsuarioId = 1,
                             VehiculoMarcaId = 9,
@@ -3893,8 +3893,8 @@ namespace API.Migrations
                         {
                             Id = 13,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5124),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5124),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5880),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5881),
                             Nombre = "Pilot",
                             UsuarioId = 1,
                             VehiculoMarcaId = 9,
@@ -3904,8 +3904,8 @@ namespace API.Migrations
                         {
                             Id = 14,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5125),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5125),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5887),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5888),
                             Nombre = "Accord",
                             UsuarioId = 1,
                             VehiculoMarcaId = 9,
@@ -3915,8 +3915,8 @@ namespace API.Migrations
                         {
                             Id = 15,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5126),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5127),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5889),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5890),
                             Nombre = "Frontier",
                             UsuarioId = 1,
                             VehiculoMarcaId = 17,
@@ -3926,8 +3926,8 @@ namespace API.Migrations
                         {
                             Id = 16,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5127),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5128),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5891),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5891),
                             Nombre = "Sentra",
                             UsuarioId = 1,
                             VehiculoMarcaId = 17,
@@ -3937,8 +3937,8 @@ namespace API.Migrations
                         {
                             Id = 17,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5128),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5129),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5892),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5893),
                             Nombre = "Tiida",
                             UsuarioId = 1,
                             VehiculoMarcaId = 17,
@@ -3948,8 +3948,8 @@ namespace API.Migrations
                         {
                             Id = 18,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5129),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5130),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5894),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5894),
                             Nombre = "Pathfinder",
                             UsuarioId = 1,
                             VehiculoMarcaId = 17,
@@ -3959,8 +3959,8 @@ namespace API.Migrations
                         {
                             Id = 19,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5208),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5208),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5895),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5896),
                             Nombre = "Kicks",
                             UsuarioId = 1,
                             VehiculoMarcaId = 17,
@@ -3970,8 +3970,8 @@ namespace API.Migrations
                         {
                             Id = 20,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5209),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5210),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5897),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5897),
                             Nombre = "Titan",
                             UsuarioId = 1,
                             VehiculoMarcaId = 17,
@@ -3981,8 +3981,8 @@ namespace API.Migrations
                         {
                             Id = 21,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5211),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5211),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5898),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5899),
                             Nombre = "Mazda 3",
                             UsuarioId = 1,
                             VehiculoMarcaId = 15,
@@ -3992,8 +3992,8 @@ namespace API.Migrations
                         {
                             Id = 22,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5212),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5212),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5900),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5900),
                             Nombre = "Mazda 6",
                             UsuarioId = 1,
                             VehiculoMarcaId = 15,
@@ -4003,8 +4003,8 @@ namespace API.Migrations
                         {
                             Id = 23,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5213),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5213),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5901),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5901),
                             Nombre = "CX-5",
                             UsuarioId = 1,
                             VehiculoMarcaId = 15,
@@ -4014,8 +4014,8 @@ namespace API.Migrations
                         {
                             Id = 24,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5214),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5214),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5902),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5903),
                             Nombre = "CX-9",
                             UsuarioId = 1,
                             VehiculoMarcaId = 15,
@@ -4025,8 +4025,8 @@ namespace API.Migrations
                         {
                             Id = 25,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5215),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5215),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5904),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5904),
                             Nombre = "Mazda 2 (Demio)",
                             UsuarioId = 1,
                             VehiculoMarcaId = 15,
@@ -4036,8 +4036,8 @@ namespace API.Migrations
                         {
                             Id = 26,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5216),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5216),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5905),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5906),
                             Nombre = "Accent",
                             UsuarioId = 1,
                             VehiculoMarcaId = 8,
@@ -4047,8 +4047,8 @@ namespace API.Migrations
                         {
                             Id = 27,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5217),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5217),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5907),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5907),
                             Nombre = "Sonata",
                             UsuarioId = 1,
                             VehiculoMarcaId = 8,
@@ -4058,8 +4058,8 @@ namespace API.Migrations
                         {
                             Id = 28,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5218),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5218),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5908),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5909),
                             Nombre = "Tucson",
                             UsuarioId = 1,
                             VehiculoMarcaId = 8,
@@ -4069,8 +4069,8 @@ namespace API.Migrations
                         {
                             Id = 29,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5219),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5219),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5910),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5910),
                             Nombre = "Santa Fe",
                             UsuarioId = 1,
                             VehiculoMarcaId = 8,
@@ -4080,8 +4080,8 @@ namespace API.Migrations
                         {
                             Id = 30,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5220),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5220),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5911),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5912),
                             Nombre = "Elantra",
                             UsuarioId = 1,
                             VehiculoMarcaId = 8,
@@ -4091,8 +4091,8 @@ namespace API.Migrations
                         {
                             Id = 31,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5221),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5221),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5912),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5913),
                             Nombre = "Y20",
                             UsuarioId = 1,
                             VehiculoMarcaId = 8,
@@ -4102,8 +4102,8 @@ namespace API.Migrations
                         {
                             Id = 32,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5222),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5222),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5914),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5914),
                             Nombre = "i10",
                             UsuarioId = 1,
                             VehiculoMarcaId = 8,
@@ -4113,8 +4113,8 @@ namespace API.Migrations
                         {
                             Id = 33,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5223),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5223),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5915),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5916),
                             Nombre = "i20",
                             UsuarioId = 1,
                             VehiculoMarcaId = 8,
@@ -4124,8 +4124,8 @@ namespace API.Migrations
                         {
                             Id = 34,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5224),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5224),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5917),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5917),
                             Nombre = "K5",
                             UsuarioId = 1,
                             VehiculoMarcaId = 13,
@@ -4135,8 +4135,8 @@ namespace API.Migrations
                         {
                             Id = 35,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5225),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5225),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5919),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5920),
                             Nombre = "Forte",
                             UsuarioId = 1,
                             VehiculoMarcaId = 13,
@@ -4146,8 +4146,8 @@ namespace API.Migrations
                         {
                             Id = 36,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5226),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5226),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5921),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5921),
                             Nombre = "Sorento",
                             UsuarioId = 1,
                             VehiculoMarcaId = 13,
@@ -4157,8 +4157,8 @@ namespace API.Migrations
                         {
                             Id = 37,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5227),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5228),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5922),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5923),
                             Nombre = "Sportage",
                             UsuarioId = 1,
                             VehiculoMarcaId = 13,
@@ -4168,8 +4168,8 @@ namespace API.Migrations
                         {
                             Id = 38,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5229),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5230),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5923),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5924),
                             Nombre = "Rio",
                             UsuarioId = 1,
                             VehiculoMarcaId = 13,
@@ -4179,8 +4179,8 @@ namespace API.Migrations
                         {
                             Id = 39,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5230),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5231),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5925),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5925),
                             Nombre = "Mira",
                             UsuarioId = 1,
                             VehiculoMarcaId = 6,
@@ -4190,8 +4190,8 @@ namespace API.Migrations
                         {
                             Id = 40,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5231),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5232),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5928),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5928),
                             Nombre = "Sirion",
                             UsuarioId = 1,
                             VehiculoMarcaId = 6,
@@ -4201,8 +4201,8 @@ namespace API.Migrations
                         {
                             Id = 41,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5232),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5233),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5929),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5930),
                             Nombre = "Camion",
                             UsuarioId = 1,
                             VehiculoMarcaId = 6,
@@ -4212,8 +4212,8 @@ namespace API.Migrations
                         {
                             Id = 42,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5233),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5234),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5931),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5931),
                             Nombre = "Terios",
                             UsuarioId = 1,
                             VehiculoMarcaId = 6,
@@ -4223,8 +4223,8 @@ namespace API.Migrations
                         {
                             Id = 43,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5234),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5235),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5934),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5934),
                             Nombre = "Escape",
                             UsuarioId = 1,
                             VehiculoMarcaId = 7,
@@ -4234,8 +4234,8 @@ namespace API.Migrations
                         {
                             Id = 44,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5235),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5236),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5935),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5936),
                             Nombre = "F-150",
                             UsuarioId = 1,
                             VehiculoMarcaId = 7,
@@ -4245,8 +4245,8 @@ namespace API.Migrations
                         {
                             Id = 45,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5237),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5237),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5937),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5937),
                             Nombre = "Focus",
                             UsuarioId = 1,
                             VehiculoMarcaId = 7,
@@ -4256,8 +4256,8 @@ namespace API.Migrations
                         {
                             Id = 46,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5238),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5238),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5938),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5939),
                             Nombre = "Explorer",
                             UsuarioId = 1,
                             VehiculoMarcaId = 7,
@@ -4267,8 +4267,8 @@ namespace API.Migrations
                         {
                             Id = 47,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5239),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5239),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5940),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5940),
                             Nombre = "Ranger",
                             UsuarioId = 1,
                             VehiculoMarcaId = 7,
@@ -4278,8 +4278,8 @@ namespace API.Migrations
                         {
                             Id = 48,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5240),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5240),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5941),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5942),
                             Nombre = "Ecosport",
                             UsuarioId = 1,
                             VehiculoMarcaId = 7,
@@ -4289,8 +4289,8 @@ namespace API.Migrations
                         {
                             Id = 49,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5241),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5241),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5943),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5943),
                             Nombre = "Wrangler",
                             UsuarioId = 1,
                             VehiculoMarcaId = 12,
@@ -4300,8 +4300,8 @@ namespace API.Migrations
                         {
                             Id = 50,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5242),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5242),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5944),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5944),
                             Nombre = "Cherokee",
                             UsuarioId = 1,
                             VehiculoMarcaId = 12,
@@ -4311,8 +4311,8 @@ namespace API.Migrations
                         {
                             Id = 51,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5243),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5243),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5945),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5946),
                             Nombre = "Grand Cherokee",
                             UsuarioId = 1,
                             VehiculoMarcaId = 12,
@@ -4322,8 +4322,8 @@ namespace API.Migrations
                         {
                             Id = 52,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5244),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5244),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5947),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5947),
                             Nombre = "Cruize",
                             UsuarioId = 1,
                             VehiculoMarcaId = 5,
@@ -4333,8 +4333,8 @@ namespace API.Migrations
                         {
                             Id = 53,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5245),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5245),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5948),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5949),
                             Nombre = "Aveo",
                             UsuarioId = 1,
                             VehiculoMarcaId = 5,
@@ -4344,8 +4344,8 @@ namespace API.Migrations
                         {
                             Id = 54,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5246),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5246),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5950),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5950),
                             Nombre = "Colorado",
                             UsuarioId = 1,
                             VehiculoMarcaId = 5,
@@ -4355,8 +4355,8 @@ namespace API.Migrations
                         {
                             Id = 55,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5247),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5247),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5951),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5952),
                             Nombre = "Silverado",
                             UsuarioId = 1,
                             VehiculoMarcaId = 5,
@@ -4366,8 +4366,8 @@ namespace API.Migrations
                         {
                             Id = 56,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5248),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5248),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5953),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5953),
                             Nombre = "Trax",
                             UsuarioId = 1,
                             VehiculoMarcaId = 5,
@@ -4377,8 +4377,8 @@ namespace API.Migrations
                         {
                             Id = 57,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5249),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5249),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5954),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5954),
                             Nombre = "Traverse",
                             UsuarioId = 1,
                             VehiculoMarcaId = 5,
@@ -4388,8 +4388,8 @@ namespace API.Migrations
                         {
                             Id = 58,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5250),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5250),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5955),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5956),
                             Nombre = "Otro",
                             UsuarioId = 1,
                             VehiculoMarcaId = 1,
@@ -4399,8 +4399,8 @@ namespace API.Migrations
                         {
                             Id = 59,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5251),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5251),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5957),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5957),
                             Nombre = "Touareg",
                             UsuarioId = 1,
                             VehiculoMarcaId = 22,
@@ -4410,8 +4410,8 @@ namespace API.Migrations
                         {
                             Id = 60,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5252),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5252),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5958),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5959),
                             Nombre = "Tiguan",
                             UsuarioId = 1,
                             VehiculoMarcaId = 22,
@@ -4421,8 +4421,8 @@ namespace API.Migrations
                         {
                             Id = 61,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5253),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5254),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5961),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5961),
                             Nombre = "Jetta",
                             UsuarioId = 1,
                             VehiculoMarcaId = 22,
@@ -4432,8 +4432,8 @@ namespace API.Migrations
                         {
                             Id = 62,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5254),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5255),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5962),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5963),
                             Nombre = "Passat",
                             UsuarioId = 1,
                             VehiculoMarcaId = 22,
@@ -4443,8 +4443,8 @@ namespace API.Migrations
                         {
                             Id = 63,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5256),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5256),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5964),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5965),
                             Nombre = "Golf",
                             UsuarioId = 1,
                             VehiculoMarcaId = 22,
@@ -4454,8 +4454,8 @@ namespace API.Migrations
                         {
                             Id = 64,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5257),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5257),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5966),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5966),
                             Nombre = "Fox",
                             UsuarioId = 1,
                             VehiculoMarcaId = 22,
@@ -4465,8 +4465,8 @@ namespace API.Migrations
                         {
                             Id = 65,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5258),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5258),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5967),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5968),
                             Nombre = "D-MAX",
                             UsuarioId = 1,
                             VehiculoMarcaId = 11,
@@ -4476,8 +4476,8 @@ namespace API.Migrations
                         {
                             Id = 66,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5259),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5259),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5969),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5969),
                             Nombre = "Rodeo",
                             UsuarioId = 1,
                             VehiculoMarcaId = 11,
@@ -4487,8 +4487,8 @@ namespace API.Migrations
                         {
                             Id = 67,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5260),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5260),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5970),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5971),
                             Nombre = "MUX",
                             UsuarioId = 1,
                             VehiculoMarcaId = 11,
@@ -4498,8 +4498,8 @@ namespace API.Migrations
                         {
                             Id = 68,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5261),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5261),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5972),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5973),
                             Nombre = "XC-60",
                             UsuarioId = 1,
                             VehiculoMarcaId = 23,
@@ -4509,8 +4509,8 @@ namespace API.Migrations
                         {
                             Id = 69,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5262),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5263),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5973),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5974),
                             Nombre = "XC-90",
                             UsuarioId = 1,
                             VehiculoMarcaId = 23,
@@ -4520,8 +4520,8 @@ namespace API.Migrations
                         {
                             Id = 70,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5263),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5264),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5975),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5975),
                             Nombre = "XC-40",
                             UsuarioId = 1,
                             VehiculoMarcaId = 23,
@@ -4531,8 +4531,8 @@ namespace API.Migrations
                         {
                             Id = 71,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5264),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5265),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5976),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5977),
                             Nombre = "Legacy",
                             UsuarioId = 1,
                             VehiculoMarcaId = 24,
@@ -4542,8 +4542,8 @@ namespace API.Migrations
                         {
                             Id = 72,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5265),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5266),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5978),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5978),
                             Nombre = "Impreza",
                             UsuarioId = 1,
                             VehiculoMarcaId = 24,
@@ -4553,8 +4553,8 @@ namespace API.Migrations
                         {
                             Id = 73,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5266),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5267),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5979),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5980),
                             Nombre = "Outback",
                             UsuarioId = 1,
                             VehiculoMarcaId = 24,
@@ -4564,8 +4564,8 @@ namespace API.Migrations
                         {
                             Id = 74,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5267),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5268),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5981),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5981),
                             Nombre = "Forester",
                             UsuarioId = 1,
                             VehiculoMarcaId = 24,
@@ -4575,8 +4575,8 @@ namespace API.Migrations
                         {
                             Id = 75,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5268),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5269),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5982),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5983),
                             Nombre = "XV (Crosstrek)",
                             UsuarioId = 1,
                             VehiculoMarcaId = 24,
@@ -4616,8 +4616,8 @@ namespace API.Migrations
                         {
                             Id = 1,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5047),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5048),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5774),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5774),
                             Nombre = "Otro",
                             UsuarioId = 1
                         },
@@ -4625,8 +4625,8 @@ namespace API.Migrations
                         {
                             Id = 2,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5048),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5049),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5775),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5776),
                             Nombre = "Autobus",
                             UsuarioId = 1
                         },
@@ -4634,17 +4634,17 @@ namespace API.Migrations
                         {
                             Id = 3,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5049),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5050),
-                            Nombre = "Camion",
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5776),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5777),
+                            Nombre = "Camión",
                             UsuarioId = 1
                         },
                         new
                         {
                             Id = 4,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5050),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5051),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5778),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5778),
                             Nombre = "Camioneta",
                             UsuarioId = 1
                         },
@@ -4652,8 +4652,8 @@ namespace API.Migrations
                         {
                             Id = 5,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5051),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5052),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5779),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5780),
                             Nombre = "Carro",
                             UsuarioId = 1
                         },
@@ -4661,8 +4661,8 @@ namespace API.Migrations
                         {
                             Id = 6,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5052),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5053),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5782),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5782),
                             Nombre = "Jeepeta",
                             UsuarioId = 1
                         },
@@ -4670,8 +4670,8 @@ namespace API.Migrations
                         {
                             Id = 7,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5053),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5054),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5783),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5783),
                             Nombre = "Jeep",
                             UsuarioId = 1
                         },
@@ -4679,8 +4679,8 @@ namespace API.Migrations
                         {
                             Id = 8,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5054),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5054),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5784),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5785),
                             Nombre = "Guagua",
                             UsuarioId = 1
                         },
@@ -4688,8 +4688,8 @@ namespace API.Migrations
                         {
                             Id = 9,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5055),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5055),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5786),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5787),
                             Nombre = "Motor o Motocicleta",
                             UsuarioId = 1
                         },
@@ -4697,11 +4697,162 @@ namespace API.Migrations
                         {
                             Id = 10,
                             Estatus = true,
-                            FechaCreacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5056),
-                            FechaModificacion = new DateTime(2023, 3, 28, 20, 56, 44, 732, DateTimeKind.Local).AddTicks(5056),
+                            FechaCreacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5788),
+                            FechaModificacion = new DateTime(2023, 5, 12, 12, 9, 30, 78, DateTimeKind.Local).AddTicks(5788),
                             Nombre = "Patana",
                             UsuarioId = 1
                         });
+                });
+
+            modelBuilder.Entity("Domain.ProcedureResults.SP_ContadorAsistenciasPorUnidad", b =>
+                {
+                    b.Property<int>("TotalAccidentes")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TotalAsistencias")
+                        .HasColumnType("int");
+
+                    b.ToTable("SP_ContadorAsistenciasPorUnidad_Result");
+                });
+
+            modelBuilder.Entity("Domain.ProcedureResults.SP_ReporteAsistenciasDetalles", b =>
+                {
+                    b.Property<string>("CategoriaAsistencia")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CedulaSoldado")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Color")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EsExtranjero")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("FechaCreacion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Identificacion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Institucion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Marca")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Modelo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Municipio")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NombreCiudadano")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Provincia")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("QuienReporta")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RangoAgente")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Region")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sexo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TiempoCompletada")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TiempoCreacion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TiempoLlegada")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Tipo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TipoAsistencia")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Tramo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Usuario")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.ToTable("SP_ReporteAsistenciasDetalles_Result");
+                });
+
+            modelBuilder.Entity("Domain.ResultSetModels.SP_CreateUnidadMiembro", b =>
+                {
+                    b.Property<string>("Denominacion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("EsEncargado")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Ficha")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MiembroInfo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Placa")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Tramo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UnidadMiembroId")
+                        .HasColumnType("int");
+
+                    b.ToTable("SP_CreateUnidadMiembro_Result");
+                });
+
+            modelBuilder.Entity("Domain.ResultSetModels.SP_UnidadAutoCompleteResult", b =>
+                {
+                    b.Property<string>("Denominacion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("EstaDisponible")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Ficha")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Placa")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Tramo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UnidadId")
+                        .HasColumnType("int");
+
+                    b.ToTable("SP_UnidadAutoComplete_Result");
+                });
+
+            modelBuilder.Entity("Domain.ResultSetsModels.SP_ReporteAsistenciasResult", b =>
+                {
+                    b.Property<string>("CategoriaAsistencia")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Region")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TipoAsistencia")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Total")
+                        .HasColumnType("int");
+
+                    b.ToTable("SP_ReporteAsistencias_Result");
                 });
 
             modelBuilder.Entity("Domain.Entities.Asistencia", b =>

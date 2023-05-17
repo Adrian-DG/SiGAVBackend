@@ -25,8 +25,8 @@ namespace Domain.ProcedureResults
         public string Institucion { get; set; }
         public string RangoAgente { get; set;}
         public string CedulaSoldado { get; set; }
-        public string NombreSoldado { get;}
-        public DateTime FechaCreacion { get; set; }
+        public string NombreSoldado { get; set; }
+        public string FechaCreacion { get; set; }
         public string TiempoCreacion { get; set; }
         public string TiempoLlegada { get; set; }
         public string TiempoCompletada { get; set; }
