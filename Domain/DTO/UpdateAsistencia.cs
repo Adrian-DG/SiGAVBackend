@@ -10,5 +10,6 @@ namespace Domain.DTO
 	{
 		public int Id { get; set; }
 		public EstatusAsistencia EstatusAsistencia { get; set; }
+		public Nullable<int> CodUsuario { get; set; }
 	}
 }

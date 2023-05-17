@@ -297,7 +297,7 @@ namespace API.Controllers
 					}
 
 					// Populate data rows
-					int rowIndex = 2;
+					int rowIndex = 5;
 					foreach (var item in result)
 					{
 						columnIndex = 1;

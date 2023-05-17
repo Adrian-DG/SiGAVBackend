@@ -158,6 +158,7 @@ namespace Infrastructure.Repositories
 			{
 				asistencia.Estatus = true;
 				asistencia.TiempoCompletada = DateTime.Now;
+				asistencia.UsuarioId = (int) model.CodUsuario;
 			}			
 
 			_context.Attach<Asistencia>(asistencia);
