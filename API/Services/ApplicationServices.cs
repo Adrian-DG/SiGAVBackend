@@ -10,6 +10,7 @@ namespace API.Services
 			services.AddScoped<IUnitOfWork, UnitOfWork>();
 			services.GetDatabaseService(configuration, environment);
 			services.GetAuthService(configuration);
+			services.AddSingleton(typeof(GoogleSheetHelper));
 
 			return services;
 		}

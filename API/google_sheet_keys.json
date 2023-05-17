@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "asistenciavialmap",
+  "private_key_id": "d6ad2cf4531f71b79ee029abbccf9715b23e6731",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCnFClYzIfwjfpO\naYJLp37ROHyxIWB/QPiW/W0j4OPXCgZUfXmyWGqqgLuCxO7dB97qvaekfiDKu1yP\npulAbAkwwHe+MXPh8n+updBXeOyJV8zI95JsWNVTZeYEFy4u3GXB0KKMmPoTcs3y\nHYypqKWVm82lmAHJ4fzbqtU1o34ivxKTSgfiz2VegrsgNvqRgR/4HUo0+o8TMEnU\nTFQjv9IJIQyDbmK4psh9JptMxR2bGfLtnwC2heaN5sbp+9r79ZgKDMajQexPCug8\naB7Mu3LJao+G6dXj1pjIE6mHBZUV3W+asNZ1Dnx9w/GJ7IpOCrtchrcW9x7CjY0F\n5U+ZT1x7AgMBAAECggEABeg8RzPBpKgoaIHp31BJnahGt4ge3mQgkrOptBVWvBSF\njiwt7TfO2z6YIpkuE50cU3L0Jk7NTJp2PQZhap7HOzS62ki366eqvjTsZxzssM7S\n/AUz/v+r2MbnOU+ZsukMJSxoUUDa92zdY8kjeLlW08s0tXBos8esX7BF2VK+YKHc\nX691tkX8xk/DKgzKRrxevA35DYd8YoUReCb3fuGY1LDHXsxZqSgtdrxviUpT8qZ6\n8a609nNdiSyliMwWdTfCBd+ZDPObchbljZawjGiDRdoUkbzD8eSRfIxzoxEAfDBS\nchh9EKTSjGlA5xiD6XVIvGMUQMclpfNgbmr7NBoIRQKBgQDP+YNeGckHJaicsM/g\nrDPYd4s7YV88J0UukrMM1VOOORNeg/wVZ8i5ZUQSLKjQRxIVhBelq78fmMsJUIlC\ncOWNLE1yJwodY+HsS5l7eZqyxkipTz+gkijl43nCTY6CVTqz0i+KJ/V4DnFl8+WR\niBxOpseXsU6rgqLDa9KrzURTHwKBgQDNqRL/BOgcziS94f1YD8QyArUiq0mIJs+b\nxIoD+9lJwhCzP5GKQeoy4JDvnhkjVgnVBQcfyKNm69oRj8RTNu2ciNPxiAAJa2/o\n1Cd7+I7s+5HLR51iF2LhzVnyPNSf35TGliSmwtGUdOmj4wgnMKLdtDs2cAKfm9u4\nOTYGcCaHJQKBgBe3yuWGZ0irYMlN2Mc0nE0JhRVmi2feyqL/E/BYu8iydaUHxE3k\noh2SkOrJsQ7frA5MHC5GoetGj5EmYCD1oxgwfzyPezXS2EcMcBqGyb+toUe9w/HZ\n+VQOVypzkdcHRUSQqd9Fo1bnvsLzx7CLJz9JAeYo0GH66fkDaOky5aHdAoGAGs8C\nYeni0/ZvRa1S2AreGWLO9+D6KdxdTcHV9+T5kyrQAH213B7xh4ZMfl/OiROrHnCU\nWClQW5c9CvMBtZNAcBpJ/n8q+g9ePCyDpR5miy/T9nq0YlgIFMUvB2u0j86WVzi1\nOGPG7CI9Xpa2tl0ZrerTmSoKvYGUp7QVfctayl0CgYBIsMtM40u5NPkiARODh+gH\n9j0sKXZVRFRPUP/KaFoypagoctVxosTvn/SI/+3gfgRO6hwZ5aQ3E4cBQSO5KTk/\nf/khYd6OyUVMMLlv418C+Foc4nfLj08odhdKNRtBHtqqvzJxD2tjZfbvKQ+dzpHK\n2FiZ8E+ZPQ0qouI99a06Jg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "asistenciavial@asistenciavialmap.iam.gserviceaccount.com",
+  "client_id": "118117853381079881958",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/asistenciavial%40asistenciavialmap.iam.gserviceaccount.com"
+}

@@ -154,49 +154,49 @@ namespace API.Controllers
 			{
 				var result = _asistencias.GetResumenAsistenciasDiario();
 
-				var stream = new MemoryStream();
-
-				using (var excel = new ExcelPackage(stream))
+				using (ExcelPackage package = new ExcelPackage())
 				{
+					var worksheet = package.Workbook.Worksheets.Add("Resumen Estadisticas Asistencias");
 
-					ExcelWorksheet worksheet = excel.Workbook.Worksheets.Add("Reporte de Asistencias");
+					// Encabezado
+					var header = worksheet.Cells[1, 1];
+					header.Style.Font.Bold = true;
+					header.Style.Font.Size = 24;
+					header.LoadFromText("Reporte Estadistico Asistencias");
 
-					int startRow = 4;
-					int columnIndex = 1;
+					var disclaimer = worksheet.Cells[3, 1];
+					disclaimer.Style.Font.Bold = true;
+					disclaimer.LoadFromText("Este documento es el resumen detallado de todas las asistencias completadas durante el dia.");
 
-					foreach (var prop in typeof(SP_ReporteAsistenciasResult).GetProperties())
-					{
-						worksheet.Cells[startRow, columnIndex].Value = prop.Name;
-						columnIndex++;
-					}
+					var printDate = worksheet.Cells[3, 4];
+					printDate.Style.Font.Bold = true;
+					printDate.LoadFromText("Fecha Impresion");
+
+					worksheet.Cells[3, 5].LoadFromText($"{DateTime.Now.ToString("dd/MM/yyyy hh:mm tt")}");
+
+					int rowIndex = 5;
 
 					// Apply styling to column headers
-					using (var range = worksheet.Cells[startRow, 1, startRow, columnIndex])
+					using (var range = worksheet.Cells[rowIndex, 1, rowIndex, 4])
 					{
-						range.Style.Font.Bold = true;
 						range.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-						range.Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.Gray);
+						range.Style.Fill.BackgroundColor.SetColor(Color.FromArgb(69, 75, 127));
+						range.Style.Font.Bold = true;
 						range.Style.Font.Color.SetColor(System.Drawing.Color.White);
 					}
 
-					// Populate data rows
-					int rowIndex = 2;
-					foreach (var item in result)
-					{
-						columnIndex = 1;
-						foreach (var prop in typeof(SP_ReporteAsistenciasResult).GetProperties())
-						{
-							worksheet.Cells[rowIndex, columnIndex].Value = prop.GetValue(item, null);
-							columnIndex++;
-						}
-						rowIndex++;
-					}
+					// insert data to sheet
+					worksheet.Cells[rowIndex, 1].LoadFromCollection(result, true);
 
 					worksheet.Cells.AutoFitColumns();
-				}
 
-				stream.Position = 0;
-				return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", $"resumen_asistencia_diario_{DateTime.Now.ToString("dd-MM-yyyy")}");
+					using (MemoryStream ms = new MemoryStream())
+					{
+						package.SaveAs(ms);
+						byte[] file = ms.ToArray();
+						return File(file, "	application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", $"reporte_estadistico_asistencias_{DateTime.Now.ToString("dd-MM-yyyy")}");
+					}
+				}
 			}
 			catch (Exception)
 			{
@@ -206,64 +206,64 @@ namespace API.Controllers
 
 
 
-		[HttpGet("reporte/resumen_fecha")]
-		public IActionResult GetReporteResumenAsistenciasPorFecha([FromQuery] DateFilter filter)
-		{
-			try
-			{
-				var result = _asistencias.GetResumenAsistenciasPorFecha(filter);
+		//[HttpGet("reporte/resumen_fecha")]
+		//public IActionResult GetReporteResumenAsistenciasPorFecha([FromQuery] DateFilter filter)
+		//{
+		//	try
+		//	{
+		//		var result = _asistencias.GetResumenAsistenciasPorFecha(filter);
 
-				var stream = new MemoryStream();
+		//		var stream = new MemoryStream();
 
-				using (var excel = new ExcelPackage(stream))
-				{
-					var worksheet = excel.Workbook.Worksheets.Add("Resumen");
-					var namedStyle = excel.Workbook.Styles.CreateNamedStyle("HyperLink");
-					namedStyle.Style.Font.UnderLine = true;
-					namedStyle.Style.Font.Color.SetColor(Color.Blue);
+		//		using (var excel = new ExcelPackage(stream))
+		//		{
+		//			var worksheet = excel.Workbook.Worksheets.Add("Resumen");
+		//			var namedStyle = excel.Workbook.Styles.CreateNamedStyle("HyperLink");
+		//			namedStyle.Style.Font.UnderLine = true;
+		//			namedStyle.Style.Font.Color.SetColor(Color.Blue);
 
-					const int startRow = 5;
-					var row = startRow;
+		//			const int startRow = 5;
+		//			var row = startRow;
 
-					worksheet.Cells["A1"].Value = "Resumen Asistencias";
+		//			worksheet.Cells["A1"].Value = "Resumen Asistencias";
 
-					using (var header = worksheet.Cells["A1:C1"])
-					{
-						header.Merge = true;
-						header.Style.Font.Color.SetColor(Color.White);
-						header.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.CenterContinuous;
-						header.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-						header.Style.Fill.BackgroundColor.SetColor(Color.FromArgb(23, 55, 93));
-					}
+		//			using (var header = worksheet.Cells["A1:C1"])
+		//			{
+		//				header.Merge = true;
+		//				header.Style.Font.Color.SetColor(Color.White);
+		//				header.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.CenterContinuous;
+		//				header.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+		//				header.Style.Fill.BackgroundColor.SetColor(Color.FromArgb(23, 55, 93));
+		//			}
 
-					worksheet.Cells["A3"].Value = "Fecha";
-					string printDate = DateTime.Now.ToString("dd/MM/yyyy hh:mm tt"); 
-					worksheet.Cells["B3"].Value = printDate;
+		//			worksheet.Cells["A3"].Value = "Fecha";
+		//			string printDate = DateTime.Now.ToString("dd/MM/yyyy hh:mm tt"); 
+		//			worksheet.Cells["B3"].Value = printDate;
 
-					foreach (var item in result)
-					{
-						worksheet.Cells[row, 1].Value = item.Region;
-						worksheet.Cells[row, 2].Value = item.CategoriaAsistencia;
-						worksheet.Cells[row, 3].Value = item.TipoAsistencia;
-						worksheet.Cells[row, 4].Value = item.Total;
-					}
+		//			foreach (var item in result)
+		//			{
+		//				worksheet.Cells[row, 1].Value = item.Region;
+		//				worksheet.Cells[row, 2].Value = item.CategoriaAsistencia;
+		//				worksheet.Cells[row, 3].Value = item.TipoAsistencia;
+		//				worksheet.Cells[row, 4].Value = item.Total;
+		//			}
 
-					excel.Workbook.Properties.Title = "User List";
-					excel.Workbook.Properties.Author = "Mohamad Lawand";
-					excel.Workbook.Properties.Subject = "User List";
-					// save the new spreadsheet
-					excel.Save();
+		//			excel.Workbook.Properties.Title = "User List";
+		//			excel.Workbook.Properties.Author = "Mohamad Lawand";
+		//			excel.Workbook.Properties.Subject = "User List";
+		//			// save the new spreadsheet
+		//			excel.Save();
 
-				}
+		//		}
 
-				stream.Position = 0;
-				return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", $"Resumen_Asistencias_{DateTime.Now.ToString("dd/MM/yyyy")}.xlsx");
-			}
-			catch (Exception)
-			{
-				throw;
-			}
-		}
+		//		stream.Position = 0;
+		//		return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", $"Resumen_Asistencias_{DateTime.Now.ToString("dd/MM/yyyy")}.xlsx");
+		//	}
+		//	catch (Exception)
+		//	{
+		//		throw;
+		//	}
+		//}
 
 		[HttpGet("reporte/resumen_detalles")]
 		public ActionResult GetResumenAsistenciasDetalles()
@@ -271,52 +271,54 @@ namespace API.Controllers
 			try
 			{
 				var result = _asistencias.GetResumenAsistenciasDetalles();
-                var stream = new MemoryStream();
 
-				using (var excel = new ExcelPackage(stream))
+				using (ExcelPackage package = new ExcelPackage())
 				{
-					// Create a new worksheet
-					ExcelWorksheet worksheet = excel.Workbook.Worksheets.Add("Reporte de Asistencias");
+					var worksheet = package.Workbook.Worksheets.Add("Resumen de Asistencias");
 
-					int startRow = 4;
-					int columnIndex = 1;
+					// Encabezado
+					var header = worksheet.Cells[1, 1];
+					header.Style.Font.Bold = true;
+					header.Style.Font.Size = 24;
+					header.LoadFromText("Reporte Detalle Asistencia");
 
-					foreach(var prop in typeof(SP_ReporteAsistenciasDetalles).GetProperties())
-					{
-						worksheet.Cells[startRow, columnIndex].Value = prop.Name;
-						columnIndex++;
-					}
+					var disclaimer = worksheet.Cells[3, 1];
+					disclaimer.Style.Font.Bold = true;
+					disclaimer.LoadFromText("Este documento es el resumen detallado de todas las asistencias completadas durante el dia.");
+
+					var printDate = worksheet.Cells[3, 4];
+					printDate.Style.Font.Bold = true;
+					printDate.LoadFromText("Fecha Impresion");
+
+					worksheet.Cells[3, 5].LoadFromText($"{DateTime.Now.ToString("dd/MM/yyyy hh:mm tt")}");
+
+					int rowIndex = 5;
 
 					// Apply styling to column headers
-					using (var range = worksheet.Cells[startRow, 1, startRow, columnIndex])
+					using (var range = worksheet.Cells[rowIndex, 1, rowIndex, 25])
 					{
-						range.Style.Font.Bold = true;
 						range.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-						range.Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.Gray);
+						range.Style.Fill.BackgroundColor.SetColor(Color.FromArgb(69, 75, 127));
+						range.Style.Font.Bold = true;						
 						range.Style.Font.Color.SetColor(System.Drawing.Color.White);
 					}
 
-					// Populate data rows
-					int rowIndex = 2;
-					foreach (var item in result)
-					{
-						columnIndex = 1;
-						foreach (var prop in typeof(SP_ReporteAsistenciasDetalles).GetProperties())
-						{
-							worksheet.Cells[rowIndex, columnIndex].Value = prop.GetValue(item, null);
-							columnIndex++;
-						}
-						rowIndex++;
-					}
+					// insert data to sheet
+					worksheet.Cells[rowIndex, 1].LoadFromCollection(result, true);
 
 					worksheet.Cells.AutoFitColumns();
 
+					using (MemoryStream ms = new MemoryStream())
+					{
+						package.SaveAs(ms);
+						byte[] file = ms.ToArray();
+						return File(file, "	application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", $"reporte_detalle_asistencias_{DateTime.Now.ToString("dd-MM-yyyy")}");
+					}
+
 				}
 
-				stream.Position = 0;
-				return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", $"resumen_asistencia_{DateTime.Now.ToString("dd-MM-yyyy")}");
 
-            }
+			}
             catch (Exception)
 			{
 				throw;
