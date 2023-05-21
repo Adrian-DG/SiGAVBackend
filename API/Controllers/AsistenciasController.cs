@@ -26,7 +26,9 @@ namespace API.Controllers
 			try
 			{
 				await _asistencias.CreateAsistenciaR5(model);
-				var response = _response.GetResponse(await _uow.CommitChangesAsync());
+				var response = (await _uow.CommitChangesAsync())
+					? new ServerResponse { Message = "Los cambios se guardaron correctamente !!", Status = true }
+					: new ServerResponse { Message = "Error: Solo es posible asignar asistencias si la unidad esta conectada a la aplicación !!", Status = false };
 				return Ok(response);
 			}
 			catch (Exception)

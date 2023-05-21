@@ -96,7 +96,7 @@ namespace Infrastructure.Repositories
 						.OrderByDescending(x => x.FechaCreacion)
 						.ToListAsync();
 
-			return results.First().Id;
+			return (results.Count > 0) ? results.First().Id : 0;
 		}
 
 		public async Task CreateAsistenciaR5(CreateAsistenciaR5 model)
@@ -111,6 +111,8 @@ namespace Infrastructure.Repositories
 			}
 
 			var unidadMiembroId = await GetUnidadMiembroId(model.UnidadId);
+
+			if (unidadMiembroId == 0) return;
 
 			var newAsistencia = new Asistencia
 			{
@@ -130,16 +132,16 @@ namespace Infrastructure.Repositories
 				// asistencia (sin coordenadas)
 				MunicipioId = model.MunicipioId,
 				ProvinciaId = model.ProvinciaId,
-				UnidadMiembroId = unidadMiembroId,
 				ReportadoPor = ReportadoPor.CallCenter,
 				EstatusAsistencia = EstatusAsistencia.PENDIENTE,
+				UnidadMiembroId = unidadMiembroId,
 				UsuarioId = model.UsuarioId,
 				TipoAsistencias = tipoAsistencias,
 				Comentario = model.Comentario,
 				Estatus = false
 			};
 
-				await _repository.AddAsync(newAsistencia);
+			await _repository.AddAsync(newAsistencia);
 		}
 
 		public async Task<PagedData<AsistenciaViewModel>> GetAllAsistencias(PaginationFilter filters, Expression<Func<Asistencia, bool>> predicate)
@@ -218,6 +220,7 @@ namespace Infrastructure.Repositories
 			if((int)model.EstatusAsistencia == 2)
 			{
 				asistencia.TiempoLlegada = DateTime.Now;
+				asistencia.UnidadMiembroId = (int) model.UnidadMiembroId;
 			}
 			
 			asistencia.FechaModificacion = DateTime.Now;

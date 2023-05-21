@@ -62,10 +62,9 @@ namespace Infrastructure.Context
 					v => JsonConvert.DeserializeObject<IList<string>>(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore })
 				);
 
-
 			/* ----------- DATA SEEDING TO TABLES --------------- */
 
-			if (true)
+			if (false)
 			{
 				// Generamos el cifrado de la clave del usuario administrador
 				new Infrastructure.Helpers.EncryptHelper().CreatePasswordHash("admin01", out byte[] passwordHash, out byte[] passwordSalt);
