@@ -174,12 +174,12 @@ namespace API.Controllers
 					printDate.Style.Font.Bold = true;
 					printDate.LoadFromText("Fecha Impresion");
 
-					worksheet.Cells[3, 5].LoadFromText($"{DateTime.Now.ToString("dd/MM/yyyy hh:mm tt")}");
+					worksheet.Cells[3, 5].LoadFromText($"{DateTime.Now.ToShortDateString()}");
 
 					int rowIndex = 5;
 
 					// Apply styling to column headers
-					using (var range = worksheet.Cells[rowIndex, 1, rowIndex, 4])
+					using (var range = worksheet.Cells[rowIndex, 1, rowIndex, 5])
 					{
 						range.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
 						range.Style.Fill.BackgroundColor.SetColor(Color.FromArgb(69, 75, 127));
@@ -292,12 +292,12 @@ namespace API.Controllers
 					printDate.Style.Font.Bold = true;
 					printDate.LoadFromText("Fecha Impresion");
 
-					worksheet.Cells[3, 5].LoadFromText($"{DateTime.Now.ToString("dd/MM/yyyy hh:mm tt")}");
+					worksheet.Cells[3, 5].LoadFromText($"{DateTime.Now.ToShortDateString()}");
 
 					int rowIndex = 5;
 
 					// Apply styling to column headers
-					using (var range = worksheet.Cells[rowIndex, 1, rowIndex, 25])
+					using (var range = worksheet.Cells[rowIndex, 1, rowIndex, 28])
 					{
 						range.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
 						range.Style.Fill.BackgroundColor.SetColor(Color.FromArgb(69, 75, 127));

@@ -9,6 +9,7 @@ namespace Domain.ResultSetsModels
     public class SP_ReporteAsistenciasResult
     {
         public string Region { get; set; }
+        public string Tramo { get; set; }
         public string CategoriaAsistencia { get; set; }
         public string TipoAsistencia { get; set; }
         public int Total { get; set; }
