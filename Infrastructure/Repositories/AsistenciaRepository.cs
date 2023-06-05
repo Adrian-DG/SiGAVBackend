@@ -375,6 +375,52 @@ namespace Infrastructure.Repositories
 			return results;
 		}
 
+		public async Task<AsistenciaEditViewModel> GetAsistenciaEditViewModel(int Id)
+		{
+			var asistencia = await _repository
+							.Select(x => new AsistenciaEditViewModel
+							{
+								Id = x.Id,
+								Identificacion = x.Identificacion,
+								Nombre = x.Nombre,
+								Apellido = x.Apellido,
+								Genero = x.Genero,
+								Telefono = x.Telefono,
+								VehiculoColorId = x.VehiculoColorId,
+								VehiculoTipoId = x.VehiculoTipoId,
+								VehiculoMarcaId = x.VehiculoMarcaId,
+								VehiculoModeloId = x.VehiculoModeloId,
+								Placa = x.Placa,
+								Comentario = x.Comentario,
+								TipoAsistencias = new List<int>()
+							})
+							.SingleAsync(x => x.Id == Id);
+
+			return asistencia;
+		}
+
+		public async Task CompletarInformacionAsistencia(AsistenciaEditViewModel model)
+		{
+			var entity = await _repository.FindAsync(model.Id);
+
+			entity.Identificacion = model.Identificacion;
+			entity.Nombre = model.Nombre;
+			entity.Apellido = model.Apellido;
+			entity.Telefono = model.Telefono;
+			entity.Comentario = model.Comentario;
+
+			entity.VehiculoTipoId = model.VehiculoTipoId;
+			entity.VehiculoColorId = model.VehiculoColorId;
+			entity.VehiculoMarcaId = model.VehiculoMarcaId;
+			entity.VehiculoModeloId = model.VehiculoModeloId;
+
+			entity.Placa = model.Placa;
+
+			_context.Attach<Asistencia>(entity);
+			_context.Entry<Asistencia>(entity).State = EntityState.Modified;
+
+		}
+
 		public List<SP_ReporteAsistenciasResult> GetResumenAsistenciasDiario()
 		{
 			return _context.SP_ReporteAsistencias_Result

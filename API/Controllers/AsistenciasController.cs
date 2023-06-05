@@ -2,6 +2,7 @@
 using Domain.Entities;
 using Domain.ProcedureResults;
 using Domain.ResultSetsModels;
+using Domain.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -145,6 +146,39 @@ namespace API.Controllers
 			}
 			catch (Exception)
 			{
+				throw;
+			}
+		}
+
+		[AllowAnonymous]
+		[HttpGet("edit/{id}")]
+		public async Task<IActionResult> GetAsistenciaEditViewModel([FromRoute] int Id)
+		{
+			try
+			{
+				var result = await _asistencias.GetAsistenciaEditViewModel(Id);
+				return Ok(result);
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+
+		[AllowAnonymous]
+		[HttpPut("edit")]
+		public async Task<IActionResult> CompletarInformacionAsistencia([FromBody] AsistenciaEditViewModel model)
+		{
+			try
+			{
+				await _asistencias.CompletarInformacionAsistencia(model);
+
+				return Ok(await _uow.CommitChangesAsync());
+			}
+			catch (Exception)
+			{
+
 				throw;
 			}
 		}
