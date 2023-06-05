@@ -96,7 +96,7 @@ namespace Infrastructure.Repositories
 						.OrderByDescending(x => x.FechaCreacion)
 						.ToListAsync();
 
-			return results.First().Id;
+			return (results.Count > 0) ? results.First().Id : 0;
 		}
 
 		public async Task CreateAsistenciaR5(CreateAsistenciaR5 model)
@@ -111,6 +111,8 @@ namespace Infrastructure.Repositories
 			}
 
 			var unidadMiembroId = await GetUnidadMiembroId(model.UnidadId);
+
+			if (unidadMiembroId == 0) return;
 
 			var newAsistencia = new Asistencia
 			{
@@ -130,16 +132,16 @@ namespace Infrastructure.Repositories
 				// asistencia (sin coordenadas)
 				MunicipioId = model.MunicipioId,
 				ProvinciaId = model.ProvinciaId,
-				UnidadMiembroId = unidadMiembroId,
 				ReportadoPor = ReportadoPor.CallCenter,
 				EstatusAsistencia = EstatusAsistencia.PENDIENTE,
+				UnidadMiembroId = unidadMiembroId,
 				UsuarioId = model.UsuarioId,
 				TipoAsistencias = tipoAsistencias,
 				Comentario = model.Comentario,
 				Estatus = false
 			};
 
-				await _repository.AddAsync(newAsistencia);
+			await _repository.AddAsync(newAsistencia);
 		}
 
 		public async Task<PagedData<AsistenciaViewModel>> GetAllAsistencias(PaginationFilter filters, Expression<Func<Asistencia, bool>> predicate)
@@ -218,6 +220,7 @@ namespace Infrastructure.Repositories
 			if((int)model.EstatusAsistencia == 2)
 			{
 				asistencia.TiempoLlegada = DateTime.Now;
+				asistencia.UnidadMiembroId = (int) model.UnidadMiembroId;
 			}
 			
 			asistencia.FechaModificacion = DateTime.Now;
@@ -280,6 +283,11 @@ namespace Infrastructure.Repositories
 			await _repository.AddAsync(newAsistencia);
 		}
 
+		private bool checkFieldsHoldValue(string field)
+		{
+			return String.IsNullOrEmpty(field) || String.IsNullOrEmpty(field.Trim());
+		}
+
 		public async Task<List<AsistenciaViewModel>> GetAsistenciasAsignadaAUnidad(string ficha)
 		{
 			var results = await _repository
@@ -328,9 +336,18 @@ namespace Infrastructure.Repositories
 								EstatusAsistencia = a.EstatusAsistencia.ToString(),
 								ReportadaPor = a.ReportadoPor.ToString(),
 								Comentario = a.Comentario,
-								Estatus = a.Estatus
+								Estatus = a.Estatus,
+								TieneDatosCompletados = true
 							})
 							.ToListAsync();
+
+			foreach(var item in results)
+			{
+				if(checkFieldsHoldValue(item.Identificacion) || checkFieldsHoldValue(item.NombreCiudadano) || checkFieldsHoldValue(item.Telefono))
+				{
+					item.TieneDatosCompletados = false;
+				}
+			}
 
 			return results;
 
@@ -356,6 +373,52 @@ namespace Infrastructure.Repositories
 						.ToListAsync();
 
 			return results;
+		}
+
+		public async Task<AsistenciaEditViewModel> GetAsistenciaEditViewModel(int Id)
+		{
+			var asistencia = await _repository
+							.Select(x => new AsistenciaEditViewModel
+							{
+								Id = x.Id,
+								Identificacion = x.Identificacion,
+								Nombre = x.Nombre,
+								Apellido = x.Apellido,
+								Genero = x.Genero,
+								Telefono = x.Telefono,
+								VehiculoColorId = x.VehiculoColorId,
+								VehiculoTipoId = x.VehiculoTipoId,
+								VehiculoMarcaId = x.VehiculoMarcaId,
+								VehiculoModeloId = x.VehiculoModeloId,
+								Placa = x.Placa,
+								Comentario = x.Comentario,
+								TipoAsistencias = new List<int>()
+							})
+							.SingleAsync(x => x.Id == Id);
+
+			return asistencia;
+		}
+
+		public async Task CompletarInformacionAsistencia(AsistenciaEditViewModel model)
+		{
+			var entity = await _repository.FindAsync(model.Id);
+
+			entity.Identificacion = model.Identificacion;
+			entity.Nombre = model.Nombre;
+			entity.Apellido = model.Apellido;
+			entity.Telefono = model.Telefono;
+			entity.Comentario = model.Comentario;
+
+			entity.VehiculoTipoId = model.VehiculoTipoId;
+			entity.VehiculoColorId = model.VehiculoColorId;
+			entity.VehiculoMarcaId = model.VehiculoMarcaId;
+			entity.VehiculoModeloId = model.VehiculoModeloId;
+
+			entity.Placa = model.Placa;
+
+			_context.Attach<Asistencia>(entity);
+			_context.Entry<Asistencia>(entity).State = EntityState.Modified;
+
 		}
 
 		public List<SP_ReporteAsistenciasResult> GetResumenAsistenciasDiario()

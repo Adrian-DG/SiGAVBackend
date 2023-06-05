@@ -2,6 +2,7 @@
 using Domain.Entities;
 using Domain.ProcedureResults;
 using Domain.ResultSetsModels;
+using Domain.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -26,7 +27,9 @@ namespace API.Controllers
 			try
 			{
 				await _asistencias.CreateAsistenciaR5(model);
-				var response = _response.GetResponse(await _uow.CommitChangesAsync());
+				var response = (await _uow.CommitChangesAsync())
+					? new ServerResponse { Message = "Los cambios se guardaron correctamente !!", Status = true }
+					: new ServerResponse { Message = "Error: Solo es posible asignar asistencias si la unidad esta conectada a la aplicación !!", Status = false };
 				return Ok(response);
 			}
 			catch (Exception)
@@ -147,6 +150,39 @@ namespace API.Controllers
 			}
 		}
 
+		[AllowAnonymous]
+		[HttpGet("edit/{id}")]
+		public async Task<IActionResult> GetAsistenciaEditViewModel([FromRoute] int Id)
+		{
+			try
+			{
+				var result = await _asistencias.GetAsistenciaEditViewModel(Id);
+				return Ok(result);
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+
+		[AllowAnonymous]
+		[HttpPut("edit")]
+		public async Task<IActionResult> CompletarInformacionAsistencia([FromBody] AsistenciaEditViewModel model)
+		{
+			try
+			{
+				await _asistencias.CompletarInformacionAsistencia(model);
+
+				return Ok(await _uow.CommitChangesAsync());
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+
 		[HttpGet("reporte/resumen_diario")]
 		public IActionResult GetReporteResumenAsistenciasDiario()
 		{
@@ -172,12 +208,12 @@ namespace API.Controllers
 					printDate.Style.Font.Bold = true;
 					printDate.LoadFromText("Fecha Impresion");
 
-					worksheet.Cells[3, 5].LoadFromText($"{DateTime.Now.ToString("dd/MM/yyyy hh:mm tt")}");
+					worksheet.Cells[3, 5].LoadFromText($"{DateTime.Now.ToShortDateString()}");
 
 					int rowIndex = 5;
 
 					// Apply styling to column headers
-					using (var range = worksheet.Cells[rowIndex, 1, rowIndex, 4])
+					using (var range = worksheet.Cells[rowIndex, 1, rowIndex, 5])
 					{
 						range.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
 						range.Style.Fill.BackgroundColor.SetColor(Color.FromArgb(69, 75, 127));
@@ -290,12 +326,12 @@ namespace API.Controllers
 					printDate.Style.Font.Bold = true;
 					printDate.LoadFromText("Fecha Impresion");
 
-					worksheet.Cells[3, 5].LoadFromText($"{DateTime.Now.ToString("dd/MM/yyyy hh:mm tt")}");
+					worksheet.Cells[3, 5].LoadFromText($"{DateTime.Now.ToShortDateString()}");
 
 					int rowIndex = 5;
 
 					// Apply styling to column headers
-					using (var range = worksheet.Cells[rowIndex, 1, rowIndex, 25])
+					using (var range = worksheet.Cells[rowIndex, 1, rowIndex, 28])
 					{
 						range.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
 						range.Style.Fill.BackgroundColor.SetColor(Color.FromArgb(69, 75, 127));

@@ -54,5 +54,7 @@ namespace Domain.ViewModels
 		public string EstatusAsistencia { get; set; }
 		public bool Estatus { get; set; }
 
+		public bool TieneDatosCompletados { get; set; }
+
 	}
 }
