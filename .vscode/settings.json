@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/833fd8b3-608c-4328-82e8-aa519a90796b/resourceGroups/AsistenciaVialRSG/providers/Microsoft.Web/sites/SiGAVAPI",
+    "appService.deploySubpath": "."
+}
