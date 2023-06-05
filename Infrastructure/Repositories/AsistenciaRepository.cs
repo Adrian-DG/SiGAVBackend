@@ -283,6 +283,11 @@ namespace Infrastructure.Repositories
 			await _repository.AddAsync(newAsistencia);
 		}
 
+		private bool checkFieldsHoldValue(string field)
+		{
+			return String.IsNullOrEmpty(field) || String.IsNullOrEmpty(field.Trim());
+		}
+
 		public async Task<List<AsistenciaViewModel>> GetAsistenciasAsignadaAUnidad(string ficha)
 		{
 			var results = await _repository
@@ -331,9 +336,18 @@ namespace Infrastructure.Repositories
 								EstatusAsistencia = a.EstatusAsistencia.ToString(),
 								ReportadaPor = a.ReportadoPor.ToString(),
 								Comentario = a.Comentario,
-								Estatus = a.Estatus
+								Estatus = a.Estatus,
+								TieneDatosCompletados = true
 							})
 							.ToListAsync();
+
+			foreach(var item in results)
+			{
+				if(checkFieldsHoldValue(item.Identificacion) || checkFieldsHoldValue(item.NombreCiudadano) || checkFieldsHoldValue(item.Telefono))
+				{
+					item.TieneDatosCompletados = false;
+				}
+			}
 
 			return results;
 
