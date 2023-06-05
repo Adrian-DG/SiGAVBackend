@@ -85,10 +85,10 @@ namespace API.Controllers
 		}
 
 		[HttpGet("VehiculoModelo")]
-		public async Task<IActionResult> GetVehiculoModelo([FromQuery] int id)
+		public async Task<IActionResult> GetVehiculoModelo([FromQuery] int tipo, [FromQuery] int marca)
 		{
 			var result = await _dbContext.VehiculoModelos
-						.Where(x => x.VehiculoMarcaId == id)
+						.Where(x => x.VehiculoMarcaId == marca && x.VehiculoTipoId == tipo)
 						.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre })
 						.ToListAsync();
 
