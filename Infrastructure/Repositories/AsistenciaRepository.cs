@@ -132,6 +132,7 @@ namespace Infrastructure.Repositories
 				// asistencia (sin coordenadas)
 				MunicipioId = model.MunicipioId,
 				ProvinciaId = model.ProvinciaId,
+				Direccion = model.Direccion,
 				ReportadoPor = ReportadoPor.CallCenter,
 				EstatusAsistencia = EstatusAsistencia.PENDIENTE,
 				UnidadMiembroId = unidadMiembroId,
@@ -269,6 +270,7 @@ namespace Infrastructure.Repositories
 				// asistencia (sin coordenadas)
 				MunicipioId = model.MunicipioId,
 				ProvinciaId = model.ProvinciaId,
+				Direccion = model.Direccion,
 				Coordenadas = model.Coordenadas,
 				UnidadMiembroId = model.UnidadMiembroId,
 				ReportadoPor = model.reportadoPor,

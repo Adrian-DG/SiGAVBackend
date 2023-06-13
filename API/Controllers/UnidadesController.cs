@@ -15,6 +15,7 @@ namespace API.Controllers
 			_predicate = x => (x.Ficha.Contains(_searchTerm) || x.Placa.Contains(_searchTerm) || x.Denominacion.Contains(_searchTerm)) && x.Estatus == _status;
 		}
 
+		[Authorize]
 		[HttpGet("all")]
 		public async Task<IActionResult> GetAllUnidades([FromQuery] PaginationFilter filters)
 		{
@@ -31,6 +32,7 @@ namespace API.Controllers
 			}
 		}
 
+		[Authorize]
 		[HttpGet("autocomplete")]
 		public IActionResult GetUnidadesAutoComplete([FromQuery] string param = "")
 		{
@@ -59,6 +61,39 @@ namespace API.Controllers
 			{
 
 				throw;
+			}
+		}
+
+		[AllowAnonymous]
+		[HttpGet("confirmStatus")]
+		public async Task<IActionResult> ConfirmUnidadEstatus([FromQuery] string ficha)
+		{
+			try
+			{
+				var response = await _unidades.ConfirmUnidadEstatus(ficha);
+				return Ok(response);
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+
+		[AllowAnonymous]
+		[HttpPut("changeStatus")]
+		public async Task<IActionResult> CambiarEstatusUnidad([FromBody] UpdateUnidadStatus model)
+		{
+			try
+			{
+				if (!ModelState.IsValid) return BadRequest(ModelState);
+				await _unidades.CambiarEstatusUnidad(model.Ficha);
+				return Ok(await _uow.CommitChangesAsync());
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
 			}
 		}
 
