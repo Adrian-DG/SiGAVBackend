@@ -382,17 +382,23 @@ namespace Infrastructure.Repositories
 			var asistencia = await _repository
 							.Select(x => new AsistenciaEditViewModel
 							{
+								// Ciudadano
 								Id = x.Id,
 								Identificacion = x.Identificacion,
 								Nombre = x.Nombre,
 								Apellido = x.Apellido,
 								Genero = x.Genero,
 								Telefono = x.Telefono,
+								// Vehiculo
 								VehiculoColorId = x.VehiculoColorId,
 								VehiculoTipoId = x.VehiculoTipoId,
 								VehiculoMarcaId = x.VehiculoMarcaId,
 								VehiculoModeloId = x.VehiculoModeloId,
 								Placa = x.Placa,
+								// Ubicacion
+								ProvinciaId = x.ProvinciaId,
+								MunicipioId = x.MunicipioId,
+								Direccion = x.Direccion,
 								Comentario = x.Comentario,
 								TipoAsistencias = new List<int>()
 							})
