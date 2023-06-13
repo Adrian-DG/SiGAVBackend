@@ -48,15 +48,42 @@ namespace Infrastructure.Repositories
 			};
 		}
 
-		public List<SP_UnidadAutoCompleteResult> GetUnidadesAutoComplete(string param)
+		public async Task<List<SP_UnidadAutoCompleteResult>> GetUnidadesAutoComplete(string param)
 		{
-			return _context.SP_UnidadAutoComplete_Result.FromSqlInterpolated($"[dbo].[UnidadesAutocompleteAsignar] {param}").ToList();
+			return await _repository
+				.Include(x => x.Tramo)
+				.Where(x => x.Denominacion.Contains(param) && x.EstaDisponible)
+				.Select(x => new SP_UnidadAutoCompleteResult
+				{
+					UnidadId = x.Id,
+					Ficha = x.Ficha,
+					Denominacion = x.Denominacion,
+					Placa = x.Placa,
+					Tramo = x.Tramo.Nombre,
+					EstaDisponible = x.EstaDisponible
+				}).ToListAsync();
+
+			//return _context.SP_UnidadAutoComplete_Result.FromSqlInterpolated($"[dbo].[UnidadesAutocompleteAsignar] {param}").ToList();
 		}
 
 		public async Task<bool> ConfirmUnidadExists(string ficha)
 		{
 			return await _repository.AnyAsync(x => x.Ficha == ficha);
 		}
-	}
+
+		public async Task<bool> ConfirmUnidadEstatus(string ficha)
+		{
+			return (await _repository.SingleAsync(x => x.Ficha == ficha)).EstaDisponible;
+		}
+
+		public async Task CambiarEstatusUnidad(string ficha)
+		{
+			var exists = await _repository.AnyAsync(x => x.Ficha == ficha);
+			var foundUnit = await _context.Unidades.FirstAsync(x => x.Ficha == ficha);
+			foundUnit.EstaDisponible = !foundUnit.EstaDisponible;
+			_context.Attach<Unidad>(foundUnit);
+			_context.Entry<Unidad>(foundUnit).State = EntityState.Modified;
+		}
+ 	}
 
 }

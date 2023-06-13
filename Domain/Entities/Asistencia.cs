@@ -41,6 +41,8 @@ namespace Domain.Entities
 		// Informacion Ubicacion Asistencia		
 		public string Coordenadas { get; set; }
 
+		public string Direccion { get; set; }
+
 		[ForeignKey("Municipio")]
 		public int MunicipioId { get; set; }
 		public virtual Municipio Municipio { get; set; }

@@ -22,6 +22,10 @@ namespace Domain.ViewModels
 		public int VehiculoModeloId { get; set; }
 		public int VehiculoMarcaId { get; set; }
 
+		public int ProvinciaId { get; set; }
+		public int MunicipioId { get; set; }
+		public string Direccion { get; set; }
+
 		public IList<int> TipoAsistencias { get; set; }
 		public string Comentario { get; set; }
 	}

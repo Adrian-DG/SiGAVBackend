@@ -1,4 +1,6 @@
 using API.Services;
+using Microsoft.OpenApi.Models;
+
 string _customPolicy = "CustomPolicy";
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,8 +18,11 @@ builder.Services.AddCors(opt => opt.AddPolicy(_customPolicy, b =>
 	// Allows to send back exports filename 
 	b.WithExposedHeaders("content-disposition");
 }));
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+//builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+	c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
+});
 
 var app = builder.Build();
 
@@ -26,7 +31,10 @@ if (builder.Environment.IsDevelopment())
 {
 	app.UseDeveloperExceptionPage();
 	app.UseSwagger();
-	app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
+	app.UseSwaggerUI(c => {
+		c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1");
+		c.RoutePrefix = string.Empty;
+	});
 }
 else
 {

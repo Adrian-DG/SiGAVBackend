@@ -26,6 +26,7 @@ namespace Domain.DTO
 
 		public int MunicipioId { get; set; }
 		public int ProvinciaId { get; set; }
+		public string Direccion { get; set; }
 		public string Coordenadas { get; set; }
 
 		public int UnidadMiembroId { get; set; }
