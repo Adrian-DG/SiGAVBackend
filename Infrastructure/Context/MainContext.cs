@@ -22,6 +22,11 @@ namespace Infrastructure.Context
 
 		}
 
+		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+		{
+			//optionsBuilder.UseLazyLoadingProxies(); // enables LazyLoading on virtual properties
+		}
+
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			/* ------- STORED PROCEDURE --------------- */

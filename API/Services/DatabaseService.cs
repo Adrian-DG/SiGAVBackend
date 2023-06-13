@@ -11,7 +11,10 @@ namespace API.Services
 				? configuration.GetConnectionString("ProdConnection")
 				: configuration.GetConnectionString("DevConnection");
 
-			services.AddDbContext<MainContext>(opt => opt.UseSqlServer(connectionString, b => b.MigrationsAssembly("API")));
+			services.AddDbContext<MainContext>(opt =>
+			{
+				opt.UseSqlServer(connectionString, b => b.MigrationsAssembly("API"));
+			});
 
 			return services;
 		}

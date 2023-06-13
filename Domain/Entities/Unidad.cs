@@ -13,6 +13,7 @@ namespace Domain.Entities
         public string Placa { get; set; }
         public string PuntosAsignados { get; set; }
 		public string Cobertura { get; set; }
+        public bool EstaDisponible { get; set; } = true;
 
         [ForeignKey("TipoUnidad")]
         public int TipoUnidadId { get; set; }

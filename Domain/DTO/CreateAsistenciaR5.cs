@@ -28,7 +28,7 @@ namespace Domain.DTO
 
 		public int MunicipioId { get; set; }
 		public int ProvinciaId { get; set; }
-
+		public string Direccion { get; set; }
 		public int UnidadId { get; set; }
 
 		public IList<int> TipoAsistencias { get; set; }
