@@ -34,12 +34,12 @@ namespace API.Controllers
 
 		[Authorize]
 		[HttpGet("autocomplete")]
-		public IActionResult GetUnidadesAutoComplete([FromQuery] string param = "")
+		public async Task<IActionResult> GetUnidadesAutoComplete([FromQuery] string param = "")
 		{
 			try
 			{
 				param = param is null ? "" : param;
-				var result = _unidades.GetUnidadesAutoComplete(param);
+				var result = await _unidades.GetUnidadesAutoComplete(param);
 				return Ok(result);
 			}
 			catch (Exception)
