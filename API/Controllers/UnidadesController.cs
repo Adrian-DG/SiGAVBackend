@@ -38,7 +38,7 @@ namespace API.Controllers
 		{
 			try
 			{
-				param = param is null ? "" : param;
+				param = String.IsNullOrEmpty(param) ? "" : param;
 				var result = await _unidades.GetUnidadesAutoComplete(param);
 				return Ok(result);
 			}
