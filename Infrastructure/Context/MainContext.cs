@@ -479,7 +479,7 @@ namespace Infrastructure.Context
 				// Tipo Vehiculo
 
 				modelBuilder.Entity<VehiculoTipo>().HasData(
-						new VehiculoTipo { Id = (int)VehiculoTipoEnum.Otro, Nombre = "Otro" },
+						new VehiculoTipo { Id = (int)VehiculoTipoEnum.Otro, Nombre = "Desconocido" },
 						new VehiculoTipo { Id = (int)VehiculoTipoEnum.Autobus, Nombre = "Autobus" },
 						new VehiculoTipo { Id = (int)VehiculoTipoEnum.Camion, Nombre = "Camión" },
 						new VehiculoTipo { Id = (int)VehiculoTipoEnum.Camioneta, Nombre = "Camioneta" },
@@ -494,7 +494,7 @@ namespace Infrastructure.Context
 				// Marcas de vehiculos
 
 				modelBuilder.Entity<VehiculoMarca>().HasData(
-						new VehiculoMarca { Id = 1, Nombre = "Otra" },
+						new VehiculoMarca { Id = 1, Nombre = "Desconocida" },
 						new VehiculoMarca { Id = 2, Nombre = "Acura" },
 						new VehiculoMarca { Id = 3, Nombre = "Audi" },
 						new VehiculoMarca { Id = 4, Nombre = "BMW" },

@@ -52,7 +52,7 @@ namespace Infrastructure.Repositories
 		{
 			return await _repository
 				.Include(x => x.Tramo)
-				.Where(x => x.Denominacion.Contains(param) && x.EstaDisponible)
+				.Where(x => x.Denominacion.Contains(param))
 				.Select(x => new SP_UnidadAutoCompleteResult
 				{
 					UnidadId = x.Id,
