@@ -17,5 +17,6 @@ namespace Domain.ViewModels
 		public string PuntosAsignados { get; set; }
 		public string Cobertura { get; set; }
 		public string TipoUnidad { get; set; }
+		public bool Estatus { get; set; }
 	}
 }
