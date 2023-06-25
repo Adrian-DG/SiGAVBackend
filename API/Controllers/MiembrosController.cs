@@ -37,6 +37,7 @@ namespace API.Controllers
 		{
 			try
 			{
+				if (await _miembros.ConfirmEntityExists(x => x.Cedula == model.Cedula)) return Ok(new ServerResponse { Message = "Esta cédula ya esta registrada!!", Status = false });
 				await _miembros.CreateMiembro(model);
 				return Ok(_response.GetResponse(await _uow.CommitChangesAsync()));
 			}
