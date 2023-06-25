@@ -56,10 +56,9 @@ namespace Infrastructure.Repositories
 			return await _repository.FindAsync(id);
 		}
 
-		public async Task<int> GetTotalRecords(bool status)
-		{
-			return await _repository.CountAsync(x => x.Estatus == status);
-		}
+		public async Task<int> GetTotalRecords(bool status) => await _repository.CountAsync(x => x.Estatus == status);
+
+		public async Task<int> GetTotalRecords() => await _repository.CountAsync();
 
 		public async Task InsertAsync(T entity)
 		{
