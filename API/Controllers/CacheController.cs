@@ -80,7 +80,9 @@ namespace API.Controllers
 		[HttpGet("VehiculoMarca")]
 		public async Task<IActionResult> GetVehiculoMarca()
 		{
-			var result = await _dbContext.VehiculoMarcas.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre }).ToListAsync();
+			var result = await _dbContext.VehiculoMarcas
+				.Where(x => x.Estatus)
+				.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre }).ToListAsync();
 			return Ok(result);
 		}
 
@@ -88,7 +90,7 @@ namespace API.Controllers
 		public async Task<IActionResult> GetVehiculoModelo([FromQuery] int tipo, [FromQuery] int marca)
 		{
 			var result = await _dbContext.VehiculoModelos
-						.Where(x => x.VehiculoMarcaId == marca && x.VehiculoTipoId == tipo)
+						.Where(x => x.VehiculoMarcaId == marca && x.VehiculoTipoId == tipo && x.Estatus)
 						.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre })
 						.ToListAsync();
 
