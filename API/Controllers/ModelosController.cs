@@ -30,5 +30,20 @@ namespace API.Controllers
 				throw;
 			}
 		}
+
+		[HttpPost("create")]
+		public async Task<IActionResult> CreateModelo([FromBody] VehiculoModelo model)
+		{
+			try
+			{
+				if (await _repository.ConfirmEntityExists(x => x.Nombre.ToLower() == model.Nombre.ToLower())) return Ok(new ServerResponse { Message = "Este modelo ya existe!!", Status = false });
+				return await InsertAsync(model);
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
 	}
 }
