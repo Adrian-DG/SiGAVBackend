@@ -21,6 +21,7 @@ namespace API.Controllers
 			{
 				_status = filters.Status;
 				_searchTerm = filters.SearchTerm is null ? "" : filters.SearchTerm;
+				filters.Page = filters.Page > 0 ? filters.Page : 1;
 				var result = await _modeloRepository.GetAllModelos(filters, _predicate);
 				return Ok(result);
 			}

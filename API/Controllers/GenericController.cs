@@ -38,7 +38,7 @@ namespace API.Controllers
 			{
 				_searchTerm = (filters.SearchTerm is null) ? "" : filters.SearchTerm;
 				_status = filters.Status;
-
+				filters.Page = filters.Page > 0 ? filters.Page : 1;
 				var result = await _repository.GetAllAsync(filters, _predicate);
 				return Ok(result);
 			}

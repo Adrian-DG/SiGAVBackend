@@ -35,7 +35,8 @@ namespace Infrastructure.Repositories
 				FechaNacimiento = model.FechaNacimiento,
 				RangoId = model.RangoId,
 				Institucion = model.Institucion,
-				Estatus = false
+				Autorizado = false,
+				Estatus = true
 			};
 
 			await _repository.AddAsync(newMiembro);
@@ -57,6 +58,7 @@ namespace Infrastructure.Repositories
 								Rango = u.Rango.Nombre,
 								Institucion = u.Institucion.ToString(),
 								Estatus = u.Estatus,
+								Autorizado = u.Autorizado,
 								FechaCreacion = u.FechaCreacion,
 								UsuarioId = (int) u.UsuarioId
 							})
@@ -71,11 +73,19 @@ namespace Infrastructure.Repositories
 			};
 		}
 
-		public async Task UpdateEstatusMiembro(int id)
+		public async Task UpdateEstatusMiembro(UpdateStatusMiembroDTO model)
 		{
-			var miembro = await _repository.FindAsync(id);
+			var miembro = await _repository.FindAsync(model.Id);
 
-			miembro.Estatus = !miembro.Estatus;
+			if (model.Type == 1)
+			{
+				miembro.Autorizado = !miembro.Autorizado;
+			}
+			else
+			{
+				miembro.Autorizado = false;
+				miembro.Estatus = false;
+			}
 
 			_context.Attach<Miembro>(miembro);
 			_context.Entry<Miembro>(miembro).State = EntityState.Modified;
