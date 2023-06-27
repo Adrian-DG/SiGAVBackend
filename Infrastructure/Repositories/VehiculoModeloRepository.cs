@@ -24,7 +24,7 @@ namespace Infrastructure.Repositories
 						.Where(predicate)
 						.Skip((filters.Page - 1) * filters.Size)
 						.Take(filters.Size)
-						.OrderBy(x => x.VehiculoMarca.Nombre).ThenBy(x => x.Nombre).ThenBy(x => x.VehiculoTipo.Nombre)
+						.OrderBy(x => x.VehiculoTipo.Nombre).ThenBy(x => x.VehiculoMarca.Nombre).ThenBy(x => x.Nombre)
 						.Select(x => new VehiculoModeloViewModel { Id = x.Id, Modelo = x.Nombre, Marca = x.VehiculoMarca.Nombre, Tipo = x.VehiculoTipo.Nombre })
 						.ToListAsync();
 

@@ -21,8 +21,24 @@ namespace API.Controllers
 			{
 				_status = filters.Status;
 				_searchTerm = filters.SearchTerm is null ? "" : filters.SearchTerm;
+				filters.Page = filters.Page > 0 ? filters.Page : 1;
 				var result = await _modeloRepository.GetAllModelos(filters, _predicate);
 				return Ok(result);
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+
+		[HttpPost("create")]
+		public async Task<IActionResult> CreateModelo([FromBody] VehiculoModelo model)
+		{
+			try
+			{
+				if (await _repository.ConfirmEntityExists(x => x.Nombre.ToLower() == model.Nombre.ToLower())) return Ok(new ServerResponse { Message = "Este modelo ya existe!!", Status = false });
+				return await InsertAsync(model);
 			}
 			catch (Exception)
 			{

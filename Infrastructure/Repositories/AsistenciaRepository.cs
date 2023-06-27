@@ -163,7 +163,7 @@ namespace Infrastructure.Repositories
 						.Include(a => a.Municipio)
 						.Include(a => a.Provincia)
 						.Where(predicate)
-						.OrderByDescending(a => a.FechaCreacion.Date)
+						.OrderByDescending(a => a.FechaCreacion)
 						.ThenByDescending(a => a.FechaCreacion.TimeOfDay)
 						.Skip((filters.Page - 1) * filters.Size)
 						.Take(filters.Size)
@@ -181,6 +181,7 @@ namespace Infrastructure.Repositories
 							VehiculoColor = a.VehiculoColor.Nombre,
 							VehiculoModelo = a.VehiculoModelo.Nombre,
 							VehiculoMarca = a.VehiculoMarca.Nombre,
+							Placa = a.Placa,
 							// Ubicacion
 							Coordenadas = a.Coordenadas,
 							Municipio = a.Municipio.Nombre,

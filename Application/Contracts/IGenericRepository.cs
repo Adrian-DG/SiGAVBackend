@@ -11,11 +11,13 @@ namespace Application.Contracts
 	public interface IGenericRepository<T> where T : ModelMetadata
 	{
 		Task<ICollection<T>> GetAllAsync();
+		Task<bool> ConfirmEntityExists(Expression<Func<T, bool>> predicate);
 		Task<PagedData<T>> GetAllAsync(PaginationFilter filters, Expression<Func<T, bool>> predicate);
 		Task<T> GetByIdAsync(int id);
 		Task InsertAsync(T entity);
 		void Update(T entity);
 		Task Delete(int id);
 		Task<int> GetTotalRecords(bool status);
+		Task<int> GetTotalRecords();
 	}
 }

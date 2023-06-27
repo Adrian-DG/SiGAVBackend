@@ -35,7 +35,9 @@ namespace Infrastructure.Repositories
 								Tramo = u.Tramo.Nombre,
 								Cobertura = u.Cobertura,
 								TipoUnidad = u.TipoUnidad.Nombre,
-								PuntosAsignados = u.PuntosAsignados
+								PuntosAsignados = u.PuntosAsignados,
+								EstaDisponible = u.EstaDisponible,
+								Estatus = u.Estatus
 							})
 							.ToListAsync();
 
@@ -44,7 +46,7 @@ namespace Infrastructure.Repositories
 				Page = filters.Page,
 				Size = filters.Size,
 				Items = results,
-				TotalCount = await GetTotalRecords(filters.Status)
+				TotalCount = await GetTotalRecords()
 			};
 		}
 
@@ -52,7 +54,7 @@ namespace Infrastructure.Repositories
 		{
 			return await _repository
 				.Include(x => x.Tramo)
-				.Where(x => x.Denominacion.Contains(param))
+				.Where(x => x.Denominacion.Contains(param) && x.Estatus)
 				.Select(x => new SP_UnidadAutoCompleteResult
 				{
 					UnidadId = x.Id,
@@ -60,7 +62,7 @@ namespace Infrastructure.Repositories
 					Denominacion = x.Denominacion,
 					Placa = x.Placa,
 					Tramo = x.Tramo.Nombre,
-					EstaDisponible = x.EstaDisponible
+					EstaDisponible = x.EstaDisponible,
 				}).ToListAsync();
 
 			//return _context.SP_UnidadAutoComplete_Result.FromSqlInterpolated($"[dbo].[UnidadesAutocompleteAsignar] {param}").ToList();
@@ -68,7 +70,7 @@ namespace Infrastructure.Repositories
 
 		public async Task<bool> ConfirmUnidadExists(string ficha)
 		{
-			return await _repository.AnyAsync(x => x.Ficha == ficha);
+			return await _repository.AnyAsync(x => x.Ficha == ficha && x.Estatus);
 		}
 
 		public async Task<bool> ConfirmUnidadEstatus(string ficha)
@@ -84,6 +86,7 @@ namespace Infrastructure.Repositories
 			_context.Attach<Unidad>(foundUnit);
 			_context.Entry<Unidad>(foundUnit).State = EntityState.Modified;
 		}
+
  	}
 
 }

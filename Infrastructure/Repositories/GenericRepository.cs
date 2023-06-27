@@ -20,6 +20,8 @@ namespace Infrastructure.Repositories
 			_repository = _context.Set<T>();
 		}
 
+		public async Task<bool> ConfirmEntityExists(Expression<Func<T, bool>> predicate) => await _repository.AnyAsync(predicate);
+
 		public async Task Delete(int id)
 		{
 			var entity = await GetByIdAsync(id);
@@ -56,10 +58,9 @@ namespace Infrastructure.Repositories
 			return await _repository.FindAsync(id);
 		}
 
-		public async Task<int> GetTotalRecords(bool status)
-		{
-			return await _repository.CountAsync(x => x.Estatus == status);
-		}
+		public async Task<int> GetTotalRecords(bool status) => await _repository.CountAsync(x => x.Estatus == status);
+
+		public async Task<int> GetTotalRecords() => await _repository.CountAsync();
 
 		public async Task InsertAsync(T entity)
 		{

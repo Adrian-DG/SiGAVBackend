@@ -12,7 +12,25 @@ namespace API.Controllers
 		public UnidadesController(IUnitOfWork unitOfWork, ISpecifaction<Unidad> specifaction) : base(unitOfWork, specifaction)
 		{
 			_unidades = (UnidadRepository)_repository;
-			_predicate = x => (x.Ficha.Contains(_searchTerm) || x.Placa.Contains(_searchTerm) || x.Denominacion.Contains(_searchTerm)) && x.Estatus == _status;
+			_predicate = x => (x.Ficha.Contains(_searchTerm) || x.Placa.Contains(_searchTerm) || x.Denominacion.Contains(_searchTerm));
+		}
+
+		[Authorize]
+		[HttpPost("create")]
+		public async Task<IActionResult> CreateUnidad([FromBody] Unidad model)
+		{
+			try
+			{
+				if (await _repository.ConfirmEntityExists(x => x.Ficha == model.Ficha)) return Ok(new ServerResponse { Message = "Esta ficha ya esta en uso !!", Status = false });
+				model.EstaDisponible = false;
+				model.Estatus = true;
+				return await InsertAsync(model);
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
 		}
 
 		[Authorize]
@@ -23,6 +41,7 @@ namespace API.Controllers
 			{
 				_searchTerm = (filters.SearchTerm is null) ? "" : filters.SearchTerm;
 				_status = filters.Status;
+				filters.Page = filters.Page > 0 ? filters.Page : 1;
 				var result = await _unidades.GetAllUnidadesAsync(filters, _predicate);
 				return Ok(result);
 			}
