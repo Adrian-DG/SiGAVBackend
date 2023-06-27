@@ -12,5 +12,6 @@ namespace Domain.Entities
         public int RangoId { get; set; }
         public virtual Rango Rango { get; set; }
         public Institucion Institucion { get; set; }
+        public bool Autorizado { get; set; } = false;
     }
 }

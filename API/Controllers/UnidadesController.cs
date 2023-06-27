@@ -16,6 +16,24 @@ namespace API.Controllers
 		}
 
 		[Authorize]
+		[HttpPost("create")]
+		public async Task<IActionResult> CreateUnidad([FromBody] Unidad model)
+		{
+			try
+			{
+				if (await _repository.ConfirmEntityExists(x => x.Ficha == model.Ficha)) return Ok(new ServerResponse { Message = "Esta ficha ya esta en uso !!", Status = false });
+				model.EstaDisponible = false;
+				model.Estatus = true;
+				return await InsertAsync(model);
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+
+		[Authorize]
 		[HttpGet("all")]
 		public async Task<IActionResult> GetAllUnidades([FromQuery] PaginationFilter filters)
 		{

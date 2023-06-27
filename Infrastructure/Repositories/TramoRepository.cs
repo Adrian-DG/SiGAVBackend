@@ -24,7 +24,12 @@ namespace Infrastructure.Repositories
 							.Skip((filters.Page - 1) * filters.Size)
 							.Take(filters.Size)
 							.OrderBy(t => t.FechaCreacion)
-							.Select(t => new TramoViewModel { Id = t.Id, Nombre = t.Nombre, RegionAsistencia = t.RegionAsistencia.Nombre })
+							.Select(t => new TramoViewModel { 
+								Id = t.Id, 
+								Nombre = t.Nombre,
+								PerteneceA = (t.PerteneceAGestion ? "Gestión Operativa" : "Asistencia Vial"), 
+								RegionAsistencia = t.RegionAsistencia.Nombre 
+							})
 							.ToListAsync();
 
 			return new PagedData<TramoViewModel>

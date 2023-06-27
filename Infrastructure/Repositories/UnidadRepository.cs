@@ -36,6 +36,7 @@ namespace Infrastructure.Repositories
 								Cobertura = u.Cobertura,
 								TipoUnidad = u.TipoUnidad.Nombre,
 								PuntosAsignados = u.PuntosAsignados,
+								EstaDisponible = u.EstaDisponible,
 								Estatus = u.Estatus
 							})
 							.ToListAsync();
@@ -53,7 +54,7 @@ namespace Infrastructure.Repositories
 		{
 			return await _repository
 				.Include(x => x.Tramo)
-				.Where(x => x.Denominacion.Contains(param))
+				.Where(x => x.Denominacion.Contains(param) && x.Estatus)
 				.Select(x => new SP_UnidadAutoCompleteResult
 				{
 					UnidadId = x.Id,
@@ -85,6 +86,7 @@ namespace Infrastructure.Repositories
 			_context.Attach<Unidad>(foundUnit);
 			_context.Entry<Unidad>(foundUnit).State = EntityState.Modified;
 		}
+
  	}
 
 }
