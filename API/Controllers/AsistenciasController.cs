@@ -361,6 +361,20 @@ namespace API.Controllers
 			}
 		}
 
+		[HttpGet("{id}/imagenes")]
+		public async Task<IActionResult> GetImagenesAsistencia([FromRoute] int Id)
+		{
+			try
+			{
+				var result = await _asistencias.GetImagenesAsistencia(Id);
+				return new JsonResult(result);
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
 
     }
 }

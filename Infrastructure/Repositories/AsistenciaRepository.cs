@@ -451,5 +451,7 @@ namespace Infrastructure.Repositories
 			return _context.SP_ReporteAsistenciasDetalles_Result.FromSqlInterpolated($"dbo.CorteAsistenciasDetalle").ToList();
 		}
 
+		public async Task<IList<string>> GetImagenesAsistencia(int id) => (await _repository.FindAsync(id)).Imagenes;
+
 	}
 }
