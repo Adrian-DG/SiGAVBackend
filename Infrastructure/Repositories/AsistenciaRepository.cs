@@ -198,7 +198,7 @@ namespace Infrastructure.Repositories
 							TipoAsistencias = a.TipoAsistencias.ToList(),
 							Comentario = a.Comentario,
 							ReportadaPor = a.ReportadoPor.ToString(),
-							FechaCreacion = a.FechaCreacion,
+							FechaCreacion = a.FechaCreacion.AddHours(-1).AddMinutes(-9),
 							EstatusAsistencia = a.EstatusAsistencia.ToString(),
 							Estatus = a.Estatus
 						})
@@ -291,8 +291,13 @@ namespace Infrastructure.Repositories
 			return String.IsNullOrEmpty(field) || String.IsNullOrEmpty(field.Trim());
 		}
 
-		public async Task<List<AsistenciaViewModel>> GetAsistenciasAsignadaAUnidad(string ficha)
+		public async Task<List<AsistenciaViewModel>> GetAsistenciasAsignadaAUnidad(string ficha, int estatusAsistencia)
 		{
+			Expression<Func<Asistencia, bool>> predicate = x => x.UnidadMiembro.Unidad.Ficha == ficha && (int) x.EstatusAsistencia == estatusAsistencia;
+
+			if (estatusAsistencia == 3) predicate = x => x.UnidadMiembro.Unidad.Ficha == ficha && (int) x.EstatusAsistencia == estatusAsistencia && x.TiempoCompletada.Date == DateTime.Now.Date;
+
+
 			var results = await _repository
 							.Include(a => a.VehiculoMarca)
 							.Include(a => a.VehiculoModelo)
@@ -304,8 +309,8 @@ namespace Infrastructure.Repositories
 							.Include(a => a.UnidadMiembro.Miembro.Rango)
 							.Include(a => a.Provincia)
 							.Include(a => a.Municipio)
-							.Where(x => x.UnidadMiembro.Unidad.Ficha == ficha && x.FechaCreacion.Date == DateTime.Now.Date)
-							.OrderByDescending(a => a.FechaCreacion)
+							.Where(predicate)
+							.OrderByDescending(a => a.FechaCreacion.Date)
 							.Select(a => new AsistenciaViewModel
 							{
 								Id = a.Id,
@@ -322,6 +327,7 @@ namespace Infrastructure.Repositories
 								VehiculoModelo = a.VehiculoModelo.Nombre,
 								Placa = a.Placa,
 								// agente
+								Institucion = a.UnidadMiembro.Miembro.Institucion.ToString(),
 								RangoAgente = a.UnidadMiembro.Miembro.Rango.Nombre,
 								CedulaAgente = a.UnidadMiembro.Miembro.Cedula,
 								NombreAgente = a.UnidadMiembro.Miembro.NombreCompleto(),
@@ -334,8 +340,9 @@ namespace Infrastructure.Repositories
 								Municipio = a.Municipio.Nombre,
 								Coordenadas = a.Coordenadas,
 								Tramo = a.UnidadMiembro.Unidad.Tramo.Nombre,
+								EsEmergencia = false,
 								TipoAsistencias = a.TipoAsistencias.ToList(),
-								FechaCreacion = a.FechaCreacion,
+								FechaCreacion = a.FechaCreacion.AddHours(-1).AddMinutes(-9),
 								EstatusAsistencia = a.EstatusAsistencia.ToString(),
 								ReportadaPor = a.ReportadoPor.ToString(),
 								Comentario = a.Comentario,
@@ -346,10 +353,7 @@ namespace Infrastructure.Repositories
 
 			foreach(var item in results)
 			{
-				if(checkFieldsHoldValue(item.Identificacion) || checkFieldsHoldValue(item.NombreCiudadano) || checkFieldsHoldValue(item.Telefono))
-				{
-					item.TieneDatosCompletados = false;
-				}
+				item.EsEmergencia = (int)item.TipoAsistencias[0].CategoriaAsistencia == 1;
 			}
 
 			return results;
@@ -370,7 +374,7 @@ namespace Infrastructure.Repositories
 						.Include(x => x.UnidadMiembro)
 						.Include(x => x.UnidadMiembro.Unidad)
 						.Include(x => x.UnidadMiembro.Unidad.Tramo)						
-						.Where(x => x.UnidadMiembro.Unidad.Tramo.Id == tramoId && x.FechaCreacion.Date == DateTime.Now.Date)
+						.Where(x => x.UnidadMiembro.Unidad.Tramo.Id == tramoId && x.FechaCreacion.Date == DateTime.Now.Date && (int) x.EstatusAsistencia == 3)
 						.GroupBy(x => x.UnidadMiembro.Unidad.Ficha)
 						.Select(x => new AsistenciasUnidadTramoViewModel { Ficha = x.Key, Total = x.Count() })
 						.ToListAsync();
@@ -450,6 +454,8 @@ namespace Infrastructure.Repositories
 		{
 			return _context.SP_ReporteAsistenciasDetalles_Result.FromSqlInterpolated($"dbo.CorteAsistenciasDetalle").ToList();
 		}
+
+		public async Task<IList<string>> GetImagenesAsistencia(int id) => (await _repository.FindAsync(id)).Imagenes;
 
 	}
 }
