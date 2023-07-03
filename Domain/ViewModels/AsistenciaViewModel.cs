@@ -44,8 +44,9 @@ namespace Domain.ViewModels
 		public string RangoAgente { get; set; }
         public string Institucion { get; set; }
 
-        // Tipificacion Asistencia
-        public List<TipoAsistencia> TipoAsistencias { get; set; }
+		// Tipificacion Asistencia
+		public bool EsEmergencia { get; set; }
+		public List<TipoAsistencia> TipoAsistencias { get; set; }
 		public string Comentario { get; set; }
 
 		// Metadata Asistencia

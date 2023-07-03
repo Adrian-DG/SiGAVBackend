@@ -121,12 +121,12 @@ namespace API.Controllers
 		}
 
 		[AllowAnonymous]
-		[HttpGet("all/{ficha}")]
-		public async Task<IActionResult> GetAsistenciasAsignadaAUnidad([FromRoute] string ficha)
+		[HttpGet("all/filterBy")]
+		public async Task<IActionResult> GetAsistenciasAsignadaAUnidad([FromQuery] FilterAsistenciaUnidadDTO model)
 		{
 			try
 			{
-				var result = await _asistencias.GetAsistenciasAsignadaAUnidad(ficha);
+				var result = await _asistencias.GetAsistenciasAsignadaAUnidad(model.Ficha, model.EstatusAsistencia);
 				return Ok(result);
 			}
 			catch (Exception)
