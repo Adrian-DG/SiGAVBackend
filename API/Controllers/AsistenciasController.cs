@@ -120,12 +120,12 @@ namespace API.Controllers
 		}
 
 		[AllowAnonymous]
-		[HttpGet("all/{ficha}")]
-		public async Task<IActionResult> GetAsistenciasAsignadaAUnidad([FromRoute] string ficha)
+		[HttpGet("all/filterBy")]
+		public async Task<IActionResult> GetAsistenciasAsignadaAUnidad([FromQuery] FilterAsistenciaUnidadDTO model)
 		{
 			try
 			{
-				var result = await _asistencias.GetAsistenciasAsignadaAUnidad(ficha);
+				var result = await _asistencias.GetAsistenciasAsignadaAUnidad(model.Ficha, model.EstatusAsistencia);
 				return Ok(result);
 			}
 			catch (Exception)
@@ -360,6 +360,20 @@ namespace API.Controllers
 			}
 		}
 
+		[HttpGet("{id}/imagenes")]
+		public async Task<IActionResult> GetImagenesAsistencia([FromRoute] int Id)
+		{
+			try
+			{
+				var result = await _asistencias.GetImagenesAsistencia(Id);
+				return new JsonResult(result);
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
 
     }
 }
