@@ -624,7 +624,7 @@ namespace Infrastructure.Context
         public DbSet<SP_ContadorAsistenciasPorUnidad> SP_ContadorAsistenciasPorUnidad_Result { get; set; }
 		public DbSet<SP_CreateUnidadMiembro> SP_CreateUnidadMiembro_Result { get; set; }
 		public DbSet<SP_UnidadAutoCompleteResult> SP_UnidadAutoComplete_Result { get; set; }
-		public DbSet<SP_ReporteAsistenciasResult> SP_ReporteAsistencias_Result { get; set; }
+		public DbSet<SP_ReporteAsistenciasResult> SP_ReporteAsistenciasDetalles { get; set; }
 
 		// Tables
 		public DbSet<Usuario> Usuarios { get; set; }

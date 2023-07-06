@@ -241,64 +241,65 @@ namespace API.Controllers
 
 
 
-		//[HttpGet("reporte/resumen_fecha")]
-		//public IActionResult GetReporteResumenAsistenciasPorFecha([FromQuery] DateFilter filter)
-		//{
-		//	try
-		//	{
-		//		var result = _asistencias.GetResumenAsistenciasPorFecha(filter);
+		[HttpGet("reporte/resumen_fecha")]
+		public IActionResult GetReporteResumenAsistenciasPorFecha([FromQuery] DateFilter filter)
+		{
+			try
+			{
+				var result = _asistencias.GetResumenAsistenciasPorFecha(filter);
 
-		//		var stream = new MemoryStream();
+				using (ExcelPackage package = new ExcelPackage())
+				{
+					var worksheet = package.Workbook.Worksheets.Add("Resumen de Asistencias");
 
-		//		using (var excel = new ExcelPackage(stream))
-		//		{
-		//			var worksheet = excel.Workbook.Worksheets.Add("Resumen");
-		//			var namedStyle = excel.Workbook.Styles.CreateNamedStyle("HyperLink");
-		//			namedStyle.Style.Font.UnderLine = true;
-		//			namedStyle.Style.Font.Color.SetColor(Color.Blue);
+					// Encabezado
+					var header = worksheet.Cells[1, 1];
+					header.Style.Font.Bold = true;
+					header.Style.Font.Size = 24;
+					header.LoadFromText("Reporte Detalle Asistencia");
 
-		//			const int startRow = 5;
-		//			var row = startRow;
+					var disclaimer = worksheet.Cells[3, 1];
+					disclaimer.Style.Font.Bold = true;
+					disclaimer.LoadFromText($"Este documento es el resumen detallado de todas las asistencias completadas durante el período {filter.InitialDate.ToString("dd-MM-yyyy")} al {filter.FinalDate.ToString("dd-MM-yyyy")}");
 
-		//			worksheet.Cells["A1"].Value = "Resumen Asistencias";
+					var printDate = worksheet.Cells[3, 4];
+					printDate.Style.Font.Bold = true;
+					printDate.LoadFromText("Fecha Impresion");
 
-		//			using (var header = worksheet.Cells["A1:C1"])
-		//			{
-		//				header.Merge = true;
-		//				header.Style.Font.Color.SetColor(Color.White);
-		//				header.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.CenterContinuous;
-		//				header.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-		//				header.Style.Fill.BackgroundColor.SetColor(Color.FromArgb(23, 55, 93));
-		//			}
+					worksheet.Cells[3, 5].LoadFromText($"{DateTime.Now.ToString("dd-MM-yyyy")}");
 
-		//			worksheet.Cells["A3"].Value = "Fecha";
-		//			string printDate = DateTime.Now.ToString("dd/MM/yyyy hh:mm tt"); 
-		//			worksheet.Cells["B3"].Value = printDate;
+					int rowIndex = 5;
 
-		//			foreach (var item in result)
-		//			{
-		//				worksheet.Cells[row, 1].Value = item.Region;
-		//				worksheet.Cells[row, 2].Value = item.CategoriaAsistencia;
-		//				worksheet.Cells[row, 3].Value = item.TipoAsistencia;
-		//				worksheet.Cells[row, 4].Value = item.Total;
-		//			}
+					// Apply styling to column headers
+					using (var range = worksheet.Cells[rowIndex, 1, rowIndex, 28])
+					{
+						range.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+						range.Style.Fill.BackgroundColor.SetColor(Color.FromArgb(69, 75, 127));
+						range.Style.Font.Bold = true;
+						range.Style.Font.Color.SetColor(System.Drawing.Color.White);
+					}
 
-		//			excel.Workbook.Properties.Title = "User List";
-		//			excel.Workbook.Properties.Author = "Mohamad Lawand";
-		//			excel.Workbook.Properties.Subject = "User List";
-		//			// save the new spreadsheet
-		//			excel.Save();
+					// insert data to sheet
+					worksheet.Cells[rowIndex, 1].LoadFromCollection(result, true);
 
-		//		}
+					worksheet.Cells.AutoFitColumns();
 
-		//		stream.Position = 0;
-		//		return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", $"Resumen_Asistencias_{DateTime.Now.ToString("dd/MM/yyyy")}.xlsx");
-		//	}
-		//	catch (Exception)
-		//	{
-		//		throw;
-		//	}
-		//}
+					using (MemoryStream ms = new MemoryStream())
+					{
+						package.SaveAs(ms);
+						byte[] file = ms.ToArray();
+						return File(file, "	application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", $"reporte_detalle_asistencias_período_{DateTime.Now.ToString("dd-MM-yyyy")}");
+					}
+
+				}
+
+
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
 
 		[HttpGet("reporte/resumen_detalles")]
 		public ActionResult GetResumenAsistenciasDetalles()
