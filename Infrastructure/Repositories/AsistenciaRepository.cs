@@ -457,5 +457,47 @@ namespace Infrastructure.Repositories
 
 		public async Task<IList<string>> GetImagenesAsistencia(int id) => (await _repository.FindAsync(id)).Imagenes;
 
+
+		public async Task<bool> ReasignarAsistencia(UpdateReasignarAsistenciaDTO model)
+		{
+			var asistencia = await _repository.SingleOrDefaultAsync(x => x.Id == model.IdAsistencia);
+
+			if (asistencia == null) return false;
+
+			var transaction = await _context.Database.BeginTransactionAsync();
+
+			int oldUnidadaMiembro = asistencia.UnidadMiembroId; // save old Id
+
+			try
+			{
+				var newUnidadMiembro = _context.UnidadMiembro
+									.Where(x => x.UnidadId.Equals(model.NewUnidadId))
+									.OrderByDescending(x => x.FechaCreacion)
+									.FirstOrDefault();
+
+				// Update
+
+				asistencia.UnidadMiembroId = newUnidadMiembro.Id;
+				_context.Attach<Asistencia>(asistencia);
+				_context.Entry<Asistencia>(asistencia).State = EntityState.Modified;
+
+				// Insert 
+
+				await _context.HistoricoAsistencias.AddAsync(new HistoricoAsistencia { IdUnidadMiembro = oldUnidadaMiembro, IdAsistencia = asistencia.Id, UsuarioId = model.UsuarioId });
+
+				await _context.SaveChangesAsync();
+
+				await transaction.CommitAsync();
+
+				return true;
+			}
+			catch (Exception)
+			{
+				await transaction.RollbackAsync();
+				return false;
+			}
+
+		}
+
 	}
 }

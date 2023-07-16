@@ -116,5 +116,20 @@ namespace API.Controllers
 			}
 		}
 
+		[HttpGet("filteredByTramo")]
+		public async Task<IActionResult> GetUnidadesPorTramo([FromQuery] int tramoId)
+		{
+			try
+			{
+				var result = await _unidades.GetUnidadesPorTramo(tramoId);
+				return new JsonResult(result);
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+
 	}
 }

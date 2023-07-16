@@ -29,6 +29,7 @@ namespace Infrastructure.Context
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
+
 			/* ------- STORED PROCEDURE --------------- */
 
 			// SP detalle de asistencias 
@@ -648,6 +649,9 @@ namespace Infrastructure.Context
 		public DbSet<Rango> Rangos { get; set; }
 		public DbSet<SupervisorEncargado> SupervisoresEncargados { get; set; }
 		public DbSet<SupervisorEncargadoTramo> SupervisoresEncargadosTramos { get; set; }
+
+		public DbSet<HistoricoAsistencia> HistoricoAsistencias { get; set; }
+		public DbSet<HistoricoUnidad> HistoricoUnidades { get; set; }
 
 	}
 }

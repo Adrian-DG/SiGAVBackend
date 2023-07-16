@@ -375,5 +375,20 @@ namespace API.Controllers
 			}
 		}
 
-    }
+		[HttpPost("reasignar")]
+		public async Task<IActionResult> ReasignarAsistencia([FromBody] UpdateReasignarAsistenciaDTO model)
+		{
+			try
+			{
+				var response = await _asistencias.ReasignarAsistencia(model);
+				return response ? Ok(response) : BadRequest(response);
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+
+    }				
 }
