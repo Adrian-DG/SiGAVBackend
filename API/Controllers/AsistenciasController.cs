@@ -390,5 +390,20 @@ namespace API.Controllers
 			}
 		}
 
+		[HttpGet("historial")]
+		public async Task<IActionResult> GetHistorialAsistencia([FromQuery] int IdAsistencia)
+		{
+			try
+			{
+				var result = await _asistencias.GetHistorialAsistencia(IdAsistencia);
+				return new JsonResult(result);
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+
     }				
 }

@@ -47,6 +47,8 @@ namespace Infrastructure.Context
 			// SP_Asistencias_Por_Region (SQL Procedure)
 			modelBuilder.Entity<SP_ReporteAsistenciasResult>(e => e.HasNoKey());
 
+			modelBuilder.Entity<SP_HistorialAsistencia>(e => e.HasNoKey());
+
 
 
 			/* ---------- VALUES PARSER (CONVERSIONS) --------------- */
@@ -626,6 +628,7 @@ namespace Infrastructure.Context
 		public DbSet<SP_CreateUnidadMiembro> SP_CreateUnidadMiembro_Result { get; set; }
 		public DbSet<SP_UnidadAutoCompleteResult> SP_UnidadAutoComplete_Result { get; set; }
 		public DbSet<SP_ReporteAsistenciasResult> SP_ReporteAsistencias_Result { get; set; }
+		public DbSet<SP_HistorialAsistencia> SP_HistorialAsistencias_Result { get; set; }
 
 		// Tables
 		public DbSet<Usuario> Usuarios { get; set; }

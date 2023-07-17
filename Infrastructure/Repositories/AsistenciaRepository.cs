@@ -499,5 +499,11 @@ namespace Infrastructure.Repositories
 
 		}
 
+		public async Task<List<SP_HistorialAsistencia>> GetHistorialAsistencia(int idAsistencia)
+		{
+			return await _context.SP_HistorialAsistencias_Result
+				.FromSqlInterpolated($"exec [dbo].[HistorialAsistencia] @IdAsistencia = {idAsistencia}").ToListAsync();
+		}
+
 	}
 }
