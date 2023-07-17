@@ -436,7 +436,7 @@ namespace Infrastructure.Repositories
 
 		public List<SP_ReporteAsistenciasResult> GetResumenAsistenciasDiario()
 		{
-			return _context.SP_ReporteAsistenciasDetalles
+			return _context.SP_ReporteAsistencias_Result
 				.FromSqlInterpolated($"[dbo].[CorteAsistenciasDiario]")
 				.ToList();
 		}
@@ -450,12 +450,61 @@ namespace Infrastructure.Repositories
 				.ToList();
 		}
 
+
 		public List<SP_ReporteAsistenciasDetalles> GetResumenAsistenciasDetalles()
 		{
 			return _context.SP_ReporteAsistenciasDetalles_Result.FromSqlInterpolated($"dbo.CorteAsistenciasDetalle").ToList();
 		}
 
 		public async Task<IList<string>> GetImagenesAsistencia(int id) => (await _repository.FindAsync(id)).Imagenes;
+
+
+		public async Task<bool> ReasignarAsistencia(UpdateReasignarAsistenciaDTO model)
+		{
+			var asistencia = await _repository.SingleOrDefaultAsync(x => x.Id == model.IdAsistencia);
+
+			if (asistencia == null) return false;
+
+			var transaction = await _context.Database.BeginTransactionAsync();
+
+			int oldUnidadaMiembro = asistencia.UnidadMiembroId; // save old Id
+
+			try
+			{
+				var newUnidadMiembro = _context.UnidadMiembro
+									.Where(x => x.UnidadId.Equals(model.NewUnidadId))
+									.OrderByDescending(x => x.FechaCreacion)
+									.FirstOrDefault();
+
+				// Update
+
+				asistencia.UnidadMiembroId = newUnidadMiembro.Id;
+				_context.Attach<Asistencia>(asistencia);
+				_context.Entry<Asistencia>(asistencia).State = EntityState.Modified;
+
+				// Insert 
+
+				await _context.HistoricoAsistencias.AddAsync(new HistoricoAsistencia { IdUnidadMiembro = oldUnidadaMiembro, IdAsistencia = asistencia.Id, UsuarioId = model.UsuarioId });
+
+				await _context.SaveChangesAsync();
+
+				await transaction.CommitAsync();
+
+				return true;
+			}
+			catch (Exception)
+			{
+				await transaction.RollbackAsync();
+				return false;
+			}
+
+		}
+
+		public async Task<List<SP_HistorialAsistencia>> GetHistorialAsistencia(int idAsistencia)
+		{
+			return await _context.SP_HistorialAsistencias_Result
+				.FromSqlInterpolated($"exec [dbo].[HistorialAsistencia] @IdAsistencia = {idAsistencia}").ToListAsync();
+		}
 
 	}
 }

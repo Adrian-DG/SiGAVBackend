@@ -240,7 +240,6 @@ namespace API.Controllers
 		}
 
 
-
 		[HttpGet("reporte/resumen_fecha")]
 		public IActionResult GetReporteResumenAsistenciasPorFecha([FromQuery] DateFilter filter)
 		{
@@ -376,5 +375,35 @@ namespace API.Controllers
 			}
 		}
 
-    }
+		[HttpPost("reasignar")]
+		public async Task<IActionResult> ReasignarAsistencia([FromBody] UpdateReasignarAsistenciaDTO model)
+		{
+			try
+			{
+				var response = await _asistencias.ReasignarAsistencia(model);
+				return response ? Ok(response) : BadRequest(response);
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+
+		[HttpGet("historial")]
+		public async Task<IActionResult> GetHistorialAsistencia([FromQuery] int IdAsistencia)
+		{
+			try
+			{
+				var result = await _asistencias.GetHistorialAsistencia(IdAsistencia);
+				return new JsonResult(result);
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+
+    }				
 }

@@ -87,6 +87,13 @@ namespace Infrastructure.Repositories
 			_context.Entry<Unidad>(foundUnit).State = EntityState.Modified;
 		}
 
+		public async Task<List<Unidad>> GetUnidadesPorTramo(int tramoId)
+		{
+			return await _repository
+				.Where(x => x.TramoId.Equals(tramoId))
+				.ToListAsync();
+		}
+
  	}
 
 }
