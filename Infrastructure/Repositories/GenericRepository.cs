@@ -44,7 +44,7 @@ namespace Infrastructure.Repositories
 				Page = filters.Page,
 				Size = filters.Size,
 				Items = results,
-				TotalCount = await GetTotalRecords(filters.Status)
+				TotalCount = await GetTotalRecords(predicate)
 			};
 		}
 
@@ -58,7 +58,7 @@ namespace Infrastructure.Repositories
 			return await _repository.FindAsync(id);
 		}
 
-		public async Task<int> GetTotalRecords(bool status) => await _repository.CountAsync(x => x.Estatus == status);
+		public async Task<int> GetTotalRecords(Expression<Func<T, bool>> predicate) => await _repository.CountAsync(predicate);
 
 		public async Task<int> GetTotalRecords() => await _repository.CountAsync();
 

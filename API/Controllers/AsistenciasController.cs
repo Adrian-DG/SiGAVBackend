@@ -18,7 +18,7 @@ namespace API.Controllers
 		public AsistenciasController(IUnitOfWork unitOfWork, ISpecifaction<Asistencia> specifaction) : base(unitOfWork, specifaction)
 		{
 			_asistencias = (AsistenciaRepository)_repository;
-			_predicate = x => (x.Nombre.Contains(_searchTerm) || x.Apellido.Contains(_searchTerm) || x.Identificacion.Contains(_searchTerm)) && x.Estatus == _status;
+			_predicate = x => (x.Nombre.Contains(_searchTerm) || x.Apellido.Contains(_searchTerm) || x.Identificacion.Contains(_searchTerm));
 		}
 
 		[HttpPost("createR5")]
@@ -56,13 +56,15 @@ namespace API.Controllers
 		}
 
 		[HttpGet("all")]
-		public async Task<IActionResult> GetAllAsistencias([FromQuery] PaginationFilter filters)
+		public async Task<IActionResult> GetAllAsistencias([FromQuery] AsistenciaPaginationFilter filters)
 		{
 			try
 			{
-				_searchTerm = (filters.SearchTerm is null) ? "" : filters.SearchTerm;
-				_status = filters.Status;
+				_searchTerm = (filters.SearchTerm is null) ? "" : filters.SearchTerm;		
 				filters.Page = filters.Page > 0 ? filters.Page : 1;
+
+				if(filters.EstatusAsistencia != 0) _predicate = x => (x.Nombre.Contains(_searchTerm) || x.Apellido.Contains(_searchTerm) || x.Identificacion.Contains(_searchTerm)) && (int) x.EstatusAsistencia == filters.EstatusAsistencia;
+
 				var result = await _asistencias.GetAllAsistencias(filters, _predicate);
 				return Ok(result);
 			}

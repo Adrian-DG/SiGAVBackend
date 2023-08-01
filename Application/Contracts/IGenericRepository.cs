@@ -17,7 +17,7 @@ namespace Application.Contracts
 		Task InsertAsync(T entity);
 		void Update(T entity);
 		Task Delete(int id);
-		Task<int> GetTotalRecords(bool status);
+		Task<int> GetTotalRecords(Expression<Func<T, bool>> predicate);
 		Task<int> GetTotalRecords();
 	}
 }

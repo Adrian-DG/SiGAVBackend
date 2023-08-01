@@ -209,7 +209,7 @@ namespace Infrastructure.Repositories
 				Page = filters.Page,
 				Size = filters.Size,
 				Items = result,
-				TotalCount = await GetTotalRecords(filters.Status)
+				TotalCount = await GetTotalRecords(predicate)
 			};
 		}
 
