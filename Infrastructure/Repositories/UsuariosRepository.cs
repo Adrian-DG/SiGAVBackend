@@ -96,5 +96,20 @@ namespace Infrastructure.Repositories
 			_context.Attach<Usuario>(usuario);
 			_context.Entry<Usuario>(usuario).State = EntityState.Modified;
 		}
+
+		public async Task ChangePassword(int userId, string newPassword)
+		{
+			var user = await _repository.FindAsync(userId);
+			
+			if (user == null) return;
+
+			_encrypt.CreatePasswordHash(newPassword, out byte[] passwordHash, out byte[] passwordSalt);
+
+			user.PasswordHash = passwordHash;
+			user.PasswordSalt = passwordSalt;
+
+			_context.Attach<Usuario>(user);
+			_context.Entry<Usuario>(user).State = EntityState.Modified;
+		}
 	}
 }

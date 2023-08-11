@@ -93,5 +93,22 @@ namespace API.Controllers
 				throw;
 			}
 		}
+
+		[HttpPut("changePassword")]
+		public async Task<IActionResult> ChangePassword([FromBody] ChangeUserPasswordDTO model)
+		{
+			try
+			{
+				await _usuarios.ChangePassword(model.UserId, model.NewPassword);
+				return await _uow.CommitChangesAsync() 
+					? Ok(_response.GetResponse(true)) 
+					: BadRequest(_response.GetResponse(false));
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
 	}
 }
