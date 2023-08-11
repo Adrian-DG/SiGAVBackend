@@ -36,6 +36,7 @@ namespace Domain.DTO
 
 		public string Comentario { get; set; }
 		public int UsuarioId { get; set; }
+		public DateTime FechaCreacion { get; set; }
 
 	}
 }

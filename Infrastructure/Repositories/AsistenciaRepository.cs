@@ -139,7 +139,8 @@ namespace Infrastructure.Repositories
 				UsuarioId = model.UsuarioId,
 				TipoAsistencias = tipoAsistencias,
 				Comentario = model.Comentario,
-				Estatus = false
+				Estatus = false,
+				FechaCreacion = model.FechaCreacion
 			};
 
 			await _repository.AddAsync(newAsistencia);
@@ -198,7 +199,7 @@ namespace Infrastructure.Repositories
 							TipoAsistencias = a.TipoAsistencias.ToList(),
 							Comentario = a.Comentario,
 							ReportadaPor = a.ReportadoPor.ToString(),
-							FechaCreacion = a.FechaCreacion.AddHours(-1).AddMinutes(-9),
+							FechaCreacion = a.FechaCreacion,
 							EstatusAsistencia = a.EstatusAsistencia.ToString(),
 							Estatus = a.Estatus
 						})
@@ -280,7 +281,8 @@ namespace Infrastructure.Repositories
 				TipoAsistencias = tipoAsistencias,
 				Comentario = model.Comentario,
 				Imagenes = model.Imagenes,
-				Estatus = false
+				Estatus = false,
+				FechaCreacion = model.FechaCreacion
 			};
 
 			await _repository.AddAsync(newAsistencia);
@@ -342,7 +344,7 @@ namespace Infrastructure.Repositories
 								Tramo = a.UnidadMiembro.Unidad.Tramo.Nombre,
 								EsEmergencia = false,
 								TipoAsistencias = a.TipoAsistencias.ToList(),
-								FechaCreacion = a.FechaCreacion.AddHours(-1).AddMinutes(-9),
+								FechaCreacion = a.FechaCreacion,
 								EstatusAsistencia = a.EstatusAsistencia.ToString(),
 								ReportadaPor = a.ReportadoPor.ToString(),
 								Comentario = a.Comentario,
