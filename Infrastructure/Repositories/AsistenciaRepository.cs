@@ -140,7 +140,6 @@ namespace Infrastructure.Repositories
 				TipoAsistencias = tipoAsistencias,
 				Comentario = model.Comentario,
 				Estatus = false,
-				FechaCreacion = DateTime.Now
 			};
 
 			await _repository.AddAsync(newAsistencia);
@@ -281,8 +280,7 @@ namespace Infrastructure.Repositories
 				TipoAsistencias = tipoAsistencias,
 				Comentario = model.Comentario,
 				Imagenes = model.Imagenes,
-				Estatus = false,
-				FechaCreacion = DateTime.Now
+				Estatus = false
 			};
 
 			await _repository.AddAsync(newAsistencia);
