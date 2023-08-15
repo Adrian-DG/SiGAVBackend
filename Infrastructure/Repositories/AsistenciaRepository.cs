@@ -140,6 +140,7 @@ namespace Infrastructure.Repositories
 				TipoAsistencias = tipoAsistencias,
 				Comentario = model.Comentario,
 				Estatus = false,
+				FechaCreacion = DateTime.Now.AddHours(-4)
 			};
 
 			await _repository.AddAsync(newAsistencia);
@@ -225,7 +226,7 @@ namespace Infrastructure.Repositories
 				asistencia.UnidadMiembroId = (int) model.UnidadMiembroId;
 			}
 			
-			asistencia.FechaModificacion = DateTime.Now;
+			asistencia.FechaModificacion = DateTime.Now.AddHours(-4);
 
 			if ((int) model.EstatusAsistencia == 3)
 			{
@@ -280,7 +281,8 @@ namespace Infrastructure.Repositories
 				TipoAsistencias = tipoAsistencias,
 				Comentario = model.Comentario,
 				Imagenes = model.Imagenes,
-				Estatus = false
+				Estatus = false,
+				FechaCreacion = DateTime.Now.AddHours(-4)
 			};
 
 			await _repository.AddAsync(newAsistencia);
