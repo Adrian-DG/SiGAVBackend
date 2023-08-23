@@ -12,6 +12,6 @@ namespace Domain.Response
         public string Usuario { get; set; }
         public string Token { get; set; }
         public bool EsAdministrador { get; set; }
-        public List<int> Permisos { get; set; }
+        public int RolUsuario { get; set; }
     }
 }

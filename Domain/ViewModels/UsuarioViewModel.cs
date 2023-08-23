@@ -12,7 +12,7 @@ namespace Domain.ViewModels
 		public string Cedula { get; set; }
 		public string NombreCompleto { get; set; }
 		public string NombreUsuario { get; set; }
-		public bool EsAdministrador { get; set; }
+		public string TipoUsuario { get; set; }
 		public bool Estatus { get; set; }
 	}
 }

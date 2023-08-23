@@ -28,7 +28,7 @@ namespace Infrastructure.Repositories
 							.Skip((filters.Page - 1) * filters.Size)
 							.Take(filters.Size)
 							.OrderBy(x => x.FechaCreacion)
-							.Select(x => new UsuarioViewModel { Id = x.Id, Cedula = x.Cedula, NombreCompleto = x.NombreCompleto(), NombreUsuario = x.Username, EsAdministrador = x.EsAdministrador, Estatus = x.Estatus  })
+							.Select(x => new UsuarioViewModel { Id = x.Id, Cedula = x.Cedula, NombreCompleto = x.NombreCompleto(), NombreUsuario = x.Username, TipoUsuario = x.RolUsuario.ToString(), Estatus = x.Estatus  })
 							.ToListAsync();
 
 			return new PagedData<UsuarioViewModel>
@@ -55,7 +55,8 @@ namespace Infrastructure.Repositories
 				Username = model.Username,
 				PasswordHash = passwordHash,
 				PasswordSalt = passwordSalt,
-				EsAdministrador = model.EsAdministrador
+				EsAdministrador = model.EsAdministrador,
+				RolUsuario = model.RolUsuario
 			};
 
 			await _repository.AddAsync(newUsuario);
@@ -73,7 +74,7 @@ namespace Infrastructure.Repositories
 							Cedula = x.Cedula,
 							NombreCompleto = x.NombreCompleto(),
 							NombreUsuario = x.Username,
-							EsAdministrador = x.EsAdministrador,
+							TipoUsuario = x.RolUsuario.ToString(),
 							Permisos = x.Permisos.Select(x => new PermisoViewModel { Nombre = x.Permiso.Nombre, Descripcion = x.Permiso.Descripcion }).ToList(),
 							Estatus = x.Estatus
 						})

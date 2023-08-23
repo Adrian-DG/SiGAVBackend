@@ -10,5 +10,6 @@ namespace Domain.DTO
         public string Username { get; set; }
         public string Password { get; set; }
         public bool EsAdministrador { get; set; }
+        public RolUsuario RolUsuario { get; set; }
     }
 }

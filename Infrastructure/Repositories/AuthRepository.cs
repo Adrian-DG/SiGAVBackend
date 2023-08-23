@@ -55,7 +55,7 @@ namespace Infrastructure.Repositories
 				Usuario = foundUser.Username,
 				Status = true,
 				EsAdministrador = foundUser.EsAdministrador,
-				Permisos = foundUser.Permisos.Select(x => x.PermisoId).ToList(),
+				RolUsuario = (int) foundUser.RolUsuario,
 				Token = _token.GenerateToken(foundUser)
 			};
 		}
