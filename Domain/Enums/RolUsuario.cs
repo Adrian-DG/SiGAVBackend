@@ -11,6 +11,6 @@ namespace Domain.Enums
 		Administrador = 1,
 		CallCenterR5,
 		GestionOperativa,
-		Supervisor_Plana_Mayor
+		Calidad
 	}
 }
