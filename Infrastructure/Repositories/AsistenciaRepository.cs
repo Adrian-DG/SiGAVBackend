@@ -201,7 +201,8 @@ namespace Infrastructure.Repositories
 							ReportadaPor = a.ReportadoPor.ToString(),
 							FechaCreacion = a.FechaCreacion,
 							EstatusAsistencia = a.EstatusAsistencia.ToString(),
-							Estatus = a.Estatus
+							Estatus = a.Estatus,
+							PerteneceA = a.UnidadMiembro.Miembro.PerteneceA.ToString()
 						})
 						.ToListAsync();
 

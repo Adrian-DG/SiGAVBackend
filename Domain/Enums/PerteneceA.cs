@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Domain.Enums
 {
-	public enum RolUsuario
+	public enum PerteneceA
 	{
-		Administrador = 1,
-		CallCenterR5,
-		GestionOperativa,
+		Asistencia_Vial = 1,
+		Gestion_Operativa,
 		Calidad
 	}
 }

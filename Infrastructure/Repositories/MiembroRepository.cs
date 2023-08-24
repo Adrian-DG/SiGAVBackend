@@ -36,7 +36,8 @@ namespace Infrastructure.Repositories
 				RangoId = model.RangoId,
 				Institucion = model.Institucion,
 				Autorizado = false,
-				Estatus = true
+				Estatus = true,
+				PerteneceA = model.PerteneceA
 			};
 
 			await _repository.AddAsync(newMiembro);
@@ -60,7 +61,8 @@ namespace Infrastructure.Repositories
 								Estatus = u.Estatus,
 								Autorizado = u.Autorizado,
 								FechaCreacion = u.FechaCreacion,
-								UsuarioId = (int) u.UsuarioId
+								UsuarioId = (int) u.UsuarioId,
+								PerteneceA = u.PerteneceA.ToString()
 							})
 							.ToListAsync();
 

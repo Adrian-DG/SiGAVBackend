@@ -13,5 +13,6 @@ namespace Domain.Entities
         public virtual Rango Rango { get; set; }
         public Institucion Institucion { get; set; }
         public bool Autorizado { get; set; } = false;
+        public PerteneceA PerteneceA { get; set; }
     }
 }

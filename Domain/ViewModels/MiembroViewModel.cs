@@ -17,6 +17,7 @@ namespace Domain.ViewModels
 		public DateTime FechaCreacion { get; set; }
 		public int UsuarioId { get; set; }
 		public bool Autorizado { get; set; }
+		public string PerteneceA { get; set; }
 	}
 }
 	

@@ -10,5 +10,6 @@ namespace Domain.DTO
 	{
 		public int RangoId { get; set; }
 		public Institucion Institucion { get; set; }
+		public PerteneceA PerteneceA { get; set; }
 	}
 }
