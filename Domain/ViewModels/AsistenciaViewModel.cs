@@ -43,6 +43,7 @@ namespace Domain.ViewModels
 		public string NombreAgente { get; set; }
 		public string RangoAgente { get; set; }
         public string Institucion { get; set; }
+		public string PerteneceA { get; set; }
 
 		// Tipificacion Asistencia
 		public bool EsEmergencia { get; set; }
