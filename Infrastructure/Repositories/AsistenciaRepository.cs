@@ -223,7 +223,7 @@ namespace Infrastructure.Repositories
 			
 			if((int)model.EstatusAsistencia == 2)
 			{
-				asistencia.TiempoLlegada = DateTime.Now;
+				asistencia.TiempoLlegada = DateTime.Now.AddHours(-4);
 				asistencia.UnidadMiembroId = (int) model.UnidadMiembroId;
 			}
 			
@@ -236,7 +236,7 @@ namespace Infrastructure.Repositories
 				asistencia.UsuarioId = (int) model.CodUsuario;
 
 				// insert to excel
-				await AddNewRowToExcel(asistencia);
+				//await AddNewRowToExcel(asistencia);
 			}			
 
 			_context.Attach<Asistencia>(asistencia);
@@ -482,6 +482,7 @@ namespace Infrastructure.Repositories
 				// Update
 
 				asistencia.UnidadMiembroId = newUnidadMiembro.Id;
+				asistencia.FechaModificacion = DateTime.Now.AddHours(-4);
 				_context.Attach<Asistencia>(asistencia);
 				_context.Entry<Asistencia>(asistencia).State = EntityState.Modified;
 
