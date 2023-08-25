@@ -8,9 +8,9 @@ namespace Domain.Enums
 {
 	public enum RolUsuario
 	{
-		Administrador = 1,
-		CallCenterR5,
-		GestionOperativa,
+		Analista_Operaciones = 1,
+		Operador_R5,
+		Gestion_Operativa,
 		Calidad
 	}
 }
