@@ -510,5 +510,12 @@ namespace Infrastructure.Repositories
 				.FromSqlInterpolated($"exec [dbo].[HistorialAsistencia] @IdAsistencia = {idAsistencia}").ToListAsync();
 		}
 
+		public async Task<List<SP_ReporteEstadisticoAsistencias>> GetReporteEstadisticoAsistencias(int filtrarPor, DateTime initialDate, DateTime finalDate)
+		{
+			return await _context.SP_ReporteEstadisticoAsistencias_Result
+				.FromSqlInterpolated($"exec [dbo].[ReporteEstadisticoAsistencia] @filtrarPor={filtrarPor}, @initialDate={initialDate}, @finalDate={finalDate}")
+				.ToListAsync();
+		}
+
 	}
 }
