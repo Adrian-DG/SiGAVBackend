@@ -49,6 +49,8 @@ namespace Infrastructure.Context
 
 			modelBuilder.Entity<SP_HistorialAsistencia>(e => e.HasNoKey());
 
+			modelBuilder.Entity<SP_ReporteEstadisticoAsistencias>(e => e.HasNoKey());
+
 
 
 			/* ---------- VALUES PARSER (CONVERSIONS) --------------- */
@@ -629,6 +631,7 @@ namespace Infrastructure.Context
 		public DbSet<SP_UnidadAutoCompleteResult> SP_UnidadAutoComplete_Result { get; set; }
 		public DbSet<SP_ReporteAsistenciasResult> SP_ReporteAsistencias_Result { get; set; }
 		public DbSet<SP_HistorialAsistencia> SP_HistorialAsistencias_Result { get; set; }
+		public DbSet<SP_ReporteEstadisticoAsistencias> SP_ReporteEstadisticoAsistencias_Result { get; set; }
 
 		// Tables
 		public DbSet<Usuario> Usuarios { get; set; }

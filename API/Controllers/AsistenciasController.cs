@@ -15,10 +15,19 @@ namespace API.Controllers
 	public class AsistenciasController : GenericController<Asistencia>
 	{
 		private readonly AsistenciaRepository _asistencias;
+
+		private readonly Dictionary<int, string> filterTypes = new Dictionary<int, string>();
 		public AsistenciasController(IUnitOfWork unitOfWork, ISpecifaction<Asistencia> specifaction) : base(unitOfWork, specifaction)
 		{
 			_asistencias = (AsistenciaRepository)_repository;
 			_predicate = x => (x.Nombre.Contains(_searchTerm) || x.Apellido.Contains(_searchTerm) || x.Identificacion.Contains(_searchTerm));
+
+			filterTypes.Add(1, "región");
+			filterTypes.Add(2, "tramo");
+			filterTypes.Add(3, "provincia");
+			filterTypes.Add(4, "tipo de vehículo");
+			filterTypes.Add(5, "tipo de unidad");
+			filterTypes.Add(6, "unidad");
 		}
 
 		[HttpPost("createR5")]
@@ -193,23 +202,21 @@ namespace API.Controllers
 
 				using (ExcelPackage package = new ExcelPackage())
 				{
-					var worksheet = package.Workbook.Worksheets.Add("Resumen Estadisticas Asistencias");
+					var worksheet = package.Workbook.Worksheets.Add("Resumen Estadísticas Asistencias");
 
 					// Encabezado
 					var header = worksheet.Cells[1, 1];
 					header.Style.Font.Bold = true;
 					header.Style.Font.Size = 24;
-					header.LoadFromText("Reporte Estadistico Asistencias");
+					header.LoadFromText("Reporte Estadístico Asistencias");
 
 					var disclaimer = worksheet.Cells[3, 1];
 					disclaimer.Style.Font.Bold = true;
 					disclaimer.LoadFromText("Este documento es el resumen detallado de todas las asistencias completadas durante el dia.");
 
-					var printDate = worksheet.Cells[3, 4];
+					var printDate = worksheet.Cells[3, 2];
 					printDate.Style.Font.Bold = true;
-					printDate.LoadFromText("Fecha Impresion");
-
-					worksheet.Cells[3, 5].LoadFromText($"{DateTime.Now.ToShortDateString()}");
+					printDate.LoadFromText($"Fecha Impresión {DateTime.Now.ToString("dd-MM-yyyy HH:mm")}");
 
 					int rowIndex = 5;
 
@@ -265,10 +272,8 @@ namespace API.Controllers
 
 					var printDate = worksheet.Cells[3, 4];
 					printDate.Style.Font.Bold = true;
-					printDate.LoadFromText("Fecha Impresion");
-
-					worksheet.Cells[3, 5].LoadFromText($"{DateTime.Now.ToString("dd-MM-yyyy")}");
-
+					printDate.LoadFromText($"Fecha Impresión: {DateTime.Now.ToString("dd-MM-yyyy HH:mm")}");
+					
 					int rowIndex = 5;
 
 					// Apply styling to column headers
@@ -323,11 +328,10 @@ namespace API.Controllers
 					disclaimer.Style.Font.Bold = true;
 					disclaimer.LoadFromText("Este documento es el resumen detallado de todas las asistencias completadas durante el dia.");
 
-					var printDate = worksheet.Cells[3, 4];
+					var printDate = worksheet.Cells[3, 3];
 					printDate.Style.Font.Bold = true;
-					printDate.LoadFromText("Fecha Impresion");
+					printDate.LoadFromText($"Fecha Impresión: {DateTime.Now.ToString("dd-MM-yyyy HH:mm")}");
 
-					worksheet.Cells[3, 5].LoadFromText($"{DateTime.Now.ToShortDateString()}");
 
 					int rowIndex = 5;
 
@@ -407,5 +411,67 @@ namespace API.Controllers
 			}
 		}
 
-    }				
+		[HttpGet("reporte/estadistico")]
+		public async Task<ActionResult> GetReporteEstadisticoAsistencias(int filter, DateTime initialDate, DateTime finalDate)
+		{
+
+			try
+			{
+				var result = await _asistencias.GetReporteEstadisticoAsistencias(filter, initialDate, finalDate);
+
+				using (ExcelPackage package = new ExcelPackage())
+				{
+					var worksheet = package.Workbook.Worksheets.Add("Reporte estadístico de asistencias");
+
+					// Encabezado
+					var header = worksheet.Cells[1, 1];
+					header.Style.Font.Bold = true;
+					header.Style.Font.Size = 24;
+					header.LoadFromText("Reporte Estadístico de Asistencias");
+
+					var filterBy = worksheet.Cells[3, 1];					
+					filterBy.LoadFromText($"Filtrado por: {filterTypes[filter]}");
+					filterBy.Style.Font.Bold = true;				
+
+					var actualDate = DateTime.Now;
+					var printDate = worksheet.Cells[3, 3];
+					printDate.Style.Font.Bold = true;
+					printDate.LoadFromText($"Fecha Impresión: {actualDate.ToString("dd-MM-yyyy HH:mm")}");
+
+					var disclaimer = worksheet.Cells[5, 1];
+					disclaimer.Style.Font.Bold = true;
+					disclaimer.LoadFromText($"Este documento es el resumen detallado de todas las asistencias completadas durante el período {initialDate.ToString("dd-MM-yyyy")} al {finalDate.ToString("dd-MM-yyyy")}");
+
+					int rowIndex = 7;
+
+					// Apply styling to column headers
+					using (var range = worksheet.Cells[rowIndex, 1, rowIndex, 18])
+					{
+						range.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+						range.Style.Fill.BackgroundColor.SetColor(Color.FromArgb(69, 75, 127));
+						range.Style.Font.Bold = true;
+						range.Style.Font.Color.SetColor(System.Drawing.Color.White);
+					}
+
+					// insert data to sheet
+					worksheet.Cells[rowIndex, 1].LoadFromCollection(result, true);
+
+					worksheet.Cells.AutoFitColumns();
+
+					using (MemoryStream ms = new MemoryStream())
+					{
+						package.SaveAs(ms);
+						byte[] file = ms.ToArray();
+						return File(file, "	application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", $"reporte_estadistico_asistencias_período_{DateTime.Now.ToString("dd-MM-yyyy")}");
+					}
+
+				}
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+	}				
 }
