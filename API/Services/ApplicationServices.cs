@@ -8,6 +8,7 @@ namespace API.Services
 		{
 			services.AddScoped(typeof(ISpecifaction<>), typeof(Specification<>));
 			services.AddScoped<IUnitOfWork, UnitOfWork>();
+			services.AddScoped<IStatsRepository, StatsRepository>();
 			services.GetDatabaseService(configuration, environment);
 			services.GetAuthService(configuration);
 			services.AddSingleton(typeof(GoogleSheetHelper));
