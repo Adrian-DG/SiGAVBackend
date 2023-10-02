@@ -69,6 +69,7 @@ namespace Infrastructure.Repositories
 
 		public void Update(T entity)
 		{
+			entity.FechaModificacion = DateTime.Now.AddHours(-4);
 			_context.Attach<T>(entity);
 			_context.Entry<T>(entity).State = EntityState.Modified;
 		}

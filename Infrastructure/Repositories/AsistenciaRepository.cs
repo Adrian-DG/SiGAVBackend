@@ -236,7 +236,15 @@ namespace Infrastructure.Repositories
 				asistencia.UsuarioId = (int) model.CodUsuario;
 
 				// insert to excel
-				//await AddNewRowToExcel(asistencia);
+				try
+				{
+					await AddNewRowToExcel(asistencia);
+				}
+				catch(Exception ex)
+				{
+					throw ex;
+				}
+				
 			}			
 
 			_context.Attach<Asistencia>(asistencia);
