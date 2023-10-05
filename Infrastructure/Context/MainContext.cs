@@ -51,6 +51,10 @@ namespace Infrastructure.Context
 
 			modelBuilder.Entity<SP_ReporteEstadisticoAsistencias>(e => e.HasNoKey());
 
+			// Resumen estadistico asistencias unidad (solo para los supervisores y encargados de tramo)
+			modelBuilder.Entity<SP_ReporteEstadisticoUnidadApp>(e => e.HasNoKey());
+
+			modelBuilder.Entity<SP_ReporteEstadisticoTramoApp>(e => e.HasNoKey());
 
 
 			/* ---------- VALUES PARSER (CONVERSIONS) --------------- */
@@ -632,6 +636,8 @@ namespace Infrastructure.Context
 		public DbSet<SP_ReporteAsistenciasResult> SP_ReporteAsistencias_Result { get; set; }
 		public DbSet<SP_HistorialAsistencia> SP_HistorialAsistencias_Result { get; set; }
 		public DbSet<SP_ReporteEstadisticoAsistencias> SP_ReporteEstadisticoAsistencias_Result { get; set; }
+		public DbSet<SP_ReporteEstadisticoUnidadApp> SP_ReporteEstadisticoUnidadApp_Result { get; set; }
+		public DbSet<SP_ReporteEstadisticoTramoApp> SP_ReporteEstadisticoTramoApp_Result { get; set; }
 
 		// Tables
 		public DbSet<Usuario> Usuarios { get; set; }

@@ -22,5 +22,7 @@ namespace Domain.Entities
         [ForeignKey("Tramo")]
         public int TramoId { get; set; }
         public virtual Tramo Tramo { get; set; }
+
+        public string GetUnidadInfo() => $"{Denominacion} - {Ficha}";
     }
 }

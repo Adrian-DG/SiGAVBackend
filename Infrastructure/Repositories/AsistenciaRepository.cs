@@ -9,6 +9,7 @@ using Infrastructure.Helpers;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -369,20 +370,20 @@ namespace Infrastructure.Repositories
 				.FromSqlInterpolated($"[dbo].[ContadorAsistenciasPorUnidad] {unidadMiembroId}")
 				.ToList()[0];
 		}
+		
 
-
-		public async Task<List<AsistenciasUnidadTramoViewModel>> GetMetricasAsistenciasUnidadByTramo(int tramoId)
+		public async Task<List<SP_ReporteEstadisticoTramoApp>> GetMetricasAsistenciasUnidadByTramo(int tramoId)
 		{
-			var results = await _repository
-						.Include(x => x.UnidadMiembro)
-						.Include(x => x.UnidadMiembro.Unidad)
-						.Include(x => x.UnidadMiembro.Unidad.Tramo)						
-						.Where(x => x.UnidadMiembro.Unidad.Tramo.Id == tramoId && x.FechaCreacion.Date == DateTime.Now.Date && (int) x.EstatusAsistencia == 3)
-						.GroupBy(x => x.UnidadMiembro.Unidad.Ficha)
-						.Select(x => new AsistenciasUnidadTramoViewModel { Ficha = x.Key, Total = x.Count() })
-						.ToListAsync();
+			return await _context.SP_ReporteEstadisticoTramoApp_Result
+				.FromSqlInterpolated($"exec [dbo].[ReporteEstadisticoTramoApp] @tramoId={tramoId}")
+				.ToListAsync();
+		}
 
-			return results;
+		public async Task<List<SP_ReporteEstadisticoUnidadApp>> GetMetricasAsistenciasUnidadByTipo(int unidadId)
+		{
+			return await _context.SP_ReporteEstadisticoUnidadApp_Result
+				.FromSqlInterpolated($"exec [dbo].[ReporteEstadisticoUnidadApp] @unidadId={unidadId}")
+				.ToListAsync();
 		}
 
 		public async Task<AsistenciaEditViewModel> GetAsistenciaEditViewModel(int Id)
