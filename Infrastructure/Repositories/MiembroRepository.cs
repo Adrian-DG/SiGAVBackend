@@ -37,7 +37,8 @@ namespace Infrastructure.Repositories
 				Institucion = model.Institucion,
 				Autorizado = false,
 				Estatus = true,
-				PerteneceA = model.PerteneceA
+				PerteneceA = model.PerteneceA,
+				AccesoTotal = model.AccesoTotal
 			};
 
 			await _repository.AddAsync(newMiembro);

@@ -15,5 +15,6 @@ namespace Domain.ResultSetModels
 		public string Tramo { get; set; }
 		public string MiembroInfo { get; set; }
 		public bool EsEncargado { get; set; }
+		public bool AccesoTotal { get; set; }
 	}
 }

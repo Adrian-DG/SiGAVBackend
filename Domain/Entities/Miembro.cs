@@ -14,5 +14,6 @@ namespace Domain.Entities
         public Institucion Institucion { get; set; }
         public bool Autorizado { get; set; } = false;
         public PerteneceA PerteneceA { get; set; }
+        public bool AccesoTotal { get; set; } = false;
     }
 }
