@@ -47,6 +47,22 @@ namespace API.Controllers
 		}
 
 		[AllowAnonymous]
+		[HttpGet("invitados")]
+		public async Task<IActionResult> GetTramosInvitados()
+		{
+			try
+			{
+				var result = await _tramos.GetTramosInvitados();
+				return Ok(result);
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+
+		[AllowAnonymous]
 		[HttpGet("supervisar")]
 		public async Task<IActionResult> GetTramosEncargadoSupervisor([FromQuery] FilterAccesoTramoDTO model)
 		{

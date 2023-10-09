@@ -50,6 +50,11 @@ namespace Infrastructure.Repositories
 				.ToListAsync<TramoViewModel>();
 		}
 
+		public async Task<List<GenericData>> GetTramosInvitados()
+		{
+			return await _repository.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre }).ToListAsync();
+		}
+
 		public async Task<List<GenericData>> GetTramosEncargadoSupervisor(FilterAccesoTramoDTO model)
 		{
 
