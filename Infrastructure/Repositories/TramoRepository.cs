@@ -50,27 +50,43 @@ namespace Infrastructure.Repositories
 				.ToListAsync<TramoViewModel>();
 		}
 
-		public async Task<List<GenericData>> GetTramosEncargadoSupervisor(string ficha)
+		public async Task<List<GenericData>> GetTramosInvitados()
 		{
-			var unidad = await _context.Unidades
-					    .Include(x => x.Tramo)
-						.SingleAsync(x => x.Ficha == ficha);
+			return await _repository.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre }).ToListAsync();
+		}
 
-			if(unidad.TipoUnidadId == 1) // Encargado regional (todos los tramos correspondientes a su region)
+		public async Task<List<GenericData>> GetTramosEncargadoSupervisor(FilterAccesoTramoDTO model)
+		{
+
+			if (model.AccesoTotal)
 			{
 				return await _repository
-					.Where(x => x.RegionAsistenciaId == unidad.Tramo.RegionAsistenciaId)
-					.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre })
-					.ToListAsync();
+						.Where(x => !x.PerteneceAGestion && x.Estatus)
+						.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre })
+						.ToListAsync();
 			}
-			else // Supervisor tramo (solo el tramo al que esta asignado)
+			else
 			{
-				return await _repository
-					.Where(x => x.Id == unidad.TramoId)
-					.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre })
-					.ToListAsync();
-			}
+				var unidad = await _context.Unidades
+						.Include(x => x.Tramo)
+						.SingleAsync(x => x.Ficha == model.Ficha);
 
+
+				if (unidad.TipoUnidadId == 1) // Encargado regional (todos los tramos correspondientes a su region)
+				{
+					return await _repository
+						.Where(x => x.RegionAsistenciaId == unidad.Tramo.RegionAsistenciaId)
+						.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre })
+						.ToListAsync();
+				}
+				else // Supervisor tramo (solo el tramo al que esta asignado)
+				{
+					return await _repository
+						.Where(x => x.Id == unidad.TramoId)
+						.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre })
+						.ToListAsync();
+				}
+			}
 		}
 
 	}

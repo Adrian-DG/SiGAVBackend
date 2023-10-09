@@ -17,5 +17,6 @@ namespace Domain.Response
 		public string Token { get; set; }
 		public bool Estatus { get; set; }
 		public bool EsEncargado { get; set; }
+		public bool AccesoTotal { get; set; }
 	}
 }
