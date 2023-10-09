@@ -42,18 +42,17 @@ namespace API.Controllers
 			}
 			catch (Exception)
 			{
-
 				throw;
 			}
 		}
 
 		[AllowAnonymous]
 		[HttpGet("supervisar")]
-		public async Task<IActionResult> GetTramosEncargadoSupervisor([FromQuery] string ficha)
+		public async Task<IActionResult> GetTramosEncargadoSupervisor([FromQuery] FilterAccesoTramoDTO model)
 		{
 			try
 			{
-				var result = await _tramos.GetTramosEncargadoSupervisor(ficha);
+				var result = await _tramos.GetTramosEncargadoSupervisor(model);
 				return Ok(result);
 			}
 			catch (Exception)

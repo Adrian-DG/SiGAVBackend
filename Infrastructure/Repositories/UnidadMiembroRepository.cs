@@ -35,7 +35,8 @@ namespace Infrastructure.Repositories
 				MiembroInfo = response.MiembroInfo,
 				Token = _token.GenerateUnitToken(response.Ficha),
 				EsEncargado = response.EsEncargado,
-				Estatus = true
+				Estatus = true,
+				AccesoTotal = response.AccesoTotal
 			};
 		}
 

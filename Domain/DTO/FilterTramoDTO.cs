@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Domain.DTO
 {
-	public class CreateMiembroDTO : PersonaModelMetadata
+	public class FilterAccesoTramoDTO
 	{
-		public int RangoId { get; set; }
-		public Institucion Institucion { get; set; }
-		public PerteneceA PerteneceA { get; set; }
+		public string Ficha { get; set; }
 		public bool AccesoTotal { get; set; } = false;
 	}
 }
