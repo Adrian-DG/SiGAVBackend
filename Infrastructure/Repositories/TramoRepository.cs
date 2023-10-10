@@ -61,7 +61,7 @@ namespace Infrastructure.Repositories
 			if (model.AccesoTotal)
 			{
 				return await _repository
-						.Where(x => !x.PerteneceAGestion && x.Estatus)
+						.Where(x => x.Estatus)
 						.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre })
 						.ToListAsync();
 			}
