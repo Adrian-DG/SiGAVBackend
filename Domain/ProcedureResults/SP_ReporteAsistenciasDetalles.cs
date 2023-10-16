@@ -49,6 +49,7 @@ namespace Domain.ProcedureResults
         public string TiempoCompletada { get; set; }
         public string QuienReporta { get; set; }
         public string Usuario { get; set; }
+        public string Comentario { get; set; }
     }
 }
 
