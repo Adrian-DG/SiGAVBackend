@@ -60,6 +60,8 @@ namespace Infrastructure.Context
 
 			modelBuilder.Entity<SP_AsistenciaAsignadaUnidad>(e => e.HasNoKey());
 
+			modelBuilder.Entity<SP_ObtenerListadoAsistencias>(e => e.HasNoKey());
+
 
 			/* ---------- VALUES PARSER (CONVERSIONS) --------------- */
 
@@ -81,6 +83,12 @@ namespace Infrastructure.Context
 				);
 
 			modelBuilder.Entity<SP_AsistenciaAsignadaUnidad>()
+				.Property(a => a.TipoAsistencias).HasConversion(
+					v => JsonConvert.SerializeObject(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }),
+					v => JsonConvert.DeserializeObject<IList<TipoAsistencia>>(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore })
+				);
+
+			modelBuilder.Entity<SP_ObtenerListadoAsistencias>()
 				.Property(a => a.TipoAsistencias).HasConversion(
 					v => JsonConvert.SerializeObject(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }),
 					v => JsonConvert.DeserializeObject<IList<TipoAsistencia>>(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore })
@@ -650,6 +658,7 @@ namespace Infrastructure.Context
 		public DbSet<SP_ReporteEstadisticoUnidadTramoApp> SP_ReporteEstadisticoUnidadTramoApp_Result { get; set; }
 		public DbSet<SP_ReporteEstadisticoTotalTramoApp> SP_ReporteEstadisticoTotalTramoApp_Result { get; set; }
 		public DbSet<SP_AsistenciaAsignadaUnidad> SP_AsistenciaAsignadaUnidad_Result { get; set; }
+		public DbSet<SP_ObtenerListadoAsistencias> SP_ObtenerListadoAsistencias_Result { get; set; }
 
 		// Tables
 		public DbSet<Usuario> Usuarios { get; set; }

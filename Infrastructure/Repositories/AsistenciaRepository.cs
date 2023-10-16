@@ -147,71 +147,17 @@ namespace Infrastructure.Repositories
 			await _repository.AddAsync(newAsistencia);
 		}
 
-		public async Task<PagedData<AsistenciaViewModel>> GetAllAsistencias(PaginationFilter filters, Expression<Func<Asistencia, bool>> predicate)
+		public async Task<PagedData<SP_ObtenerListadoAsistencias>> GetAllAsistencias(AsistenciaPaginationFilter filters, Expression<Func<Asistencia, bool>> predicate)
 		{
-			var result = await _repository
-						// Vehiculo
-						.Include(a => a.VehiculoTipo)
-						.Include(a => a.VehiculoColor)
-						.Include(a => a.VehiculoModelo)
-						.Include(a => a.VehiculoMarca)
-						// Unidad & Miembro & Tramo & Rango
-						.Include(a => a.UnidadMiembro.Miembro)
-						.Include(a => a.UnidadMiembro.Miembro.Rango)
-						.Include(a => a.UnidadMiembro.Unidad)
-						.Include(a => a.UnidadMiembro.Unidad.Tramo)
-						.Include(a => a.UnidadMiembro.Unidad.TipoUnidad)
-						// Ubicacion
-						.Include(a => a.Municipio)
-						.Include(a => a.Provincia)
-						.Where(predicate)
-						.OrderByDescending(a => a.FechaCreacion)
-						.ThenByDescending(a => a.FechaCreacion.TimeOfDay)
-						.Skip((filters.Page - 1) * filters.Size)
-						.Take(filters.Size)
-						.Select(a => new AsistenciaViewModel
-						{
-							Id = a.Id,
-							// Ciudadano
-							Identificacion = a.Identificacion,
-							NombreCiudadano = String.Concat(a.Nombre, " ", a.Apellido),
-							Telefono = a.Telefono,
-							Genero = a.Genero.ToString(),
-							EsExtranjero = a.EsExtranjero,
-							// Vehiculo
-							VehiculoTipo = a.VehiculoTipo.Nombre,
-							VehiculoColor = a.VehiculoColor.Nombre,
-							VehiculoModelo = a.VehiculoModelo.Nombre,
-							VehiculoMarca = a.VehiculoMarca.Nombre,
-							Placa = a.Placa,
-							// Ubicacion
-							Coordenadas = a.Coordenadas,
-							Municipio = a.Municipio.Nombre,
-							Provincia = a.Provincia.Nombre,
-							Tramo = a.UnidadMiembro.Unidad.Tramo.Nombre,
-							FichaUnidad = a.UnidadMiembro.Unidad.Ficha,
-							DenominacionUnidad = a.UnidadMiembro.Unidad.Denominacion,
-							TipoUnidad = a.UnidadMiembro.Unidad.TipoUnidad.Nombre,
-							// Agente
-							CedulaAgente = a.UnidadMiembro.Miembro.Cedula,
-							NombreAgente = String.Concat(a.UnidadMiembro.Miembro.Nombre, " ", a.UnidadMiembro.Miembro.Apellido),
-							RangoAgente = a.UnidadMiembro.Miembro.Rango.Nombre,
-							Institucion = a.UnidadMiembro.Miembro.Institucion.ToString(),
-							TipoAsistencias = a.TipoAsistencias.ToList(),
-							Comentario = a.Comentario,
-							ReportadaPor = a.ReportadoPor.ToString(),
-							FechaCreacion = a.FechaCreacion,
-							EstatusAsistencia = a.EstatusAsistencia.ToString(),
-							Estatus = a.Estatus,
-							PerteneceA = a.UnidadMiembro.Miembro.PerteneceA.ToString()
-						})
-						.ToListAsync();
+			var results = await _context.SP_ObtenerListadoAsistencias_Result
+						.FromSqlInterpolated($"[dbo].[ObtenerListadoAsistencia] @page={filters.Page - 1}, @size={filters.Size}, @searchTerm={filters.SearchTerm}, @estatusAsistencia={filters.EstatusAsistencia}").
+						ToListAsync();
 
-			return new PagedData<AsistenciaViewModel>
+			return new PagedData<SP_ObtenerListadoAsistencias>
 			{
+				Items = results,
 				Page = filters.Page,
 				Size = filters.Size,
-				Items = result,
 				TotalCount = await GetTotalRecords(predicate)
 			};
 		}
