@@ -71,9 +71,8 @@ namespace API.Controllers
 			{
 				_searchTerm = (filters.SearchTerm is null) ? "" : filters.SearchTerm;		
 				filters.Page = filters.Page > 0 ? filters.Page : 1;
-
+				filters.SearchTerm = _searchTerm;
 				if(filters.EstatusAsistencia != 0) _predicate = x => (x.Nombre.Contains(_searchTerm) || x.Apellido.Contains(_searchTerm) || x.Identificacion.Contains(_searchTerm)) && (int) x.EstatusAsistencia == filters.EstatusAsistencia;
-
 				var result = await _asistencias.GetAllAsistencias(filters, _predicate);
 				return Ok(result);
 			}

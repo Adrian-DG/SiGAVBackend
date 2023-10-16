@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain.ProcedureResults
 {
-	public class SP_ReporteEstadisticoUnidadTramoApp : ReporteSupervisoresApp
+	public class SP_ReporteEstadisticoTotalTramoApp : ReporteSupervisoresApp
 	{
 		
 	}
