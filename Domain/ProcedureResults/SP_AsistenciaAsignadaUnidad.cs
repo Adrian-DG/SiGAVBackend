@@ -27,29 +27,16 @@ namespace Domain.ProcedureResults
 		public string Placa { get; set; }
 
 		// Ubicacion 
-		public string Coordenadas { get; set; }
 		public string Municipio { get; set; }
 		public string Provincia { get; set; }
-		public string Tramo { get; set; }
-
-		// Unidad
-		public string FichaUnidad { get; set; }
-		public string DenominacionUnidad { get; set; }
-		public string TipoUnidad { get; set; }
-
-		// Agente
-		public string CedulaAgente { get; set; }
-		public string NombreAgente { get; set; }
-		public string RangoAgente { get; set; }
 
 		// Tipificacion Asistencia
-		public string TipoAsistencias { get; set; }
+		public IList<TipoAsistencia> TipoAsistencias { get; set; }
 		public string Comentario { get; set; }
-
-		// Metadata Asistencia
-		public string ReportadaPor { get; set; }
-		public DateTime FechaCreacion { get; set; }
 		public string EstatusAsistencia { get; set; }
 		public bool Estatus { get; set; }
+		// Metadata Asistencia
+		public DateTime FechaCreacion { get; set; }
+
 	}
 }

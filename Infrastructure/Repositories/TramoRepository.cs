@@ -1,4 +1,5 @@
-﻿using Domain.ViewModels;
+﻿using Domain.ProcedureResults;
+using Domain.ViewModels;
 using Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -55,38 +56,11 @@ namespace Infrastructure.Repositories
 			return await _repository.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre }).ToListAsync();
 		}
 
-		public async Task<List<GenericData>> GetTramosEncargadoSupervisor(FilterAccesoTramoDTO model)
+		public async Task<List<SP_ReporteEstadisticoTotalTramoApp>> GetTramosEncargadoSupervisor(FilterAccesoTramoDTO model)
 		{
-
-			if (model.AccesoTotal)
-			{
-				return await _repository
-						.Where(x => x.Estatus)
-						.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre })
-						.ToListAsync();
-			}
-			else
-			{
-				var unidad = await _context.Unidades
-						.Include(x => x.Tramo)
-						.SingleAsync(x => x.Ficha == model.Ficha);
-
-
-				if (unidad.TipoUnidadId == 1) // Encargado regional (todos los tramos correspondientes a su region)
-				{
-					return await _repository
-						.Where(x => x.RegionAsistenciaId == unidad.Tramo.RegionAsistenciaId)
-						.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre })
-						.ToListAsync();
-				}
-				else // Supervisor tramo (solo el tramo al que esta asignado)
-				{
-					return await _repository
-						.Where(x => x.Id == unidad.TramoId)
-						.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre })
-						.ToListAsync();
-				}
-			}
+			return await _context.SP_ReporteEstadisticoTotalTramoApp_Result
+				.FromSqlInterpolated($"exec[dbo].[ReporteEstadisticoTotalPorTramo] @ficha = {model.Ficha}, @accesoTotal = {model.AccesoTotal}")
+				.ToListAsync();
 		}
 
 	}

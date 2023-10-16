@@ -52,9 +52,13 @@ namespace Infrastructure.Context
 			modelBuilder.Entity<SP_ReporteEstadisticoAsistencias>(e => e.HasNoKey());
 
 			// Resumen estadistico asistencias unidad (solo para los supervisores y encargados de tramo)
-			modelBuilder.Entity<SP_ReporteEstadisticoUnidadApp>(e => e.HasNoKey());
+			modelBuilder.Entity<SP_ReporteEstadisticoTipoAsistenciaUnidadApp>(e => e.HasNoKey());
 
-			modelBuilder.Entity<SP_ReporteEstadisticoTramoApp>(e => e.HasNoKey());
+			modelBuilder.Entity<SP_ReporteEstadisticoUnidadTramoApp>(e => e.HasNoKey());
+
+			modelBuilder.Entity<SP_ReporteEstadisticoTotalTramoApp>(e => e.HasNoKey());
+
+			modelBuilder.Entity<SP_AsistenciaAsignadaUnidad>(e => e.HasNoKey());
 
 
 			/* ---------- VALUES PARSER (CONVERSIONS) --------------- */
@@ -74,6 +78,12 @@ namespace Infrastructure.Context
 				.Property(a => a.Imagenes).HasConversion(
 					v => JsonConvert.SerializeObject(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }),
 					v => JsonConvert.DeserializeObject<IList<string>>(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore })
+				);
+
+			modelBuilder.Entity<SP_AsistenciaAsignadaUnidad>()
+				.Property(a => a.TipoAsistencias).HasConversion(
+					v => JsonConvert.SerializeObject(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }),
+					v => JsonConvert.DeserializeObject<IList<TipoAsistencia>>(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore })
 				);
 
 			/* ----------- DATA SEEDING TO TABLES --------------- */
@@ -635,9 +645,11 @@ namespace Infrastructure.Context
 		public DbSet<SP_UnidadAutoCompleteResult> SP_UnidadAutoComplete_Result { get; set; }
 		public DbSet<SP_ReporteAsistenciasResult> SP_ReporteAsistencias_Result { get; set; }
 		public DbSet<SP_HistorialAsistencia> SP_HistorialAsistencias_Result { get; set; }
-		public DbSet<SP_ReporteEstadisticoAsistencias> SP_ReporteEstadisticoAsistencias_Result { get; set; }
-		public DbSet<SP_ReporteEstadisticoUnidadApp> SP_ReporteEstadisticoUnidadApp_Result { get; set; }
-		public DbSet<SP_ReporteEstadisticoTramoApp> SP_ReporteEstadisticoTramoApp_Result { get; set; }
+		public DbSet<SP_ReporteEstadisticoAsistencias> SP_ReporteEstadisticoAsistencias_Result { get; set; }		
+		public DbSet<SP_ReporteEstadisticoTipoAsistenciaUnidadApp> SP_ReporteEstadisticoTipoAsistenciaUnidadApp_Result { get; set; }
+		public DbSet<SP_ReporteEstadisticoUnidadTramoApp> SP_ReporteEstadisticoUnidadTramoApp_Result { get; set; }
+		public DbSet<SP_ReporteEstadisticoTotalTramoApp> SP_ReporteEstadisticoTotalTramoApp_Result { get; set; }
+		public DbSet<SP_AsistenciaAsignadaUnidad> SP_AsistenciaAsignadaUnidad_Result { get; set; }
 
 		// Tables
 		public DbSet<Usuario> Usuarios { get; set; }

@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.ProcedureResults
+namespace Domain.Abstraction
 {
-	public class SP_ReporteEstadisticoTipoAsistenciaUnidadApp
+	public class ReporteSupervisoresApp
 	{
+		public int Id { get; set; } = 0;
 		public string Nombre { get; set; }
 		public int Total { get; set; }
 	}
