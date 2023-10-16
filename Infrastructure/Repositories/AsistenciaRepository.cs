@@ -147,71 +147,17 @@ namespace Infrastructure.Repositories
 			await _repository.AddAsync(newAsistencia);
 		}
 
-		public async Task<PagedData<AsistenciaViewModel>> GetAllAsistencias(PaginationFilter filters, Expression<Func<Asistencia, bool>> predicate)
+		public async Task<PagedData<SP_ObtenerListadoAsistencias>> GetAllAsistencias(AsistenciaPaginationFilter filters, Expression<Func<Asistencia, bool>> predicate)
 		{
-			var result = await _repository
-						// Vehiculo
-						.Include(a => a.VehiculoTipo)
-						.Include(a => a.VehiculoColor)
-						.Include(a => a.VehiculoModelo)
-						.Include(a => a.VehiculoMarca)
-						// Unidad & Miembro & Tramo & Rango
-						.Include(a => a.UnidadMiembro.Miembro)
-						.Include(a => a.UnidadMiembro.Miembro.Rango)
-						.Include(a => a.UnidadMiembro.Unidad)
-						.Include(a => a.UnidadMiembro.Unidad.Tramo)
-						.Include(a => a.UnidadMiembro.Unidad.TipoUnidad)
-						// Ubicacion
-						.Include(a => a.Municipio)
-						.Include(a => a.Provincia)
-						.Where(predicate)
-						.OrderByDescending(a => a.FechaCreacion)
-						.ThenByDescending(a => a.FechaCreacion.TimeOfDay)
-						.Skip((filters.Page - 1) * filters.Size)
-						.Take(filters.Size)
-						.Select(a => new AsistenciaViewModel
-						{
-							Id = a.Id,
-							// Ciudadano
-							Identificacion = a.Identificacion,
-							NombreCiudadano = String.Concat(a.Nombre, " ", a.Apellido),
-							Telefono = a.Telefono,
-							Genero = a.Genero.ToString(),
-							EsExtranjero = a.EsExtranjero,
-							// Vehiculo
-							VehiculoTipo = a.VehiculoTipo.Nombre,
-							VehiculoColor = a.VehiculoColor.Nombre,
-							VehiculoModelo = a.VehiculoModelo.Nombre,
-							VehiculoMarca = a.VehiculoMarca.Nombre,
-							Placa = a.Placa,
-							// Ubicacion
-							Coordenadas = a.Coordenadas,
-							Municipio = a.Municipio.Nombre,
-							Provincia = a.Provincia.Nombre,
-							Tramo = a.UnidadMiembro.Unidad.Tramo.Nombre,
-							FichaUnidad = a.UnidadMiembro.Unidad.Ficha,
-							DenominacionUnidad = a.UnidadMiembro.Unidad.Denominacion,
-							TipoUnidad = a.UnidadMiembro.Unidad.TipoUnidad.Nombre,
-							// Agente
-							CedulaAgente = a.UnidadMiembro.Miembro.Cedula,
-							NombreAgente = String.Concat(a.UnidadMiembro.Miembro.Nombre, " ", a.UnidadMiembro.Miembro.Apellido),
-							RangoAgente = a.UnidadMiembro.Miembro.Rango.Nombre,
-							Institucion = a.UnidadMiembro.Miembro.Institucion.ToString(),
-							TipoAsistencias = a.TipoAsistencias.ToList(),
-							Comentario = a.Comentario,
-							ReportadaPor = a.ReportadoPor.ToString(),
-							FechaCreacion = a.FechaCreacion,
-							EstatusAsistencia = a.EstatusAsistencia.ToString(),
-							Estatus = a.Estatus,
-							PerteneceA = a.UnidadMiembro.Miembro.PerteneceA.ToString()
-						})
-						.ToListAsync();
+			var results = await _context.SP_ObtenerListadoAsistencias_Result
+						.FromSqlInterpolated($"[dbo].[ObtenerListadoAsistencia] @page={filters.Page - 1}, @size={filters.Size}, @searchTerm={filters.SearchTerm}, @estatusAsistencia={filters.EstatusAsistencia}").
+						ToListAsync();
 
-			return new PagedData<AsistenciaViewModel>
+			return new PagedData<SP_ObtenerListadoAsistencias>
 			{
+				Items = results,
 				Page = filters.Page,
 				Size = filters.Size,
-				Items = result,
 				TotalCount = await GetTotalRecords(predicate)
 			};
 		}
@@ -303,70 +249,12 @@ namespace Infrastructure.Repositories
 			return String.IsNullOrEmpty(field) || String.IsNullOrEmpty(field.Trim());
 		}
 
-		public async Task<List<AsistenciaViewModel>> GetAsistenciasAsignadaAUnidad(string ficha, int estatusAsistencia)
+		public async Task<List<SP_AsistenciaAsignadaUnidad>> GetAsistenciasAsignadaAUnidad(string ficha, int estatusAsistencia)
 		{
-			Expression<Func<Asistencia, bool>> predicate = x => x.UnidadMiembro.Unidad.Ficha == ficha && (int) x.EstatusAsistencia == estatusAsistencia;
 
-			if (estatusAsistencia == 3) predicate = x => x.UnidadMiembro.Unidad.Ficha == ficha && (int) x.EstatusAsistencia == estatusAsistencia && x.TiempoCompletada.Date == DateTime.Now.Date;
-
-
-			var results = await _repository
-							.Include(a => a.VehiculoMarca)
-							.Include(a => a.VehiculoModelo)
-							.Include(a => a.VehiculoTipo)
-							.Include(a => a.VehiculoColor)
-							.Include(a => a.UnidadMiembro.Miembro)
-							.Include(a => a.UnidadMiembro.Unidad)
-							.Include(a => a.UnidadMiembro.Unidad.Tramo)
-							.Include(a => a.UnidadMiembro.Miembro.Rango)
-							.Include(a => a.Provincia)
-							.Include(a => a.Municipio)
-							.Where(predicate)
-							.OrderByDescending(a => a.FechaCreacion.Date)
-							.Select(a => new AsistenciaViewModel
-							{
-								Id = a.Id,
-								// ciudadano
-								Identificacion = a.Identificacion,
-								NombreCiudadano = $"{a.Nombre} {a.Apellido}",
-								Genero = a.Genero.ToString(),
-								EsExtranjero = a.EsExtranjero,
-								Telefono = a.Telefono,
-								// vehiculo
-								VehiculoColor = a.VehiculoColor.Nombre,
-								VehiculoTipo = a.VehiculoTipo.Nombre,
-								VehiculoMarca = a.VehiculoMarca.Nombre,
-								VehiculoModelo = a.VehiculoModelo.Nombre,
-								Placa = a.Placa,
-								// agente
-								Institucion = a.UnidadMiembro.Miembro.Institucion.ToString(),
-								RangoAgente = a.UnidadMiembro.Miembro.Rango.Nombre,
-								CedulaAgente = a.UnidadMiembro.Miembro.Cedula,
-								NombreAgente = a.UnidadMiembro.Miembro.NombreCompleto(),
-								// unidad
-								FichaUnidad = a.UnidadMiembro.Unidad.Ficha,
-								DenominacionUnidad = a.UnidadMiembro.Unidad.Denominacion,
-								TipoUnidad = a.UnidadMiembro.Unidad.TipoUnidad.ToString(),
-								// ubicacion
-								Provincia = a.Provincia.Nombre,
-								Municipio = a.Municipio.Nombre,
-								Coordenadas = a.Coordenadas,
-								Tramo = a.UnidadMiembro.Unidad.Tramo.Nombre,
-								EsEmergencia = false,
-								TipoAsistencias = a.TipoAsistencias.ToList(),
-								FechaCreacion = a.FechaCreacion,
-								EstatusAsistencia = a.EstatusAsistencia.ToString(),
-								ReportadaPor = a.ReportadoPor.ToString(),
-								Comentario = a.Comentario,
-								Estatus = a.Estatus,
-								TieneDatosCompletados = true
-							})
-							.ToListAsync();
-
-			foreach(var item in results)
-			{
-				item.EsEmergencia = (int)item.TipoAsistencias[0].CategoriaAsistencia == 1;
-			}
+			var results = await _context.SP_AsistenciaAsignadaUnidad_Result
+						.FromSqlInterpolated($"[dbo].[AsistenciasAsignadasPorUnidad] @ficha={ficha}, @estatusAsistencia={estatusAsistencia}")
+						.ToListAsync();			
 
 			return results;
 
@@ -380,16 +268,16 @@ namespace Infrastructure.Repositories
 		}
 		
 
-		public async Task<List<SP_ReporteEstadisticoTramoApp>> GetMetricasAsistenciasUnidadByTramo(int tramoId)
+		public async Task<List<SP_ReporteEstadisticoUnidadTramoApp>> GetMetricasAsistenciasUnidadByTramo(int tramoId)
 		{
-			return await _context.SP_ReporteEstadisticoTramoApp_Result
+			return await _context.SP_ReporteEstadisticoUnidadTramoApp_Result
 				.FromSqlInterpolated($"exec [dbo].[ReporteEstadisticoTramoApp] @tramoId={tramoId}")
 				.ToListAsync();
 		}
 
-		public async Task<List<SP_ReporteEstadisticoUnidadApp>> GetMetricasAsistenciasUnidadByTipo(int unidadId)
+		public async Task<List<SP_ReporteEstadisticoTipoAsistenciaUnidadApp>> GetMetricasAsistenciasUnidadByTipo(int unidadId)
 		{
-			return await _context.SP_ReporteEstadisticoUnidadApp_Result
+			return await _context.SP_ReporteEstadisticoTipoAsistenciaUnidadApp_Result
 				.FromSqlInterpolated($"exec [dbo].[ReporteEstadisticoUnidadApp] @unidadId={unidadId}")
 				.ToListAsync();
 		}
