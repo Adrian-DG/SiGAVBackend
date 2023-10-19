@@ -28,6 +28,9 @@ namespace API.Controllers
 			filterTypes.Add(4, "tipo de vehículo");
 			filterTypes.Add(5, "tipo de unidad");
 			filterTypes.Add(6, "unidad");
+			filterTypes.Add(7, "quien reporta");
+			filterTypes.Add(8, "miembro");
+			filterTypes.Add(9, "usuarios");
 		}
 
 		[HttpPost("createR5")]
