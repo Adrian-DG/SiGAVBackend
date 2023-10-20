@@ -90,8 +90,8 @@ namespace API.Controllers
 		{
 			try
 			{
-				await _asistencias.ActualizarAsistencia(model);
-				return Ok(_response.GetResponse(await _uow.CommitChangesAsync()));
+				var response = await _asistencias.ActualizarAsistencia(model);
+				return Ok(response);
 			}
 			catch (Exception)
 			{

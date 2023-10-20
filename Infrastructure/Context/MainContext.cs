@@ -62,6 +62,8 @@ namespace Infrastructure.Context
 
 			modelBuilder.Entity<SP_ObtenerListadoAsistencias>(e => e.HasNoKey());
 
+			modelBuilder.Entity<SP_ActualizarAsistencia>(e => e.HasNoKey());
+
 
 			/* ---------- VALUES PARSER (CONVERSIONS) --------------- */
 
@@ -659,6 +661,8 @@ namespace Infrastructure.Context
 		public DbSet<SP_ReporteEstadisticoTotalTramoApp> SP_ReporteEstadisticoTotalTramoApp_Result { get; set; }
 		public DbSet<SP_AsistenciaAsignadaUnidad> SP_AsistenciaAsignadaUnidad_Result { get; set; }
 		public DbSet<SP_ObtenerListadoAsistencias> SP_ObtenerListadoAsistencias_Result { get; set; }
+
+		public DbSet<SP_ActualizarAsistencia> SP_ActualizarAsistencias_Result { get; set; }
 
 		// Tables
 		public DbSet<Usuario> Usuarios { get; set; }
