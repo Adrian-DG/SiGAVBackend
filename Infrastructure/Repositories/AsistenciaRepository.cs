@@ -162,40 +162,18 @@ namespace Infrastructure.Repositories
 			};
 		}
 
-		public async Task ActualizarAsistencia(UpdateAsistencia model)
+		public async Task<ServerResponse> ActualizarAsistencia(UpdateAsistencia model)
 		{
-			var asistencia = await _repository.FindAsync(model.Id);
+			var response = await _context.SP_ActualizarAsistencias_Result
+				.FromSqlInterpolated(@$"
+				[dbo].[ActualizarEstatusAsistencia]
+				@IdAsistencia={model.Id},
+				@EstatusAsistencia = {model.EstatusAsistencia},
+				@UsuarioId = {model.CodUsuario}")
+				.ToListAsync();
 
-			asistencia.EstatusAsistencia = model.EstatusAsistencia;
+			return (ServerResponse) response.FirstOrDefault();
 			
-			if((int)model.EstatusAsistencia == 2)
-			{
-				asistencia.TiempoLlegada = DateTime.Now.AddHours(-4);
-				asistencia.UnidadMiembroId = (int) model.UnidadMiembroId;
-			}
-			
-			asistencia.FechaModificacion = DateTime.Now.AddHours(-4);
-
-			if ((int) model.EstatusAsistencia == 3)
-			{
-				asistencia.Estatus = true;
-				asistencia.TiempoCompletada = DateTime.Now;
-				asistencia.UsuarioId = (int) model.CodUsuario;
-
-				// insert to excel
-				try
-				{
-					await AddNewRowToExcel(asistencia);
-				}
-				catch(Exception ex)
-				{
-					throw ex;
-				}
-				
-			}			
-
-			_context.Attach<Asistencia>(asistencia);
-			_context.Entry<Asistencia>(asistencia).State = EntityState.Modified;
 		}
 
 

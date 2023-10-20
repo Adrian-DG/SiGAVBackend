@@ -22,7 +22,7 @@ namespace Infrastructure.Repositories
 			var results = await _repository
 							.Include(u => u.Tramo)
 							.Include(u => u.TipoUnidad)
-							.Where(predicate)							
+							.Where(predicate)
 							.Skip((filters.Page - 1) * filters.Size)
 							.Take(filters.Size)
 							.OrderBy(u => u.FechaCreacion)
@@ -50,11 +50,12 @@ namespace Infrastructure.Repositories
 			};
 		}
 
-		public async Task<List<SP_UnidadAutoCompleteResult>> GetUnidadesAutoComplete(string param)
+		public async Task<List<SP_UnidadAutoCompleteResult>> GetUnidadesAutoComplete(string filter)
 		{
 			return await _repository
 				.Include(x => x.Tramo)
-				.Where(x => x.Denominacion.Contains(param) && x.Estatus)
+				.Where(x => x.Denominacion.Contains(filter) && x.Estatus)
+				.Take(10)
 				.Select(x => new SP_UnidadAutoCompleteResult
 				{
 					UnidadId = x.Id,
@@ -94,6 +95,6 @@ namespace Infrastructure.Repositories
 				.ToListAsync();
 		}
 
- 	}
+	}
 
 }
