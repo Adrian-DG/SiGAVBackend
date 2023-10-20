@@ -55,7 +55,7 @@ namespace Infrastructure.Repositories
 			return await _repository
 				.Include(x => x.Tramo)
 				.Where(x => x.Denominacion.Contains(filter) && x.Estatus)
-				.Take(5)
+				.Take(10)
 				.Select(x => new SP_UnidadAutoCompleteResult
 				{
 					UnidadId = x.Id,
