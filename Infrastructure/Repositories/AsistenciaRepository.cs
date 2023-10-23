@@ -210,7 +210,7 @@ namespace Infrastructure.Repositories
 				Coordenadas = model.Coordenadas,
 				UnidadMiembroId = model.UnidadMiembroId,
 				ReportadoPor = model.reportadoPor,
-				EstatusAsistencia = EstatusAsistencia.EN_CURSO,
+				EstatusAsistencia = (model.FueCompletada ? EstatusAsistencia.COMPLETADA : EstatusAsistencia.EN_CURSO),
 				UsuarioId = model.UsuarioId,
 				TipoAsistencias = tipoAsistencias,
 				Comentario = model.Comentario,
