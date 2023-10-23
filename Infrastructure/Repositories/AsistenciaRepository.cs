@@ -219,6 +219,12 @@ namespace Infrastructure.Repositories
 				FechaCreacion = DateTime.Now.AddHours(-4)
 			};
 
+			if(model.FueCompletada)
+			{
+				newAsistencia.TiempoCompletada = DateTime.Now.AddHours(-4);
+				newAsistencia.FechaModificacion = DateTime.Now.AddHours(-4);
+			}
+
 			await _repository.AddAsync(newAsistencia);
 		}
 
