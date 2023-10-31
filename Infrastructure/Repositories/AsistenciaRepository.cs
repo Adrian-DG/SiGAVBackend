@@ -75,7 +75,7 @@ namespace Infrastructure.Repositories
 					Provincia = municipio.Provincia.Nombre,
 					Municipio = municipio.Nombre,
 					Tramo = unidadMiembro.Unidad.Tramo.Nombre,
-					Fecha = DateTime.Now.ToString("d")
+					Fecha = DateTime.Now.ToString("dd/MM/yyyy")
 				};
 
 				var valueRange = new ValueRange
@@ -150,8 +150,7 @@ namespace Infrastructure.Repositories
 		public async Task<PagedData<SP_ObtenerListadoAsistencias>> GetAllAsistencias(AsistenciaPaginationFilter filters, Expression<Func<Asistencia, bool>> predicate)
 		{
 			var results = await _context.SP_ObtenerListadoAsistencias_Result
-						.FromSqlInterpolated($"[dbo].[ObtenerListadoAsistencia] @page={filters.Page - 1}, @size={filters.Size}, @searchTerm={filters.SearchTerm}, @estatusAsistencia={filters.EstatusAsistencia}").
-						ToListAsync();
+						.FromSqlInterpolated($"[dbo].[ObtenerListadoAsistencia] @page={filters.Page - 1}, @size={filters.Size}, @searchTerm={filters.SearchTerm}, @estatusAsistencia={filters.EstatusAsistencia}").ToListAsync();
 
 			return new PagedData<SP_ObtenerListadoAsistencias>
 			{
@@ -164,15 +163,21 @@ namespace Infrastructure.Repositories
 
 		public async Task<ServerResponse> ActualizarAsistencia(UpdateAsistencia model)
 		{
-			var response = await _context.SP_ActualizarAsistencias_Result
+			var response = (ServerResponse) await _context.SP_ActualizarAsistencias_Result
 				.FromSqlInterpolated(@$"
 				[dbo].[ActualizarEstatusAsistencia]
 				@IdAsistencia={model.Id},
 				@EstatusAsistencia = {model.EstatusAsistencia},
 				@UsuarioId = {model.CodUsuario}")
-				.ToListAsync();
+				.FirstOrDefaultAsync();
 
-			return (ServerResponse) response.FirstOrDefault();
+			if(model.EstatusAsistencia.Equals(3) && response.Status)
+			{
+				var asistencia = await _repository.FindAsync(model.Id);
+				await AddNewRowToExcel(asistencia);
+			}
+
+			return response;
 			
 		}
 
@@ -215,7 +220,7 @@ namespace Infrastructure.Repositories
 				TipoAsistencias = tipoAsistencias,
 				Comentario = model.Comentario,
 				Imagenes = model.Imagenes,
-				Estatus = false,
+				Estatus = model.FueCompletada,
 				FechaCreacion = DateTime.Now.AddHours(-4)
 			};
 
@@ -226,6 +231,11 @@ namespace Infrastructure.Repositories
 			}
 
 			await _repository.AddAsync(newAsistencia);
+
+			if (model.FueCompletada)
+			{
+				await AddNewRowToExcel(newAsistencia);
+			}
 		}
 
 		private bool checkFieldsHoldValue(string field)
