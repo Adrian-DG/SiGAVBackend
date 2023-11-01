@@ -171,9 +171,9 @@ namespace Infrastructure.Repositories
 						  @UsuarioId = {model.CodUsuario}")
 						  .ToListAsync();
 
-			var response = (ServerResponse)result.FirstOrDefault();
+			var response = (ServerResponse) result.FirstOrDefault();
 
-			if (model.EstatusAsistencia.Equals(3) && response.Status)
+			if (model.EstatusAsistencia == 3 && response.Status)
 			{
 				var asistencia = await _repository.FindAsync(model.Id);
 
