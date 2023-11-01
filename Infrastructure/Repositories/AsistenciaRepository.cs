@@ -75,7 +75,7 @@ namespace Infrastructure.Repositories
 					Provincia = municipio.Provincia.Nombre,
 					Municipio = municipio.Nombre,
 					Tramo = unidadMiembro.Unidad.Tramo.Nombre,
-					Fecha = DateTime.Now.ToString("dd/MM/yyyy")
+					Fecha = model.TiempoCompletada.ToString("dd/MM/yyyy")
 				};
 
 				var valueRange = new ValueRange
