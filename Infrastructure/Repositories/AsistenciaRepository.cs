@@ -176,7 +176,11 @@ namespace Infrastructure.Repositories
 			if (model.EstatusAsistencia.Equals(3) && response.Status)
 			{
 				var asistencia = await _repository.FindAsync(model.Id);
-				await AddNewRowToExcel(asistencia);
+
+				if (asistencia != null)
+				{
+					await AddNewRowToExcel(asistencia);
+				}				
 			}
 
 			return response;
