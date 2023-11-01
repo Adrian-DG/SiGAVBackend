@@ -163,22 +163,24 @@ namespace Infrastructure.Repositories
 
 		public async Task<ServerResponse> ActualizarAsistencia(UpdateAsistencia model)
 		{
-			var response = (ServerResponse) await _context.SP_ActualizarAsistencias_Result
-				.FromSqlInterpolated(@$"
-				[dbo].[ActualizarEstatusAsistencia]
-				@IdAsistencia={model.Id},
-				@EstatusAsistencia = {model.EstatusAsistencia},
-				@UsuarioId = {model.CodUsuario}")
-				.FirstOrDefaultAsync();
+			var result = await _context.SP_ActualizarAsistencias_Result
+						  .FromSqlInterpolated(@$"
+						  [dbo].[ActualizarEstatusAsistencia] 
+						  @IdAsistencia={model.Id}, 
+						  @EstatusAsistencia = {model.EstatusAsistencia},
+						  @UsuarioId = {model.CodUsuario}")
+						  .ToListAsync();
 
-			if(model.EstatusAsistencia.Equals(3) && response.Status)
+			var response = (ServerResponse)result.FirstOrDefault();
+
+			if (model.EstatusAsistencia.Equals(3) && response.Status)
 			{
 				var asistencia = await _repository.FindAsync(model.Id);
 				await AddNewRowToExcel(asistencia);
 			}
 
 			return response;
-			
+
 		}
 
 
