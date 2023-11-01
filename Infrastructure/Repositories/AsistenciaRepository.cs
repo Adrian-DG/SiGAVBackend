@@ -115,21 +115,29 @@ namespace Infrastructure.Repositories
 
 			if (unidadMiembroId == 0) return;
 
+			string identificacion = model.EsExtranjero 
+				? model.Identificacion.Replace("-", "").ToUpper() 
+				: model.Identificacion.Replace("-", "");
+
+			string telefono = model.Telefono.Replace("-", "");
+
+			string placa = model.Placa.ToUpper();
+
 			var newAsistencia = new Asistencia
 			{
 				// Ciudadano
-				Identificacion = model.Identificacion,
+				Identificacion = identificacion,
 				Nombre = model.Nombre,
 				Apellido = model.Apellido,
 				Genero = model.Genero,
-				Telefono = model.Telefono,
+				Telefono = telefono,
 				EsExtranjero = model.EsExtranjero,
 				// Vehiculo
 				VehiculoTipoId = model.VehiculoTipoId.Equals(0) ? 1 : model.VehiculoTipoId,
 				VehiculoColorId = model.VehiculoColorId.Equals(0) ? 1 : model.VehiculoColorId,
 				VehiculoModeloId = model.VehiculoModeloId.Equals(0) ? 1 : model.VehiculoModeloId,
 				VehiculoMarcaId = model.VehiculoMarcaId.Equals(0) ? 1 : model.VehiculoMarcaId,
-				Placa = model.Placa,
+				Placa = placa,
 				// asistencia (sin coordenadas)
 				MunicipioId = model.MunicipioId.Equals(0) ? 1 : model.MunicipioId,
 				ProvinciaId = model.ProvinciaId.Equals(0) ? 33 : model.ProvinciaId,
@@ -197,23 +205,31 @@ namespace Infrastructure.Repositories
 			{
 				var tipo = await _context.TipoAsistencias.FindAsync(item);
 				tipoAsistencias.Add(tipo);
-			}	
+			}
+
+			string identificacion = model.EsExtranjero
+				? model.Identificacion.Replace("-", "").ToUpper()
+				: model.Identificacion.Replace("-", "");
+
+			string telefono = model.Telefono.Replace("-", "");
+
+			string placa = model.Placa.ToUpper();
 
 			var newAsistencia = new Asistencia
 			{
 				// Ciudadano
-				Identificacion = model.Identificacion,
+				Identificacion = identificacion,
 				Nombre = model.Nombre,
 				Apellido = model.Apellido,
 				Genero = model.Genero,
-				Telefono = model.Telefono,
+				Telefono = telefono,
 				EsExtranjero = model.EsExtranjero,
 				// Vehiculo
 				VehiculoTipoId = model.VehiculoTipoId,
 				VehiculoColorId = model.VehiculoColorId,
 				VehiculoModeloId = model.VehiculoModeloId,
 				VehiculoMarcaId = model.VehiculoMarcaId,
-				Placa = model.Placa,
+				Placa = placa,
 				// asistencia (sin coordenadas)
 				MunicipioId = model.MunicipioId,
 				ProvinciaId = model.ProvinciaId,
