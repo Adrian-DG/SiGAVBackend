@@ -39,14 +39,43 @@ namespace Infrastructure.Repositories
 		{
 			var objectList = new List<object>()
 			{
-				item.Tipo,
-				item.Categoria,
+				item.TipoAsistencia,
+				item.CategoriaAsistencia,
+
 				item.Unidad,
-				item.Region,
+
+				item.Region,									
 				item.Provincia,
 				item.Municipio,
 				item.Tramo,
-				item.Fecha
+				item.Fecha,
+
+				item.Ficha,				
+
+				item.Identificacion,
+				item.NombreCiudadano,
+				item.Telefono,
+				item.Sexo,
+				item.EsExtranjero,
+
+				item.Tipo,
+				item.Color,
+				item.Marca,
+				item.Modelo,
+				item.Placa,				
+
+				item.Institucion,
+				item.RangoAgente,
+				item.CedulaSoldado,
+				item.NombreSoldado,
+				
+				item.FechaCreacion,
+				item.TiempoCreacion,
+				item.TiempoLlegada,				
+				item.TiempoCompletada,
+				item.QuienReporta,
+				item.Usuario,
+				item.Comentario
 			};
 			var rangeData = new List<IList<object>> { objectList };
 			return rangeData;
@@ -64,18 +93,64 @@ namespace Infrastructure.Repositories
 
 			await _context.Entry(municipio).Reference(m => m.Provincia).LoadAsync();
 
+			await _context.Entry(unidadMiembro).Reference(m => m.Miembro).LoadAsync();
+			await _context.Entry(unidadMiembro.Miembro).Reference(m => m.Rango).LoadAsync();
+
+			await _context.Entry(model).Reference(m => m.VehiculoColor).LoadAsync();
+			await _context.Entry(model).Reference(m => m.VehiculoMarca).LoadAsync();
+			await _context.Entry(model).Reference(m => m.VehiculoModelo).LoadAsync();
+			await _context.Entry(model).Reference(m => m.VehiculoTipo).LoadAsync();
+			
+
 			foreach (var item in model.TipoAsistencias)
 			{
 				var excelModel = new AsistenciaExcelSheetModel()
 				{
-					Tipo = item.Nombre,
-					Categoria = item.CategoriaAsistencia.ToString(),
+					//Tipo = item.Nombre,
+					//Categoria = item.CategoriaAsistencia.ToString(),
+					//Unidad = unidadMiembro.Unidad.Denominacion,
+					//Region = unidadMiembro.Unidad.Tramo.RegionAsistencia.Nombre,
+					//Provincia = municipio.Provincia.Nombre,
+					//Municipio = municipio.Nombre,
+					//Tramo = unidadMiembro.Unidad.Tramo.Nombre,
+					//Fecha = model.TiempoCompletada.ToString("dd/MM/yyyy")
+
+					TipoAsistencia = item.Nombre,
+					CategoriaAsistencia = item.CategoriaAsistencia.ToString(),
 					Unidad = unidadMiembro.Unidad.Denominacion,
 					Region = unidadMiembro.Unidad.Tramo.RegionAsistencia.Nombre,
-					Provincia = municipio.Provincia.Nombre,
+					Provincia = model.Provincia.Nombre,
 					Municipio = municipio.Nombre,
 					Tramo = unidadMiembro.Unidad.Tramo.Nombre,
-					Fecha = model.TiempoCompletada.ToString("dd/MM/yyyy")
+					Fecha = model.TiempoLlegada.ToString("dd/MM/yyyy"),
+
+					Ficha = unidadMiembro.Unidad.Ficha,							
+
+					Identificacion = model.Identificacion,
+					NombreCiudadano = $"{model.Nombre} {model.Apellido}",
+					Telefono = model.Telefono,
+					Sexo = model.Genero.ToString(),
+					EsExtranjero = model.EsExtranjero ? "Si": "No",
+
+					Tipo = model.VehiculoTipo.Nombre,
+					Marca = model.VehiculoMarca.Nombre,
+					Modelo = model.VehiculoModelo.Nombre,
+					Placa = model.Placa,
+					Color = model.VehiculoColor.Nombre,
+					
+					Institucion = model.UnidadMiembro.Miembro.Institucion.ToString(),
+					RangoAgente = model.UnidadMiembro.Miembro.Rango.Nombre,
+					CedulaSoldado = model.UnidadMiembro.Miembro.Cedula,
+					NombreSoldado = model.UnidadMiembro.Miembro.NombreCompleto(),
+
+					FechaCreacion = model.FechaCreacion.ToString("dd/MM/yyyy"),
+					TiempoCreacion = model.FechaCreacion.ToString("HH:mm"),
+					TiempoLlegada = model.TiempoLlegada.ToString("HH:mm"),
+					
+					TiempoCompletada = model.TiempoCompletada.ToString("HH:mm"),
+					QuienReporta = model.ReportadoPor.ToString(),
+					Usuario = (await _context.Usuarios.FirstOrDefaultAsync(x => x.Id == model.UsuarioId)).NombreCompleto(),
+					Comentario = model.Comentario
 				};
 
 				var valueRange = new ValueRange
