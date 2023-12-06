@@ -100,7 +100,13 @@ namespace Infrastructure.Repositories
 			await _context.Entry(model).Reference(m => m.VehiculoMarca).LoadAsync();
 			await _context.Entry(model).Reference(m => m.VehiculoModelo).LoadAsync();
 			await _context.Entry(model).Reference(m => m.VehiculoTipo).LoadAsync();
-			
+
+			string nombreUsuario = "No Disponible";
+
+			if (model.UsuarioId != 0)
+			{
+				nombreUsuario = (await _context.Usuarios.SingleOrDefaultAsync(x => x.Id == model.UsuarioId)).NombreCompleto();
+			}
 
 			foreach (var item in model.TipoAsistencias)
 			{
@@ -149,7 +155,7 @@ namespace Infrastructure.Repositories
 					
 					TiempoCompletada = model.TiempoCompletada.ToString("HH:mm"),
 					QuienReporta = model.ReportadoPor.ToString(),
-					Usuario = (await _context.Usuarios.FirstOrDefaultAsync(x => x.Id == model.UsuarioId)).NombreCompleto(),
+					Usuario = nombreUsuario,
 					Comentario = model.Comentario
 				};
 
