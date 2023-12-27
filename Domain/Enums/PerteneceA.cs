@@ -10,6 +10,9 @@ namespace Domain.Enums
 	{
 		Asistencia_Vial = 1,
 		Gestion_Operativa,
-		Calidad
+		Seguridad_Ciudadana,
+		Taller,
+		Gruas,
+		Ambulancia
 	}
 }

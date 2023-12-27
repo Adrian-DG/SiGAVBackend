@@ -289,12 +289,12 @@ namespace Infrastructure.Repositories
 			}
 
 			string identificacion = model.EsExtranjero
-				? model.Identificacion.Replace("-", "").ToUpper()
-				: model.Identificacion.Replace("-", "");
+				? model.Identificacion.Replace("-", "").ToUpper().Trim()
+				: model.Identificacion.Replace("-", "").Trim();
 
-			string telefono = model.Telefono.Replace("-", "");
+			string telefono = model.Telefono.Trim().Replace("-", "");
 
-			string placa = model.Placa.ToUpper();
+			string placa = model.Placa.Trim().ToUpper();
 
 			var newAsistencia = new Asistencia
 			{
@@ -317,7 +317,7 @@ namespace Infrastructure.Repositories
 				Direccion = model.Direccion,
 				Coordenadas = model.Coordenadas,
 				UnidadMiembroId = model.UnidadMiembroId,
-				ReportadoPor = model.reportadoPor,
+				ReportadoPor = (model.reportadoPor == 0 ? ReportadoPor.AgenteCampo : model.reportadoPor),
 				EstatusAsistencia = (model.FueCompletada ? EstatusAsistencia.COMPLETADA : EstatusAsistencia.EN_CURSO),
 				UsuarioId = model.UsuarioId,
 				TipoAsistencias = tipoAsistencias,
@@ -329,6 +329,7 @@ namespace Infrastructure.Repositories
 
 			if(model.FueCompletada)
 			{
+				newAsistencia.TiempoLlegada = DateTime.Now.AddHours(-4);
 				newAsistencia.TiempoCompletada = DateTime.Now.AddHours(-4);
 				newAsistencia.FechaModificacion = DateTime.Now.AddHours(-4);
 			}
