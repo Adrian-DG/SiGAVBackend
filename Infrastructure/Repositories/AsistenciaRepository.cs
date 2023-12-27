@@ -101,9 +101,13 @@ namespace Infrastructure.Repositories
 			await _context.Entry(model).Reference(m => m.VehiculoModelo).LoadAsync();
 			await _context.Entry(model).Reference(m => m.VehiculoTipo).LoadAsync();
 
-			string nombreUsuario = "No Disponible";
+			string nombreUsuario = null;
 
-			if (model.UsuarioId != 0)
+			if (model.UsuarioId == 0)
+			{
+				nombreUsuario = "No Disponible - Completada en Campo";
+			}
+			else
 			{
 				nombreUsuario = (await _context.Usuarios.SingleOrDefaultAsync(x => x.Id == model.UsuarioId)).NombreCompleto();
 			}
@@ -296,6 +300,8 @@ namespace Infrastructure.Repositories
 
 			string placa = model.Placa.Trim().ToUpper();
 
+			int usuarioId = 0;
+
 			var newAsistencia = new Asistencia
 			{
 				// Ciudadano
@@ -319,7 +325,7 @@ namespace Infrastructure.Repositories
 				UnidadMiembroId = model.UnidadMiembroId,
 				ReportadoPor = (model.reportadoPor == 0 ? ReportadoPor.AgenteCampo : model.reportadoPor),
 				EstatusAsistencia = (model.FueCompletada ? EstatusAsistencia.COMPLETADA : EstatusAsistencia.EN_CURSO),
-				UsuarioId = model.UsuarioId,
+				UsuarioId = usuarioId,
 				TipoAsistencias = tipoAsistencias,
 				Comentario = model.Comentario,
 				Imagenes = model.Imagenes,
