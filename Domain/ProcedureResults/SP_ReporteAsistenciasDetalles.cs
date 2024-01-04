@@ -23,7 +23,8 @@ namespace Domain.ProcedureResults
         public string TipoAsistencia { get; set; }
 
         // Ciudadano
-        public string Identificacion { get; set; }
+        public string Cedula { get; set; }
+        public string Pasaporte { get; set; }
         public string NombreCiudadano { get; set; }
         public string Telefono { get; set; }
         public string Sexo { get; set; }
