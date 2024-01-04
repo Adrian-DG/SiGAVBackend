@@ -16,6 +16,9 @@ namespace Domain.ViewModels
 		//public string Provincia { get; set; }
 		//public string Municipio { get; set; }
 		//public string Tramo { get; set; }
+
+		public string Identificacion { get; set; }
+
 		public string Fecha { get; set; }
 	}
 }
