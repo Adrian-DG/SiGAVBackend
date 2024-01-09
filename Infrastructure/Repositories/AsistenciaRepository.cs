@@ -372,10 +372,10 @@ namespace Infrastructure.Repositories
 		}
 		
 
-		public async Task<List<SP_ReporteEstadisticoUnidadTramoApp>> GetMetricasAsistenciasUnidadByTramo(int tramoId)
+		public async Task<List<SP_ReporteEstadisticoUnidadTramoApp>> GetMetricasAsistenciasUnidadByTramo(int TramoId, string Ficha)
 		{
 			return await _context.SP_ReporteEstadisticoUnidadTramoApp_Result
-				.FromSqlInterpolated($"exec [dbo].[ReporteEstadisticoTramoApp] @tramoId={tramoId}")
+				.FromSqlInterpolated($"exec [dbo].[ReporteEstadisticoTramoApp] @tramoId={TramoId}, @Ficha={Ficha}")
 				.ToListAsync();
 		}
 

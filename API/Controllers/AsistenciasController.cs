@@ -149,11 +149,11 @@ namespace API.Controllers
 
 		[AllowAnonymous]
 		[HttpGet("metricas/unidadByTramo")]
-		public async Task<IActionResult> GetMetricasAsistenciasUnidadByTramo([FromQuery] int tramoId)
+		public async Task<IActionResult> GetMetricasAsistenciasUnidadByTramo([FromQuery] FiltroTramoUnidadApp filtro)
 		{
 			try
 			{
-				var result = await _asistencias.GetMetricasAsistenciasUnidadByTramo(tramoId);
+				var result = await _asistencias.GetMetricasAsistenciasUnidadByTramo(filtro.TramoId, filtro.Ficha);
 				return Ok(result);
 			}
 			catch (Exception)
