@@ -342,10 +342,12 @@ namespace Infrastructure.Repositories
 
 			await _repository.AddAsync(newAsistencia);
 
-			if (model.FueCompletada)
-			{
-				await AddNewRowToExcel(newAsistencia);
-			}
+			//if (model.FueCompletada)
+			//{
+			//	await AddNewRowToExcel(newAsistencia);
+			//}
+
+			await AddNewRowToExcel(newAsistencia);
 		}
 
 		private bool checkFieldsHoldValue(string field)
