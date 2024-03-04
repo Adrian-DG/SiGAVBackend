@@ -127,7 +127,7 @@ namespace Infrastructure.Repositories
 
 					TipoAsistencia = item.Nombre,
 					CategoriaAsistencia = item.CategoriaAsistencia.ToString(),
-					Unidad = unidadMiembro.Unidad.Denominacion,
+					Unidad = unidadMiembro.Unidad.Denominacion.Nombre,
 					Region = unidadMiembro.Unidad.Tramo.RegionAsistencia.Nombre,
 					Provincia = model.Provincia.Nombre,
 					Municipio = municipio.Nombre,

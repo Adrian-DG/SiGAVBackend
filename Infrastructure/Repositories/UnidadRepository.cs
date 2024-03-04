@@ -29,10 +29,10 @@ namespace Infrastructure.Repositories
 							.Select(u => new UnidadViewModel
 							{
 								Id = u.Id,
-								Denominacion = u.Denominacion,
+								Denominacion = u.Denominacion.Nombre,
 								Ficha = u.Ficha,
 								Placa = u.Placa,
-								Tramo = u.Tramo.Nombre,
+								Tramo = u.Denominacion.Tramo.Nombre,
 								Cobertura = u.Cobertura,
 								TipoUnidad = u.TipoUnidad.Nombre,
 								PuntosAsignados = u.PuntosAsignados,
@@ -54,13 +54,13 @@ namespace Infrastructure.Repositories
 		{
 			return await _repository
 				.Include(x => x.Tramo)
-				.Where(x => x.Denominacion.Contains(filter) && x.Estatus)
+				.Where(x => x.Denominacion.Nombre.Contains(filter) && x.Estatus)
 				.Take(10)
 				.Select(x => new SP_UnidadAutoCompleteResult
 				{
 					UnidadId = x.Id,
 					Ficha = x.Ficha,
-					Denominacion = x.Denominacion,
+					Denominacion = x.Denominacion.Nombre,
 					Placa = x.Placa,
 					Tramo = x.Tramo.Nombre,
 					EstaDisponible = x.EstaDisponible,

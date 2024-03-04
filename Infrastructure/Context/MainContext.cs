@@ -689,6 +689,7 @@ namespace Infrastructure.Context
 
 		public DbSet<HistoricoAsistencia> HistoricoAsistencias { get; set; }
 		public DbSet<HistoricoUnidad> HistoricoUnidades { get; set; }
+		public DbSet<Denominacion> Denominaciones { get; set; }
 
 	}
 }
