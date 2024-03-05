@@ -1,3 +1,4 @@
+using Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -17,6 +18,9 @@ namespace Domain.Abstraction
         [DataType(DataType.DateTime)]
         public DateTime FechaModificacion { get; set; } = DateTime.Now;
         public bool Estatus { get; set; } = true;
-        public Nullable<int> UsuarioId { get; set; } = 1; // Usuario Administrador 
+
+        [ForeignKey("Usuario")]
+        public Nullable<int> UsuarioId { get; set; } = 1; // Usuario Administrador
+        public virtual Usuario Usuario { get; set; }    
     }
 }

@@ -85,21 +85,21 @@ namespace Infrastructure.Repositories
 		{
 			var unidadMiembro = await _context.UnidadMiembro.FindAsync(model.UnidadMiembroId);
 
-			await _context.Entry(unidadMiembro).Reference(u => u.Unidad).LoadAsync();
-			await _context.Entry(unidadMiembro.Unidad).Reference(u => u.Tramo).LoadAsync();
-			await _context.Entry(unidadMiembro.Unidad.Tramo).Reference(u => u.RegionAsistencia).LoadAsync();
+			//await _context.Entry(unidadMiembro).Reference(u => u.Unidad).LoadAsync();
+			//await _context.Entry(unidadMiembro.Unidad).Reference(u => u.Tramo).LoadAsync();
+			//await _context.Entry(unidadMiembro.Unidad.Tramo).Reference(u => u.RegionAsistencia).LoadAsync();
 
 			var municipio = await _context.Municipios.FindAsync(model.MunicipioId);
 
-			await _context.Entry(municipio).Reference(m => m.Provincia).LoadAsync();
+			//await _context.Entry(municipio).Reference(m => m.Provincia).LoadAsync();
 
-			await _context.Entry(unidadMiembro).Reference(m => m.Miembro).LoadAsync();
-			await _context.Entry(unidadMiembro.Miembro).Reference(m => m.Rango).LoadAsync();
+			//await _context.Entry(unidadMiembro).Reference(m => m.Miembro).LoadAsync();
+			//await _context.Entry(unidadMiembro.Miembro).Reference(m => m.Rango).LoadAsync();
 
-			await _context.Entry(model).Reference(m => m.VehiculoColor).LoadAsync();
-			await _context.Entry(model).Reference(m => m.VehiculoMarca).LoadAsync();
-			await _context.Entry(model).Reference(m => m.VehiculoModelo).LoadAsync();
-			await _context.Entry(model).Reference(m => m.VehiculoTipo).LoadAsync();
+			//await _context.Entry(model).Reference(m => m.VehiculoColor).LoadAsync();
+			//await _context.Entry(model).Reference(m => m.VehiculoMarca).LoadAsync();
+			//await _context.Entry(model).Reference(m => m.VehiculoModelo).LoadAsync();
+			//await _context.Entry(model).Reference(m => m.VehiculoTipo).LoadAsync();
 
 			string nombreUsuario = null;
 
@@ -131,7 +131,7 @@ namespace Infrastructure.Repositories
 					Region = unidadMiembro.Unidad.Tramo.RegionAsistencia.Nombre,
 					Provincia = model.Provincia.Nombre,
 					Municipio = municipio.Nombre,
-					Tramo = unidadMiembro.Unidad.Tramo.Nombre,
+					Tramo = model.Denominacion.Tramo.Nombre ?? unidadMiembro.Unidad.Tramo.Nombre,
 					Fecha = model.TiempoLlegada.ToString("dd/MM/yyyy"),
 
 					Ficha = unidadMiembro.Unidad.Ficha,							
@@ -148,10 +148,10 @@ namespace Infrastructure.Repositories
 					Placa = model.Placa,
 					Color = model.VehiculoColor.Nombre,
 					
-					Institucion = model.UnidadMiembro.Miembro.Institucion.ToString(),
-					RangoAgente = model.UnidadMiembro.Miembro.Rango.Nombre,
-					CedulaSoldado = model.UnidadMiembro.Miembro.Cedula,
-					NombreSoldado = model.UnidadMiembro.Miembro.NombreCompleto(),
+					Institucion = model.Miembro.Institucion.ToString() ?? model.UnidadMiembro.Miembro.Institucion.ToString(),
+					RangoAgente = model.Miembro.Rango.Nombre ?? model.UnidadMiembro.Miembro.Rango.Nombre,
+					CedulaSoldado = model.Miembro.Cedula ?? model.UnidadMiembro.Miembro.Cedula,
+					NombreSoldado = model.Miembro.NombreCompleto() ?? model.UnidadMiembro.Miembro.NombreCompleto(),
 
 					FechaCreacion = model.FechaCreacion.ToString("dd/MM/yyyy"),
 					TiempoCreacion = model.FechaCreacion.ToString("HH:mm"),
@@ -196,9 +196,9 @@ namespace Infrastructure.Repositories
 				tipoAsistencias.Add(tipo);
 			}
 
-			var unidadMiembroId = await GetUnidadMiembroId(model.UnidadId);
+			var unidadMiembro = await _context.UnidadMiembro.SingleOrDefaultAsync(x => x.UnidadId == model.UnidadId && x.Estatus); // TODO: cambiar estatus de 
 
-			if (unidadMiembroId == 0) return;
+			if (unidadMiembro == null) return;
 
 			string identificacion = model.EsExtranjero 
 				? model.Identificacion.Replace("-", "").ToUpper() 
@@ -229,12 +229,14 @@ namespace Infrastructure.Repositories
 				Direccion = model.Direccion,
 				ReportadoPor = ReportadoPor.CallCenter,
 				EstatusAsistencia = EstatusAsistencia.PENDIENTE,
-				UnidadMiembroId = unidadMiembroId,
+				UnidadMiembroId = unidadMiembro.Id, // TODO: Quitar propiedad
 				UsuarioId = model.UsuarioId,
 				TipoAsistencias = tipoAsistencias,
 				Comentario = model.Comentario,
 				Estatus = false,
-				FechaCreacion = DateTime.Now.AddHours(-4)
+				FechaCreacion = DateTime.Now.AddHours(-4),
+				DenominacionId = unidadMiembro.Unidad.DenominacionId,
+				MiembroId = unidadMiembro.MiembroId
 			};
 
 			await _repository.AddAsync(newAsistencia);
@@ -300,6 +302,8 @@ namespace Infrastructure.Repositories
 
 			string placa = model.Placa.Trim().ToUpper();
 
+			var unidadMiembro = await _context.UnidadMiembro.FindAsync(model.UnidadMiembroId);
+
 			int usuarioId = 0;
 
 			var newAsistencia = new Asistencia
@@ -322,7 +326,7 @@ namespace Infrastructure.Repositories
 				ProvinciaId = model.ProvinciaId,
 				Direccion = model.Direccion,
 				Coordenadas = model.Coordenadas,
-				UnidadMiembroId = model.UnidadMiembroId,
+				UnidadMiembroId = model.UnidadMiembroId, // TODO: Eliminar esta propiedad
 				ReportadoPor = (model.reportadoPor == 0 ? ReportadoPor.AgenteCampo : model.reportadoPor),
 				EstatusAsistencia = (model.FueCompletada ? EstatusAsistencia.COMPLETADA : EstatusAsistencia.EN_CURSO),
 				UsuarioId = usuarioId,
@@ -330,7 +334,9 @@ namespace Infrastructure.Repositories
 				Comentario = model.Comentario,
 				Imagenes = model.Imagenes,
 				Estatus = model.FueCompletada,
-				FechaCreacion = DateTime.Now.AddHours(-4)
+				FechaCreacion = DateTime.Now.AddHours(-4),
+				MiembroId = unidadMiembro.MiembroId,
+				DenominacionId = unidadMiembro.Unidad.DenominacionId
 			};
 
 			if(model.FueCompletada)

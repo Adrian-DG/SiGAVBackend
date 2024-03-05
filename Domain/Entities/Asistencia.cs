@@ -52,7 +52,7 @@ namespace Domain.Entities
 		public virtual Provincia Provincia { get; set; }
 
 		// Unidad-Miembro
-
+		// TODO: Eliminar esta propiedad
 		[ForeignKey("UnidadMiembro")]
 		public int UnidadMiembroId { get; set; }
 		public virtual UnidadMiembro UnidadMiembro { get; set; }
@@ -77,5 +77,13 @@ namespace Domain.Entities
 
 		// Estatus 
 		public EstatusAsistencia EstatusAsistencia { get; set; }
+
+		[ForeignKey("Miembro")]
+		public int MiembroId { get; set; }
+		public virtual Miembro Miembro { get; set; }
+
+		[ForeignKey("Denominacion")]
+		public int DenominacionId { get; set; }
+		public virtual Denominacion Denominacion { get; set; }
 	}
 }

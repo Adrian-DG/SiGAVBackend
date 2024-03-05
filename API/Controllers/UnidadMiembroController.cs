@@ -29,5 +29,20 @@ namespace API.Controllers
 			}
 		}
 
+		[AllowAnonymous]
+		[HttpPut("close-session")]
+		public IActionResult CloseSession([FromBody] string Ficha)
+		{
+			try
+			{
+				var result = _unidadMiembro.CloseSession(Ficha);
+				return Ok(result);
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
 	}
 }

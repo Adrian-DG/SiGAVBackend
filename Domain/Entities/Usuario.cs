@@ -12,6 +12,6 @@ namespace Domain.Entities
         public byte[] PasswordSalt { get; set; }
         public bool EsAdministrador { get; set; }
         public RolUsuario RolUsuario { get; set; }
-        public ICollection<UsuarioPermiso> Permisos { get; set; }
+        public virtual ICollection<UsuarioPermiso> Permisos { get; set; }
     }
 }

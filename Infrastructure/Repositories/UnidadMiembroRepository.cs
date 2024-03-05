@@ -20,6 +20,11 @@ namespace Infrastructure.Repositories
 
 		public LoginUnitResponse CreateUnidadMiembro(CreateUnidadMiembro model)
 		{
+			if (_repository.Any(x => x.Unidad.Ficha == model.Ficha && x.FechaCreacion.Date == DateTime.Now.Date && x.Estatus))
+			{
+				return new LoginUnitResponse { Estatus = false };
+			}
+
 			var result = _context.SP_CreateUnidadMiembro_Result
 						.FromSqlInterpolated($"[dbo].[CreateUnidadMiembro] {model.Cedula}, {model.Ficha}").ToList();
 
@@ -38,6 +43,19 @@ namespace Infrastructure.Repositories
 				Estatus = true,
 				AccesoTotal = response.AccesoTotal
 			};
+		}
+
+		public async Task<bool> CloseSession(string Ficha)
+		{
+			var unidadMiembro = await _repository.LastAsync(x => x.Unidad.Ficha == Ficha);
+
+			unidadMiembro.Estatus = false;
+			unidadMiembro.FechaModificacion = DateTime.Now;
+
+			_context.Attach<UnidadMiembro>(unidadMiembro);
+			_context.Entry<UnidadMiembro>(unidadMiembro).State = EntityState.Detached;
+
+			return await _context.SaveChangesAsync() > 0;
 		}
 
 	}
