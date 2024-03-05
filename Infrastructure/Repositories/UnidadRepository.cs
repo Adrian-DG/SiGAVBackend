@@ -95,6 +95,21 @@ namespace Infrastructure.Repositories
 				.ToListAsync();
 		}
 
+		public async Task<bool> ReasignarUnidadDenominacion(int UnidadId, int DenominacionId)
+		{
+			var foundUnidad = await _repository.FindAsync(UnidadId);
+
+			if (foundUnidad == null) return false;
+
+			foundUnidad.DenominacionId = DenominacionId;
+			foundUnidad.FechaModificacion = DateTime.Now;
+
+			_context.Attach<Unidad>(foundUnidad);
+			_context.Entry<Unidad>(foundUnidad).State = EntityState.Modified;
+
+			return await _context.SaveChangesAsync() > 0;
+		}
+
 	}
 
 }

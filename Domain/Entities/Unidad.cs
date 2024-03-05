@@ -8,7 +8,6 @@ namespace Domain.Entities
 {
     public class Unidad : ModelMetadata
     {
-        //public string Denominacion { get; set; }
         public string Ficha { get; set; }
         public string Placa { get; set; }
         public string PuntosAsignados { get; set; }
@@ -27,6 +26,6 @@ namespace Domain.Entities
         public int DenominacionId { get; set; }
         public virtual Denominacion Denominacion { get; set; }
 
-        public string GetUnidadInfo() => $"{Denominacion} - {Ficha}";
+        public string GetUnidadInfo() => $"{Denominacion.Nombre} - {Ficha}";
     }
 }

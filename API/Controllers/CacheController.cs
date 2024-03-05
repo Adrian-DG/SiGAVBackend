@@ -110,5 +110,15 @@ namespace API.Controllers
 			var result = await _dbContext.VehiculoTipos.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre }).ToListAsync();
 			return Ok(result);
 		}
+
+		[HttpGet("Denominaciones")]
+		public async Task<IActionResult> GetDenominaciones([FromQuery] string param)
+		{
+			var result = await _dbContext.Denominaciones
+				.Where(x => x.Nombre.Contains(param) && x.Estatus)
+				.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre }).ToListAsync();
+
+			return Ok(result);
+		}
 	}
 }

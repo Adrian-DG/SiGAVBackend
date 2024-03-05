@@ -131,5 +131,20 @@ namespace API.Controllers
 			}
 		}
 
+		[HttpPost("reasignar-unidad-denominacion")]
+		[Authorize]		
+		public async Task<IActionResult> ReasignarUnidadDenominacion([FromBody] ReasignarUnidadDenominacionDto unidadDenominacionDto)
+		{
+			try
+			{
+				var result = await _unidades.ReasignarUnidadDenominacion(unidadDenominacionDto.UnidadId, unidadDenominacionDto.DenominacionId);
+				return Ok(result);
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
 	}
 }
