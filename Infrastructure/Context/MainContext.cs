@@ -104,8 +104,8 @@ namespace Infrastructure.Context
 			//	new Infrastructure.Helpers.EncryptHelper().CreatePasswordHash("admin01", out byte[] passwordHash, out byte[] passwordSalt);
 
 			//	modelBuilder.Entity<Usuario>().HasData(
-			//		new Usuario { Id = 1, Username = "admin", PasswordHash = passwordHash, PasswordSalt = passwordSalt, EsAdministrador = true, UsuarioId = null,Estatus = true }
-			//	);				
+			//		new Usuario { Id = 1, Username = "admin", PasswordHash = passwordHash, PasswordSalt = passwordSalt, EsAdministrador = true, UsuarioId = null, Estatus = true, RolUsuario = RolUsuario.Analista_Operaciones }
+			//	);
 
 			//	// Tipo Unidad
 
@@ -644,7 +644,7 @@ namespace Infrastructure.Context
 			//			new VehiculoModelo { Id = 74, Nombre = "Forester", VehiculoMarcaId = 24, VehiculoTipoId = (int)VehiculoTipoEnum.Jeepeta },
 			//			new VehiculoModelo { Id = 75, Nombre = "XV (Crosstrek)", VehiculoMarcaId = 24, VehiculoTipoId = (int)VehiculoTipoEnum.Jeepeta }
 			//		);
-			//}		
+			//}
 
 		}
 

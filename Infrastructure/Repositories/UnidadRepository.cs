@@ -29,10 +29,10 @@ namespace Infrastructure.Repositories
 							.Select(u => new UnidadViewModel
 							{
 								Id = u.Id,
-								Denominacion = u.Denominacion.Nombre,
+								Denominacion = u.DenominacionT.Nombre,
 								Ficha = u.Ficha,
 								Placa = u.Placa,
-								Tramo = u.Denominacion.Tramo.Nombre,
+								Tramo = u.DenominacionT.Tramo.Nombre,
 								Cobertura = u.Cobertura,
 								TipoUnidad = u.TipoUnidad.Nombre,
 								PuntosAsignados = u.PuntosAsignados,
@@ -54,13 +54,13 @@ namespace Infrastructure.Repositories
 		{
 			return await _repository
 				.Include(x => x.Tramo)
-				.Where(x => x.Denominacion.Nombre.Contains(filter) && x.Estatus)
+				.Where(x => x.DenominacionT.Nombre.Contains(filter) && x.Estatus)
 				.Take(10)
 				.Select(x => new SP_UnidadAutoCompleteResult
 				{
 					UnidadId = x.Id,
 					Ficha = x.Ficha,
-					Denominacion = x.Denominacion.Nombre,
+					Denominacion = x.DenominacionT.Nombre,
 					Placa = x.Placa,
 					Tramo = x.Tramo.Nombre,
 					EstaDisponible = x.EstaDisponible,
@@ -108,6 +108,37 @@ namespace Infrastructure.Repositories
 			_context.Entry<Unidad>(foundUnidad).State = EntityState.Modified;
 
 			return await _context.SaveChangesAsync() > 0;
+		}
+
+		public async Task CreateUnidadDenominacion(Unidad unidad)
+		{
+			using (var transaction = await _context.Database.BeginTransactionAsync())
+			{
+				try
+				{
+					// Denominacion 
+
+					var newDenominacion = new Denominacion { Nombre = unidad.Denominacion, TramoId = unidad.TramoId };
+
+					await _context.Denominaciones.AddAsync(newDenominacion);
+
+					await _context.SaveChangesAsync();
+
+					// Unidad
+
+					await _repository.AddAsync(unidad);
+
+					await _context.SaveChangesAsync();
+
+					await transaction.CommitAsync();
+				}
+				catch (Exception)
+				{
+					await transaction.RollbackAsync();	
+					throw;
+				}
+			}
+
 		}
 
 	}

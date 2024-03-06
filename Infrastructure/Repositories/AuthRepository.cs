@@ -33,9 +33,7 @@ namespace Infrastructure.Repositories
 
 		public async Task<LoginResponse> LoginUser(LoginUserDTO model)
 		{
-			var foundUser = await _context.Usuarios
-				.Include(x => x.Permisos)
-				.SingleAsync(x => x.Username == model.Username);
+			var foundUser = await _context.Usuarios.SingleAsync(x => x.Username == model.Username);
 
 			if (!foundUser.Estatus)
 			{

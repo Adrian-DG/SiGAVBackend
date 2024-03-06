@@ -16,19 +16,20 @@ namespace API.Controllers
 		}
 
 		[Authorize]
-		[HttpPost("create")]
+		[HttpPost("create-unidad-denominacion")]
 		public async Task<IActionResult> CreateUnidad([FromBody] Unidad model)
 		{
 			try
 			{
 				if (await _repository.ConfirmEntityExists(x => x.Ficha == model.Ficha)) return Ok(new ServerResponse { Message = "Esta ficha ya esta en uso !!", Status = false });
 				model.EstaDisponible = false;
-				model.Estatus = true;
-				return await InsertAsync(model);
+				model.Estatus = true;				
+				await _unidades.CreateUnidadDenominacion(model);
+
+				return Ok(true);
 			}
 			catch (Exception)
 			{
-
 				throw;
 			}
 		}

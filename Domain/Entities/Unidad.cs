@@ -8,6 +8,8 @@ namespace Domain.Entities
 {
     public class Unidad : ModelMetadata
     {
+        [NotMapped]
+        public string Denominacion { get; set; }
         public string Ficha { get; set; }
         public string Placa { get; set; }
         public string PuntosAsignados { get; set; }
@@ -24,8 +26,8 @@ namespace Domain.Entities
 
         [ForeignKey("Denominacion")]
         public int DenominacionId { get; set; }
-        public virtual Denominacion Denominacion { get; set; }
+        public virtual Denominacion DenominacionT { get; set; }
 
-        public string GetUnidadInfo() => $"{Denominacion.Nombre} - {Ficha}";
+        public string GetUnidadInfo() => $"{DenominacionT.Nombre} - {Ficha}";
     }
 }
