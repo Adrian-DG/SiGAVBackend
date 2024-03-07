@@ -1,4 +1,5 @@
-﻿using Application.DataAccess;
+﻿using API.Migrations;
+using Application.DataAccess;
 using Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -78,6 +79,23 @@ namespace API.Controllers
 			{
 				_filters = filters;
 				var result = await _statsRepository.GetAsistenciasByTipoVehiculo(_predicate);
+				return new JsonResult(result);
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+
+		[AllowAnonymous]
+		[HttpGet("reportadoPor")]
+		public async Task<IActionResult> GetStatsByEstatus([FromQuery] StatsFilterDTO filter)
+		{
+			try
+			{
+				_filters = filter;
+				var result = await _statsRepository.GetStatsByEstatus(x => x.FechaCreacion.Date >= _filters.Initial.Date && x.FechaCreacion.Date <= _filters.Final.AddDays(1).Date);
 				return new JsonResult(result);
 			}
 			catch (Exception)

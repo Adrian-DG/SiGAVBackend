@@ -61,5 +61,16 @@ namespace Infrastructure.Repositories
 				.ToListAsync();
 		}
 
+		public async Task<List<GraphViewModel>> GetStatsByEstatus(Expression<Func<Asistencia, bool>> predicate)
+		{
+			var result = await _asistencias
+				.Where(predicate)
+				.GroupBy(x => x.EstatusAsistencia)
+				.Select(x => new GraphViewModel { Nombre = x.Key.ToString(), Value = x.Count() })
+				.ToListAsync();
+
+			return result;				
+		}
+
 	}
 }

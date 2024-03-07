@@ -15,5 +15,6 @@ namespace Application.Contracts
 		Task<List<GraphViewModel>> GetAsistenciasByTramo(Expression<Func<Asistencia, bool>> predicate);
 		Task<List<GraphViewModel>> GetAsistenciasByProvincia(Expression<Func<Asistencia, bool>> predicate);
 		Task<List<GraphViewModel>> GetAsistenciasByTipoVehiculo(Expression<Func<Asistencia, bool>> predicate);
+		Task<List<GraphViewModel>> GetStatsByEstatus(Expression<Func<Asistencia, bool>> predicate);
 	}
 }
