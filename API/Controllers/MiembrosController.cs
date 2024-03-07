@@ -94,5 +94,19 @@ namespace API.Controllers
 			}
 		}
 
+		[AllowAnonymous]
+		[HttpGet("login-as-guest")]
+		public async Task<IActionResult> loginAsGuest([FromQuery] string cedula)
+		{
+			try
+			{
+				return Ok(await _miembros.ConfirmEntityExists(x => x.Cedula == cedula && x.AccesoTotal));
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
 	}
 }

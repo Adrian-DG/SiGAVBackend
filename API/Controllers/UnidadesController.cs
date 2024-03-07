@@ -12,7 +12,7 @@ namespace API.Controllers
 		public UnidadesController(IUnitOfWork unitOfWork, ISpecifaction<Unidad> specifaction) : base(unitOfWork, specifaction)
 		{
 			_unidades = (UnidadRepository)_repository;
-			_predicate = x => (x.Ficha.Contains(_searchTerm) || x.Placa.Contains(_searchTerm) || x.Denominacion.Nombre.Contains(_searchTerm));
+			_predicate = x => (x.Ficha.Contains(_searchTerm) || x.Placa.Contains(_searchTerm) || x.DenominacionT.Nombre.Contains(_searchTerm));
 		}
 
 		[Authorize]
