@@ -85,21 +85,23 @@ namespace Infrastructure.Repositories
 		{
 			var unidadMiembro = await _context.UnidadMiembro.FindAsync(model.UnidadMiembroId);
 
-			//await _context.Entry(unidadMiembro).Reference(u => u.Unidad).LoadAsync();
-			//await _context.Entry(unidadMiembro.Unidad).Reference(u => u.Tramo).LoadAsync();
-			//await _context.Entry(unidadMiembro.Unidad.Tramo).Reference(u => u.RegionAsistencia).LoadAsync();
+			await _context.Entry(unidadMiembro).Reference(u => u.Unidad).LoadAsync();
+			await _context.Entry(unidadMiembro.Unidad).Reference(u => u.Tramo).LoadAsync();
+			await _context.Entry(unidadMiembro.Unidad.Tramo).Reference(u => u.RegionAsistencia).LoadAsync();
+
+			var provincia = await _context.Provincias.FindAsync(model.ProvinciaId);
 
 			var municipio = await _context.Municipios.FindAsync(model.MunicipioId);
 
 			//await _context.Entry(municipio).Reference(m => m.Provincia).LoadAsync();
 
-			//await _context.Entry(unidadMiembro).Reference(m => m.Miembro).LoadAsync();
-			//await _context.Entry(unidadMiembro.Miembro).Reference(m => m.Rango).LoadAsync();
+			await _context.Entry(unidadMiembro).Reference(m => m.Miembro).LoadAsync();
+			await _context.Entry(unidadMiembro.Miembro).Reference(m => m.Rango).LoadAsync();
 
-			//await _context.Entry(model).Reference(m => m.VehiculoColor).LoadAsync();
-			//await _context.Entry(model).Reference(m => m.VehiculoMarca).LoadAsync();
-			//await _context.Entry(model).Reference(m => m.VehiculoModelo).LoadAsync();
-			//await _context.Entry(model).Reference(m => m.VehiculoTipo).LoadAsync();
+			await _context.Entry(model).Reference(m => m.VehiculoColor).LoadAsync();
+			await _context.Entry(model).Reference(m => m.VehiculoMarca).LoadAsync();
+			await _context.Entry(model).Reference(m => m.VehiculoModelo).LoadAsync();
+			await _context.Entry(model).Reference(m => m.VehiculoTipo).LoadAsync();
 
 			string nombreUsuario = null;
 
@@ -129,7 +131,7 @@ namespace Infrastructure.Repositories
 					CategoriaAsistencia = item.CategoriaAsistencia.ToString(),
 					Unidad = unidadMiembro.Unidad.DenominacionT.Nombre,
 					Region = unidadMiembro.Unidad.Tramo.RegionAsistencia.Nombre,
-					Provincia = model.Provincia.Nombre,
+					Provincia = provincia.Nombre,
 					Municipio = municipio.Nombre,
 					Tramo = model.Denominacion.Tramo.Nombre ?? unidadMiembro.Unidad.Tramo.Nombre,
 					Fecha = model.TiempoLlegada.ToString("dd/MM/yyyy"),
