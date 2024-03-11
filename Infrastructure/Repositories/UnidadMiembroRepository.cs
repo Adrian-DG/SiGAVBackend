@@ -20,7 +20,7 @@ namespace Infrastructure.Repositories
 
 		public LoginUnitResponse CreateUnidadMiembro(CreateUnidadMiembro model)
 		{
-			if (_repository.Any(x => x.Unidad.Ficha == model.Ficha && x.FechaCreacion.Date == DateTime.Now.Date && x.Estatus))
+			if (_repository.Any(x => x.Unidad.Ficha == model.Ficha && x.Estatus))
 			{
 				return new LoginUnitResponse { Estatus = false };
 			}
@@ -41,7 +41,8 @@ namespace Infrastructure.Repositories
 				Token = _token.GenerateUnitToken(response.Ficha),
 				EsEncargado = response.EsEncargado,
 				Estatus = true,
-				AccesoTotal = response.AccesoTotal
+				AccesoTotal = response.AccesoTotal,
+				PertenceA = response.PerteneceA
 			};
 		}
 

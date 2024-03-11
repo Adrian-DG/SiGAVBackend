@@ -16,5 +16,6 @@ namespace Domain.ResultSetModels
 		public string MiembroInfo { get; set; }
 		public bool EsEncargado { get; set; }
 		public bool AccesoTotal { get; set; }
-	}
+        public int PerteneceA { get; set; }
+    }
 }

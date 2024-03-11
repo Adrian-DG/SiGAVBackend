@@ -691,5 +691,8 @@ namespace Infrastructure.Context
 		public DbSet<HistoricoUnidad> HistoricoUnidades { get; set; }
 		public DbSet<Denominacion> Denominaciones { get; set; }
 
-	}
+		public DbSet<Hospital> Hospitales { get; set; }
+
+        public DbSet<Nacionalidad> Nacionalidades { get; set; }
+    }
 }

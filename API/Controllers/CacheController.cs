@@ -120,5 +120,23 @@ namespace API.Controllers
 
 			return Ok(result);
 		}
+
+		[HttpGet("hospitales")]
+		public async Task<IActionResult> GetHospitales([FromQuery] int Id)
+		{
+			var result = await _dbContext.Hospitales
+				.Where(x => (int) x.Region == Id)
+				.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre })
+				.ToListAsync();
+
+			return Ok(result);
+		}
+
+		[HttpGet("nacionalidades")]
+		public async Task<IActionResult> GetNacionalidades()
+		{
+			var result = await _dbContext.Nacionalidades.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre }).ToListAsync();
+			return Ok(result);
+		}
 	}
 }
