@@ -196,7 +196,12 @@ namespace Infrastructure.Repositories
 				tipoAsistencias.Add(tipo);
 			}
 
-			var unidadMiembro = await _context.UnidadMiembro.SingleOrDefaultAsync(x => x.UnidadId == model.UnidadId && x.Estatus); // TODO: cambiar estatus de 
+			var unidadMiembro = 
+				await _context.UnidadMiembro.FirstOrDefaultAsync(x => x.UnidadId == model.UnidadId && x.Estatus) ??
+				await _context.UnidadMiembro
+				.Where(x => x.UnidadId == model.UnidadId)
+				.OrderByDescending(x => x.Id)
+				.LastAsync();
 
 			if (unidadMiembro == null) return;
 
