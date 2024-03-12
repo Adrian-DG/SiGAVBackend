@@ -20,10 +20,10 @@ namespace Infrastructure.Repositories
 
 		public LoginUnitResponse CreateUnidadMiembro(CreateUnidadMiembro model)
 		{
-			if (_repository.Any(x => x.Unidad.Ficha == model.Ficha && x.Estatus))
-			{
-				return new LoginUnitResponse { Estatus = false };
-			}
+			//if (_repository.Any(x => x.Unidad.Ficha == model.Ficha && x.Estatus))
+			//{
+			//	return new LoginUnitResponse { Estatus = false };
+			//}
 
 			var result = _context.SP_CreateUnidadMiembro_Result
 						.FromSqlInterpolated($"[dbo].[CreateUnidadMiembro] {model.Cedula}, {model.Ficha}").ToList();
