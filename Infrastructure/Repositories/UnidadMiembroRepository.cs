@@ -42,7 +42,7 @@ namespace Infrastructure.Repositories
 				EsEncargado = response.EsEncargado,
 				Estatus = true,
 				AccesoTotal = response.AccesoTotal,
-				PertenceA = response.PerteneceA
+				PerteneceA = response.PerteneceA
 			};
 		}
 

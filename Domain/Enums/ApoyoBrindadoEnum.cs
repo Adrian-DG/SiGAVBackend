@@ -8,7 +8,7 @@ namespace Domain.Enums
 {
 	public enum ApoyoBrindadoEnum
 	{
-		NINGUNO = 1,
+		NINGUNO,
 		UNIDAD_AMBULANCIA_MOPC,
 		UNIDAD_RESCATE_MOPC
 	}

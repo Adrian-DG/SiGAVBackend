@@ -18,6 +18,6 @@ namespace Domain.Response
 		public bool Estatus { get; set; }
 		public bool EsEncargado { get; set; }
 		public bool AccesoTotal { get; set; }
-        public int PertenceA { get; set; }
+        public int PerteneceA { get; set; }
     }
 }

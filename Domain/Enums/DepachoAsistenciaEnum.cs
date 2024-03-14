@@ -8,7 +8,7 @@ namespace Domain.Enums
 {
 	public enum DepachoAsistenciaEnum
 	{
-		SISTEMA_NACIONAL_DE_EMERGENCIAS_911 = 1,
+		SISTEMA_NACIONAL_DE_EMERGENCIAS_911,
 		MOPC
 	}
 }

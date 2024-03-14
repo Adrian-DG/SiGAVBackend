@@ -8,7 +8,7 @@ namespace Domain.Enums
 {
 	public enum LlenadoCapilarEnum
 	{
-		NORMAL_MENOR_2SEG = 1,
+		NORMAL_MENOR_2SEG,
 		RETRASADO_MAYOR_2SEG
 	}
 }

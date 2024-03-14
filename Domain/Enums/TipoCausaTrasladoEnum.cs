@@ -8,7 +8,7 @@ namespace Domain.Enums
 {
 	public enum TipoCausaTrasladoEnum
 	{
-		NO_AMERITA_TRASLADO = 1,
+		NO_AMERITA_TRASLADO,
 		VICTIMA_EN_911,
 		RECHAZO_DE_ASISTENCIA,
 		RECHAZO_DE_TRASLADO,

@@ -94,5 +94,16 @@ namespace Infrastructure.Repositories
 			_context.Entry<Miembro>(miembro).State = EntityState.Modified;
 
 		}
+
+		public async Task<List<GenericData>> GetAutoCompleteMiembrosPreHospitalaria()
+		{
+			var result = await _repository
+						.Where(m => m.PerteneceA.Equals(PerteneceA.Ambulancia))
+						.OrderBy(m => m.NombreCompleto())
+						.Select(m => new GenericData { Id = m.Id, Nombre = m.NombreCompleto() })
+						.ToListAsync();
+
+			return result;
+		}
 	}
 }
