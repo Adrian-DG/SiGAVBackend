@@ -98,9 +98,8 @@ namespace Infrastructure.Repositories
 		public async Task<List<GenericData>> GetAutoCompleteMiembrosPreHospitalaria()
 		{
 			var result = await _repository
-						.Where(m => m.PerteneceA.Equals(PerteneceA.Ambulancia))
-						.OrderBy(m => m.NombreCompleto())
-						.Select(m => new GenericData { Id = m.Id, Nombre = m.NombreCompleto() })
+						.Where(m => (int)m.PerteneceA == (int)PerteneceA.Ambulancia && m.Estatus)						
+						.Select(m => new GenericData { Id = m.Id, Nombre =$"{m.Nombre} {m.Apellido}" })
 						.ToListAsync();
 
 			return result;

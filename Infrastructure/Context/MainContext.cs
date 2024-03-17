@@ -96,6 +96,20 @@ namespace Infrastructure.Context
 					v => JsonConvert.DeserializeObject<IList<TipoAsistencia>>(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore })
 				);
 
+			modelBuilder.Entity<AsistenciaPreHospitalaria>()
+				.Property(a => a.SignosVitales)
+				.HasConversion(
+					v => JsonConvert.SerializeObject(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }),
+					v => JsonConvert.DeserializeObject<IList<SignosVitales>>(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore })
+				);
+
+			modelBuilder.Entity<AsistenciaPreHospitalaria>()
+				.Property(a => a.Imagenes)
+				.HasConversion(
+					v => JsonConvert.SerializeObject(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }),
+					v => JsonConvert.DeserializeObject<IList<string>>(v, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore })
+				);
+
 			/* ----------- DATA SEEDING TO TABLES --------------- */
 
 			//if (false)
@@ -694,5 +708,7 @@ namespace Infrastructure.Context
 		public DbSet<Hospital> Hospitales { get; set; }
 
         public DbSet<Nacionalidad> Nacionalidades { get; set; }
+
+		public DbSet<AsistenciaPreHospitalaria> AsistenciasPreHospitalarias { get; set; }
     }
 }

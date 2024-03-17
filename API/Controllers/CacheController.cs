@@ -48,6 +48,17 @@ namespace API.Controllers
 			return Ok(result);
 		}
 
+		[HttpGet("filter_provicias")]
+		public async Task<IActionResult> GetProvinciasByRegion([FromQuery] int Id)
+		{
+			var result = await _dbContext.Provincias
+						.Where(x => (int) x.RegionMacro == Id)
+						.Select(x => new GenericData { Id = x.Id, Nombre = x.Nombre })
+						.ToListAsync();
+
+			return Ok(result);
+		}
+
 		[HttpGet("municipios")]
 		public async Task<IActionResult> GetMunicipios([FromQuery] int id)
 		{

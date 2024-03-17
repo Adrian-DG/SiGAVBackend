@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-	public class DatosPreHospitalaria : ModelMetadata
+	public class AsistenciaPreHospitalaria : ModelMetadata
 	{
         // Ciudadano
         public string Identificacion { get; set; } // Cedula o Pasaporte 
@@ -23,18 +23,35 @@ namespace Domain.Entities
         public virtual Nacionalidad Nacionalidad { get; set; }
         public TipoCausaPreHospitalariaEnum TipoCausa { get; set; }
 
-        public bool  EsTraslado { get; set; } // Si el paciente fue trasladado o no
-        public TipoCausaTrasladoEnum TipoTraslado { get; set; }
+		public bool EsEventoCampo { get; set; }
 
+        // Traslado 
+		public bool EsTraslado { get; set; } // Si el paciente fue trasladado o no
+		public TipoCausaTrasladoEnum CausaTraslado { get; set; }
+
+		// Evento Especial 
+		public bool EsEventoEspecial { get; set; } // Algun evento festivo 
+		public string NombreEventoEspecial { get; set; }
+		
+       
         public DepachoAsistenciaEnum DespachadaPor { get; set; }
         public ApoyoBrindadoEnum ApoyoBrindado { get; set; }
+		public TipoAsistenciaPreHospitalariaEnum TipoAsistencia { get; set; }
 
-        // Lugar 
-        public bool FueEventoCampo { get; set; }
-        public string DetalleEvento { get; set; }
+		// Lugar 
+		
+        
         public RegionMacro Zona { get; set; }
 
-        [ForeignKey("Unidad")]
+        [ForeignKey("provincia")]
+        public int ProvinciaId { get; set; }
+        public virtual Provincia Provincia { get; set; }
+
+		[ForeignKey("municipio")]
+		public int MunicipioId { get; set; }
+		public virtual Municipio Municipio { get; set; }
+
+		[ForeignKey("Unidad")]
         public int UnidadId { get; set; }
         public virtual Unidad Unidad { get; set; }
 
@@ -47,29 +64,16 @@ namespace Domain.Entities
         public virtual Hospital Hospital { get; set; }
         public string PersonaRecibioEnHospital { get; set; }
         public string AntecedentesMorbidos { get; set; } // Detalle enfermedades del paciente
-
-        public DateTime TiempoLlamadaRecibida { get; set; }
-        public DateTime TiempoLlegada { get; set; }
-        public DateTime TiempoAbordajePaciente { get; set; }
-        public DateTime TiempoSalidaHospital  { get; set; }
-        public DateTime TiempoEntregaPaciente  { get; set; }
-        public TipoAsistenciaPreHospitalariaEnum TipoAsistencia { get; set; }
         public string DetalleAsistencia { get; set; } // Detalle de la asistencia 
 
         // Signos Vitales 
-		public int FrecuenciaCardiaca { get; set; }
-		public int FrecuenciaRespiratoria { get; set; }
-		public int TensionArterialSistolica { get; set; }
-		public int TensionArterialDiastolica { get; set; }
-		public int SaturacionParcialOxigeno { get; set; }
-		public int Temperatura { get; set; }
-		public LlenadoCapilarEnum LlenadoCapilar { get; set; }
-		public int AperturaOcular { get; set; } // del 1 al 4
-		public int RespuestaVerbal { get; set; } // del 1 al 5
-		public int RespuestaMotora { get; set; } // del 1 al 5
+        public IList<SignosVitales> SignosVitales { get; set; }
+
+        // Imagenes
+        public IList<string> Imagenes { get; set; }
 
         //
-		public string HallazgoPositivo { get; set; }
+        public string HallazgoPositivo { get; set; }
 		public string DiagnosticoPresuntivo { get; set; }
 		public string ProcedimientosRealizados { get; set; }
         public string InsumosUtilizados { get; set; } // Insumos / Medicamentos
@@ -77,8 +81,8 @@ namespace Domain.Entities
         // Datos personal brindo asistencia 
 
         [ForeignKey("Miembro")]
-        public int  MiembroId { get; set; }
-        public virtual Miembro Miembro { get; set; }
+        public int  MedicoId { get; set; }
+        public virtual Miembro Medico { get; set; }
 
 		[ForeignKey("Componente1")]
 		public int Componente1Id { get; set; }
@@ -89,9 +93,11 @@ namespace Domain.Entities
 		public virtual Miembro Componente2 { get; set; }
 
 
-		[ForeignKey("RegularEmergencia")]
+		[ForeignKey("ReguladorEmergencia")]
 		public int ReguladorEmergeciaId { get; set; }
 		public virtual Miembro ReguladorEmergencia { get; set; }
+
+        public EstatusAsistencia EstatusAsistencia { get; set; }
 
 
 	}

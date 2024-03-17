@@ -108,5 +108,21 @@ namespace API.Controllers
 				throw;
 			}
 		}
+
+		[AllowAnonymous]
+		[HttpGet("miembros-pre-hospitalaria")]
+		public async Task<IActionResult> GetAutoCompleteMiembrosPreHospitalaria()
+		{
+			try
+			{
+				var result = await _miembros.GetAutoCompleteMiembrosPreHospitalaria();
+				return new JsonResult(result);
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
 	}
 }
