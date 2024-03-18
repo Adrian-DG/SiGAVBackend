@@ -22,7 +22,7 @@ namespace Infrastructure.Repositories
 						.Where(predicate)
 						.Skip((filters.Page - 1) * filters.Size)
 						.Take(filters.Size)
-						.OrderBy(a => a.FechaCreacion)
+						.OrderByDescending(x => x.FechaCreacion)
 						.Select(a => new AsistenciaPreHospitalariaViewModel
 						{
 							Id = a.Id,
@@ -35,7 +35,13 @@ namespace Infrastructure.Repositories
 							Provincia = a.Provincia.Nombre,
 							Municipio = a.Municipio.Nombre,
 							Denominacion = a.Denominacion.Nombre,
-							Ficha = a.Unidad.Ficha
+							Ficha = a.Unidad.Ficha,
+							FechaCreacion = a.FechaCreacion,
+							Zona = a.Zona.ToString().Replace("_", " "),
+							TipoAsistencia = a.TipoAsistencia.ToString().Replace("_", " "),
+							TipoCausa = a.TipoCausa.ToString().Replace("_", " "),
+							CausaTraslado = a.CausaTraslado.ToString().Replace("_", " "),
+							ApoyoBrindado = a.ApoyoBrindado.ToString().Replace("_", " "),
 						})
 						.ToListAsync();
 
@@ -104,10 +110,10 @@ namespace Infrastructure.Repositories
 				ProcedimientosRealizados = asistenciaModel.ProcedimientosRealizados,
 				InsumosUtilizados = asistenciaModel.InsumosUtilizados,
 
-				MedicoId = asistenciaModel.MedicoId,
-				Componente1Id = asistenciaModel.Componente1Id,
-				Componente2Id = asistenciaModel.Componente2Id,
-				ReguladorEmergeciaId = asistenciaModel.ReguladorEmergenciaId,
+				MedicoId = asistenciaModel.MedicoId ?? 0,
+				Componente1Id = asistenciaModel.Componente1Id ?? 0,
+				Componente2Id = asistenciaModel.Componente2Id ?? 0,
+				ReguladorEmergeciaId = asistenciaModel.ReguladorEmergenciaId ?? 0,
 				EstatusAsistencia = EstatusAsistencia.EN_CURSO
 			};
 

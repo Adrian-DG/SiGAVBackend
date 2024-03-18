@@ -12,7 +12,8 @@ namespace API.Controllers
 		private readonly AsistenciaPreHospitalariaRepository _asistenciasPreHospitalaria;
 		public AsistenciaPreHospitalariaController(IUnitOfWork unitOfWork, ISpecifaction<AsistenciaPreHospitalaria> specifaction) : base(unitOfWork, specifaction)
 		{
-			_asistenciasPreHospitalaria = (AsistenciaPreHospitalariaRepository)_repository;
+			_asistenciasPreHospitalaria = (AsistenciaPreHospitalariaRepository?)_repository;
+			_predicate = x => x.Nombre.Contains(_searchTerm) || x.Apellido.Contains(_searchTerm) || x.Identificacion.Contains(_searchTerm);
 		}
 
 		[HttpGet("all")]
@@ -23,7 +24,7 @@ namespace API.Controllers
 				_searchTerm = (filters.SearchTerm is null) ? "" : filters.SearchTerm;
 				filters.Page = filters.Page > 0 ? filters.Page : 1;
 				filters.SearchTerm = _searchTerm;
-				if (filters.EstatusAsistencia != 0) _predicate = x => (x.Nombre.Contains(_searchTerm) || x.Apellido.Contains(_searchTerm) || x.Identificacion.Contains(_searchTerm)) && (int)x.EstatusAsistencia == filters.EstatusAsistencia;
+				// if (filters.EstatusAsistencia != 0) _predicate = x => (x.Nombre.Contains(_searchTerm) || x.Apellido.Contains(_searchTerm) || x.Identificacion.Contains(_searchTerm)) && (int)x.EstatusAsistencia == filters.EstatusAsistencia;
 				var result = await _asistenciasPreHospitalaria.GetAsistenciaPreHospitalaria(filters, _predicate);
 				return Ok(result);
 			}

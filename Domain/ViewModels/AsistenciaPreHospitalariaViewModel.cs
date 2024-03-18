@@ -19,5 +19,11 @@ namespace Domain.ViewModels
         public string Municipio { get; set; }
         public string Ficha { get; set; }
         public string Denominacion { get; set; }
+        public DateTime FechaCreacion { get; set; }
+        public string Zona { get; set; }
+        public string TipoAsistencia { get; set; }
+        public string TipoCausa { get; set; }
+        public string ApoyoBrindado { get; set; }
+        public string CausaTraslado { get; set; }
     }
 }

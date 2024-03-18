@@ -62,10 +62,10 @@ namespace Domain.DTO
 		public string InsumosUtilizados { get; set; } // Insumos / Medicamentos
 
 		// Datos personal brindo asistencia 
-		public int MedicoId { get; set; }
-		public int Componente1Id { get; set; }
-		public int Componente2Id { get; set; }
-        public int ReguladorEmergenciaId { get; set; }
+		public Nullable<int> MedicoId { get; set; }
+		public Nullable<int> Componente1Id { get; set; }
+		public Nullable<int> Componente2Id { get; set; }
+        public Nullable<int> ReguladorEmergenciaId { get; set; }
 		public IList<string> Imagenes { get; set; }
     }
 }
