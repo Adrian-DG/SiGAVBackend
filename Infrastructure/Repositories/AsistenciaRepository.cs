@@ -448,6 +448,9 @@ namespace Infrastructure.Repositories
 
 			entity.Placa = model.Placa;
 
+			entity.ProvinciaId = model.ProvinciaId;
+			entity.MunicipioId = model.MunicipioId;
+
 			_context.Attach<Asistencia>(entity);
 			_context.Entry<Asistencia>(entity).State = EntityState.Modified;
 

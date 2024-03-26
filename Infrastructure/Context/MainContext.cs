@@ -25,6 +25,8 @@ namespace Infrastructure.Context
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
 			optionsBuilder.UseLazyLoadingProxies(); // enables LazyLoading on virtual properties
+			optionsBuilder.EnableDetailedErrors();
+			optionsBuilder.EnableSensitiveDataLogging();
 		}
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
